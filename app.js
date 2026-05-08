@@ -3,7 +3,16 @@ const USERS_KEY = "boiler-core-users-v1";
 const SESSION_KEY = "boiler-core-session-v1";
 const INVENTORY_RESET_KEY = "boiler-core-inventory-reset-empty-v1";
 const NOTES_CLEAR_KEY = "boiler-core-notes-cleared-v1";
-const SAUNIER_PARTS_IMPORT_KEY = "boiler-core-saunier-parts-import-v3";
+const SAUNIER_PARTS_IMPORT_KEY = "boiler-core-saunier-parts-import-v5";
+const DELETED_SEED_BOILERS_KEY = "boiler-core-deleted-seed-boilers-v1";
+const EXPLODED_VIEW_URLS = Object.fromEntries(
+  Object.entries({
+    "ISOMAX CONDENS T 31 CS 1 SF": "https://www.dispart.fr/vues-eclatees#/machine/28150/?marque_nom=Saunier%20Duval",
+    "THEMAPLUS H CONDENS MA 36 CF 1":
+      "https://www.dispart.fr/vues-eclatees#/machine/28169/?marque_nom=Saunier%20Duval",
+    ...(globalThis.SAUNIER_DUVAL_EXPLODED_VIEW_URLS || {})
+  }).map(([model, url]) => [normalizeModelKey(model), url])
+);
 
 if (!localStorage.getItem(INVENTORY_RESET_KEY)) {
   localStorage.setItem(STORAGE_KEY, "[]");
@@ -25,6 +34,7 @@ const sampleData = [
     model: "ecoTEC plus 831",
     barcode: "",
     specUrl: "https://www.vaillant.fr/particuliers/produits/ecotec-plus/",
+    explodedViewUrl: "",
     notes: "",
     parts: [
       { name: "Électrode d'allumage", number: "090709", category: "Allumage" },
@@ -38,6 +48,7 @@ const sampleData = [
     model: "Greenstar 30i",
     barcode: "",
     specUrl: "https://www.worcester-bosch.co.uk/products/boilers/directory/greenstar-i",
+    explodedViewUrl: "",
     notes: "",
     parts: [
       { name: "Soupape de sécurité", number: "87161064330", category: "Sécurité" },
@@ -50,6 +61,7 @@ const sampleData = [
     model: "Thema plus 25",
     barcode: "",
     specUrl: "https://www.saunierduval.fr/particulier/produits/thema-plus-condens/",
+    explodedViewUrl: "",
     notes: "",
     parts: []
   }
@@ -62,7 +74,6 @@ const state = {
   boilers: loadBoilers(),
   query: "",
   manufacturerFilter: "",
-  categoryFilter: "",
   sortMode: "manufacturer",
   editingId: null
 };
@@ -91,6 +102,7 @@ const elements = {
   model: document.querySelector("#model"),
   barcode: document.querySelector("#barcode"),
   specUrl: document.querySelector("#specUrl"),
+  explodedViewUrl: document.querySelector("#explodedViewUrl"),
   notes: document.querySelector("#notes"),
   partsList: document.querySelector("#partsList"),
   partRowTemplate: document.querySelector("#partRowTemplate"),
@@ -99,7 +111,6 @@ const elements = {
   cancelEdit: document.querySelector("#cancelEdit"),
   search: document.querySelector("#modelSearch"),
   manufacturerFilter: document.querySelector("#manufacturerFilter"),
-  categoryFilter: document.querySelector("#categoryFilter"),
   sortMode: document.querySelector("#sortMode"),
   clearSearch: document.querySelector("#clearSearch"),
   results: document.querySelector("#results"),
@@ -108,6 +119,9 @@ const elements = {
   metricModels: document.querySelector("#metricModels"),
   metricParts: document.querySelector("#metricParts"),
   metricManufacturers: document.querySelector("#metricManufacturers"),
+  metricComplete: document.querySelector("#metricComplete"),
+  metricMissing: document.querySelector("#metricMissing"),
+  quickBackup: document.querySelector("#quickBackup"),
   exportJson: document.querySelector("#exportJson"),
   exportCsv: document.querySelector("#exportCsv"),
   importJson: document.querySelector("#importJson"),
@@ -117,11 +131,17 @@ const elements = {
   cameraPreview: document.querySelector("#cameraPreview"),
   scannerStatus: document.querySelector("#scannerStatus"),
   manualBarcode: document.querySelector("#manualBarcode"),
-  manualScan: document.querySelector("#manualScan")
+  manualScan: document.querySelector("#manualScan"),
+  ocrScan: document.querySelector("#ocrScan"),
+  detailModal: document.querySelector("#detailModal"),
+  detailTitle: document.querySelector("#detailTitle"),
+  detailContent: document.querySelector("#detailContent"),
+  closeDetail: document.querySelector("#closeDetail")
 };
 
 let scannerStream = null;
 let scannerTimer = null;
+let scannerOcrActive = false;
 let currentUser = null;
 
 function getUsers() {
@@ -382,6 +402,7 @@ function getSaunierDuvalSeedData() {
     model,
     barcode: "",
     specUrl: "",
+    explodedViewUrl: getDefaultExplodedViewUrl({ manufacturer: "Saunier Duval", model }),
     notes: "",
     parts: []
   }));
@@ -389,6 +410,30 @@ function getSaunierDuvalSeedData() {
 
 function normalizeModelKey(value) {
   return String(value || "").replace(/\s+/g, "").toLowerCase();
+}
+
+function getBoilerSeedKey(boiler) {
+  return `${String(boiler?.manufacturer || "").trim().toLowerCase()}|${String(boiler?.model || "").trim().toLowerCase()}`;
+}
+
+function getDeletedSeedBoilers() {
+  try {
+    const deleted = JSON.parse(localStorage.getItem(DELETED_SEED_BOILERS_KEY)) || [];
+    return new Set(Array.isArray(deleted) ? deleted : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveDeletedSeedBoilers(deletedSeeds) {
+  localStorage.setItem(DELETED_SEED_BOILERS_KEY, JSON.stringify([...deletedSeeds]));
+}
+
+function getDefaultExplodedViewUrl(boiler) {
+  const manufacturer = String(boiler?.manufacturer || "").trim().toLowerCase();
+  if (manufacturer !== "saunier duval") return "";
+
+  return EXPLODED_VIEW_URLS[normalizeModelKey(boiler?.model)] || "";
 }
 
 function getSaunierDuvalPartsByModel() {
@@ -431,12 +476,11 @@ function getSaunierDuvalPartsByModel() {
 
 function mergeSeedBoilers(boilers) {
   const normalized = normalizeBoilers(boilers);
-  const existingKeys = new Set(
-    normalized.map((boiler) => `${boiler.manufacturer.trim().toLowerCase()}|${boiler.model.trim().toLowerCase()}`)
-  );
+  const existingKeys = new Set(normalized.map(getBoilerSeedKey));
+  const deletedSeedKeys = getDeletedSeedBoilers();
   const missingSeeds = saunierDuvalSeedData.filter((boiler) => {
-    const key = `${boiler.manufacturer.trim().toLowerCase()}|${boiler.model.trim().toLowerCase()}`;
-    return !existingKeys.has(key);
+    const key = getBoilerSeedKey(boiler);
+    return !existingKeys.has(key) && !deletedSeedKeys.has(key);
   });
   const merged = clearNotesOnce(mergeSaunierDuvalPartsOnce(normalizeBoilers([...normalized, ...missingSeeds])));
 
@@ -466,6 +510,7 @@ function mergeSaunierDuvalPartsOnce(boilers) {
     return {
       ...boiler,
       specUrl: boiler.specUrl || "https://www.dispart.fr",
+      explodedViewUrl: boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler),
       notes: boiler.notes || "",
       parts: [...(boiler.parts || []), ...missingParts]
     };
@@ -496,6 +541,7 @@ function normalizeBoilers(boilers) {
       model: String(boiler.model || ""),
       barcode: String(boiler.barcode || ""),
       specUrl: String(boiler.specUrl || ""),
+      explodedViewUrl: String(boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler)),
       notes: String(boiler.notes || ""),
       parts: Array.isArray(boiler.parts)
         ? boiler.parts
@@ -604,6 +650,7 @@ function matchesQuery(boiler, query) {
     boiler.model,
     boiler.barcode,
     boiler.specUrl,
+    boiler.explodedViewUrl,
     boiler.notes,
     ...(boiler.parts || []).flatMap((part) => [part.name, part.number, part.category, part.dispart, part.pex])
   ]
@@ -613,12 +660,34 @@ function matchesQuery(boiler, query) {
   return searchable.includes(query.toLowerCase());
 }
 
+function getPartSource(part) {
+  if (part.dispart) return "dispart";
+  if (part.pex) return "piecesxpress";
+  return "manual";
+}
+
+function getSourceLabel(source) {
+  if (source === "dispart") return "Dispart";
+  if (source === "piecesxpress") return "PiecesXpress";
+  return "Saisie manuelle";
+}
+
+function getBoilerSources(boiler) {
+  return [...new Set((boiler.parts || []).map(getPartSource))];
+}
+
+function getBoilerStatus(boiler) {
+  return (boiler.parts || []).length ? "complete" : "missing";
+}
+
+function getStatusLabel(status) {
+  return status === "complete" ? "Complet" : "Pièces manquantes";
+}
+
 function matchesFilters(boiler) {
   const manufacturer = String(boiler.manufacturer || "").trim().toLowerCase();
-  const categories = (boiler.parts || []).map((part) => String(part.category || "Général").trim().toLowerCase());
 
   if (state.manufacturerFilter && manufacturer !== state.manufacturerFilter) return false;
-  if (state.categoryFilter && !categories.includes(state.categoryFilter)) return false;
 
   return true;
 }
@@ -669,12 +738,8 @@ function populateSelect(select, values, fallbackLabel, selectedValue) {
 
 function renderFilters() {
   const manufacturers = uniqueSorted(state.boilers.map((boiler) => boiler.manufacturer));
-  const categories = uniqueSorted(
-    state.boilers.flatMap((boiler) => (boiler.parts || []).map((part) => part.category || "Général"))
-  );
 
   populateSelect(elements.manufacturerFilter, manufacturers, "Tous les fabricants", state.manufacturerFilter);
-  populateSelect(elements.categoryFilter, categories, "Toutes les catégories", state.categoryFilter);
   elements.sortMode.value = state.sortMode;
 }
 
@@ -701,6 +766,7 @@ function renderResults() {
 function renderMetrics() {
   const modelCount = state.boilers.length;
   const partCount = state.boilers.reduce((total, boiler) => total + (boiler.parts || []).length, 0);
+  const completeCount = state.boilers.filter((boiler) => getBoilerStatus(boiler) === "complete").length;
   const manufacturerCount = new Set(
     state.boilers.map((boiler) => String(boiler.manufacturer || "").trim().toLowerCase()).filter(Boolean)
   ).size;
@@ -709,6 +775,15 @@ function renderMetrics() {
   elements.metricModels.textContent = modelCount;
   elements.metricParts.textContent = partCount;
   elements.metricManufacturers.textContent = manufacturerCount;
+  elements.metricComplete.textContent = completeCount;
+  elements.metricMissing.textContent = modelCount - completeCount;
+}
+
+function createBadge(label, type) {
+  const badge = document.createElement("span");
+  badge.className = `status-badge ${type}`;
+  badge.textContent = label;
+  return badge;
 }
 
 function createBoilerCard(boiler) {
@@ -721,9 +796,11 @@ function createBoilerCard(boiler) {
   const manufacturer = document.createElement("p");
   const notes = document.createElement("p");
   const meta = document.createElement("p");
+  const badgeRow = document.createElement("div");
   const buttonGroup = document.createElement("div");
   const partsToggle = document.createElement("button");
-  const specButton = document.createElement("button");
+  const detailButton = document.createElement("button");
+  const explodedViewButton = document.createElement("button");
   const editButton = document.createElement("button");
   const deleteButton = document.createElement("button");
 
@@ -731,22 +808,30 @@ function createBoilerCard(boiler) {
   manufacturer.className = "manufacturer";
   manufacturer.textContent = boiler.manufacturer;
   meta.className = "model-meta";
-  meta.textContent = [boiler.barcode ? `Code-barres: ${boiler.barcode}` : "", boiler.specUrl ? "Fiche fournisseur disponible" : ""]
+  meta.textContent = [
+    boiler.barcode ? `Code-barres: ${boiler.barcode}` : "",
+    boiler.explodedViewUrl ? "Vue eclatee disponible" : ""
+  ]
     .filter(Boolean)
     .join(" · ");
   notes.className = "notes";
   notes.textContent = boiler.notes || "";
+  badgeRow.className = "badge-row";
   buttonGroup.className = "card-actions";
   partsToggle.className = "parts-toggle";
   partsToggle.type = "button";
   partsToggle.setAttribute("aria-expanded", "false");
   partsToggle.textContent =
     boiler.parts.length === 1 ? "Voir 1 pièce" : boiler.parts.length ? `Voir ${boiler.parts.length} pièces` : "Pièces à compléter";
-  specButton.className = "spec-model";
-  specButton.type = "button";
-  specButton.textContent = "Fiche fournisseur";
-  specButton.disabled = !boiler.specUrl;
-  specButton.addEventListener("click", () => openSpec(boiler));
+  detailButton.className = "detail-model";
+  detailButton.type = "button";
+  detailButton.textContent = "Détail";
+  detailButton.addEventListener("click", () => openDetail(boiler.id));
+  explodedViewButton.className = "exploded-view-model";
+  explodedViewButton.type = "button";
+  explodedViewButton.textContent = "Vue eclatee";
+  explodedViewButton.disabled = !boiler.explodedViewUrl;
+  explodedViewButton.addEventListener("click", () => openExplodedView(boiler));
   editButton.className = "edit-model";
   editButton.type = "button";
   editButton.textContent = "Modifier";
@@ -755,12 +840,15 @@ function createBoilerCard(boiler) {
   deleteButton.type = "button";
   deleteButton.textContent = "Supprimer";
   deleteButton.addEventListener("click", () => deleteBoiler(boiler.id));
-  buttonGroup.append(partsToggle, specButton);
+  badgeRow.append(createBadge(getStatusLabel(getBoilerStatus(boiler)), getBoilerStatus(boiler)));
+  getBoilerSources(boiler).forEach((source) => badgeRow.append(createBadge(getSourceLabel(source), source)));
+  buttonGroup.append(detailButton, partsToggle, explodedViewButton);
   if (isAdmin()) {
     buttonGroup.append(editButton, deleteButton);
   }
 
   titleBlock.append(title, manufacturer);
+  titleBlock.append(badgeRow);
   if (meta.textContent) titleBlock.append(meta);
   if (boiler.notes) titleBlock.append(notes);
   header.append(titleBlock, buttonGroup);
@@ -835,6 +923,145 @@ function createBoilerCard(boiler) {
   return card;
 }
 
+function createDetailPartRow(part) {
+  const row = document.createElement("tr");
+  row.innerHTML = `
+    <td></td>
+    <td class="part-number-cell"></td>
+    <td></td>
+  `;
+
+  const copyButton = document.createElement("button");
+  copyButton.className = "copy-reference";
+  copyButton.type = "button";
+  copyButton.textContent = part.number;
+  copyButton.title = "Copier la reference";
+  copyButton.addEventListener("click", () => copyPartReference(copyButton, part.number));
+
+  row.children[0].textContent = part.name;
+  row.children[1].append(copyButton);
+  row.children[2].textContent = getSourceLabel(getPartSource(part));
+  return row;
+}
+
+async function copyPartReference(button, reference) {
+  const value = String(reference || "").trim();
+  if (!value) return;
+
+  const previousText = button.textContent;
+
+  try {
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(value);
+      } catch {
+        fallbackCopyText(value);
+      }
+    } else {
+      fallbackCopyText(value);
+    }
+
+    button.textContent = "Copie";
+    button.classList.add("copied");
+    window.setTimeout(() => {
+      button.textContent = previousText;
+      button.classList.remove("copied");
+    }, 900);
+  } catch {
+    button.textContent = previousText;
+  }
+}
+
+function fallbackCopyText(value) {
+  const input = document.createElement("input");
+  input.value = value;
+  input.setAttribute("readonly", "");
+  input.style.position = "fixed";
+  input.style.opacity = "0";
+  document.body.append(input);
+  input.select();
+  document.execCommand("copy");
+  input.remove();
+}
+function matchesPartDetail(part, query) {
+  if (!query) return true;
+
+  const sourceText = [part.name, part.number, part.category, getSourceLabel(getPartSource(part)), part.dispart, part.pex]
+    .join(" ")
+    .toLowerCase();
+
+  return sourceText.includes(query.toLowerCase());
+}
+
+function renderDetailParts(tbody, parts, query) {
+  tbody.replaceChildren();
+
+  const matchingParts = parts.filter((part) => matchesPartDetail(part, query));
+
+  if (matchingParts.length) {
+    matchingParts.forEach((part) => tbody.append(createDetailPartRow(part)));
+    return;
+  }
+
+  const empty = document.createElement("tr");
+  empty.innerHTML = `<td colspan="3" class="empty-parts"></td>`;
+  empty.children[0].textContent = parts.length ? "Aucune piece ne correspond a la recherche." : "PiÃ¨ces Ã  complÃ©ter";
+  tbody.append(empty);
+}
+
+function openDetail(id) {
+  const boiler = state.boilers.find((item) => item.id === id);
+  if (!boiler) return;
+
+  elements.detailTitle.textContent = `${boiler.manufacturer} ${boiler.model}`;
+  elements.detailContent.replaceChildren();
+
+  const summary = document.createElement("div");
+  summary.className = "detail-summary";
+  summary.append(createBadge(getStatusLabel(getBoilerStatus(boiler)), getBoilerStatus(boiler)));
+  getBoilerSources(boiler).forEach((source) => summary.append(createBadge(getSourceLabel(source), source)));
+
+  const stats = document.createElement("p");
+  stats.className = "detail-stat";
+  stats.textContent = `${boiler.parts.length} pièce${boiler.parts.length > 1 ? "s" : ""} référencée${boiler.parts.length > 1 ? "s" : ""}`;
+
+  const searchLabel = document.createElement("label");
+  searchLabel.className = "detail-search";
+  searchLabel.textContent = "Recherche pieces";
+  const searchInput = document.createElement("input");
+  searchInput.type = "search";
+  searchInput.placeholder = "Nom, reference, source, code...";
+  searchInput.autocomplete = "off";
+  searchLabel.append(searchInput);
+
+  const table = document.createElement("table");
+  table.className = "parts-table detail-table";
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th>Nom de la pièce</th>
+        <th>Référence</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  `;
+  const tbody = table.querySelector("tbody");
+  renderDetailParts(tbody, boiler.parts, "");
+  searchInput.addEventListener("input", (event) => {
+    renderDetailParts(tbody, boiler.parts, event.target.value.trim());
+  });
+
+  elements.detailContent.append(summary, stats, searchLabel, table);
+  elements.detailModal.classList.remove("hidden");
+  searchInput.focus();
+}
+
+function closeDetail() {
+  elements.detailModal.classList.add("hidden");
+  elements.detailContent.replaceChildren();
+}
+
 function editBoiler(id) {
   if (!requireAdmin()) return;
   const boiler = state.boilers.find((item) => item.id === id);
@@ -844,7 +1071,8 @@ function editBoiler(id) {
   elements.manufacturer.value = boiler.manufacturer;
   elements.model.value = boiler.model;
   elements.barcode.value = boiler.barcode || "";
-  elements.specUrl.value = boiler.specUrl || "";
+  if (elements.specUrl) elements.specUrl.value = boiler.specUrl || "";
+  elements.explodedViewUrl.value = boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler);
   elements.notes.value = boiler.notes || "";
   elements.partsList.replaceChildren();
 
@@ -860,20 +1088,50 @@ function editBoiler(id) {
   document.querySelector(".editor-panel").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function openSpec(boiler) {
-  if (!boiler.specUrl) {
-    alert("Aucun lien fournisseur n'est enregistré pour ce modèle.");
+function openExplodedView(boiler) {
+  const explodedViewUrl = boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler);
+  if (!explodedViewUrl) {
+    alert("Aucun lien de vue eclatee n'est enregistre pour ce modele.");
     return;
   }
 
-  window.open(boiler.specUrl, "_blank", "noopener");
+  window.open(explodedViewUrl, "_blank", "noopener");
 }
 
-function findBoilerByBarcode(code) {
-  const cleanCode = code.trim().toLowerCase();
+function normalizeScanValue(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]/gi, "")
+    .toLowerCase();
+}
+
+function extractDigitSequences(value) {
+  return String(value || "").match(/\d{8,}/g) || [];
+}
+
+function getModelSerialRange(model) {
+  const normalized = String(model || "").replace(/\s+/g, " ");
+  const match = normalized.match(/\bde\s*(\d{8,})\s*(?:à|a|-)\s*(\d{8,})\b/i);
+  if (!match) return null;
+
+  return {
+    start: Number(match[1]),
+    end: Number(match[2])
+  };
+}
+
+function isSerialInModelRange(model, serial) {
+  const range = getModelSerialRange(model);
+  const value = Number(serial);
+  return Boolean(range && Number.isFinite(value) && value >= range.start && value <= range.end);
+}
+
+function findBoilerByScan(code) {
+  const cleanCode = normalizeScanValue(code);
   if (!cleanCode) return null;
 
-  return state.boilers.find((boiler) => {
+  const exactMatch = state.boilers.find((boiler) => {
     const values = [
       boiler.barcode,
       boiler.model,
@@ -881,26 +1139,97 @@ function findBoilerByBarcode(code) {
       ...boiler.parts.flatMap((part) => [part.number, part.name])
     ];
 
-    return values.some((value) => String(value || "").trim().toLowerCase() === cleanCode);
+    return values.some((value) => normalizeScanValue(value) === cleanCode);
+  });
+  if (exactMatch) return exactMatch;
+
+  const serials = extractDigitSequences(code);
+  const rangeMatch = state.boilers.find((boiler) => serials.some((serial) => isSerialInModelRange(boiler.model, serial)));
+  if (rangeMatch) return rangeMatch;
+
+  return state.boilers.find((boiler) => {
+    const modelKey = normalizeScanValue(`${boiler.manufacturer} ${boiler.model}`);
+    const shortModelKey = normalizeScanValue(boiler.model);
+    return (shortModelKey.length >= 8 && cleanCode.includes(shortModelKey)) || modelKey.includes(cleanCode);
   });
 }
 
 function handleScannedCode(code) {
-  const boiler = findBoilerByBarcode(code);
-  stopScanner();
-  elements.search.value = code;
-  state.query = code;
-  renderResults();
-
-  if (!boiler) {
-    alert(`Aucun modèle trouvé pour le code-barres: ${code}`);
+  const cleanCode = String(code || "").trim();
+  if (!cleanCode) {
+    elements.scannerStatus.textContent = "Saisissez ou scannez une référence.";
     return;
   }
 
-  if (boiler.specUrl) {
-    openSpec(boiler);
-  } else {
-    alert(`${boiler.manufacturer} ${boiler.model} trouvé, mais aucun lien fournisseur n'est enregistré.`);
+  const boiler = findBoilerByScan(cleanCode);
+  stopScanner();
+  elements.search.value = boiler ? boiler.model : cleanCode;
+  state.query = boiler ? boiler.model : cleanCode;
+  renderResults();
+
+  if (!boiler) {
+    alert(`Aucun modèle trouvé pour: ${cleanCode}`);
+    return;
+  }
+
+  openDetail(boiler.id);
+}
+
+
+function getScannerFrameCanvas() {
+  if (!elements.cameraPreview.videoWidth || !elements.cameraPreview.videoHeight) return null;
+
+  const canvas = document.createElement("canvas");
+  canvas.width = elements.cameraPreview.videoWidth;
+  canvas.height = elements.cameraPreview.videoHeight;
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+  context.drawImage(elements.cameraPreview, 0, 0, canvas.width, canvas.height);
+  return canvas;
+}
+
+async function scanPlateText() {
+  if (scannerOcrActive) return;
+  if (!scannerStream) {
+    elements.scannerStatus.textContent = "Ouvrez la caméra avant de lire la plaque.";
+    return;
+  }
+
+  const canvas = getScannerFrameCanvas();
+  if (!canvas) {
+    elements.scannerStatus.textContent = "Image caméra pas encore prête. Réessayez dans une seconde.";
+    return;
+  }
+
+  if (!globalThis.Tesseract?.recognize) {
+    elements.scannerStatus.textContent = "Lecture texte indisponible. Vérifiez la connexion internet puis réessayez.";
+    return;
+  }
+
+  scannerOcrActive = true;
+  elements.ocrScan.disabled = true;
+  elements.scannerStatus.textContent = "Lecture du texte de la plaque...";
+
+  try {
+    const result = await globalThis.Tesseract.recognize(canvas, "fra+eng", {
+      logger: (progress) => {
+        if (progress.status === "recognizing text" && Number.isFinite(progress.progress)) {
+          elements.scannerStatus.textContent = `Lecture texte ${Math.round(progress.progress * 100)}%...`;
+        }
+      }
+    });
+    const text = result?.data?.text?.trim();
+    if (!text) {
+      elements.scannerStatus.textContent = "Aucun texte lisible. Rapprochez la plaque et réessayez.";
+      return;
+    }
+
+    elements.manualBarcode.value = text.replace(/\s+/g, " ").trim();
+    handleScannedCode(text);
+  } catch {
+    elements.scannerStatus.textContent = "Lecture texte impossible. Essayez avec une image plus nette.";
+  } finally {
+    scannerOcrActive = false;
+    elements.ocrScan.disabled = false;
   }
 }
 
@@ -908,11 +1237,6 @@ async function startScanner() {
   elements.scannerModal.classList.remove("hidden");
   elements.scannerStatus.textContent = "Demande d'accès à la caméra...";
 
-  if (!("BarcodeDetector" in window)) {
-    elements.scannerStatus.textContent =
-      "Le scanner automatique n'est pas disponible dans ce navigateur. Saisissez le code manuellement.";
-    return;
-  }
 
   if (!navigator.mediaDevices?.getUserMedia) {
     elements.scannerStatus.textContent =
@@ -927,11 +1251,17 @@ async function startScanner() {
     });
     elements.cameraPreview.srcObject = scannerStream;
 
+    if (!("BarcodeDetector" in window)) {
+      elements.scannerStatus.textContent =
+        "Camera ouverte. Le code-barres automatique n'est pas disponible, utilisez Lire le texte de la plaque.";
+      return;
+    }
+
     const detector = new BarcodeDetector({
       formats: ["aztec", "code_128", "code_39", "code_93", "codabar", "data_matrix", "ean_13", "ean_8", "itf", "pdf417", "qr_code", "upc_a", "upc_e"]
     });
 
-    elements.scannerStatus.textContent = "Recherche du code-barres...";
+    elements.scannerStatus.textContent = "Recherche du code-barres ou QR code...";
     scannerTimer = window.setInterval(async () => {
       try {
         if (!elements.cameraPreview.videoWidth) return;
@@ -970,6 +1300,14 @@ function deleteBoiler(id) {
   const confirmed = confirm(`Supprimer ${boiler.manufacturer} ${boiler.model} ?`);
   if (!confirmed) return;
 
+  const seedKey = getBoilerSeedKey(boiler);
+  const seedExists = saunierDuvalSeedData.some((seed) => getBoilerSeedKey(seed) === seedKey);
+  if (seedExists) {
+    const deletedSeeds = getDeletedSeedBoilers();
+    deletedSeeds.add(seedKey);
+    saveDeletedSeedBoilers(deletedSeeds);
+  }
+
   state.boilers = state.boilers.filter((item) => item.id !== id);
   saveBoilers();
   renderResults();
@@ -987,11 +1325,11 @@ function download(filename, content, type) {
 
 function toCsv() {
   const rows = [
-    ["Fabricant", "Modèle", "Code-barres", "Lien fiche fournisseur", "Notes", "Nom de la pièce", "Numéro de pièce", "Catégorie", "Réf. Dispart", "Code PEX"]
+    ["Fabricant", "Modele", "Code-barres", "Lien vue eclatee", "Notes", "Nom de la piece", "Numero de piece", "Categorie", "Ref. Dispart", "Code PEX"]
   ];
   state.boilers.forEach((boiler) => {
     if (!boiler.parts.length) {
-      rows.push([boiler.manufacturer, boiler.model, boiler.barcode || "", boiler.specUrl || "", boiler.notes || "", "", "", "", "", ""]);
+      rows.push([boiler.manufacturer, boiler.model, boiler.barcode || "", boiler.explodedViewUrl || "", boiler.notes || "", "", "", "", "", ""]);
       return;
     }
 
@@ -1000,7 +1338,7 @@ function toCsv() {
         boiler.manufacturer,
         boiler.model,
         boiler.barcode || "",
-        boiler.specUrl || "",
+        boiler.explodedViewUrl || "",
         boiler.notes || "",
         part.name,
         part.number,
@@ -1013,7 +1351,6 @@ function toCsv() {
 
   return rows.map((row) => row.map(csvCell).join(",")).join("\n");
 }
-
 function csvCell(value) {
   return `"${String(value).replaceAll('"', '""')}"`;
 }
@@ -1057,10 +1394,14 @@ elements.form.addEventListener("submit", (event) => {
     manufacturer: elements.manufacturer.value.trim(),
     model: elements.model.value.trim(),
     barcode: elements.barcode.value.trim(),
-    specUrl: elements.specUrl.value.trim(),
+    specUrl: elements.specUrl?.value.trim() || "",
+    explodedViewUrl: elements.explodedViewUrl.value.trim(),
     notes: elements.notes.value.trim(),
     parts
   };
+  if (!boilerData.explodedViewUrl) {
+    boilerData.explodedViewUrl = getDefaultExplodedViewUrl(boilerData);
+  }
   const duplicate = findDuplicateBoiler(boilerData);
 
   if (duplicate) {
@@ -1095,7 +1436,6 @@ elements.search.addEventListener("input", (event) => {
 elements.clearSearch.addEventListener("click", () => {
   state.query = "";
   state.manufacturerFilter = "";
-  state.categoryFilter = "";
   state.sortMode = "manufacturer";
   elements.search.value = "";
   renderResults();
@@ -1106,14 +1446,14 @@ elements.manufacturerFilter.addEventListener("change", (event) => {
   renderResults();
 });
 
-elements.categoryFilter.addEventListener("change", (event) => {
-  state.categoryFilter = event.target.value;
-  renderResults();
-});
-
 elements.sortMode.addEventListener("change", (event) => {
   state.sortMode = event.target.value;
   renderResults();
+});
+
+elements.quickBackup.addEventListener("click", () => {
+  const date = new Date().toISOString().slice(0, 19).replaceAll(":", "-");
+  download(`backup-boilercore-${date}.json`, JSON.stringify(state.boilers, null, 2), "application/json");
 });
 
 elements.exportJson.addEventListener("click", () => {
@@ -1142,8 +1482,17 @@ elements.importJson.addEventListener("change", async (event) => {
       model: boiler.model || "",
       barcode: boiler.barcode || "",
       specUrl: boiler.specUrl || "",
+      explodedViewUrl: boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler),
       notes: boiler.notes || "",
-      parts: Array.isArray(boiler.parts) ? boiler.parts : []
+      parts: Array.isArray(boiler.parts)
+        ? boiler.parts.map((part) => ({
+            name: part.name || "",
+            number: part.number || "",
+            category: part.category || "",
+            dispart: part.dispart || "",
+            pex: part.pex || ""
+          }))
+        : []
     }));
     saveBoilers();
     renderResults();
@@ -1158,8 +1507,20 @@ elements.openScanner.addEventListener("click", () => startScanner());
 
 elements.closeScanner.addEventListener("click", () => stopScanner());
 
+elements.closeDetail.addEventListener("click", () => closeDetail());
+
+elements.detailModal.addEventListener("click", (event) => {
+  if (event.target === elements.detailModal) {
+    closeDetail();
+  }
+});
+
 elements.manualScan.addEventListener("click", () => {
   handleScannedCode(elements.manualBarcode.value);
+});
+
+elements.ocrScan.addEventListener("click", () => {
+  scanPlateText();
 });
 
 elements.manualBarcode.addEventListener("keydown", (event) => {

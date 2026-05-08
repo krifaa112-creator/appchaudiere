@@ -11,7 +11,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=34" />
   </head>
   <body>
     <section id="authScreen" class="auth-screen">
@@ -76,7 +76,7 @@
           <a class="nav-item active" href="#inventory">Inventaire</a>
           <a class="nav-item admin-only" href="#boilerForm">Ajouter modèle</a>
           <a class="nav-item admin-only" href="#accountSettings">Paramètres comptes</a>
-          <button id="openScanner" type="button" class="nav-item nav-button">Scanner code-barres</button>
+          <button id="openScanner" type="button" class="nav-item nav-button">Scanner plaque</button>
         </nav>
 
         <div class="sidebar-card">
@@ -100,6 +100,7 @@
             <h1>Bibliothèque de pièces chaudières</h1>
           </div>
           <div class="actions">
+            <button id="quickBackup" type="button" class="primary">Backup rapide</button>
             <button id="exportJson" type="button">Exporter JSON</button>
             <button id="exportCsv" type="button">Exporter CSV</button>
             <label class="file-button admin-only">
@@ -121,6 +122,14 @@
           <article class="metric-card">
             <span>Fabricants</span>
             <strong id="metricManufacturers">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>Complets</span>
+            <strong id="metricComplete">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>A completer</span>
+            <strong id="metricMissing">0</strong>
           </article>
         </section>
 
@@ -149,12 +158,6 @@
                 Fabricant
                 <select id="manufacturerFilter">
                   <option value="">Tous les fabricants</option>
-                </select>
-              </label>
-              <label>
-                Catégorie
-                <select id="categoryFilter">
-                  <option value="">Toutes les catégories</option>
                 </select>
               </label>
               <label>
@@ -199,8 +202,8 @@
                 <input id="barcode" name="barcode" placeholder="Ex: 1234567890123" inputmode="numeric" />
               </label>
               <label>
-                Lien fiche fournisseur
-                <input id="specUrl" name="specUrl" type="url" placeholder="https://..." />
+                Lien vue eclatee
+                <input id="explodedViewUrl" name="explodedViewUrl" type="url" placeholder="https://www.dispart.fr/vues-eclatees#/machine/..." />
               </label>
               <label>
                 Notes
@@ -248,7 +251,7 @@
         <div class="scanner-header">
           <div>
             <p class="eyebrow">Caméra</p>
-            <h2 id="scannerTitle">Scanner un code-barres</h2>
+            <h2 id="scannerTitle">Scanner une plaque</h2>
           </div>
           <button id="closeScanner" type="button" class="ghost">Fermer</button>
         </div>
@@ -256,17 +259,33 @@
           <video id="cameraPreview" autoplay muted playsinline></video>
           <div class="scan-line"></div>
         </div>
-        <p id="scannerStatus" class="scanner-status">Placez le code-barres du modèle devant la caméra.</p>
+        <p id="scannerStatus" class="scanner-status">Placez le code-barres ou le QR code de la plaque devant la caméra.</p>
+        <button id="ocrScan" type="button" class="ocr-scan-button">Lire le texte de la plaque</button>
         <div class="manual-scan">
-          <input id="manualBarcode" placeholder="Ou saisir le code manuellement" />
+          <input id="manualBarcode" placeholder="Ou saisir un code, une référence ou un numéro de série" />
           <button id="manualScan" type="button" class="ghost">Rechercher</button>
         </div>
       </div>
     </div>
 
-    <script src="saunier-duval-models.js"></script>
-    <script src="saunier-duval-parts-by-model.js"></script>
+    <div id="detailModal" class="detail-modal hidden" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <div class="detail-box">
+        <div class="detail-header">
+          <div>
+            <p class="eyebrow">Fiche modèle</p>
+            <h2 id="detailTitle">Modèle</h2>
+          </div>
+          <button id="closeDetail" type="button" class="ghost">Fermer</button>
+        </div>
+        <div id="detailContent" class="detail-content"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script src="saunier-duval-models.js?v=34"></script>
+    <script src="saunier-duval-parts-by-model.js?v=34"></script>
     <script src="piecesxpress-duomax-condens-f30-90-1-parts.js"></script>
-    <script src="app.js"></script>
+    <script src="saunier-duval-exploded-views.js?v=34"></script>
+    <script src="app.js?v=34"></script>
   </body>
 </html>
