@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bibliothèque de pièces chaudières</title>
+    <meta name="theme-color" content="#0b1020" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Pièces chaudières" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="authScreen" class="auth-screen">
+      <div class="auth-card">
+        <div class="brand auth-brand">
+          <img class="brand-logo" src="assets/logo-egs-transparent.png" alt="EGS Energies" />
+          <div>
+            <strong>EGS ENERGIES</strong>
+            <span>by krifa alaeddine</span>
+          </div>
+        </div>
+
+        <div class="auth-tabs" role="tablist" aria-label="Connexion">
+          <button id="showLogin" type="button" class="auth-tab active">Connexion</button>
+          <button id="showSignup" type="button" class="auth-tab">Créer un compte</button>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+          <label>
+            Email ou nom d'utilisateur
+            <input id="loginIdentifier" autocomplete="username" required placeholder="ahmed@email.com" />
+          </label>
+          <label>
+            Mot de passe
+            <input id="loginPassword" type="password" autocomplete="current-password" required placeholder="••••••••" />
+          </label>
+          <button type="submit" class="primary">Se connecter</button>
+        </form>
+
+        <form id="signupForm" class="auth-form hidden">
+          <label>
+            Nom d'utilisateur
+            <input id="signupUsername" autocomplete="username" required placeholder="Ahmed" />
+          </label>
+          <label>
+            Email
+            <input id="signupEmail" type="email" autocomplete="email" required placeholder="ahmed@email.com" />
+          </label>
+          <label>
+            Mot de passe
+            <input id="signupPassword" type="password" autocomplete="new-password" required minlength="6" placeholder="Minimum 6 caractères" />
+          </label>
+          <p id="signupRoleHint" class="role-hint"></p>
+          <button type="submit" class="primary">Créer le compte</button>
+        </form>
+
+        <p id="authMessage" class="auth-message"></p>
+      </div>
+    </section>
+
+    <div id="appShell" class="app-shell hidden">
+      <aside class="sidebar" aria-label="Navigation principale">
+        <div class="brand">
+          <img class="brand-logo" src="assets/logo-egs-transparent.png" alt="EGS Energies" />
+          <div>
+            <strong>EGS ENERGIES</strong>
+            <span>by krifa alaeddine</span>
+          </div>
+        </div>
+
+        <nav class="nav-list">
+          <a class="nav-item active" href="#inventory">Inventaire</a>
+          <a class="nav-item admin-only" href="#boilerForm">Ajouter modèle</a>
+          <a class="nav-item admin-only" href="#accountSettings">Paramètres comptes</a>
+          <button id="openScanner" type="button" class="nav-item nav-button">Scanner code-barres</button>
+        </nav>
+
+        <div class="sidebar-card">
+          <span class="sidebar-label">Base locale</span>
+          <strong id="totalModels">0</strong>
+          <span>modèles enregistrés</span>
+        </div>
+
+        <div class="user-card">
+          <span>Connecté</span>
+          <strong id="currentUser">Utilisateur</strong>
+          <em id="currentRole">Rôle</em>
+          <button id="logoutButton" type="button">Déconnexion</button>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Inventaire SAV</p>
+            <h1>Bibliothèque de pièces chaudières</h1>
+          </div>
+          <div class="actions">
+            <button id="exportJson" type="button">Exporter JSON</button>
+            <button id="exportCsv" type="button">Exporter CSV</button>
+            <label class="file-button admin-only">
+              Importer JSON
+              <input id="importJson" type="file" accept="application/json,.json" />
+            </label>
+          </div>
+        </header>
+
+        <section class="metrics" aria-label="Résumé de l'inventaire">
+          <article class="metric-card">
+            <span>Modèles</span>
+            <strong id="metricModels">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>Pièces référencées</span>
+            <strong id="metricParts">0</strong>
+          </article>
+          <article class="metric-card">
+            <span>Fabricants</span>
+            <strong id="metricManufacturers">0</strong>
+          </article>
+        </section>
+
+        <div class="layout">
+          <section id="inventory" class="inventory-panel">
+            <div class="panel-toolbar">
+              <div>
+                <p class="eyebrow">Recherche</p>
+                <h2>Catalogue technique</h2>
+              </div>
+              <button id="clearSearch" type="button" class="ghost">Effacer</button>
+            </div>
+            <p id="permissionNotice" class="permission-notice hidden">Mode operator: accès lecture seule.</p>
+
+            <div class="search-row">
+              <input
+                id="modelSearch"
+                type="search"
+                placeholder="Rechercher un modèle, fabricant, code-barres ou numéro de pièce"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="inventory-status">
+              <div id="resultsSummary" class="summary"></div>
+            </div>
+            <div id="results" class="results"></div>
+          </section>
+
+          <aside class="editor-panel admin-only">
+            <div class="panel-toolbar">
+              <div>
+                <p class="eyebrow">Fiche modèle</p>
+                <h2>Ajouter ou modifier</h2>
+              </div>
+            </div>
+
+            <form id="boilerForm">
+              <div class="field-grid">
+                <label>
+                  Fabricant
+                  <input id="manufacturer" name="manufacturer" required placeholder="Vaillant" />
+                </label>
+                <label>
+                  Modèle
+                  <input id="model" name="model" required placeholder="ecoTEC plus 831" />
+                </label>
+              </div>
+
+              <label>
+                Code-barres du modèle
+                <input id="barcode" name="barcode" placeholder="Ex: 1234567890123" inputmode="numeric" />
+              </label>
+              <label>
+                Lien fiche fournisseur
+                <input id="specUrl" name="specUrl" type="url" placeholder="https://..." />
+              </label>
+              <label>
+                Notes
+                <textarea id="notes" name="notes" rows="3" placeholder="Chaudière gaz mixte, notes d'installation, plage de numéros de série"></textarea>
+              </label>
+
+              <div class="parts-header">
+                <span>Pièces</span>
+                <button id="addPart" type="button" class="ghost">Ajouter une pièce</button>
+              </div>
+              <div id="partsList" class="parts-list"></div>
+
+              <div class="form-actions">
+                <button id="cancelEdit" type="button" class="ghost hidden">Annuler</button>
+                <button id="saveModel" type="submit" class="primary">Enregistrer le modèle</button>
+              </div>
+            </form>
+          </aside>
+        </div>
+
+        <section id="accountSettings" class="settings-panel admin-only">
+          <div class="panel-toolbar">
+            <div>
+              <p class="eyebrow">Administration</p>
+              <h2>Paramètres des comptes</h2>
+            </div>
+          </div>
+          <p class="settings-note">Les admins peuvent modifier les rôles. Un compte admin au minimum doit toujours rester actif.</p>
+          <div id="usersList" class="users-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="partRowTemplate">
+      <div class="part-row">
+        <input class="part-name" required placeholder="Nom de la pièce" />
+        <input class="part-number" required placeholder="Numéro de pièce" />
+        <input class="part-category" placeholder="Catégorie" />
+        <button type="button" class="icon-button remove-part" title="Supprimer la pièce">×</button>
+      </div>
+    </template>
+
+    <div id="scannerModal" class="scanner-modal hidden" role="dialog" aria-modal="true" aria-labelledby="scannerTitle">
+      <div class="scanner-box">
+        <div class="scanner-header">
+          <div>
+            <p class="eyebrow">Caméra</p>
+            <h2 id="scannerTitle">Scanner un code-barres</h2>
+          </div>
+          <button id="closeScanner" type="button" class="ghost">Fermer</button>
+        </div>
+        <div class="camera-frame">
+          <video id="cameraPreview" autoplay muted playsinline></video>
+          <div class="scan-line"></div>
+        </div>
+        <p id="scannerStatus" class="scanner-status">Placez le code-barres du modèle devant la caméra.</p>
+        <div class="manual-scan">
+          <input id="manualBarcode" placeholder="Ou saisir le code manuellement" />
+          <button id="manualScan" type="button" class="ghost">Rechercher</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
