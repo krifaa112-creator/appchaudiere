@@ -110,6 +110,7 @@ const elements = {
   saveModel: document.querySelector("#saveModel"),
   cancelEdit: document.querySelector("#cancelEdit"),
   search: document.querySelector("#modelSearch"),
+  submitSearch: document.querySelector("#submitSearch"),
   manufacturerFilter: document.querySelector("#manufacturerFilter"),
   sortMode: document.querySelector("#sortMode"),
   clearSearch: document.querySelector("#clearSearch"),
@@ -1465,9 +1466,17 @@ elements.form.addEventListener("submit", (event) => {
   renderResults();
 });
 
-elements.search.addEventListener("input", (event) => {
-  state.query = event.target.value.trim();
+function confirmSearch() {
+  state.query = elements.search.value.trim();
   renderResults();
+}
+
+elements.submitSearch.addEventListener("click", () => confirmSearch());
+
+elements.search.addEventListener("keydown", (event) => {
+  if (event.key !== "Enter") return;
+  event.preventDefault();
+  confirmSearch();
 });
 
 elements.clearSearch.addEventListener("click", () => {
