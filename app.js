@@ -771,24 +771,35 @@ function renderFilters() {
 
 function renderResults() {
   renderFilters();
-  const filtered = sortBoilers(state.boilers.filter((boiler) => matchesQuery(boiler, state.query) && matchesFilters(boiler)));
+  const hasSearch = Boolean(state.query.trim());
+  const filtered = hasSearch
+    ? sortBoilers(state.boilers.filter((boiler) => matchesQuery(boiler, state.query) && matchesFilters(boiler)))
+    : [];
   elements.results.replaceChildren();
   renderMetrics();
 
+  if (!hasSearch) {
+    elements.resultsSummary.textContent = `${state.boilers.length} mod?les disponibles`;
+    const empty = document.createElement("div");
+    empty.className = "empty-state";
+    empty.textContent = "Saisissez un nom de mod?le, une r?f?rence ou un num?ro de s?rie pour afficher les appareils.";
+    elements.results.append(empty);
+    return;
+  }
+
   elements.resultsSummary.textContent =
-    filtered.length === 1 ? "1 modèle de chaudière trouvé" : `${filtered.length} modèles de chaudière trouvés`;
+    filtered.length === 1 ? "1 mod?le de chaudi?re trouv?" : `${filtered.length} mod?les de chaudi?re trouv?s`;
 
   if (!filtered.length) {
     const empty = document.createElement("div");
     empty.className = "empty-state";
-    empty.textContent = "Aucun modèle de chaudière trouvé. Ajoutez-le à droite ou importez votre base.";
+    empty.textContent = "Aucun mod?le de chaudi?re trouv?. Ajoutez-le ? droite ou importez votre base.";
     elements.results.append(empty);
     return;
   }
 
   filtered.forEach((boiler) => elements.results.append(createBoilerCard(boiler)));
 }
-
 function renderMetrics() {
   const modelCount = state.boilers.length;
   const partCount = state.boilers.reduce((total, boiler) => total + (boiler.parts || []).length, 0);
