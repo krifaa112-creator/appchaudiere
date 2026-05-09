@@ -1,13 +1,13 @@
-const CACHE_NAME = "pieces-chaudieres-v35";
+const CACHE_NAME = "pieces-chaudieres-v36";
 const APP_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=35",
-  "./app.js?v=35",
-  "./saunier-duval-models.js?v=35",
-  "./saunier-duval-parts-by-model.js?v=35",
+  "./styles.css?v=36",
+  "./app.js?v=36",
+  "./saunier-duval-models.js?v=36",
+  "./saunier-duval-parts-by-model.js?v=36",
   "./piecesxpress-duomax-condens-f30-90-1-parts.js",
-  "./saunier-duval-exploded-views.js?v=35",
+  "./saunier-duval-exploded-views.js?v=36",
   "./manifest.webmanifest",
   "./assets/boiler-room-bg.png",
   "./assets/logo-egs.png",

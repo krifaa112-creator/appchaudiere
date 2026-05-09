@@ -164,7 +164,15 @@ function getUsers() {
       return defaultUsers;
     }
 
-    return normalizeUsers(users);
+    const normalized = normalizeUsers(users);
+    const hasDefaultUser = normalized.some(
+      (user) => user.email === defaultUsers[0].email || normalizeIdentifier(user.username || "") === defaultUsers[0].username
+    );
+    if (hasDefaultUser) return normalized;
+
+    const merged = [...normalized, ...defaultUsers];
+    saveUsers(merged);
+    return merged;
   } catch {
     saveUsers(defaultUsers);
     return defaultUsers;
