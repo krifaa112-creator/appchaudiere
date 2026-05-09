@@ -144,12 +144,30 @@ let scannerTimer = null;
 let scannerOcrActive = false;
 let currentUser = null;
 
+const defaultUsers = [
+  {
+    id: "default-admin-krifa",
+    username: "krifa",
+    email: "krifaa112@gmail.com",
+    role: "admin",
+    salt: "0296b3cc3fcd930485fded2d91153cc6",
+    passwordHash: "a2db63009bc3c16e620a60df31b749b787f84aad0ab6e7b1a2e258d586a4e009",
+    createdAt: "2026-05-09T00:00:00.000Z"
+  }
+];
+
 function getUsers() {
   try {
     const users = JSON.parse(localStorage.getItem(USERS_KEY)) || [];
+    if (!users.length) {
+      saveUsers(defaultUsers);
+      return defaultUsers;
+    }
+
     return normalizeUsers(users);
   } catch {
-    return [];
+    saveUsers(defaultUsers);
+    return defaultUsers;
   }
 }
 
