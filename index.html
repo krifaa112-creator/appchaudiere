@@ -11,7 +11,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css?v=42" />
+    <link rel="stylesheet" href="styles.css?v=43" />
   </head>
   <body>
     <section id="authScreen" class="auth-screen">
@@ -77,7 +77,7 @@
           <a class="nav-item active" href="#inventory">Inventaire</a>
           <a class="nav-item admin-only" href="#boilerForm">Ajouter modèle</a>
           <a class="nav-item admin-only" href="#accountSettings">Paramètres comptes</a>
-          <button id="openScanner" type="button" class="nav-item nav-button">Scanner plaque</button>
+          <button id="openScanner" type="button" class="nav-item nav-button scanner-alert">Scanner plaque</button>
         </nav>
 
         <div class="sidebar-card">
@@ -100,7 +100,7 @@
             <p class="eyebrow">Inventaire SAV</p>
             <h1>Bibliothèque de pièces chaudières</h1>
           </div>
-          <div class="actions">
+          <div class="actions hidden">
             <button id="quickBackup" type="button" class="primary">Backup rapide</button>
             <button id="exportJson" type="button">Exporter JSON</button>
             <button id="exportCsv" type="button">Exporter CSV</button>
@@ -284,10 +284,10 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-    <script src="saunier-duval-models.js?v=42"></script>
-    <script src="saunier-duval-parts-by-model.js?v=42"></script>
+    <script src="saunier-duval-models.js?v=43"></script>
+    <script src="saunier-duval-parts-by-model.js?v=43"></script>
     <script src="piecesxpress-duomax-condens-f30-90-1-parts.js"></script>
-    <script src="saunier-duval-exploded-views.js?v=42"></script>
-    <script src="app.js?v=42"></script>
+    <script src="saunier-duval-exploded-views.js?v=43"></script>
+    <script src="app.js?v=43"></script>
   </body>
 </html>

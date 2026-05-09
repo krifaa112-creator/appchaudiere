@@ -288,6 +288,20 @@ h2 {
   width: 100%;
 }
 
+.scanner-alert {
+  border-color: rgba(251, 113, 133, 0.5);
+  background: var(--danger-soft);
+  color: #fecdd3;
+  animation: guestPulse 1.35s ease-in-out infinite;
+}
+
+.scanner-alert:hover {
+  border-color: var(--danger);
+  background: rgba(251, 113, 133, 0.22);
+  box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.14);
+  animation-play-state: paused;
+}
+
 .sidebar-card {
   margin-top: auto;
   border: 1px solid var(--line);
