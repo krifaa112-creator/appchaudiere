@@ -83,6 +83,7 @@ const elements = {
   authScreen: document.querySelector("#authScreen"),
   showLogin: document.querySelector("#showLogin"),
   showSignup: document.querySelector("#showSignup"),
+  guestLogin: document.querySelector("#guestLogin"),
   loginForm: document.querySelector("#loginForm"),
   signupForm: document.querySelector("#signupForm"),
   loginIdentifier: document.querySelector("#loginIdentifier"),
@@ -259,6 +260,17 @@ function showApp(user) {
   applyPermissions();
   renderResults();
   renderUsersList();
+}
+
+function showGuestApp() {
+  localStorage.removeItem(SESSION_KEY);
+  showApp({
+    id: "guest-session",
+    username: "Invit?",
+    email: "",
+    role: "operator",
+    createdAt: new Date().toISOString()
+  });
 }
 
 function showAuth() {
@@ -1579,6 +1591,8 @@ elements.manualBarcode.addEventListener("keydown", (event) => {
 elements.showLogin.addEventListener("click", () => showAuthMode("login"));
 
 elements.showSignup.addEventListener("click", () => showAuthMode("signup"));
+
+elements.guestLogin.addEventListener("click", () => showGuestApp());
 
 elements.signupForm.addEventListener("submit", async (event) => {
   event.preventDefault();
