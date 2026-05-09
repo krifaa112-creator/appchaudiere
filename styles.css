@@ -160,6 +160,15 @@ h2 {
 .guest-login {
   width: 100%;
   margin-top: 12px;
+  border-color: rgba(251, 113, 133, 0.5);
+  background: var(--danger-soft);
+  color: #fecdd3;
+}
+
+.guest-login:hover {
+  border-color: var(--danger);
+  background: rgba(251, 113, 133, 0.22);
+  box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.14);
 }
 
 .auth-message {
