@@ -266,7 +266,7 @@ function showGuestApp() {
   localStorage.removeItem(SESSION_KEY);
   showApp({
     id: "guest-session",
-    username: "Invité",
+    username: "Invit\u00e9",
     email: "",
     role: "operator",
     createdAt: new Date().toISOString()
