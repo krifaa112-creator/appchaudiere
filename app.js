@@ -1,10 +1,10 @@
-const STORAGE_KEY = "boiler-parts-library-v1";
+const STORAGE_KEY = "boiler-parts-library-sparecheck-v5";
 const USERS_KEY = "boiler-core-users-v1";
 const SESSION_KEY = "boiler-core-session-v1";
-const INVENTORY_RESET_KEY = "boiler-core-inventory-reset-empty-v1";
+const INVENTORY_RESET_KEY = "boiler-core-inventory-reset-sparecheck-v5";
 const NOTES_CLEAR_KEY = "boiler-core-notes-cleared-v1";
-const SAUNIER_PARTS_IMPORT_KEY = "boiler-core-saunier-parts-import-v5";
-const DELETED_SEED_BOILERS_KEY = "boiler-core-deleted-seed-boilers-v1";
+const SAUNIER_PARTS_IMPORT_KEY = "boiler-core-saunier-parts-import-v10";
+const DELETED_SEED_BOILERS_KEY = "boiler-core-deleted-seed-boilers-sparecheck-v4";
 const EXPLODED_VIEW_URLS = Object.fromEntries(
   Object.entries({
     "ISOMAX CONDENS T 31 CS 1 SF": "https://www.dispart.fr/vues-eclatees#/machine/28150/?marque_nom=Saunier%20Duval",
@@ -435,16 +435,21 @@ function loadBoilers() {
 function getSaunierDuvalSeedData() {
   const models = Array.isArray(globalThis.SAUNIER_DUVAL_MODELS) ? globalThis.SAUNIER_DUVAL_MODELS : [];
 
-  return models.map((model) => ({
-    id: createId(),
-    manufacturer: "Saunier Duval",
-    model,
-    barcode: "",
-    specUrl: "",
-    explodedViewUrl: getDefaultExplodedViewUrl({ manufacturer: "Saunier Duval", model }),
-    notes: "",
-    parts: []
-  }));
+  return models.map((item) => {
+    const source = item && typeof item === "object" ? item : { model: String(item || "") };
+    const model = String(source.model || source.name || "");
+
+    return {
+      id: source.id ? `sparecheck-${source.id}` : createId(),
+      manufacturer: source.manufacturer || "Saunier Duval",
+      model,
+      barcode: String(source.barcode || ""),
+      specUrl: "",
+      explodedViewUrl: getDefaultExplodedViewUrl({ manufacturer: "Saunier Duval", model }),
+      notes: String(source.notes || ""),
+      parts: []
+    };
+  });
 }
 
 function normalizeModelKey(value) {
@@ -475,6 +480,21 @@ function getDefaultExplodedViewUrl(boiler) {
   return EXPLODED_VIEW_URLS[normalizeModelKey(boiler?.model)] || "";
 }
 
+function getLocalExplodedViews(boiler) {
+  const source =
+    globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS && typeof globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS === "object"
+      ? globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS
+      : {};
+  return source[boiler?.model] || source[String(boiler?.model || "").trim()] || [];
+}
+
+function getDocumentAssetUrl(blobId) {
+  if (!blobId) return "";
+  const inPackagedFolder = window.location.pathname.includes("/BoilerCore-EGS-ENERGIES/");
+  const prefix = inPackagedFolder ? "../" : "";
+  return `${prefix}assets/sparecheck-documents/${blobId}.webp`;
+}
+
 function getSaunierDuvalPartsByModel() {
   const source =
     globalThis.SAUNIER_DUVAL_PARTS_BY_MODEL && typeof globalThis.SAUNIER_DUVAL_PARTS_BY_MODEL === "object"
@@ -492,7 +512,15 @@ function getSaunierDuvalPartsByModel() {
         number: String(part.number || ""),
         dispart: String(part.dispart || ""),
         pex: String(part.pex || ""),
-        category: "Pièces Dispart"
+        category: String(part.category || part.source || "Catalogue Saunier Duval"),
+        position: String(part.position || ""),
+        component: String(part.component || ""),
+        componentId: String(part.componentId || ""),
+        documentId: String(part.documentId || ""),
+        description: String(part.description || ""),
+        ean: String(part.ean || ""),
+        replacedBy: String(part.replacedBy || ""),
+        source: String(part.source || "")
       }))
     );
   });
@@ -523,15 +551,11 @@ function mergeSeedBoilers(boilers) {
   });
   const merged = clearNotesOnce(mergeSaunierDuvalPartsOnce(normalizeBoilers([...normalized, ...missingSeeds])));
 
-  if (missingSeeds.length || merged.changed) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
-  }
-
   return merged;
 }
 
 function mergeSaunierDuvalPartsOnce(boilers) {
-  if (localStorage.getItem(SAUNIER_PARTS_IMPORT_KEY) || !saunierDuvalPartsByModel.size) return boilers;
+  if (!saunierDuvalPartsByModel.size) return boilers;
 
   let changed = false;
   const updated = boilers.map((boiler) => {
@@ -540,8 +564,9 @@ function mergeSaunierDuvalPartsOnce(boilers) {
     const seedParts = saunierDuvalPartsByModel.get(normalizeModelKey(boiler.model));
     if (!seedParts?.length) return boiler;
 
-    const existingNumbers = new Set((boiler.parts || []).map((part) => part.number.trim().toLowerCase()).filter(Boolean));
-    const missingParts = seedParts.filter((part) => !existingNumbers.has(part.number.trim().toLowerCase()));
+    const existingParts = boiler.parts || [];
+    const existingKeys = new Set(existingParts.map(getPartSyncKey));
+    const missingParts = seedParts.filter((part) => !existingKeys.has(getPartSyncKey(part)));
 
     if (!missingParts.length) return boiler;
     changed = true;
@@ -556,8 +581,21 @@ function mergeSaunierDuvalPartsOnce(boilers) {
   });
 
   updated.changed = changed;
-  localStorage.setItem(SAUNIER_PARTS_IMPORT_KEY, "done");
+  localStorage.setItem(SAUNIER_PARTS_IMPORT_KEY, `synced-${Date.now()}`);
   return updated;
+}
+
+function getPartSyncKey(part) {
+  return [
+    part.number,
+    part.component || part.category,
+    part.position,
+    part.description,
+    part.ean,
+    part.replacedBy
+  ]
+    .map((value) => String(value || "").trim().toLowerCase())
+    .join("|");
 }
 
 function clearNotesOnce(boilers) {
@@ -590,7 +628,15 @@ function normalizeBoilers(boilers) {
               number: String(part.number || ""),
               category: String(part.category || ""),
               dispart: String(part.dispart || ""),
-              pex: String(part.pex || "")
+              pex: String(part.pex || ""),
+              position: String(part.position || ""),
+              component: String(part.component || ""),
+              componentId: String(part.componentId || ""),
+              documentId: String(part.documentId || ""),
+              description: String(part.description || ""),
+              ean: String(part.ean || ""),
+              replacedBy: String(part.replacedBy || ""),
+              source: String(part.source || "")
             }))
         : []
     }));
@@ -643,7 +689,11 @@ function translateExampleData(boilers) {
 }
 
 function saveBoilers() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state.boilers));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state.boilers));
+  } catch (error) {
+    console.warn("Catalogue trop volumineux pour le stockage navigateur; utilisation en memoire uniquement.", error);
+  }
 }
 
 function addPartRow(part = {}) {
@@ -792,21 +842,21 @@ function renderResults() {
   renderMetrics();
 
   if (!hasSearch) {
-    elements.resultsSummary.textContent = `${state.boilers.length} mod?les disponibles`;
+    elements.resultsSummary.textContent = `${state.boilers.length} modèles disponibles`;
     const empty = document.createElement("div");
     empty.className = "empty-state";
-    empty.textContent = "Saisissez un nom de mod?le, une r?f?rence ou un num?ro de s?rie pour afficher les appareils.";
+    empty.textContent = "Saisissez un nom de modèle, une référence ou un numéro de série pour afficher les appareils.";
     elements.results.append(empty);
     return;
   }
 
   elements.resultsSummary.textContent =
-    filtered.length === 1 ? "1 mod?le de chaudi?re trouv?" : `${filtered.length} mod?les de chaudi?re trouv?s`;
+    filtered.length === 1 ? "1 modèle de chaudière trouvé" : `${filtered.length} modèles de chaudière trouvés`;
 
   if (!filtered.length) {
     const empty = document.createElement("div");
     empty.className = "empty-state";
-    empty.textContent = "Aucun mod?le de chaudi?re trouv?. Ajoutez-le ? droite ou importez votre base.";
+    empty.textContent = "Aucun modèle de chaudière trouvé. Ajoutez-le à droite ou importez votre base.";
     elements.results.append(empty);
     return;
   }
@@ -853,6 +903,7 @@ function createBoilerCard(boiler) {
   const explodedViewButton = document.createElement("button");
   const editButton = document.createElement("button");
   const deleteButton = document.createElement("button");
+  const localExplodedViews = getLocalExplodedViews(boiler);
 
   title.textContent = boiler.model;
   manufacturer.className = "manufacturer";
@@ -860,7 +911,7 @@ function createBoilerCard(boiler) {
   meta.className = "model-meta";
   meta.textContent = [
     boiler.barcode ? `Code-barres: ${boiler.barcode}` : "",
-    boiler.explodedViewUrl ? "Vue eclatee disponible" : ""
+    localExplodedViews.length ? `${localExplodedViews.length} vues \u00e9clat\u00e9es disponibles` : boiler.explodedViewUrl ? "Vue \u00e9clat\u00e9e disponible" : ""
   ]
     .filter(Boolean)
     .join(" · ");
@@ -879,8 +930,8 @@ function createBoilerCard(boiler) {
   detailButton.addEventListener("click", () => openDetail(boiler.id));
   explodedViewButton.className = "exploded-view-model";
   explodedViewButton.type = "button";
-  explodedViewButton.textContent = "Vue eclatee";
-  explodedViewButton.disabled = !boiler.explodedViewUrl;
+  explodedViewButton.textContent = localExplodedViews.length > 1 ? "Vues \u00e9clat\u00e9es" : "Vue \u00e9clat\u00e9e";
+  explodedViewButton.disabled = !localExplodedViews.length && !boiler.explodedViewUrl;
   explodedViewButton.addEventListener("click", () => openExplodedView(boiler));
   editButton.className = "edit-model";
   editButton.type = "button";
@@ -985,12 +1036,20 @@ function createDetailPartRow(part) {
   copyButton.className = "copy-reference";
   copyButton.type = "button";
   copyButton.textContent = part.number;
-  copyButton.title = "Copier la reference";
+  copyButton.title = "Copier la référence";
   copyButton.addEventListener("click", () => copyPartReference(copyButton, part.number));
 
   row.children[0].textContent = part.name;
   row.children[1].append(copyButton);
-  row.children[2].textContent = getSourceLabel(getPartSource(part));
+  if (part.position || part.component || part.ean || part.replacedBy || part.description) {
+    const details = document.createElement("small");
+    details.className = "dispart-ref";
+    details.textContent = [part.position ? `Pos. ${part.position}` : "", part.component, part.ean ? `EAN ${part.ean}` : "", part.replacedBy ? `Remplacée par ${part.replacedBy}` : "", part.description]
+      .filter(Boolean)
+      .join(" · ");
+    row.children[1].append(details);
+  }
+  row.children[2].textContent = part.source || getSourceLabel(getPartSource(part));
   return row;
 }
 
@@ -1011,7 +1070,7 @@ async function copyPartReference(button, reference) {
       fallbackCopyText(value);
     }
 
-    button.textContent = "Copie";
+    button.textContent = "Copié";
     button.classList.add("copied");
     window.setTimeout(() => {
       button.textContent = previousText;
@@ -1036,7 +1095,19 @@ function fallbackCopyText(value) {
 function matchesPartDetail(part, query) {
   if (!query) return true;
 
-  const sourceText = [part.name, part.number, part.category, getSourceLabel(getPartSource(part)), part.dispart, part.pex]
+  const sourceText = [
+    part.name,
+    part.number,
+    part.category,
+    part.component,
+    part.position,
+    part.description,
+    part.ean,
+    part.replacedBy,
+    getSourceLabel(getPartSource(part)),
+    part.dispart,
+    part.pex
+  ]
     .join(" ")
     .toLowerCase();
 
@@ -1055,7 +1126,7 @@ function renderDetailParts(tbody, parts, query) {
 
   const empty = document.createElement("tr");
   empty.innerHTML = `<td colspan="3" class="empty-parts"></td>`;
-  empty.children[0].textContent = parts.length ? "Aucune piece ne correspond a la recherche." : "PiÃ¨ces Ã  complÃ©ter";
+  empty.children[0].textContent = parts.length ? "Aucune pièce ne correspond à la recherche." : "Pièces à compléter";
   tbody.append(empty);
 }
 
@@ -1071,16 +1142,30 @@ function openDetail(id) {
   summary.append(createBadge(getStatusLabel(getBoilerStatus(boiler)), getBoilerStatus(boiler)));
   getBoilerSources(boiler).forEach((source) => summary.append(createBadge(getSourceLabel(source), source)));
 
+  const detailActions = document.createElement("div");
+  detailActions.className = "detail-actions";
+
   const stats = document.createElement("p");
   stats.className = "detail-stat";
   stats.textContent = `${boiler.parts.length} pièce${boiler.parts.length > 1 ? "s" : ""} référencée${boiler.parts.length > 1 ? "s" : ""}`;
+  detailActions.append(stats);
+
+  const views = getLocalExplodedViews(boiler);
+  if (views.length || boiler.explodedViewUrl) {
+    const explodedButton = document.createElement("button");
+    explodedButton.type = "button";
+    explodedButton.className = "detail-exploded-link";
+    explodedButton.textContent = views.length > 1 ? `Voir ${views.length} vues éclatées` : "Voir la vue éclatée";
+    explodedButton.addEventListener("click", () => openExplodedView(boiler));
+    detailActions.append(explodedButton);
+  }
 
   const searchLabel = document.createElement("label");
   searchLabel.className = "detail-search";
-  searchLabel.textContent = "Recherche pieces";
+  searchLabel.textContent = "Recherche pièces";
   const searchInput = document.createElement("input");
   searchInput.type = "search";
-  searchInput.placeholder = "Nom, reference, source, code...";
+  searchInput.placeholder = "Nom, référence, source, code...";
   searchInput.autocomplete = "off";
   searchLabel.append(searchInput);
 
@@ -1102,7 +1187,7 @@ function openDetail(id) {
     renderDetailParts(tbody, boiler.parts, event.target.value.trim());
   });
 
-  elements.detailContent.append(summary, stats, searchLabel, table);
+  elements.detailContent.append(summary, detailActions, searchLabel, table);
   elements.detailModal.classList.remove("hidden");
   searchInput.focus();
 }
@@ -1139,13 +1224,166 @@ function editBoiler(id) {
 }
 
 function openExplodedView(boiler) {
-  const explodedViewUrl = boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler);
-  if (!explodedViewUrl) {
-    alert("Aucun lien de vue eclatee n'est enregistre pour ce modele.");
+  const views = getLocalExplodedViews(boiler);
+  if (!views.length) {
+    const explodedViewUrl = boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler);
+    if (!explodedViewUrl) {
+      alert("Aucun lien de vue \u00e9clat\u00e9e n'est enregistr\u00e9 pour ce mod\u00e8le.");
+      return;
+    }
+
+    window.open(explodedViewUrl, "_blank", "noopener");
     return;
   }
 
-  window.open(explodedViewUrl, "_blank", "noopener");
+  elements.detailTitle.textContent = `Vues \u00e9clat\u00e9es - ${boiler.model}`;
+  elements.detailContent.replaceChildren();
+
+  const viewer = document.createElement("div");
+  viewer.className = "exploded-viewer";
+
+  const list = document.createElement("div");
+  list.className = "exploded-view-list";
+
+  const stage = document.createElement("div");
+  stage.className = "exploded-view-stage";
+
+  const imageWrap = document.createElement("div");
+  imageWrap.className = "exploded-image-wrap";
+
+  const image = document.createElement("img");
+  image.className = "exploded-image";
+  image.alt = "";
+
+  const hotspotLayer = document.createElement("div");
+  hotspotLayer.className = "hotspot-layer";
+  imageWrap.append(image, hotspotLayer);
+
+  const title = document.createElement("h3");
+  const meta = document.createElement("p");
+  meta.className = "exploded-view-meta";
+  const referencePanel = document.createElement("div");
+  referencePanel.className = "exploded-reference-panel";
+  stage.append(title, meta, imageWrap, referencePanel);
+
+  function renderView(view, index) {
+    [...list.querySelectorAll("button")].forEach((button, buttonIndex) => {
+      button.classList.toggle("active", buttonIndex === index);
+    });
+    title.textContent = view.name || "Vue \u00e9clat\u00e9e";
+    meta.textContent = [
+      view.displayType ? `Type: ${view.displayType}` : "",
+      view.documentId ? `Document: ${view.documentId}` : "",
+      view.hotpoints?.length ? `${view.hotpoints.length} rep\u00e8res pi\u00e8ces` : ""
+    ]
+      .filter(Boolean)
+      .join(" · ");
+    image.src = getDocumentAssetUrl(view.imageBlobId);
+    image.alt = `${boiler.model} - ${view.name || "Vue \u00e9clat\u00e9e"}`;
+    hotspotLayer.replaceChildren();
+    referencePanel.replaceChildren();
+    (view.hotpoints || []).slice(0, 220).forEach((hotpoint) => {
+      const marker = document.createElement("button");
+      marker.className = "hotspot-marker";
+      marker.type = "button";
+      marker.textContent = hotpoint.content;
+      marker.title = hotpoint.content;
+      marker.style.left = `${hotpoint.x * 100}%`;
+      marker.style.top = `${hotpoint.y * 100}%`;
+      marker.style.width = `${Math.max(hotpoint.w * 100, 2.4)}%`;
+      marker.style.height = `${Math.max(hotpoint.h * 100, 2.4)}%`;
+      marker.addEventListener("click", async () => {
+        await copyHotpointReference(marker, hotpoint.content);
+      });
+      hotspotLayer.append(marker);
+    });
+
+    const references = getExplodedViewReferences(boiler, view);
+    if (references.length) {
+      const referenceTitle = document.createElement("h4");
+      referenceTitle.textContent = "R\u00e9f\u00e9rences de cette vue";
+      const referenceGrid = document.createElement("div");
+      referenceGrid.className = "exploded-reference-grid";
+      references.forEach((reference) => {
+        const refButton = document.createElement("button");
+        refButton.type = "button";
+        refButton.className = "exploded-reference-button";
+        refButton.textContent = reference.number;
+        refButton.title = reference.name ? `${reference.number} - ${reference.name}` : reference.number;
+        refButton.addEventListener("click", async () => {
+          await copyHotpointReference(refButton, reference.number);
+        });
+        referenceGrid.append(refButton);
+      });
+      referencePanel.append(referenceTitle, referenceGrid);
+    }
+  }
+
+  views.forEach((view, index) => {
+    const item = document.createElement("button");
+    item.type = "button";
+    item.className = "exploded-view-item";
+    const thumb = document.createElement("img");
+    thumb.src = getDocumentAssetUrl(view.thumbnailBlobId || view.imageBlobId);
+    thumb.alt = "";
+    const label = document.createElement("span");
+    label.textContent = view.name || `Vue ${index + 1}`;
+    item.append(thumb, label);
+    item.addEventListener("click", () => renderView(view, index));
+    list.append(item);
+  });
+
+  viewer.append(list, stage);
+  elements.detailContent.append(viewer);
+  elements.detailModal.classList.remove("hidden");
+  renderView(views[0], 0);
+}
+
+function getExplodedViewReferences(boiler, view) {
+  const references = new Map();
+  (view.hotpoints || []).forEach((hotpoint) => {
+    const number = String(hotpoint.content || "").trim();
+    if (number) references.set(number.toLowerCase(), { number, name: "" });
+  });
+  (boiler.parts || [])
+    .filter((part) => {
+      const sameDocument = view.documentId && part.documentId === view.documentId;
+      const sameComponent = view.componentId && part.componentId === view.componentId;
+      const sameComponentName = view.name && part.component === view.name;
+      return sameDocument || sameComponent || sameComponentName;
+    })
+    .forEach((part) => {
+      const number = String(part.number || "").trim();
+      if (!number) return;
+      references.set(number.toLowerCase(), { number, name: part.name || "" });
+    });
+  return [...references.values()].sort((a, b) => a.number.localeCompare(b.number, "fr", { numeric: true }));
+}
+
+async function copyHotpointReference(button, reference) {
+  const value = String(reference || "").trim();
+  if (!value) return;
+
+  const previousText = button.textContent;
+  try {
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(value);
+      } catch {
+        fallbackCopyText(value);
+      }
+    } else {
+      fallbackCopyText(value);
+    }
+    button.textContent = "Copié";
+    button.classList.add("copied");
+    window.setTimeout(() => {
+      button.textContent = previousText;
+      button.classList.remove("copied");
+    }, 900);
+  } catch {
+    button.textContent = previousText;
+  }
 }
 
 function normalizeScanValue(value) {
@@ -1246,7 +1484,7 @@ async function scanPlateText() {
 
   const canvas = getScannerFrameCanvas();
   if (!canvas) {
-    elements.scannerStatus.textContent = "Image caméra pas encore prête. Réessayez dans une seconde.";
+    elements.scannerStatus.textContent = "Image caméra pas encore prÃªte. Réessayez dans une seconde.";
     return;
   }
 
@@ -1375,7 +1613,7 @@ function download(filename, content, type) {
 
 function toCsv() {
   const rows = [
-    ["Fabricant", "Modele", "Code-barres", "Lien vue eclatee", "Notes", "Nom de la piece", "Numero de piece", "Categorie", "Ref. Dispart", "Code PEX"]
+    ["Fabricant", "Modèle", "Code-barres", "Lien vue éclatée", "Notes", "Nom de la pièce", "Numéro de pièce", "Catégorie", "Ref. Dispart", "Code PEX"]
   ];
   state.boilers.forEach((boiler) => {
     if (!boiler.parts.length) {
@@ -1461,7 +1699,7 @@ elements.form.addEventListener("submit", (event) => {
   }
 
   if (hasDuplicatePartNumbers(parts)) {
-    alert("Un même numéro de pièce est présent plusieurs fois dans cette fiche.");
+    alert("Un mÃªme numéro de pièce est présent plusieurs fois dans cette fiche.");
     return;
   }
 
@@ -1555,7 +1793,7 @@ elements.importJson.addEventListener("change", async (event) => {
     saveBoilers();
     renderResults();
   } catch {
-    alert("Ce fichier JSON n'a pas pu être importé.");
+    alert("Ce fichier JSON n'a pas pu Ãªtre importé.");
   } finally {
     event.target.value = "";
   }
@@ -1677,3 +1915,8 @@ try {
 if ("serviceWorker" in navigator && window.location.protocol !== "file:") {
   navigator.serviceWorker.register("./service-worker.js");
 }
+
+
+
+
+
