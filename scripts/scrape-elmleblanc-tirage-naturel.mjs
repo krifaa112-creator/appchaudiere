@@ -295,7 +295,11 @@ async function main() {
 
   for (let i = 0; i < sourceModels.length; i++) {
     const source = sourceModels[i];
-    const productUrl = `${BASE}/Product?Id=${source.Id}`;
+    const modelId = Number(source.Id) < 0 ? `ref-${source.Reference}` : String(source.Id);
+    const hasProductTree = Number(source.Id) >= 0;
+    const productUrl = hasProductTree
+      ? `${BASE}/Product?Id=${source.Id}`
+      : `${BASE}/Search/Details?Id=-1&Reference=${encodeURIComponent(source.Reference)}`;
     const treeUrl = `${BASE}/Product/Tree?Id=${source.Id}`;
     const documentUrl = `${BASE}/Product/Document?reference=${encodeURIComponent(source.Reference)}`;
 
@@ -303,21 +307,30 @@ async function main() {
 
     const [productHtml, treeHtml, documentHtml] = await Promise.all([
       fetchText(productUrl),
-      fetchText(treeUrl),
+      hasProductTree ? fetchText(treeUrl) : Promise.resolve(""),
       fetchText(documentUrl),
     ]);
 
-    await fs.writeFile(path.join(RAW_DIR, `${source.Id}-product.html`), productHtml, "utf8");
-    await fs.writeFile(path.join(RAW_DIR, `${source.Id}-tree.html`), treeHtml, "utf8");
-    await fs.writeFile(path.join(RAW_DIR, `${source.Id}-documents.html`), documentHtml, "utf8");
+    await fs.writeFile(path.join(RAW_DIR, `${modelId}-product.html`), productHtml, "utf8");
+    await fs.writeFile(path.join(RAW_DIR, `${modelId}-tree.html`), treeHtml, "utf8");
+    await fs.writeFile(path.join(RAW_DIR, `${modelId}-documents.html`), documentHtml, "utf8");
 
-    const product = parseProductPage(productHtml);
+    const product = hasProductTree
+      ? parseProductPage(productHtml)
+      : {
+          productTitle: String(source.FamilyName || ""),
+          fullDesignation: `[${source.Reference}] ${parsePartDetails(productHtml).designation || source.DisplayName || ""}`.trim(),
+          mainDrawing: "",
+          mainDrawingUrl: "",
+          codeErrorReference: "",
+        };
     const tree = parseTree(treeHtml);
     const documents = parseDocuments(documentHtml);
     const partCount = tree.sections.reduce((sum, section) => sum + section.parts.length, 0);
 
     models.push({
-      id: String(source.Id),
+      id: modelId,
+      sourceId: String(source.Id),
       reference: source.Reference ?? "",
       displayName: source.DisplayName ?? "",
       familyName: source.FamilyName ?? "",
@@ -333,15 +346,16 @@ async function main() {
       documentCount: documents.length,
     });
 
-    partsByModel[String(source.Id)] = {
-      modelId: String(source.Id),
+    partsByModel[modelId] = {
+      modelId,
+      sourceId: String(source.Id),
       reference: source.Reference ?? "",
       displayName: source.DisplayName ?? "",
       familyName: source.FamilyName ?? "",
       sections: tree.sections,
     };
-    explodedViews[String(source.Id)] = tree.views;
-    documentsByModel[String(source.Id)] = documents;
+    explodedViews[modelId] = tree.views;
+    documentsByModel[modelId] = documents;
 
     await sleep(150);
   }
@@ -385,4 +399,10 @@ async function main() {
   await writeJs(`${SLUG}-documents-by-model.js`, `${variablePrefix}_DOCUMENTS_BY_MODEL`, documentsByModel, header);
   await writeJs(`${SLUG}-part-details.js`, `${variablePrefix}_PART_DETAILS`, partDetailsByReference, header);
 
-  console.log(JSON.string
+  console.log(JSON.stringify(metadata, null, 2));
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

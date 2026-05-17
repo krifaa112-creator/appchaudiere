@@ -1,0 +1,1580 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="application-version" content="0.22.0.0">
+    <meta name="keywords" content="elm leblanc, elm.leblanc, Bosch e-shop, Catalogue intéractif, vues éclatées, documentations technique, Commande en ligne, eshop, vue éclatée, pièce détachée, elmLeCube, Le Cube, STABE, IPP, architectes, bailleurs sociaux, bureaux d’études, commerciaux, formateurs, installateurs, prescripteurs, Service Après-Vente elm.leblanc, services après-vente tiers, hors ligne, solutions, livraison express, livraison Click & Collect" />
+    <meta name="description" content="Une interface permettant un accès en ligne à l’ensemble des documentations techniques et vues éclatées des produits elm.leblanc et Bosch. Le Catalogue intéractif permet également de commander des pièces détachées." />
+
+    <title>elmLeCube.fr - Catalogue intéractif</title>
+
+    <script>
+        function init_datalayer() {
+            if (window.dataLayer === undefined) {
+                window.dataLayer = [];
+            }
+            window.dataLayer.push({
+                page: {
+                    pageInfo: {
+                        pageURL: 'https://www.catalogueinteractif.elmlecube.fr',
+                        pageName: 'elmLeCube.fr - Catalogue intéractif',
+                        language: 'fr',
+                        country: 'FR'
+                    }
+                }
+            });
+        }
+        privacySettingValue = window.localStorage.getItem("privacySettingValue");
+        if (typeof privacySettingValue != undefined && privacySettingValue == 2) {
+            if (window.dataLayer === undefined) {
+                window.dataLayer = [];
+            }
+            window.dataLayer.push({
+                page: {
+                    pageInfo: {
+                        pageURL: 'https://www.catalogueinteractif.elmlecube.fr',
+                        pageName: 'elmLeCube.fr - Catalogue intéractif',
+                        language: 'fr',
+                        country: 'FR'
+                    }
+                }
+            });
+        }
+    </script>
+
+    <!-- TMS Properties -->
+    <script>
+        function gtag() { dataLayer.push(arguments); }
+
+        privacySettingValue = window.localStorage.getItem("privacySettingValue");
+
+        if (typeof privacySettingValue != undefined && privacySettingValue == 2) {
+            var gascript = document.createElement('script');
+            gascript.async = true;
+            gascript.src = 'https://www.googletagmanager.com/gtag/js?id=G-TSVVNRQ0JW';
+            document.getElementsByTagName('head')[0].appendChild(gascript, document.getElementsByTagName('head')[0]);
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-TSVVNRQ0JW');
+        }
+        else if (typeof privacySettingValue != undefined && privacySettingValue == 0) {
+            window['ga-disable-G-TSVVNRQ0JW'] = true;
+            window["gid-disable-G-TSVVNRQ0JW"] = true;
+
+        }
+    </script>
+    <!-- End Google Analytics -->
+
+    <script>
+        function clearCookie(name, domain, path) {
+            try {
+                function Get_Cookie(check_name) {
+                    // first we'll split this cookie up into name/value pairs
+                    // note: document.cookie only returns name=value, not the other components
+                    var a_all_cookies = document.cookie.split(';'),
+                        a_temp_cookie = '',
+                        cookie_name = '',
+                        cookie_value = '',
+                        b_cookie_found = false;
+
+                    for (i = 0; i < a_all_cookies.length; i++) {
+                        // now we'll split apart each name=value pair
+                        a_temp_cookie = a_all_cookies[i].split('=');
+
+                        // and trim left/right whitespace while we're at it
+                        cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+
+                        // if the extracted name matches passed check_name
+                        if (cookie_name == check_name) {
+                            b_cookie_found = true;
+                            // we need to handle case where cookie has no value but exists (no = sign, that is):
+                            if (a_temp_cookie.length > 1) {
+                                cookie_value = unescape(a_temp_cookie[1].replace(/^\s+|\s+$/g, ''));
+                            }
+                            // note that in cases where cookie is initialized but no value, null is returned
+                            return cookie_value;
+                            break;
+                        }
+                        a_temp_cookie = null;
+                        cookie_name = '';
+                    }
+                    if (!b_cookie_found) {
+                        return null;
+                    }
+                }
+                if (Get_Cookie(name)) {
+                    var domain = domain || document.domain;
+                    var path = path || "/";
+                    document.cookie = name + "=; expires=" + new Date() + "; domain=" + domain + "; path=" + path;
+                }
+            }
+            catch (err) { }
+        };
+    </script>
+
+
+    <!-- Start cookie manager integration -->
+    <script type="module" src="https://dock.ui.bosch.tech/releases/4-latest/build/dock-privacy-settings.esm.js"></script>
+    <!-- NOTE: The "nomodule" script is only needed for very ol browsers, which are also not supported by DOCK anymore. Therefore, it can probably be omitted in most cases! -->
+    <script nomodule="" src="https://dock.ui.bosch.tech/releases/4-latest/build/dock-privacy-settings.js"></script>
+    <!-- Add own conditions -->
+    <script>
+        // example for callback usage
+        function BoschPrivacyCallback_OnUpdate(consent) {
+            if (consent.analysis) {
+                window.localStorage.setItem("privacySettingValue", '2');
+                init_ga();
+            } else {
+                remove_ga();
+                window.localStorage.setItem("privacySettingValue", '0');
+            }
+        }
+    </script>
+
+    <script>
+        function init_ga() {
+            init_datalayer();
+
+            window['ga-disable-G-TSVVNRQ0JW'] = false;
+            window["gid-disable-G-TSVVNRQ0JW"] = false;
+
+            var gascript = document.createElement('script');
+            gascript.async = true;
+            gascript.src = 'https://www.googletagmanager.com/gtag/js?id=G-TSVVNRQ0JW';
+            document.getElementsByTagName('head')[0].appendChild(gascript, document.getElementsByTagName('head')[0]);
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-TSVVNRQ0JW');
+        }
+
+        function remove_ga() {
+            window['ga-disable-G-TSVVNRQ0JW'] = true;
+            window["gid-disable-G-TSVVNRQ0JW"] = true;
+
+            clearCookie('_ga', 'elmlecube.fr', '/');
+            clearCookie('_gid', 'elmlecube.fr', '/');
+        }
+    </script>
+
+    <link href="/Content/css?v=09cyFuvtbXgSbT3H9bjArFzQKnPx5pn2UPwiVmA7y2E1" rel="stylesheet"/>
+
+    <link href="/Content/kendo/css?v=ahtoO4qsWCVSXvzer_GExrCVgfBtA58IKApDhIhPzt81" rel="stylesheet"/>
+
+
+    <script src="/bundles/jquery?v=lPtJzPZdyMfeA_3msz66mc1mSCeNrS_MfpTuA8rPIcA1"></script>
+
+    <script src="/bundles/kendo?v=Ky3JqFmW2AjRSl617vDRcmiv_TQqaFGWfQdqaKTfv9A1"></script>
+
+
+    <script src="/bundles/pdf?v=_ynkpawF-M0sRQ0zNFn4zY1BBd5xo5s1K_Cbr8WwGo01"></script>
+
+
+    <script src="/Scripts/kendo/cultures/kendo.culture.fr-FR.min.js"></script>
+
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <!-- 3D -->
+    <script src="/Scripts/p5.min.js"></script>
+    <script src="/Scripts/p5.easycam.min.js"></script>
+
+    <style>
+        #page-container {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        #barCodeScanner:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        #header div {
+            /*display: inline-block;*/
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+
+<body class="" style="height:100%; padding:0; margin:0; position:relative; ">
+
+    <dock-privacy-settings cookie-name="do-consent-catalogueinteractif"
+                           cookie-same-site="Lax"
+                           cookie-secure="true"
+                           consent-categories="analysis"
+                           consent-domain=".catalogueinteractif.elmlecube.fr"
+                           consent-path="/"
+                           consent-lifetime-accepted="365"
+                           consent-lifetime-declined="31"
+                           link-url-marketing="https://www.catalogueinteractif.elmlecube.fr/PolitiqueConfidentialite"
+                           link-url-comfort="https://www.catalogueinteractif.elmlecube.fr/PolitiqueConfidentialite"
+                           link-url-imprint="https://www.catalogueinteractif.elmlecube.fr/Imprint"
+                           link-url-policy="https://www.catalogueinteractif.elmlecube.fr/PolitiqueConfidentialite"
+                           locale="fr-fr"
+                           fallback-locale="en-gb">
+    </dock-privacy-settings>
+
+    <div id="page-container">
+        <div id="header" class="d-flex justify-content-between bg-white header cube-application">
+            <div class="icons left">
+                <a href="/Home/RedirectToCube" title="elmLeCube.fr"><img src="/Content/Images/header-cube.svg"></a>
+                <a href="/Home/Search" title="Accueil"><img src="/Content/Images/header-home.svg"></a>
+
+                
+                
+            </div>
+            <div class="align-self-center title" style="height :auto !important;">
+                Catalogue interactif
+            </div>
+            <div class="align-self-end icons">
+                <div class="d-flex justify-content-end">
+                        <a class="btn btn-register d-none d-sm-none d-md-block" href="/Login/Signup" tabindex="0">
+                            S'inscrire
+                        </a>
+                        <a class="btn btn-sign-in d-md-block" href="/Login/Signin" tabindex="0">
+                            <span class="optional">Se connecter</span>
+                        </a>
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <img src="/Content/Images/frise_1.svg" class="frise" />
+
+
+        <div id="bodyDiv" class="row m-0">
+            
+
+
+<style>
+    canvas {
+        width: 100% !important;
+        height: 100% !important;
+        /* background: #ccc;*/
+        /*        border: 1px solid #ccc;
+        margin: auto;*/
+    }
+
+    .menuSelectActive {
+        border-left: 3px solid #005691;
+    }
+
+    .inputSelectCustom {
+        color: #1f4e9d;
+        font-weight: bold;
+        border: 1px solid #1f4e9d !important;
+    }
+
+    #explodedViewPanel {
+        position: relative;
+    }
+
+    #vueEclateeContainer {
+        overflow: auto;
+        cursor: default;
+    }
+
+        #vueEclateeContainer.zoomed {
+            cursor: grab;
+        }
+
+            #vueEclateeContainer.zoomed.is-dragging {
+                cursor: grabbing;
+            }
+
+    #vueEclatee {
+        position: relative;
+        transform-origin: top left;
+    }
+
+    .zoom-toolbar {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin: 10px 40px 0 0;
+    }
+
+        .zoom-toolbar button {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+            .zoom-toolbar button:hover {
+                background: #f5f5f5;
+                transform: scale(1.05);
+            }
+
+    /* petit style spécifique reset */
+    #btnZoomReset {
+        font-size: 16px;
+    }
+</style>
+
+<div id="modalDetailPiece" class="modal fade" role="dialog" aria-labelledby="modalInformationsLabel" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-0 m-0">
+                <div id="informations" class="d-flex flex-column p-0 m-0">
+                    <div class="closeInformations d-flex flex-row-reverse"><img class="m-2" src="/Content/Images/close-black.svg" data-dismiss="modal" aria-label="Close" /></div>
+                    <div class="d-flex flex-row justify-content-center">
+                        <img class="img-responsive pt-1 pl-4 pr-4 pb-1" src="/Content/Images/info-i-black.svg" />
+                    </div>
+                    <div class="titre pb-4">Informations</div>
+                </div>
+
+                <div class="loader py-4" style="margin:auto;"></div>
+                <div style="height:2.5rem;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="responsiveLeftMenu" style="display: none" data-displayed="false">
+    <div class="d-flex flex-column">
+        <div class="d-flex flex-row-reverse">
+            <div id="closeResponsiveLeftMenu" class="m-3 hoverable">
+                <img src="/Content/Images/close-black.svg" />
+            </div>
+        </div>
+
+        <div id="productTitle" class="vcenter-child my-4" style="text-align:left !important; margin-left:65px;">
+            Ondea hydropower
+        </div>
+
+        <div id="listLeftMenu" class="d-flex flex-column pb-2">
+            <div class="d-flex flex-row menuSelect active px-5 py-3 menuSelectActive" page="explodedViewPage">
+                <div class="vcenter-child"><img src="/Content/Images/fullscreen-arrows-rotate-black.svg" /></div>
+                <div class="titleListLeftMenu light">Vues éclatées</div>
+            </div>
+            <div class="d-flex flex-row menuSelect px-5 py-3" page="documentation">
+                <div class="vcenter-child"><img src="/Content/Images/folder-open-black.svg" /></div>
+                <div class="titleListLeftMenu light">Documents</div>
+            </div>
+            <div class="d-flex flex-row menuSelect px-5 py-3" page="pageCodeError">
+                <div class="vcenter-child"><img src="/Content/Images/wrench-black.svg" /></div>
+                <div class="titleListLeftMenu light">Codes erreurs</div>
+            </div>
+
+            <div class="d-flex flex-row menuSelect px-5 py-3" page="pageOffline" onclick="addToCache()" bomid="62623888">
+                <div class="vcenter-child"><img src="/Content/images/wifi-off-disabled-light.svg" /></div>
+                <div class="titleListLeftMenu light">Hors connexion</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="scrollDiv" class="d-flex flex-column flex-lg-row col-12 m-0 p-0" style="max-height: 100%; overflow-x: hidden ">
+    <div id="leftMenuParent" class="d-flex flex-column col-lg-2 p-0 m-0">
+        <div id="leftMenu" class="d-flex flex-row flex-lg-column p-0">
+            <div class="d-flex flex-row mr-auto">
+                <div id="responsiveLeftMenuButton" class="d-inline d-lg-none vcenter-child mb-auto m-2 mr-4">
+                    <img class="hoverable" src="/Content/Images/list-view-mobile-black.svg">
+                </div>
+            </div>
+
+            <div id="productTitle" class="vcenter-child my-4" style="text-align:left !important; margin-left:15px;">
+                Ondea hydropower
+            </div>
+
+            <div id="informationsToCache" bomid="62623888" class="vcenter-child my-4" style="display:none;cursor:pointer;text-align:left !important; margin-left:15px;width: fit-content;">
+                <img class="check" src="/Content/Images/checkmark.svg" style="display:none;margin:auto;" />
+                <div class="load spinner-border spinner-border-sm text-primary mr-2" role="status" style="color:#005691 !important;display:none;">
+                    <span class="sr-only">Loading...</span>
+                </div>
+
+                <div style="margin-top:10px;color: #005691;" class="title vcenter-child pl-1"></div>
+            </div>
+
+            <div id="listLeftMenu" class="d-none d-lg-flex flex-column py-2">
+                <div class="d-flex flex-row menuSelect active menuSelectActive" page="explodedViewPage">
+                    <div><img src="/Content/Images/fullscreen-arrows-rotate-black.svg" /></div>
+                    <div class="titleListLeftMenu light">Vues éclatées</div>
+                </div>
+
+                <div class="d-flex flex-row menuSelect" page="documentation">
+                    <div><img src="/Content/Images/folder-open-black.svg" /></div>
+                    <div class="titleListLeftMenu light">Documents</div>
+                </div>
+
+                <div class="d-flex flex-row menuSelect" page="pageCodeError">
+                    <div class="vcenter-child"><img src="/Content/Images/wrench-black.svg" /></div>
+                    <div class="titleListLeftMenu light">Codes erreurs</div>
+                </div>
+
+
+                <div class="d-flex flex-row menuSelect" page="pageOffline" onclick="addToCache()" bomid="62623888">
+                    <div class="vcenter-child"><img src="/Content/images/wifi-off-disabled-light.svg" /></div>
+                    <div class="titleListLeftMenu light">Hors connexion</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="arborescence" class="d-block m-0 p-3" style="position:relative">
+
+            <div id="titreArborescence" class="light">Arborescence</div>
+
+            <div id="loaderArborescence" class="loader" style="margin:auto; position:relative; top:1.875em;"></div>
+        </div>
+    </div>
+
+    <!--EXPLODED VIEW PAGE -->
+    <div id="explodedViewPage" class="col-12 col-lg-10 m-0 p-0" style="position:relative;">
+
+        <div id="explodedViewDiv" class="d-flex flex-column col-12 px-5 py-3">
+            <div class="d-flex flex-row">
+                <div id="designation" style="margin-top:7px;">Désignation complète : &nbsp&nbsp&nbsp&nbsp&nbsp <b>[7701431633] Ondea hydropower Lh8 pvhyb</b></div>
+                <div></div>
+            </div>
+
+            <div id="responsiveInformationsContainer" class="d-lg-none d-none flex-column p-0 m-0 col-lg-6">
+                <div id="responsiveInformations" class="d-flex flex-column m-0">
+                    <div class="closeInformations d-flex">
+                        <div class="buttonTag" style="display:none"></div>
+                        <img class="m-2" src="/Content/Images/close-black.svg" data-dismiss="modal" aria-label="Close" />
+                    </div>
+                    <div class="d-flex flex-row justify-content-center">
+                        <img class="informations-image img-responsive" src="/Content/Images/info-i-black.svg" />
+                    </div>
+                    <div class="titre pb-4">Informations</div>
+                    <div class="detailledInformations"></div>
+                    <div id="loaderModal" class="loader py-4" style="margin:0 auto;"></div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column-reverse flex-lg-row">
+                <div id="descriptionPanel" class="d-flex flex-column col-12 col-lg-3">
+                    <div id="description" class="light">
+                        
+                    </div>
+                </div>
+
+                
+
+                <div id="explodedViewPanel" style="min-width:37.5rem" class="vcenter-child">
+
+                    <div class="zoom-toolbar">
+                        <button id="btnZoomIn">+</button>
+                        <button id="btnZoomOut">−</button>
+                        <button id="btnZoomReset" title="Reset">⟳</button>
+                    </div>
+
+                    <div id="vueEclateeContainer">
+                        <div id="vueEclatee" class="my-3 mx-5"></div>
+                    </div>
+
+                    <div class="ghostLoaderVueEclatee"></div>
+                    <div id="loaderVueEclatee" class="loader" style="margin:auto;"></div>
+                    <div class="ghostLoaderVueEclatee"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="informationsContainer" class="d-lg-none d-none flex-column p-0 m-0 col-lg-6">
+            <div id="informations" class="d-flex flex-column p-0 m-0">
+                <div class="closeInformations d-flex">
+                    <div class="buttonTag">9</div>
+                    <img class="m-2" src="/Content/Images/close-black.svg" data-dismiss="modal" aria-label="Close" />
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <img class="img-responsive pl-4 pr-4" src="/Content/Images/info-i-black.svg" />
+                </div>
+                <div class="titre pb-4">Informations</div>
+                <div class="detailledInformations"></div>
+                <div id="loaderModal" class="loader py-4" style="margin:0 auto;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="documentation" class="col-lg-10 m-0 p-0" style="position:relative;">
+        <div id="loaderDocuments" class="loader" style="margin:auto; position:relative; top:1.875rem;"></div>
+    </div>
+    <div id="pageCodeError" class="col-12 col-lg-10 m-0 p-0" style="position:relative;">
+            <div class="d-flex flex-column flex-lg-row py-4 m-0">
+                <div class="d-flex flex-column mr-auto">
+                    <div>Pas de codes erreurs pour cet appareil.</div>
+                </div>
+            </div>
+    </div>
+
+    <div id="page3DView" class="col-12 col-lg-10 m-0 p-0" style="position:relative;">
+        <div id="explodedViewDiv" class="d-flex flex-column col-12 py-3">
+            <div class="row col-md-12" style="margin: auto;">
+                <div class="row" style="margin:auto;">
+                    <div id="canvas-holder-boiler" style="margin-top:10px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+
+        <style type="text/css">
+    .top-footer {
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, #F9FBFC 0%, #E3EAF3 96%);
+        height: 5px;
+    }
+
+    .footer-elm {
+        padding: 20px;
+    }
+
+        .footer-elm a {
+            color: #ACACAC !important;
+        }
+
+    #footer .copyright {
+        position: absolute;
+        bottom: 0;
+        z-index: 1030;
+        right: 10px;
+        color: #ACACAC !important;
+        font: 13px BoschSansLight;
+        text-decoration: none;
+    }
+
+    #footer .copyrightXS {
+        bottom: 0;
+        z-index: 1030;
+        right: 10px;
+        color: #ACACAC !important;
+        font: 13px BoschSansLight;
+        text-decoration: none;
+    }
+
+    @media (min-width: 768px) {
+        #footer .copyright {
+            display: normal !important;
+        }
+
+        #footer .copyrightXS {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #footer .copyright {
+            display: none !important;
+        }
+
+        #footer .copyrightXS {
+            display: normal !important;
+        }
+    }
+
+    @media (min-width: 768px) {
+        #footer .copyrightXS {
+            display: none !important;
+        }
+
+        #footer .copyright {
+            display: normal !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #footer .copyrightXS {
+            display: normal !important;
+        }
+
+        #footer .copyright {
+            display: none !important;
+        }
+    }
+
+    #footer ul {
+        font: 13px BoschSansLight;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    #footer span {
+        font: 13px BoschSansBlack;
+    }
+
+    #footer {
+        font-style: normal !important;
+        font-family: 'BoschSansBlack', sans-serif;
+        font-size: 13px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: .5rem;
+        background-color: white;
+        padding-top: 10px;
+        color: #838383;
+    }
+
+    #privacySettingsButton:hover {
+        text-decoration: underline !important;
+    }
+</style>
+
+<div id="footer">
+    <div class="top-footer"></div>
+    <div class="container-fluid footer-elm">
+        <div class="row">
+            <div class="col-md-3 col-xs-12 col-sm-12" style="text-align: center;margin-top:5px;">
+                <span>elm.leblanc S.A.S.</span>
+            </div>
+
+            <div class="col-md-3 col-xs-6 col-sm-6" style="margin-top:5px;">
+                A propos
+                <ul style="margin-top:5px;">
+                    <li>
+                        <a href="/Imprint">Imprint</a>
+                    </li>
+                    <li>
+                        <a href="/MentionsLegales">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a href="/PolitiqueConfidentialite">Politique de confidentialité</a>
+                    </li>
+                    <li>
+                        <a href="/ConditionsGeneralesVente">Conditions générales de vente</a>
+                    </li>
+                    <li>
+                        <a id="privacySettingsButton" style="cursor:pointer;" onclick="dock.show()" class="privacy-settings-modal" title="Paramètres de cookies">Paramètres de cookies </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-xs-6 col-sm-6" style="margin-top:5px;">
+                Nos sites
+                <ul style="margin-top:5px;">
+                    <li>
+                        <a href="https://www.elmleblanc.fr" target="_blank">www.elmleblanc.fr</a>
+                    </li>
+                    <li>
+                        <a href="https://www.bosch-homecomfort.fr" target="_blank">www.bosch-homecomfort.fr</a>
+                    </li>
+                    <li>
+                        <a href="https://www.elmlecube.fr" target="_blank">www.elmlecube.fr</a>
+                    </li>
+                    <li>
+                        <a href="http://www.bosch-industrial.fr" target="_blank">www.bosch-industrial.fr</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <div style="margin-top:5px;"><a style="color: #838383 !important;" href="/Feedback">Votre avis nous intéresse !</a></div>
+                <div class="copyright">© elm.leblanc S.A.S. 2026, tous droits réservés</div>
+                <div class="copyrightXS">© elm.leblanc S.A.S. 2026, tous droits réservés</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <script src="/Scripts/umd/popper.min.js"></script>
+
+        <script src="/bundles/bootstrap?v=BFVH0e3kKoyN-JeEsYzWXS1Ls_KHBEY4qZPfN0psyZI1"></script>
+
+
+        
+    <script>
+
+        let zoomLevel = 1;
+        const zoomStep = 0.1;
+        const minZoom = 0.5;
+        const maxZoom = 2;
+
+        const vueEclatee = document.getElementById("vueEclatee");
+
+        function applyZoom() {
+            const vueEclatee = document.getElementById("vueEclatee");
+
+            if (vueEclatee) {
+                vueEclatee.style.transform = `scale(${zoomLevel})`;
+            }
+
+            updateCursor();
+        }
+
+        document.getElementById("btnZoomIn").addEventListener("click", () => {
+            zoomLevel = Math.min(zoomLevel + zoomStep, maxZoom);
+            applyZoom();
+        });
+
+        document.getElementById("btnZoomOut").addEventListener("click", () => {
+            zoomLevel = Math.max(zoomLevel - zoomStep, minZoom);
+            applyZoom();
+        });
+
+        document.getElementById("btnZoomReset").addEventListener("click", () => {
+            zoomLevel = 1;
+            applyZoom();
+
+            const container = document.getElementById("vueEclateeContainer");
+            container.scrollTop = 0;
+            container.scrollLeft = 0;
+        });
+
+        function resetZoom(resetScroll = true) {
+            zoomLevel = 1;
+            applyZoom()
+
+            if (resetScroll) {
+                const container = document.getElementById("vueEclateeContainer");
+                container.scrollTop = 0;
+                container.scrollLeft = 0;
+            }
+        }
+
+        function enableDragScroll() {
+            const container = document.getElementById("vueEclateeContainer");
+
+            let isDown = false;
+            let startX = 0;
+            let startY = 0;
+            let scrollLeft = 0;
+            let scrollTop = 0;
+
+            container.addEventListener("mousedown", function (e) {
+
+                if (zoomLevel <= 1) return;
+
+                isDown = true;
+                container.classList.add("is-dragging");
+
+                startX = e.pageX - container.offsetLeft;
+                startY = e.pageY - container.offsetTop;
+                scrollLeft = container.scrollLeft;
+                scrollTop = container.scrollTop;
+            });
+
+            container.addEventListener("mouseleave", function () {
+                isDown = false;
+                container.classList.remove("is-dragging");
+            });
+
+            container.addEventListener("mouseup", function () {
+                isDown = false;
+                container.classList.remove("is-dragging");
+            });
+
+            container.addEventListener("mousemove", function (e) {
+                if (!isDown) {
+                    return;
+                }
+
+                e.preventDefault();
+
+                const x = e.pageX - container.offsetLeft;
+                const y = e.pageY - container.offsetTop;
+
+                const walkX = x - startX;
+                const walkY = y - startY;
+
+                container.scrollLeft = scrollLeft - walkX;
+                container.scrollTop = scrollTop - walkY;
+            });
+        }
+
+        function updateCursor() {
+            const container = document.getElementById("vueEclateeContainer");
+
+            if (zoomLevel > 1) {
+                container.classList.add("zoomed");
+            } else {
+                container.classList.remove("zoomed");
+            }
+        }
+
+        enableDragScroll();
+
+        $(function () {
+
+            $("#userInformations").click(function () {
+                $("#userInformations").addClass("d-lg-none").removeClass("d-lg-flex");
+                $("#logoutDiv").addClass("d-flex").removeClass("d-none");
+            });
+
+            $("#closeLogoutDiv").click(function () {
+                $("#logoutDiv").addClass("d-none").removeClass("d-flex");
+                $("#userInformations").addClass("d-lg-flex").removeClass("d-lg-none");
+            });
+
+            $("#logoutClick").click(function () {
+                location.assign("/Home/Logout");
+            });
+
+            $("#IdErrorCode").bind("change", function () {
+                $("#codeError").html("");
+                $("#label-error-code").text("");
+                $("#codeError").append("<div id='loaderCodeErrors' class='loader' style='margin:auto; position:relative; top:1.875rem;'></div>");
+                callCodeErrors();
+            });
+
+            changeLabelErrorCode();
+        });
+
+        // goBack to the previous page, called when we click on the return arrow
+        function goBack() {
+            window.history.back();
+        }
+
+        // Check if the device is stored in the cache thanks to the cached GetDesignation method result. This result is stored in cache only when a device is stored in cache
+        $(function isInTheCache()
+        {
+            const RUNTIME = "runtime-v1";
+
+            caches.open(RUNTIME).then(cache => {
+                cache.keys().then(function (keys) {
+                    for (var i = 0; i < keys.length; i++) {
+                        if (keys[i].url.includes("/Offline/GetDesignation?id="+62623888)) {
+                            addedToCacheWithSuccess();
+                            break;
+                        }
+                    }
+                })
+            });
+        });
+
+        // Called when a device is successfully added to the cache, modifies the "add to cache" button
+        function addedToCacheWithSuccess()
+        {
+            //$("#addToCache .add").hide();
+            $("#informationsToCache .load").hide();
+            $("#informationsToCache .check").show();
+            $("#informationsToCache .title").html("Disponible hors-connexion");
+            $("#informationsToCache").removeClass("hoverable");
+        }
+
+        // When the "add to cache" button is clicked, we call a service worker method that will store this device into the cache
+        function addToCache()
+        {
+            $("#informationsToCache").show();
+
+            $("#informationsToCache").removeClass("hoverable");
+            $("#informationsToCache .check").hide();
+            $("#informationsToCache .load").show();
+            $("#informationsToCache .title").html("Ajout en cours - Cela peut prendre quelques minutes");
+
+            addDeviceToCache(parseInt($("#informationsToCache").attr("bomid"), 10));
+            addOfflinePageToCache();
+        }
+
+        // Close the responsiveSearchProductDiv when cross clicked
+        $(function () {
+            $("#closeResponsiveSearchBarProduct").click(function(){
+                $("#responsiveSearchBarProductDiv").parent().fadeOut(function(){
+                    $("#headerMenu").addClass("d-flex").removeClass("d-none");
+                });
+            });
+        });
+
+        // Open the responsiveSearchBarProductDiv when the glass icon is clicked
+        $(function () {
+            $("#searchBarIcon").click(function(){
+                $("#headerMenu").addClass("d-none").removeClass("d-flex");
+                $("#responsiveSearchBarProductDiv").parent().fadeIn();
+                $("#responsiveSearchBarProductInput").focus();
+            });
+        });
+
+    // Set the width of the dropdown items
+    $(function () {
+        $("#menuDropdown img").click(function () {
+            if ($(window).width() < 992) {
+                $("#menuDropdown ul.dropdown-menu").css("min-width", "");
+                $("#menuDropdown ul.dropdown-menu").css("width", "50vw");
+            }
+            else {
+                $("#menuDropdown ul.dropdown-menu").css("min-width", "25vw");
+                $("#menuDropdown ul.dropdown-menu").css("width", "");
+            }
+        });
+    });
+
+    $(function () {
+        $(window).resize(function () {
+            if ($(window).width() < 992)
+            {
+                $("#menuDropdown ul.dropdown-menu").css("min-width", "");
+                $("#menuDropdown ul.dropdown-menu").css("width", "50vw");
+            }
+            else
+            {
+                $("#menuDropdown ul.dropdown-menu").css("min-width", "25vw");
+                $("#menuDropdown ul.dropdown-menu").css("width", "");
+            }
+        });
+    });
+
+    // This is the default width that the exploded view will have
+    var defaultExplodedViewWidth = 600;
+
+    // Minimum font-size of the buttons in the exploded views
+        var minimumCharacterHeight = 11;
+
+    // Function converting pixels into rem
+    function rem(pixel)
+    {
+        var defaultRemValue = parseInt($("body").css("font-size"),10); //In pixel (important)
+        return parseFloat(pixel)/defaultRemValue;
+    }
+
+    // This function is used to convert a PDF file into an image and displays this image in a canvas on the web page
+
+    function loadImage(url) {
+        resetZoom(true);
+
+        // Hide the exploded view and show the loader, keep the previous height to vertically center the loader
+        var heightVueEclatee = $("#vueEclatee").height();
+        var widthVueEclatee = $("#vueEclatee").width();
+        $("#loaderVueEclatee").parent().css("min-height", heightVueEclatee);
+        $("#loaderVueEclatee").parent().css("min-width", widthVueEclatee);
+        $("#vueEclatee").hide();
+        $("#vueEclatee").html("");
+        $("#vueEclatee").hide();
+        $("#vueEclatee").html("");
+        $("#loaderVueEclatee").show();
+
+        var pages = [], heights = [], width = 0, height = 0, currentPage = 1;
+
+        // Change this value to manage the clearness of the exploded view;
+        var scale = 2.5;
+
+        function drawImg() {
+            var canvas = document.createElement('canvas'), ctx = canvas.getContext('2d');
+            canvas.width = width;
+            canvas.height = height;
+
+            for (var i = 0; i < pages.length; i++)
+                ctx.putImageData(pages[i], 0, heights[i]);
+
+            document.getElementById("vueEclatee").appendChild(canvas);
+            canvas.id = "imageVueEclatee";
+
+            callExplodedView(url);
+        }
+
+        PDFJS.disableWorker = true; // due to CORS
+        PDFJS.getDocument(url).then(function (pdf) {
+
+            getPage();
+
+            function getPage() {
+
+                pdf.getPage(currentPage).then(function (page) {
+                    var viewport = page.getViewport(scale);
+                    var canvas = document.createElement('canvas'), ctx = canvas.getContext('2d');
+                    var renderContext = { canvasContext: ctx, viewport: viewport };
+
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    page.render(renderContext).then(function () {
+
+                        pages.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+
+                        heights.push(height);
+                        height += canvas.height;
+
+                        if (width < canvas.width) width = canvas.width;
+
+                        if (currentPage < pdf.numPages) {
+                            currentPage++;
+                            getPage();
+                        }
+                        else {
+                            drawImg();
+                        }
+
+                    });
+                });
+            }
+        });
+    }
+
+    // This function calls the controller method ExplodedView which will return the button's position on the exploded view
+
+        function callExplodedView(link) {
+
+        $.ajax({
+            type: "GET",
+            cache: true,
+            url: "/Product/ExplodedView?url="+link+"&estAncien="+"False",
+            dataType: "html",
+            beforeSend: function(){
+                // Hide the exploded view and show the loader, keep the previous height to vertically center the loader
+                var heightVueEclatee = $("#vueEclatee").height();
+                var widthVueEclatee = $("#vueEclatee").width();
+                var currentHeight = $("#loaderVueEclatee").parent().height();
+                $("#loaderVueEclatee").parent().css("min-height", Math.min(heightVueEclatee, currentHeight));
+                $("#loaderVueEclatee").parent().css("min-width", widthVueEclatee);
+                $("#vueEclatee").hide();
+                $("#loaderVueEclatee").show();
+            },
+            complete: function () {
+                // Hide the loader, show the exploded view
+                $(".ghostLoaderVueEclatee").hide();
+                $("#loaderVueEclatee").hide();
+                $("#loaderVueEclatee").parent().css("height", "");
+                $("#vueEclatee").show();
+            },
+            success: function (code_html, statut) {
+
+                // Append the buttons to the previously existing canvas containing the exploded view image
+                $("#vueEclatee").append(code_html);
+
+                //Place the buttons on the exploded view, uses the percentages to be sure the button are placed correctly
+                $("#vueEclatee button").each(function () {
+                    var myLeft = $(this).attr("left").replace("," , ".");
+                    var myTop = $(this).attr("top").replace("," , ".");
+                    $(this).css("left",myLeft + "%");
+                    $(this).css("top", myTop + "%");
+                });
+
+                // Responsive size of the exploded view
+                if ($(window).width() < 992)
+                {
+                    //Remove padding from elements
+                    $("#explodedViewDiv").removeClass("px-5");
+                    $("#explodedViewDiv #designation").addClass("px-3");
+
+                    // The height of the exploded view is calculated in function of the ratio width/height of the pdf file transmitted to the canvas element
+                    var myWidth = $(window).width() - 100;
+                    $("#vueEclatee").css("width", rem(myWidth) + "rem");
+                    $("#vueEclatee").css("height", rem(myWidth * $("#imageVueEclatee").attr("height").replace(",",".") / $("#imageVueEclatee").attr("width") ) +"rem");
+
+                    //Responsive size of buttons
+                    var characterHeight = parseInt($("#vueEclatee button").first().attr("characterHeight"), 10);
+                    var newCharacterHeight = Math.round(characterHeight * myWidth / parseFloat(defaultExplodedViewWidth));
+                    $("#vueEclatee button").css("font-size", rem(Math.max(newCharacterHeight,minimumCharacterHeight))+"rem");
+                }
+                else
+                {
+                    //Add padding from elements
+                    $("#explodedViewDiv").addClass("px-5");
+                    $("#explodedViewDiv #designation").removeClass("px-3");
+
+                    // The height of the exploded view is calculated in function of the ratio width/height of the pdf file transmitted to the canvas element
+                    $("#vueEclatee").css("width",rem(defaultExplodedViewWidth)+"rem");
+                    $("#vueEclatee").css("height", rem( defaultExplodedViewWidth * $("#imageVueEclatee").attr("height").replace(",",".") / $("#imageVueEclatee").attr("width") ) +"rem");
+
+                    // Reset the size of the buttons as default
+                    var characterHeight = parseInt($("#vueEclatee button").first().attr("characterHeight"), 10);
+                    $("#vueEclatee button").css("font-size", rem(Math.max(characterHeight+2,minimumCharacterHeight))+"rem");
+                }
+
+                $("#imageVueEclatee").css("width","100%");
+                $("#imageVueEclatee").css("height","100%");
+            }
+        });
+    }
+
+    // This function calls the controller method Tree in order to collect all the sons
+
+    function callArborescence(){
+        $.ajax({
+            type: "GET",
+            cache: true,
+            url: "/Product/Tree?Id="+62623888,
+            dataType: "html",
+            beforeSend: function(){
+                // Show loader, set a default height to replace the loader
+                $("#arborescence").css("height","12.5rem");
+                $("#loaderArborescence").show();
+            },
+            complete: function(){
+                // Hide loader, reset height to default
+                $("#loaderArborescence").hide();
+                $("#arborescence").css("height","");
+            },
+            success: function (code_html, statut) {
+                // Put the arborescence in the right div
+                $("#arborescence").html(code_html);
+                loadImage("https://www.elmleblanc-services.fr/Catalogue/drawings/"+"6720902505.AA.pdf");
+            }
+        });
+    }
+
+    // This function calls the controller method Document to get the documents concerning a particular device
+
+    function callDocuments(){
+        $.ajax({
+            type: "GET",
+            url: "/Product/Document?reference=" + '7701431633',
+            dataType: "html",
+            beforeSend: function(){
+                $("#loaderDocuments").show();
+            },
+            complete: function(){
+                $("#loaderDocuments").hide();
+            },
+            success: function (code_html, statut) {
+                $("#documentation").html(code_html);
+            }
+        });
+        }
+
+    // This function calls the controller method Document to get the documents concerning a particular device
+    function callCodeErrors() {
+        var idCode = $("#IdErrorCode").val();
+        if (idCode != undefined) {
+            $.ajax({
+                type: "GET",
+                url: "/Product/CodeError?Reference=&IdCode=" + idCode + "&IdBomParent=62623888",
+                dataType: "html",
+                beforeSend: function () {
+                    $("#loaderCodeErrors").show();
+                },
+                complete: function () {
+                    $("#loaderCodeErrors").hide();
+                },
+                success: function (code_html, statut) {
+                    $("#codeError").html(code_html);
+                    changeLabelErrorCode();
+                }
+            });
+        }
+    }
+
+    function changeLabelErrorCode(){
+        var idCode = $("#IdErrorCode").val();
+
+        if (idCode !== undefined)
+        {
+            $.ajax({
+                type: "GET",
+                url: "/Product/GetLabelErrorCode?IdCode=" + idCode,
+                contentType: "application/json",
+                success: function (response) {
+                    if (response.Data != null) {
+                        $("#label-error-code").text(response.Data);
+                    } else {
+                        alert(response.Reason);
+                    }
+                },
+                error: function () {
+                    console.log("Erreur sur la récupération des codes erreurs.");
+                }
+            });
+        }
+    }
+
+
+    // This function redirects the search controller
+
+    function callSearchController()
+    {
+        var inputValue = document.getElementById("searchBarProductInput").value+"&page=1";
+        if (inputValue.length > 4)
+        {
+            location.assign("/Search/Index?search=" + inputValue);
+        }
+    }
+
+    // When a research is performed, we call the function callSearchController()
+
+    $("#searchBarProduct").submit(function (e) {
+        // This line prevents the page for reloading on form submit
+        e.preventDefault();
+        callSearchController();
+    });
+
+    // Redirects to the search page when a research is performed
+
+    function callSearchControllerResp()
+    {
+        var inputValue = document.getElementById("responsiveSearchBarProductInput").value+"&page=1";
+        if (inputValue.length > 4)
+        {
+            location.assign("/Search/Index?search=" + inputValue);
+        }
+    }
+
+    $("#responsiveSearchBarProduct").submit(function (e) {
+        // This line prevents the page for reloading on form submit
+        e.preventDefault();
+        callSearchControllerResp();
+    });
+
+    // When page is loaded, we call the various methods that will load the different elements (callArborescence() calls callExplodedView())
+    $(function(){
+        $("#vueEclatee").hide();
+        callArborescence();
+        callDocuments();
+        callCodeErrors();
+
+        // change display on mobile devices
+        if ($(window).width() < 800) {
+            $("#bodyDiv, #bodyDiv .d-flex").removeClass("d-flex").addClass("d-block");
+            $("#responsiveInformations .closeInformations, #responsiveLeftMenu .d-block").removeClass("d-block").addClass("d-flex");
+            $("#explodedViewPanel").after($("#descriptionPanel"));
+        }
+    });
+
+        // On page loading, for the lateral margins on the page
+        $(function () {
+            applyContainerMargins();
+            $("#bodyDiv").css("height", "100%");
+        });
+
+        // On page resize modifies the padding of the page
+        $(function () {
+            $(window).resize(function () {
+                applyContainerMargins();
+            });
+        });
+
+        function applyContainerMargins() {
+            if ($(window).width() < 992) {
+                $("#bodyDiv").css("padding-left", "0");
+                $("#bodyDiv").css("padding-right", "0");
+            }
+            else {
+                $("#bodyDiv").css("padding-left", "1vw");
+                $("#bodyDiv").css("padding-right", "1vw");
+            }
+        }
+
+        // Initially we set the width and height of vueEclatee div
+        $(function(){
+            $("#vueEclatee").css("width","37.5rem");
+            $("#vueEclatee").css("height", parseInt($("#vueEclatee").css("width"), 10) * $("#imageVueEclatee").attr("initialHeight") / $("#imageVueEclatee").attr("initialWidth") +"px");
+
+            $("#imageVueEclatee").css("width","100%");
+            $("#imageVueEclatee").css("height","100%");
+        });
+
+        //Modify the height of informations div on page resize
+        $(function(){
+            $(window).resize(function(){
+                if($(window).width() < 992)
+                {
+                    $("#informationsContainer").parent().css("height","");
+                }
+                else
+                {
+                    $("#informationsContainer").parent().css("height",$("#bodyDiv").height());
+                }
+            });
+        });
+
+        //Cacher les autres parties de la page produit
+        $(function(){
+            $("#documentation").hide();
+            $("#pageCodeError").hide();
+        });
+
+        function goToByScroll(id) {
+            // Remove "link" from the ID
+            id = id.replace("link", "");
+            // Scroll
+            $('html,body').animate({
+                scrollTop: $("#" + id).offset().top
+            }, 'slow');
+        }
+
+        // function called when we need informations about a spare part - Calls the controller method Details
+        function callDetails(link)
+        {
+            if ($(window).width() > 992) {
+                $.ajax({
+                    type: "GET",
+                    url: link,
+                    dataType: "html",
+                    beforeSend: function () {
+                        $("#informations .detailledInformations").hide();
+                        $("#informations .buttonTag").hide();
+                        $("#informations .loader").show();
+                        $("#informationsContainer").removeClass("d-lg-none").addClass("d-lg-flex");
+
+                        goToByScroll("informationsContainer");
+                    },
+                    complete: function () {
+                        $("#informations .loader").hide();
+                        $("#informations .detailledInformations").show();
+                        $("#informations .buttonTag").show();
+                    },
+                    success: function (modalHtml) {
+                        var detailsAsHtml = $(modalHtml).find(".detailledInformations").html();
+                       $("#informationsContainer").html(modalHtml);
+                    }
+                });
+            }
+            else {
+                link = link.replace("Details", 'DetailsResponsive')
+
+                $.ajax({
+                    type: "GET",
+                    url: link,
+                    dataType: "html",
+                    beforeSend: function () {
+                    $("#responsiveInformations .detailledInformations").hide();
+                    $("#responsiveInformations .buttonTag").hide();
+                    $("#responsiveInformations .loader").show();
+                        $("#responsiveInformationsContainer").removeClass("d-none").addClass("d-block");
+
+                        goToByScroll("responsiveInformations");
+
+                    },
+                    complete: function () {
+                    $("#responsiveInformations .loader").hide();
+                    $("#responsiveInformations .detailledInformations").show();
+                    $("#responsiveInformations .buttonTag").show();
+                    },
+                    success: function (modalHtml) {
+                        var detailsAsHtml = $(modalHtml).find(".detailledInformations").html();
+                        $("#responsiveInformations").html(modalHtml);
+                    }
+                });
+            }
+        }
+
+        // Initially, the detail modal is hidden
+        $(function(){
+            $("#informationsContainer").removeClass("d-lg-flex").addClass("d-lg-none");
+            $("#responsiveInformationsContainer").removeClass("d-block").addClass("d-none");
+        });
+
+        // Closing of detail modal
+        $(function () {
+            $(".closeInformations img").click(function () {
+                //Fermer les détails
+                $("#informationsContainer").removeClass("d-lg-flex").addClass("d-lg-none");
+                $("#responsiveInformationsContainer").removeClass("d-block").addClass("d-none");
+                //Enlever le gras du composant sélectionné
+                $("#arborescence span.leaf").removeClass("active");
+                $("#vueEclatee button").removeClass("active");
+            });
+        });
+
+        // Manage the "active" class in the left menu
+        $(function(){
+            $(".menuSelect").click(function(){
+                if (!$(this).hasClass("active"))
+                {
+                    if ($(this).attr("page") == "pageOrder" || $(this).attr("page") == "pageOffline") {
+                        return;
+                    }
+
+                    $(".menuSelect").removeClass("active");
+                    $(".menuSelect").removeClass("menuSelectActive");
+                    $(".menuSelect[page=" + $(this).attr("page") + "]").addClass("active");
+                    $(".menuSelect[page=" + $(this).attr("page") + "]").addClass("menuSelectActive");
+                    displayResponsiveLeftMenu(false);
+
+                    var id = "#" + $(this).attr("page");
+
+                    $(id).siblings().hide();
+                    $(id).show();
+
+                    if ($(this).attr("page")== "documentation")
+                    {
+                        ghostResponsiveDocumentsSize();
+                    }
+
+                    // Show tree view only for exploded view page
+                    if($(this).attr("page")=="explodedViewPage")
+                    {
+                        $("#arborescence").addClass("d-block").removeClass("d-none");
+                    }
+                    else
+                    {
+                        $("#arborescence").addClass("d-none").removeClass("d-block");
+                    }
+
+                    if ($(this).attr("page") == "page3DView") {
+                        if ($("#canvas-holder-boiler").children().length === 0) {
+                            startSketch('');
+                        }
+                    }
+                }
+            });
+        });
+
+        // function for the height of the ghostResponsiveDocumentSize
+        function ghostResponsiveDocumentsSize() {
+            $("#ghostResponsiveDocuments").css("height", $("#responsiveDocuments").css("height"));
+        }
+
+        // Responsive width of the exploded view
+        $(function(){
+            $(window).resize(function(){
+                if ($(window).width() < 992)
+                {
+                    //Remove padding from elements
+                    $("#explodedViewDiv").removeClass("px-5");
+                    $("#explodedViewDiv #designation").addClass("px-3");
+
+                    //var myWidth = $("#vueEclatee").parent().parent().width();
+                    var myWidth = $(window).width() - 100;
+                    $("#vueEclatee").css("width",rem(myWidth)+"rem");
+                    $("#vueEclatee").css("height", rem( myWidth * $("#imageVueEclatee").attr("height").replace(",",".") / $("#imageVueEclatee").attr("width") ) +"rem");
+
+                    //Responsive size of buttons
+                    var characterHeight = parseInt($("#vueEclatee button").first().attr("characterHeight"), 10);
+                    var newCharacterHeight = Math.round(characterHeight * myWidth / parseFloat(defaultExplodedViewWidth));
+                    $("#vueEclatee button").css("font-size", rem(Math.max(newCharacterHeight,minimumCharacterHeight))+"rem");
+                }
+                else
+                {
+                    //Add padding from elements
+                    $("#explodedViewDiv").addClass("px-5");
+                    $("#explodedViewDiv #designation").removeClass("px-3");
+
+                    $("#vueEclatee").css("width",rem(defaultExplodedViewWidth)+"rem");
+                    $("#vueEclatee").css("height", rem( defaultExplodedViewWidth * $("#imageVueEclatee").attr("height").replace(",",".") / $("#imageVueEclatee").attr("width") ) +"rem");
+
+                    // Reset the size of the buttons as default
+                    var characterHeight = parseInt($("#vueEclatee button").first().attr("characterHeight"), 10);
+                    $("#vueEclatee button").css("font-size", rem(Math.max(characterHeight+2,minimumCharacterHeight))+"rem");
+                }
+            });
+        });
+
+        // The ghostDivResponsiveMenu div's height is initialized
+        $(function(){
+            $("#ghostDivResponsiveMenu").css("height",$("#responsiveMenu").css("height"));
+        });
+
+        $(function(){
+            $("#responsiveLeftMenuButton").click(function() {
+                if ($("#responsiveLeftMenu").attr("data-displayed") === "false") {
+                    displayResponsiveLeftMenu(true);
+                }
+                else {
+                    displayResponsiveLeftMenu(false);
+                }
+            });
+        });
+
+        $(function(){
+            $("#closeResponsiveLeftMenu").click(function () {
+                displayResponsiveLeftMenu(false);
+            });
+        });
+
+        function displayResponsiveLeftMenu(show) {
+            var $leftMenu = $("#responsiveLeftMenu");
+
+            if (show === true) {
+                $("#responsiveLeftMenu").show("slide");
+                $leftMenu.attr("data-displayed", true);
+            }
+            else {
+                $("#responsiveLeftMenu").hide("slide");
+                $leftMenu.attr("data-displayed", false);
+            }
+        }
+
+        $(function(){
+            $("#responsiveArborescenceButton").click(function(){
+                $( "#explodedViewResponsiveDiv" ).animate({
+                    height: $("#bodyDiv").height()/3
+                }, function() {
+                    $("#responsiveArborescence").fadeIn();
+                });
+            });
+        });
+
+        function startSketch(reference) {
+            var sketch = function (p) {
+
+                var model3D;
+                var referenceToLoad = reference;
+
+                p5.disableFriendlyErrors = true; // disables FES
+
+                p.preload = function (reference) {
+
+                    if (referenceToLoad !== undefined) {
+                        var url = "http://www.elmleblanc-services.fr:8084/3D/" + referenceToLoad + ".obj";
+                        model3D = p.loadModel(url, true);
+                    }
+                };
+
+                p.setup = function () {
+                    let cnv = p.createCanvas(1000, 1000, p.WEBGL);
+
+                    cnv.parent('canvas-holder-boiler');
+                    p.createEasyCam();
+                    document.oncontextmenu = () => false;
+                    p.loop();
+                };
+
+                p.draw = function () {
+                    p.background(200);
+                    p.rotateX(p.frameCount * 0.01);
+                    p.rotateY(p.frameCount * 0.01);
+
+
+                    let currentAmbientColor = p.color(127, 127, 127);
+
+                    if (model3D) {
+                        p.model(model3D);
+                    }
+
+                    p.shininess(10);
+                    p.noStroke();
+                    p.ambientMaterial(currentAmbientColor);
+
+                };
+            };
+
+            var myp5 = new p5(sketch);
+        }
+
+        function showDetailsAppliance(itemId, reference) {
+            showItemDetailModal(itemId, reference);
+        }
+    </script>
+
+        
+
+        
+
+        <script src="/bundles/site?v=LWmqR_6gOkBTfSHzUTNdh7M0IbDP4RBg7s5Xcsj_QvI1"></script>
+
+        
+
+        <script type="text/javascript" src="/serviceworker.js"></script>
+
+        <script type="text/javascript">
+        var urls = {
+            search: '/Home/Search',
+            itemDetail: '/Search/Details',
+            explodedView: '/Product'
+        };
+        </script>
+    </div>
+
+    <script>
+        customElements.whenDefined("dock-privacy-settings").then(() => {
+            let el = document.querySelector('dock-privacy-settings');
+        })
+
+        window.dock = document.querySelector("dock-privacy-settings");
+        // Create "prettier" wrapper function to display dialog
+        window.dock.show = () => {
+            dock.setAttribute("visible", "true");
+        };
+    </script>
+</body>
+</html>

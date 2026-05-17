@@ -1,0 +1,206 @@
+
+
+<style>
+    #defaultCanvas0 {
+        width: 100% !important;
+        height: 100% !important;
+    }
+</style>
+
+<div id="informations" class="d-flex flex-column p-0 m-0">
+    <div class="closeInformations d-flex">
+        <div class="buttonTag" style="display:none;">
+
+        </div>
+        <img class="m-2" src="/Content/Images/close-black.svg" data-dismiss="modal" aria-label="Close" onclick="closeModal()" />
+    </div>
+
+    <div class="titre pb-4">Informations</div>
+
+    <div class="detailledInformations">
+
+                <div class="alert alert-primary" role="alert" style="color:white;background-color:#E65849;">
+                    Attention, ce produit est arrêté.
+                </div>
+
+
+        <div class="detail-panel">
+            <div class="label">Référence</div>
+            <div class="info pb-2">8716774029</div>
+            <input type="text" value="8716774029" id="copyRef" style="display:none;">
+            <div class="d-flex flex-row pb-2">
+                <button class="px-3" onclick="copyText('copyRef', this)" data-title="Texte copié">copier</button>
+            </div>
+            <div class="label pt-2">Désignation</div>
+            <div class="info pb-1">egalis condens GVS C 14/B...-5MN</div>
+
+
+
+
+
+        </div>
+
+                <div class="order-panel">
+
+
+                        <div class="pb-3">Afin de bénéficier de la commande en ligne, veuillez vous connecter <br />ou créer un compte.</div>
+                        <div class="button-container">
+                            <button onclick="goToUrl('/Login/Signup')" type="button">
+                                S'inscrire
+                            </button>
+                            <button onclick="goToUrl('/Login/Signin')" type="button">
+                                Se connecter
+                            </button>
+                        </div>
+                </div>
+
+
+
+
+        <div class="row col-md-12">
+            <div id="successorDiv" style="display:none;">
+                <div class="col-md-12" style="margin-top:10px;">
+                    <div class="titre">Successeur</div>
+
+                    <ul id="successor" style="margin-top:10px;list-style:square;font-size: .9rem;">
+                        <div id="loaderSuccessor" class="loaderFilter" style="margin:0 auto;"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="loaderModal" class="loader py-4" style="margin:0 auto;"></div>
+</div>
+
+<div class="modal-footer-spacer"></div>
+
+<script>
+
+    $(document).ready(function () {
+        if ('' !== "") {
+            startSketch('8716774029');
+        }
+
+        if ('False' == 'True')
+        {
+            $("#successorDiv").css("display", "block");
+            GetSuccessor();
+        }
+
+        else
+        {
+            $("#loaderSuccessor").hide();
+        }
+    });
+
+    function GetSuccessor() {
+        $.ajax({
+            type: "POST",
+            url: "/Search/GetSuccessor?reference=8716774029",
+            beforeSend: function () {
+                $("#loaderSuccessor").show();
+            },
+            complete: function () {
+                $("#loaderSuccessor").hide();
+            },
+            success: function (data, statut) {
+
+                $.each(data, function (id, option) {
+                    $("#successor").append('<li>' + option + '</li>');
+                });
+            }})
+        }
+
+    function GoToUseCase(reference) {
+        window.location.href = "/Product/UseCase" + "?reference=" + reference;
+    }
+
+    function closeModal() {
+        $("#informationsContainer").removeClass("d-lg-flex").addClass("d-lg-none");
+        $("#responsiveInformationsContainer").removeClass("d-block").addClass("d-none");
+        //Enlever le gras du composant sélectionné
+        $("#arborescence span.leaf").removeClass("active");
+        $("#vueEclatee button").removeClass("active");
+    }
+
+    function copyText(copierInputId, triggeringButton) {
+        if (copierInputId === undefined)
+            copierInputId = "copyRef";
+        var $copier = $("#" + copierInputId);
+        if ($copier.length === 0) {
+            return;
+        }
+
+        var copier = document.querySelector("#copyRef");
+        $("#copyRef").css("display", "block");
+        copier.select();
+        document.execCommand("copy");
+        $("#copyRef").css("display", "none");
+
+        if (triggeringButton === undefined) {
+            alert("Texte copié: " + copier.value);
+        }
+        else {
+            var $triggeringButton = $(triggeringButton);
+            $triggeringButton.popover({
+                title: $triggeringButton.attr('data-title'),
+                content: copier.value,
+                container: 'body',
+                trigger: 'manual',
+                placement: 'right'
+            });
+            $triggeringButton.popover('show');
+            setTimeout(function () { $triggeringButton.popover('hide'); }, 2000);
+        }
+    }
+
+    function startSketch(reference) {
+        var sketch = function (p) {
+
+            var model3D;
+            var referenceToLoad = reference;
+
+            p5.disableFriendlyErrors = true; // disables FES
+
+            p.preload = function (reference) {
+
+                if (referenceToLoad !== undefined) {
+                    var url = "https://www.elmleblanc-services.fr:8084/3D/" + referenceToLoad + ".obj";
+                    model3D = p.loadModel(url, true);
+                }
+            };
+
+            p.setup = function () {
+                let cnv = p.createCanvas(1000, 1000, p.WEBGL);
+
+                cnv.parent('canvas-holder');
+                p.createEasyCam();
+                document.oncontextmenu = () => false;
+                p.loop();
+            };
+
+            p.draw = function () {
+                p.background(200);
+                p.rotateX(p.frameCount * 0.01);
+                p.rotateY(p.frameCount * 0.01);
+
+
+                let currentAmbientColor = p.color(127,127, 127);
+
+                if (model3D) {
+                    p.model(model3D);
+                }
+
+                p.shininess(10);
+                p.noStroke();
+                p.ambientMaterial(currentAmbientColor);
+
+            };
+        };
+
+        var myp5 = new p5(sketch);
+    }
+</script>

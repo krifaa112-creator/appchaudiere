@@ -1,4 +1,4 @@
-const STORAGE_KEY = "boiler-parts-library-sparecheck-v5";
+﻿const STORAGE_KEY = "boiler-parts-library-sparecheck-v5";
 const USERS_KEY = "boiler-core-users-v1";
 const SESSION_KEY = "boiler-core-session-v1";
 const INVENTORY_RESET_KEY = "boiler-core-inventory-reset-sparecheck-v5";
@@ -6,6 +6,7 @@ const NOTES_CLEAR_KEY = "boiler-core-notes-cleared-v1";
 const SAUNIER_PARTS_IMPORT_KEY = "boiler-core-saunier-parts-import-v10";
 const ELMLEBLANC_PARTS_IMPORT_KEY = "boiler-core-elmleblanc-parts-import-v1";
 const DELETED_SEED_BOILERS_KEY = "boiler-core-deleted-seed-boilers-sparecheck-v4";
+const ELMLEBLANC_MANUFACTURER = "ELM leblanc";
 const EXPLODED_VIEW_URLS = Object.fromEntries(
   Object.entries({
     "ISOMAX CONDENS T 31 CS 1 SF": "https://www.dispart.fr/vues-eclatees#/machine/28150/?marque_nom=Saunier%20Duval",
@@ -124,8 +125,6 @@ const elements = {
   metricModels: document.querySelector("#metricModels"),
   metricParts: document.querySelector("#metricParts"),
   metricManufacturers: document.querySelector("#metricManufacturers"),
-  metricComplete: document.querySelector("#metricComplete"),
-  metricMissing: document.querySelector("#metricMissing"),
   quickBackup: document.querySelector("#quickBackup"),
   exportJson: document.querySelector("#exportJson"),
   exportCsv: document.querySelector("#exportCsv"),
@@ -456,31 +455,297 @@ function getSaunierDuvalSeedData() {
 }
 
 function getElmLeblancSeedData() {
-  const models = Array.isArray(globalThis.ELMLEBLANC_TIRAGE_NATUREL_MODELS)
-    ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_MODELS
-    : [];
+  const catalogues = getElmLeblancCatalogues();
 
-  return models.map((source) => {
-    const reference = String(source.reference || "");
-    const displayName = String(source.displayName || source.productTitle || reference || "");
-    const model = reference && !displayName.includes(reference) ? `${displayName} (${reference})` : displayName;
+  return catalogues.flatMap((catalogue) =>
+    catalogue.models.map((source) => {
+      const reference = String(source.reference || "");
+      const displayName = String(source.displayName || source.productTitle || reference || "");
+      const model = reference && !displayName.includes(reference) ? `${displayName} (${reference})` : displayName;
 
-    return {
-      id: source.id ? `elmleblanc-${source.id}` : createId(),
-      catalogueModelId: String(source.id || ""),
-      manufacturer: "elm.leblanc",
-      model,
-      barcode: reference,
-      specUrl: String(source.productUrl || ""),
-      explodedViewUrl: String(source.mainDrawingUrl || ""),
-      notes: "",
-      parts: []
-    };
-  });
+      return {
+        id: source.id ? `elmleblanc-${catalogue.key}-${source.id}` : createId(),
+        catalogueKey: catalogue.key,
+        catalogueModelId: String(source.id || ""),
+        manufacturer: ELMLEBLANC_MANUFACTURER,
+        model,
+        barcode: reference,
+        specUrl: String(source.productUrl || ""),
+        explodedViewUrl: String(source.mainDrawingUrl || ""),
+        notes: catalogue.label,
+        parts: []
+      };
+    }),
+  );
+}
+
+function getElmLeblancCatalogues() {
+  return [
+    {
+      key: "tirage-naturel",
+      label: "Basse temperature - Tirage naturel",
+      models: Array.isArray(globalThis.ELMLEBLANC_TIRAGE_NATUREL_MODELS)
+        ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ventouse",
+      label: "Basse temperature - Ventouse",
+      models: Array.isArray(globalThis.ELMLEBLANC_VENTOUSE_MODELS) ? globalThis.ELMLEBLANC_VENTOUSE_MODELS : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_VENTOUSE_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_VENTOUSE_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_VENTOUSE_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_VENTOUSE_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_VENTOUSE_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_VENTOUSE_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "vmc",
+      label: "Basse temperature - VMC",
+      models: Array.isArray(globalThis.ELMLEBLANC_VMC_MODELS) ? globalThis.ELMLEBLANC_VMC_MODELS : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_VMC_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_VMC_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_VMC_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_VMC_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_VMC_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_VMC_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "bas-nox-tirage-naturel",
+      label: "Bas Nox - Tirage naturel",
+      models: Array.isArray(globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_MODELS)
+        ? globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "bas-nox-vmc",
+      label: "Bas Nox - VMC",
+      models: Array.isArray(globalThis.ELMLEBLANC_BAS_NOX_VMC_MODELS)
+        ? globalThis.ELMLEBLANC_BAS_NOX_VMC_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_BAS_NOX_VMC_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_BAS_NOX_VMC_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_BAS_NOX_VMC_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_BAS_NOX_VMC_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_BAS_NOX_VMC_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_BAS_NOX_VMC_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "condensation",
+      label: "Condensation",
+      models: Array.isArray(globalThis.ELMLEBLANC_CONDENSATION_MODELS)
+        ? globalThis.ELMLEBLANC_CONDENSATION_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_CONDENSATION_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_CONDENSATION_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_CONDENSATION_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_CONDENSATION_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_CONDENSATION_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_CONDENSATION_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-condensation",
+      label: "ECS - Chauffe-bain - Condensation",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-bas-nox-vmc",
+      label: "ECS - Chauffe-bain - Bas Nox - VMC",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-bas-nox-ventouse",
+      label: "ECS - Chauffe-bain - Bas Nox - Ventouse",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-bas-nox-tirage-naturel",
+      label: "ECS - Chauffe-bain - Bas Nox - Tirage naturel",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-basse-temperature-vmc",
+      label: "ECS - Chauffe-bain - Basse temperature - VMC",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-basse-temperature-ventouse",
+      label: "ECS - Chauffe-bain - Basse temperature - Ventouse",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-basse-temperature-tirage-naturel",
+      label: "ECS - Chauffe-bain - Basse temperature - Tirage naturel",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "gaz-chaudiere-sol-condensation",
+      label: "Gaz - Chaudiere au sol - Condensation",
+      models: Array.isArray(globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_MODELS)
+        ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "gaz-chaudiere-sol-basse-temperature-tirage-naturel",
+      label: "Gaz - Chaudiere au sol - Basse temperature - Tirage naturel",
+      models: Array.isArray(globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_MODELS)
+        ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS
+          : {}
+    }
+  ].filter((catalogue) => catalogue.models.length);
 }
 
 function normalizeModelKey(value) {
   return String(value || "").replace(/\s+/g, "").toLowerCase();
+}
+
+function isElmLeblancManufacturer(value) {
+  const manufacturer = String(value || "").trim().toLowerCase();
+  return manufacturer === "elm.leblanc" || manufacturer === "elm leblanc";
+}
+
+function normalizeManufacturerName(value) {
+  return isElmLeblancManufacturer(value) ? ELMLEBLANC_MANUFACTURER : String(value || "");
 }
 
 function getBoilerSeedKey(boiler) {
@@ -502,9 +767,9 @@ function saveDeletedSeedBoilers(deletedSeeds) {
 
 function getDefaultExplodedViewUrl(boiler) {
   const manufacturer = String(boiler?.manufacturer || "").trim().toLowerCase();
-  if (manufacturer === "elm.leblanc") {
+  if (isElmLeblancManufacturer(manufacturer)) {
     const modelId = String(boiler?.catalogueModelId || "").trim();
-    const views = getElmLeblancExplodedViewsByModelId(modelId);
+    const views = getElmLeblancExplodedViewsByModelId(modelId, boiler?.catalogueKey);
     return views[0]?.url || "";
   }
 
@@ -516,8 +781,8 @@ function getDefaultExplodedViewUrl(boiler) {
 function getLocalExplodedViews(boiler) {
   const manufacturer = String(boiler?.manufacturer || "").trim().toLowerCase();
 
-  if (manufacturer === "elm.leblanc") {
-    return getElmLeblancExplodedViewsByModelId(boiler?.catalogueModelId);
+  if (isElmLeblancManufacturer(manufacturer)) {
+    return getElmLeblancExplodedViewsByModelId(boiler?.catalogueModelId, boiler?.catalogueKey);
   }
 
   if (manufacturer === "saunier duval") {
@@ -531,12 +796,9 @@ function getLocalExplodedViews(boiler) {
   return [];
 }
 
-function getElmLeblancExplodedViewsByModelId(modelId) {
-  const source =
-    globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS &&
-    typeof globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
-      ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS
-      : {};
+function getElmLeblancExplodedViewsByModelId(modelId, catalogueKey) {
+  const catalogue = getElmLeblancCatalogues().find((item) => item.key === String(catalogueKey || ""));
+  const source = catalogue?.explodedViews || {};
   const views = source[String(modelId || "")] || [];
 
   return views.map((view, index) => ({
@@ -604,35 +866,32 @@ function getSaunierDuvalPartsByModel() {
 }
 
 function getElmLeblancPartsByModel() {
-  const source =
-    globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL &&
-    typeof globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
-      ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL
-      : {};
   const normalized = new Map();
 
-  Object.entries(source).forEach(([modelId, modelParts]) => {
-    const sections = Array.isArray(modelParts?.sections) ? modelParts.sections : [];
-    const parts = sections.flatMap((section) => {
-      const component = String(section.title || "");
-      return (section.parts || []).map((part) => ({
-        name: String(part.label || "").replace(/^\s*\d+\s*\.\s*/, ""),
-        number: String(part.reference || ""),
-        dispart: "",
-        pex: "",
-        category: component || "Catalogue elm.leblanc",
-        position: String(part.position || ""),
-        component,
-        componentId: String(section.position || ""),
-        documentId: String(section.picture || ""),
-        description: String(part.label || ""),
-        ean: "",
-        replacedBy: "",
-        source: "Catalogue elm.leblanc"
-      }));
-    });
+  getElmLeblancCatalogues().forEach((catalogue) => {
+    Object.entries(catalogue.partsByModel).forEach(([modelId, modelParts]) => {
+      const sections = Array.isArray(modelParts?.sections) ? modelParts.sections : [];
+      const parts = sections.flatMap((section) => {
+        const component = String(section.title || "");
+        return (section.parts || []).map((part) => ({
+          name: String(part.label || "").replace(/^\s*\d+\s*\.\s*/, ""),
+          number: String(part.reference || ""),
+          dispart: "",
+          pex: "",
+          category: component || "Catalogue ELM leblanc",
+          position: String(part.position || ""),
+          component,
+          componentId: String(section.position || ""),
+          documentId: String(section.picture || ""),
+          description: String(part.label || ""),
+          ean: "",
+          replacedBy: "",
+          source: "Catalogue ELM leblanc"
+        }));
+      });
 
-    normalized.set(String(modelId), parts);
+      normalized.set(`${catalogue.key}|${modelId}`, parts);
+    });
   });
 
   return normalized;
@@ -688,9 +947,9 @@ function mergeElmLeblancPartsOnce(boilers) {
 
   let changed = false;
   const updated = boilers.map((boiler) => {
-    if (boiler.manufacturer.trim().toLowerCase() !== "elm.leblanc") return boiler;
+    if (!isElmLeblancManufacturer(boiler.manufacturer)) return boiler;
 
-    const seedParts = elmLeblancPartsByModel.get(String(boiler.catalogueModelId || ""));
+    const seedParts = elmLeblancPartsByModel.get(`${boiler.catalogueKey || ""}|${boiler.catalogueModelId || ""}`);
     if (!seedParts?.length) return boiler;
 
     const existingParts = boiler.parts || [];
@@ -743,8 +1002,9 @@ function normalizeBoilers(boilers) {
     .filter((boiler) => boiler && typeof boiler === "object")
     .map((boiler) => ({
       id: boiler.id || createId(),
-      manufacturer: String(boiler.manufacturer || ""),
+      manufacturer: normalizeManufacturerName(boiler.manufacturer),
       model: String(boiler.model || ""),
+      catalogueKey: String(boiler.catalogueKey || ""),
       catalogueModelId: String(boiler.catalogueModelId || ""),
       barcode: String(boiler.barcode || ""),
       specUrl: String(boiler.specUrl || ""),
@@ -881,6 +1141,7 @@ function matchesQuery(boiler, query) {
 
 function getPartSource(part) {
   if (String(part.source || "").toLowerCase().includes("elm.leblanc")) return "elmleblanc";
+  if (String(part.source || "").toLowerCase().includes("elm leblanc")) return "elmleblanc";
   if (part.dispart) return "dispart";
   if (part.pex) return "piecesxpress";
   return "manual";
@@ -889,7 +1150,7 @@ function getPartSource(part) {
 function getSourceLabel(source) {
   if (source === "dispart") return "Dispart";
   if (source === "piecesxpress") return "PiecesXpress";
-  if (source === "elmleblanc") return "elm.leblanc";
+  if (source === "elmleblanc") return "ELM leblanc";
   return "Saisie manuelle";
 }
 
@@ -998,7 +1259,6 @@ function renderResults() {
 function renderMetrics() {
   const modelCount = state.boilers.length;
   const partCount = state.boilers.reduce((total, boiler) => total + (boiler.parts || []).length, 0);
-  const completeCount = state.boilers.filter((boiler) => getBoilerStatus(boiler) === "complete").length;
   const manufacturerCount = new Set(
     state.boilers.map((boiler) => String(boiler.manufacturer || "").trim().toLowerCase()).filter(Boolean)
   ).size;
@@ -1007,8 +1267,6 @@ function renderMetrics() {
   elements.metricModels.textContent = modelCount;
   elements.metricParts.textContent = partCount;
   elements.metricManufacturers.textContent = manufacturerCount;
-  elements.metricComplete.textContent = completeCount;
-  elements.metricMissing.textContent = modelCount - completeCount;
 }
 
 function createBadge(label, type) {
@@ -1651,7 +1909,7 @@ async function scanPlateText() {
 
   const canvas = getScannerFrameCanvas();
   if (!canvas) {
-    elements.scannerStatus.textContent = "Image caméra pas encore prÃªte. Réessayez dans une seconde.";
+    elements.scannerStatus.textContent = "Image caméra pas encore prête. Réessayez dans une seconde.";
     return;
   }
 
@@ -1866,7 +2124,7 @@ elements.form.addEventListener("submit", (event) => {
   }
 
   if (hasDuplicatePartNumbers(parts)) {
-    alert("Un mÃªme numéro de pièce est présent plusieurs fois dans cette fiche.");
+    alert("Un même numéro de pièce est présent plusieurs fois dans cette fiche.");
     return;
   }
 
@@ -1969,7 +2227,7 @@ elements.importJson.addEventListener("change", async (event) => {
     saveBoilers();
     renderResults();
   } catch {
-    alert("Ce fichier JSON n'a pas pu Ãªtre importé.");
+    alert("Ce fichier JSON n'a pas pu être importé.");
   } finally {
     event.target.value = "";
   }
@@ -2091,6 +2349,9 @@ try {
 if ("serviceWorker" in navigator && window.location.protocol !== "file:") {
   navigator.serviceWorker.register("./service-worker.js");
 }
+
+
+
 
 
 

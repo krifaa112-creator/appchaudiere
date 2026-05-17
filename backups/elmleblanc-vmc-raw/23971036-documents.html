@@ -1,0 +1,59 @@
+<style>
+    #visualizationPDF {
+        overflow: scroll;
+        overflow-y: scroll;
+    }
+
+    .displayImportant {
+        display: none !important;
+    }
+</style>
+
+<script src="/Scripts/pdf/pdf.js"></script>
+
+<div id="popupShowSendDocument" class="modal fade" role="dialog" style="top: auto !important;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="section-title center">Envoyer une documentation</div>
+
+                <div class="col-md-12" id="recaptchaDetailed" style="display:none;margin-bottom:10px;font-weight:bold;">
+                    Afin de valider le formulaire nous avons besoin de votre consentement, pour cela merci de bien vouloir accepter les cookies en cliquant sur "Paramètres de cookies" en bas de cette page puis recharger la page.
+                </div>
+
+                <div id="loaderSendDocumentation" class="loader py-4" style="display: none;margin: auto;"></div>
+
+                <div id="successSendDocumentation" style="display:none;color:green;margin-bottom:10px;">La documentation a été envoyée.</div>
+                <div id="errorSendDocumentation" style="display:none;color:#E65849;margin-bottom:10px;"></div>
+
+                <div id="bodySendDocumentation">
+                    <span>Veuillez saisir l'adresse email sur laquelle vous souhaitez envoyer la documentation "<span id="typeDocument"></span>".</span><br /><br />
+
+                    <div class="form-group form-row">
+                        <label class="control-label col-4">Adresse email</label>
+                        <div class="input-select d-flex justify-content-end">
+                            <input type="text" id="emailSendDocumentation" style="border:1px solid black;" />
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="recaptcha"></div>
+
+                    
+
+                    <div style="text-align: center; clear:both; padding-top:15px;">
+                        <a class="button" data-dismiss="modal">Annuler</a>
+                        <button id="btnSubmitSendDocumentation" type="submit" class="button primary">Envoyer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="d-flex flex-column flex-lg-row px-5 py-4 m-0">
+        <div class="d-flex flex-column mr-auto">
+            <div class="title pt-3 pb-5">Documentations disponibles</div>
+            <div>Pas de document disponible pour cet appareil.</div>
+        </div>
+    </div>
