@@ -1,0 +1,211 @@
+
+<div id="titreArborescence" class="light">Arborescence</div>
+
+<ul id="myUL" class="pt-3">
+    <li>
+        <span class="caret root" picture="8716799031.aa.pdf">
+            Vue d'ensemble
+        </span>
+        <ul class="nested">
+                        <li>
+                            <span class="caret children" posNo="1" picture="8716799037.aa.pdf">
+                                1 . pieces de tole
+                            </span>
+
+                            <ul class="nested">
+                                    <li>
+                                        <span class="leaf" details="/Search/Details?Id=23970780&Reference=87167576710" posNo="1">
+                                            1 . porte egalis gm/gs/gb eq.
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf" details="/Search/Details?Id=23970781&Reference=87167600240" posNo="2">
+                                            2 . cadre tab.elec.brio
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf" details="/Search/Details?Id=23970782&Reference=87167552620" posNo="3">
+                                            3 . vis m4x10 po (x10)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf" details="/Search/Details?Id=23970783&Reference=87167584960" posNo="4">
+                                            4 . habillage eglm23 a/ecran
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf" details="/Search/Details?Id=23970784&Reference=87167575470" posNo="5">
+                                            5 . patin antivibration (x10)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf" details="/Search/Details?Id=23970785&Reference=87167600100" posNo="6">
+                                            6 . grille inferieure 23
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf" details="/Search/Details?Id=23970786&Reference=87167602710" posNo="7">
+                                            7 . jeu axes tab.elec.
+                                        </span>
+                                    </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="leaf" details="/Search/Details?Id=23970787&Reference=8716799038" posNo="2">
+                                2 . plaque de robinetterie
+                            </span>
+                        </li>
+
+        </ul>
+    </li>
+</ul>
+
+<div id="loaderArborescence" class="loader" style="margin:auto; position:relative; top:50px;"></div>
+
+<script>
+
+    //Initialement, la vue d'ensemble est sélectionnée, on la met donc en gras
+    $(function () {
+        $("#arborescence span.root").addClass("active");
+    });
+
+    function closeDetailPopup() {
+        $("#informationsContainer").removeClass("d-lg-flex").addClass("d-lg-none");
+        $("#responsiveInformationsContainer").removeClass("d-block").addClass("d-none");
+    }
+
+    //Permet de gérer l'orientation du "caret" et le déroulement des listes ainsi que l'appel à la méthode qui affiche les vues éclatées
+    $(function () {
+        $("#arborescence span.children").click(function () {
+
+            //Fermer les détails de pièces détachées
+            closeDetailPopup();
+
+            //Enlever le gras de tous les composants
+            $("#arborescence span.leaf").removeClass("active");
+            $("#arborescence span.children").removeClass("active");
+
+            var displayMainView = false;
+            //Si on clique un élément dont la liste est déjà déroulée, cela va la fermer et on va donc afficher la vue éclatée globale
+            if ($(this).siblings(".nested").hasClass("active")) {
+                $(this).removeClass("active");
+                displayMainView = true;
+                //Mettre en gras la "vue d'ensemble"
+                $("#arborescence span.root").addClass("active");
+            }
+            else {
+                //Mettre en gras le composant cliqué
+                $(this).addClass("active");
+                //Enlever le gras de "vue d'ensemble"
+                $("#arborescence span.root").removeClass("active");
+                //Scroll tree view to this element
+                document.getElementById('arborescence').scrollTop = $(this).get(0).offsetTop;
+            }
+
+
+            //Lorsqu'on déroule une liste de l'arbre, les autres reviennent à leur état initial
+            $(this).parents("ul.nested").find("ul.active").not($(this).siblings("ul.nested")).siblings("span.caret").toggleClass("caret-down");
+            $(this).parents("ul.nested").find("ul.active").not($(this).siblings("ul.nested")).toggleClass("active");
+
+            //Permet de dérouler une liste au moment du clic
+            $(this).siblings("ul.nested").toggleClass("active");
+            $(this).toggleClass("caret-down");
+
+
+            //Permet d'afficher la vue éclatée d'un composant lorsqu'on le sélectionne
+            if (displayMainView == false) {
+                if ($(window).width() < 992) {
+                    document.getElementById('scrollDiv').scrollTop = document.getElementById("explodedViewPage").offsetTop;
+                }
+                loadImage("https://www.elmleblanc-services.fr/Catalogue/drawings/" + $(this).attr("picture"));
+            }
+            else {
+                loadImage("https://www.elmleblanc-services.fr/Catalogue/drawings/" + $("#arborescence span.root").attr("picture"));
+            }
+        });
+    });
+
+    // Triggers hover on exploded view's buttons when hover on tree of composants
+
+    $(function () {
+        $("#arborescence span.children").on({
+            mouseenter: function () {
+                var buttons = $("#vueEclatee button[innerText=" + $(this).attr("posNo") + "]");
+                buttons.addClass("hover");
+            },
+            mouseleave: function () {
+                var buttons = $("#vueEclatee button[innerText=" + $(this).attr("posNo") + "]");
+                buttons.removeClass("hover");
+            }
+        });
+    });
+
+    $(function () {
+        $("#arborescence span.root").click(function () {
+
+            //Fermer les détails de pièces détachées
+            closeDetailPopup();
+
+            //Si "vue d'ensemble" n'est pas en gras, on le met en gras et on enleve le gras de tous les sous-composants
+            if (!$(this).hasClass("active")) {
+                $(this).addClass("active");
+                $("#arborescence span.children").removeClass("active");
+            }
+
+            //Permet de dérouler une liste au moment du clic
+            $(this).siblings(".nested").toggleClass("active");
+            $(this).toggleClass("caret-down");
+
+            //Si jamais des sous listes étaient déroulées, on les ferme et on affiche la vue éclatée globale
+            if ($(this).siblings(".nested").find(".active").length > 0) {
+                loadImage("https://www.elmleblanc-services.fr/Catalogue/drawings/" + $("#arborescence span.root").attr("picture"));
+                $(this).siblings(".nested").find(".active").toggleClass("active");
+                $(this).siblings(".nested").find(".caret-down").toggleClass("caret-down");
+            }
+        });
+    });
+
+    $(function () {
+        $("#arborescence span.leaf").click(function () {
+            //Fermer les détails de pièces détachées
+            closeDetailPopup();
+
+            if ($(window).width() < 992) {
+                document.getElementById('scrollDiv').scrollTop = document.getElementById("explodedViewPage").offsetTop;
+            }
+
+            if ($(window).width() < 992) {
+                callDetails($(this).attr("details"), 1);
+            }
+            else {
+                callDetails($(this).attr("details"), 0);
+            }
+
+            //callDetails($(this).attr("details"));
+
+            $("#arborescence span.leaf").removeClass("active");
+            $(this).addClass("active");
+            var buttons = $("#vueEclatee button[innerText=" + $(this).attr("posNo") + "]");
+            $("#vueEclatee button").removeClass("active");
+            buttons.addClass("active");
+        });
+    });
+
+    // Triggers hover on exploded view's buttons when hover on tree of composants
+
+    $(function () {
+        $("#arborescence span.leaf").on({
+            mouseenter: function () {
+                var buttons = $("#vueEclatee button[innerText=" + $(this).attr("posNo") + "]");
+                buttons.addClass("hover");
+            },
+            mouseleave: function () {
+                var buttons = $("#vueEclatee button[innerText=" + $(this).attr("posNo") + "]");
+                buttons.removeClass("hover");
+            }
+        });
+    });
+
+
+
+</script>

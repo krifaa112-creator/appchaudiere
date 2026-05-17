@@ -4,6 +4,7 @@ const SESSION_KEY = "boiler-core-session-v1";
 const INVENTORY_RESET_KEY = "boiler-core-inventory-reset-sparecheck-v5";
 const NOTES_CLEAR_KEY = "boiler-core-notes-cleared-v1";
 const SAUNIER_PARTS_IMPORT_KEY = "boiler-core-saunier-parts-import-v10";
+const ELMLEBLANC_PARTS_IMPORT_KEY = "boiler-core-elmleblanc-parts-import-v1";
 const DELETED_SEED_BOILERS_KEY = "boiler-core-deleted-seed-boilers-sparecheck-v4";
 const EXPLODED_VIEW_URLS = Object.fromEntries(
   Object.entries({
@@ -69,6 +70,8 @@ const sampleData = [
 
 const saunierDuvalSeedData = getSaunierDuvalSeedData();
 const saunierDuvalPartsByModel = getSaunierDuvalPartsByModel();
+const elmLeblancSeedData = getElmLeblancSeedData();
+const elmLeblancPartsByModel = getElmLeblancPartsByModel();
 
 const state = {
   boilers: loadBoilers(),
@@ -452,6 +455,30 @@ function getSaunierDuvalSeedData() {
   });
 }
 
+function getElmLeblancSeedData() {
+  const models = Array.isArray(globalThis.ELMLEBLANC_TIRAGE_NATUREL_MODELS)
+    ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_MODELS
+    : [];
+
+  return models.map((source) => {
+    const reference = String(source.reference || "");
+    const displayName = String(source.displayName || source.productTitle || reference || "");
+    const model = reference && !displayName.includes(reference) ? `${displayName} (${reference})` : displayName;
+
+    return {
+      id: source.id ? `elmleblanc-${source.id}` : createId(),
+      catalogueModelId: String(source.id || ""),
+      manufacturer: "elm.leblanc",
+      model,
+      barcode: reference,
+      specUrl: String(source.productUrl || ""),
+      explodedViewUrl: String(source.mainDrawingUrl || ""),
+      notes: "",
+      parts: []
+    };
+  });
+}
+
 function normalizeModelKey(value) {
   return String(value || "").replace(/\s+/g, "").toLowerCase();
 }
@@ -475,17 +502,52 @@ function saveDeletedSeedBoilers(deletedSeeds) {
 
 function getDefaultExplodedViewUrl(boiler) {
   const manufacturer = String(boiler?.manufacturer || "").trim().toLowerCase();
+  if (manufacturer === "elm.leblanc") {
+    const modelId = String(boiler?.catalogueModelId || "").trim();
+    const views = getElmLeblancExplodedViewsByModelId(modelId);
+    return views[0]?.url || "";
+  }
+
   if (manufacturer !== "saunier duval") return "";
 
   return EXPLODED_VIEW_URLS[normalizeModelKey(boiler?.model)] || "";
 }
 
 function getLocalExplodedViews(boiler) {
+  const manufacturer = String(boiler?.manufacturer || "").trim().toLowerCase();
+
+  if (manufacturer === "elm.leblanc") {
+    return getElmLeblancExplodedViewsByModelId(boiler?.catalogueModelId);
+  }
+
+  if (manufacturer === "saunier duval") {
+    const source =
+      globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS && typeof globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS === "object"
+        ? globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS
+        : {};
+    return source[boiler?.model] || source[String(boiler?.model || "").trim()] || [];
+  }
+
+  return [];
+}
+
+function getElmLeblancExplodedViewsByModelId(modelId) {
   const source =
-    globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS && typeof globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS === "object"
-      ? globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS
+    globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS &&
+    typeof globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
+      ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS
       : {};
-  return source[boiler?.model] || source[String(boiler?.model || "").trim()] || [];
+  const views = source[String(modelId || "")] || [];
+
+  return views.map((view, index) => ({
+    name: view.title || `Vue ${index + 1}`,
+    displayType: view.level === "root" ? "Vue d'ensemble" : "Sous-ensemble",
+    documentId: view.pdf || "",
+    componentId: view.position || "",
+    component: view.title || "",
+    externalUrl: view.url || "",
+    pdf: view.pdf || ""
+  }));
 }
 
 function getDocumentAssetUrl(blobId) {
@@ -541,15 +603,51 @@ function getSaunierDuvalPartsByModel() {
   return normalized;
 }
 
+function getElmLeblancPartsByModel() {
+  const source =
+    globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL &&
+    typeof globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
+      ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL
+      : {};
+  const normalized = new Map();
+
+  Object.entries(source).forEach(([modelId, modelParts]) => {
+    const sections = Array.isArray(modelParts?.sections) ? modelParts.sections : [];
+    const parts = sections.flatMap((section) => {
+      const component = String(section.title || "");
+      return (section.parts || []).map((part) => ({
+        name: String(part.label || "").replace(/^\s*\d+\s*\.\s*/, ""),
+        number: String(part.reference || ""),
+        dispart: "",
+        pex: "",
+        category: component || "Catalogue elm.leblanc",
+        position: String(part.position || ""),
+        component,
+        componentId: String(section.position || ""),
+        documentId: String(section.picture || ""),
+        description: String(part.label || ""),
+        ean: "",
+        replacedBy: "",
+        source: "Catalogue elm.leblanc"
+      }));
+    });
+
+    normalized.set(String(modelId), parts);
+  });
+
+  return normalized;
+}
+
 function mergeSeedBoilers(boilers) {
   const normalized = normalizeBoilers(boilers);
   const existingKeys = new Set(normalized.map(getBoilerSeedKey));
   const deletedSeedKeys = getDeletedSeedBoilers();
-  const missingSeeds = saunierDuvalSeedData.filter((boiler) => {
+  const seedData = [...saunierDuvalSeedData, ...elmLeblancSeedData];
+  const missingSeeds = seedData.filter((boiler) => {
     const key = getBoilerSeedKey(boiler);
     return !existingKeys.has(key) && !deletedSeedKeys.has(key);
   });
-  const merged = clearNotesOnce(mergeSaunierDuvalPartsOnce(normalizeBoilers([...normalized, ...missingSeeds])));
+  const merged = clearNotesOnce(mergeElmLeblancPartsOnce(mergeSaunierDuvalPartsOnce(normalizeBoilers([...normalized, ...missingSeeds]))));
 
   return merged;
 }
@@ -585,6 +683,37 @@ function mergeSaunierDuvalPartsOnce(boilers) {
   return updated;
 }
 
+function mergeElmLeblancPartsOnce(boilers) {
+  if (!elmLeblancPartsByModel.size) return boilers;
+
+  let changed = false;
+  const updated = boilers.map((boiler) => {
+    if (boiler.manufacturer.trim().toLowerCase() !== "elm.leblanc") return boiler;
+
+    const seedParts = elmLeblancPartsByModel.get(String(boiler.catalogueModelId || ""));
+    if (!seedParts?.length) return boiler;
+
+    const existingParts = boiler.parts || [];
+    const existingKeys = new Set(existingParts.map(getPartSyncKey));
+    const missingParts = seedParts.filter((part) => !existingKeys.has(getPartSyncKey(part)));
+
+    if (!missingParts.length) return boiler;
+    changed = true;
+
+    return {
+      ...boiler,
+      specUrl: boiler.specUrl || "",
+      explodedViewUrl: boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler),
+      notes: boiler.notes || "",
+      parts: [...(boiler.parts || []), ...missingParts]
+    };
+  });
+
+  updated.changed = changed;
+  localStorage.setItem(ELMLEBLANC_PARTS_IMPORT_KEY, `synced-${Date.now()}`);
+  return updated;
+}
+
 function getPartSyncKey(part) {
   return [
     part.number,
@@ -616,6 +745,7 @@ function normalizeBoilers(boilers) {
       id: boiler.id || createId(),
       manufacturer: String(boiler.manufacturer || ""),
       model: String(boiler.model || ""),
+      catalogueModelId: String(boiler.catalogueModelId || ""),
       barcode: String(boiler.barcode || ""),
       specUrl: String(boiler.specUrl || ""),
       explodedViewUrl: String(boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler)),
@@ -750,6 +880,7 @@ function matchesQuery(boiler, query) {
 }
 
 function getPartSource(part) {
+  if (String(part.source || "").toLowerCase().includes("elm.leblanc")) return "elmleblanc";
   if (part.dispart) return "dispart";
   if (part.pex) return "piecesxpress";
   return "manual";
@@ -758,6 +889,7 @@ function getPartSource(part) {
 function getSourceLabel(source) {
   if (source === "dispart") return "Dispart";
   if (source === "piecesxpress") return "PiecesXpress";
+  if (source === "elmleblanc") return "elm.leblanc";
   return "Saisie manuelle";
 }
 
@@ -1255,9 +1387,20 @@ function openExplodedView(boiler) {
   image.className = "exploded-image";
   image.alt = "";
 
+  const externalFrame = document.createElement("iframe");
+  externalFrame.className = "exploded-pdf-frame";
+  externalFrame.title = "Vue eclatee PDF";
+  externalFrame.loading = "lazy";
+
+  const externalLink = document.createElement("a");
+  externalLink.className = "exploded-pdf-link";
+  externalLink.target = "_blank";
+  externalLink.rel = "noopener";
+  externalLink.textContent = "Ouvrir le PDF";
+
   const hotspotLayer = document.createElement("div");
   hotspotLayer.className = "hotspot-layer";
-  imageWrap.append(image, hotspotLayer);
+  imageWrap.append(image, externalFrame, externalLink, hotspotLayer);
 
   const title = document.createElement("h3");
   const meta = document.createElement("p");
@@ -1274,12 +1417,30 @@ function openExplodedView(boiler) {
     meta.textContent = [
       view.displayType ? `Type: ${view.displayType}` : "",
       view.documentId ? `Document: ${view.documentId}` : "",
+      view.externalUrl ? "PDF catalogue" : "",
       view.hotpoints?.length ? `${view.hotpoints.length} rep\u00e8res pi\u00e8ces` : ""
     ]
       .filter(Boolean)
       .join(" · ");
-    image.src = getDocumentAssetUrl(view.imageBlobId);
-    image.alt = `${boiler.model} - ${view.name || "Vue \u00e9clat\u00e9e"}`;
+    const hasLocalImage = Boolean(view.imageBlobId);
+    image.hidden = !hasLocalImage;
+    hotspotLayer.hidden = !hasLocalImage;
+    externalFrame.hidden = hasLocalImage || !view.externalUrl;
+    externalLink.hidden = !view.externalUrl;
+    if (hasLocalImage) {
+      image.src = getDocumentAssetUrl(view.imageBlobId);
+      image.alt = `${boiler.model} - ${view.name || "Vue \u00e9clat\u00e9e"}`;
+    } else {
+      image.removeAttribute("src");
+      image.alt = "";
+    }
+    if (view.externalUrl) {
+      externalFrame.src = view.externalUrl;
+      externalLink.href = view.externalUrl;
+    } else {
+      externalFrame.removeAttribute("src");
+      externalLink.removeAttribute("href");
+    }
     hotspotLayer.replaceChildren();
     referencePanel.replaceChildren();
     (view.hotpoints || []).slice(0, 220).forEach((hotpoint) => {
@@ -1323,9 +1484,14 @@ function openExplodedView(boiler) {
     const item = document.createElement("button");
     item.type = "button";
     item.className = "exploded-view-item";
-    const thumb = document.createElement("img");
-    thumb.src = getDocumentAssetUrl(view.thumbnailBlobId || view.imageBlobId);
-    thumb.alt = "";
+    const thumb = view.thumbnailBlobId || view.imageBlobId ? document.createElement("img") : document.createElement("span");
+    if (thumb.tagName === "IMG") {
+      thumb.src = getDocumentAssetUrl(view.thumbnailBlobId || view.imageBlobId);
+      thumb.alt = "";
+    } else {
+      thumb.className = "exploded-pdf-thumb";
+      thumb.textContent = "PDF";
+    }
     const label = document.createElement("span");
     label.textContent = view.name || `Vue ${index + 1}`;
     item.append(thumb, label);
@@ -1347,10 +1513,11 @@ function getExplodedViewReferences(boiler, view) {
   });
   (boiler.parts || [])
     .filter((part) => {
+      const rootElmView = view.externalUrl && view.displayType === "Vue d'ensemble";
       const sameDocument = view.documentId && part.documentId === view.documentId;
       const sameComponent = view.componentId && part.componentId === view.componentId;
       const sameComponentName = view.name && part.component === view.name;
-      return sameDocument || sameComponent || sameComponentName;
+      return rootElmView || sameDocument || sameComponent || sameComponentName;
     })
     .forEach((part) => {
       const number = String(part.number || "").trim();
@@ -1776,6 +1943,7 @@ elements.importJson.addEventListener("change", async (event) => {
       id: boiler.id || createId(),
       manufacturer: boiler.manufacturer || "",
       model: boiler.model || "",
+      catalogueModelId: boiler.catalogueModelId || "",
       barcode: boiler.barcode || "",
       specUrl: boiler.specUrl || "",
       explodedViewUrl: boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler),
@@ -1786,7 +1954,15 @@ elements.importJson.addEventListener("change", async (event) => {
             number: part.number || "",
             category: part.category || "",
             dispart: part.dispart || "",
-            pex: part.pex || ""
+            pex: part.pex || "",
+            position: part.position || "",
+            component: part.component || "",
+            componentId: part.componentId || "",
+            documentId: part.documentId || "",
+            description: part.description || "",
+            ean: part.ean || "",
+            replacedBy: part.replacedBy || "",
+            source: part.source || ""
           }))
         : []
     }));

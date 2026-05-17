@@ -752,6 +752,12 @@ label {
   color: #e9d5ff;
 }
 
+.status-badge.elmleblanc {
+  border-color: rgba(14, 165, 233, 0.42);
+  background: rgba(14, 165, 233, 0.12);
+  color: #bae6fd;
+}
+
 .card-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1078,6 +1084,18 @@ label {
   background: white;
 }
 
+.exploded-pdf-thumb {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  background: white;
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 950;
+}
+
 .exploded-view-item span {
   overflow-wrap: anywhere;
   color: #e2e8f0;
@@ -1117,6 +1135,22 @@ label {
   width: 100%;
   min-width: 560px;
   height: auto;
+}
+
+.exploded-pdf-frame {
+  display: block;
+  width: 100%;
+  min-width: 560px;
+  height: 72vh;
+  border: 0;
+  background: white;
+}
+
+.exploded-pdf-link {
+  display: inline-flex;
+  margin: 12px;
+  color: #0f172a;
+  font-weight: 950;
 }
 
 .hotspot-layer {

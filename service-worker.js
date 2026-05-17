@@ -1,11 +1,14 @@
-const CACHE_NAME = "pieces-chaudieres-v57";
+const CACHE_NAME = "pieces-chaudieres-v58";
 const APP_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=57",
-  "./app.js?v=57",
+  "./styles.css?v=58",
+  "./app.js?v=58",
   "./saunier-duval-models.js?v=57",
   "./piecesxpress-duomax-condens-f30-90-1-parts.js",
+  "./elmleblanc-tirage-naturel-models.js?v=58",
+  "./elmleblanc-tirage-naturel-parts-by-model.js?v=58",
+  "./elmleblanc-tirage-naturel-exploded-views.js?v=58",
   "./manifest.webmanifest",
   "./assets/boiler-room-bg.png",
   "./assets/logo-egs.png",
@@ -36,6 +39,8 @@ self.addEventListener("fetch", (event) => {
   if (
     url.pathname.endsWith("/saunier-duval-parts-by-model.js") ||
     url.pathname.endsWith("/saunier-duval-exploded-views.js") ||
+    url.pathname.endsWith("/elmleblanc-tirage-naturel-parts-by-model.js") ||
+    url.pathname.endsWith("/elmleblanc-tirage-naturel-exploded-views.js") ||
     url.pathname.includes("/assets/sparecheck-documents/")
   ) {
     event.respondWith(fetch(event.request));
