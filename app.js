@@ -8,6 +8,7 @@ const ELMLEBLANC_PARTS_IMPORT_KEY = "boiler-core-elmleblanc-parts-import-v1";
 const CHAPPEE_PARTS_IMPORT_KEY = "boiler-core-chappee-parts-import-v1";
 const DELETED_SEED_BOILERS_KEY = "boiler-core-deleted-seed-boilers-sparecheck-v4";
 const DESIGN_MODE_KEY = "boiler-core-design-mode-v1";
+const DESIGN_MODE_DEFAULT_RESET_KEY = "boiler-core-design-default-reset-v74";
 const ELMLEBLANC_MANUFACTURER = "ELM leblanc";
 const CHAPPEE_MANUFACTURER = "Chappée";
 const EXPLODED_VIEW_URLS = Object.fromEntries(
@@ -160,7 +161,12 @@ function applyDesignMode(mode) {
 }
 
 function getSavedDesignMode() {
-  return localStorage.getItem(DESIGN_MODE_KEY) === "classic" ? "classic" : "modern";
+  if (localStorage.getItem(DESIGN_MODE_DEFAULT_RESET_KEY) !== "done") {
+    localStorage.setItem(DESIGN_MODE_KEY, "classic");
+    localStorage.setItem(DESIGN_MODE_DEFAULT_RESET_KEY, "done");
+  }
+
+  return localStorage.getItem(DESIGN_MODE_KEY) === "modern" ? "modern" : "classic";
 }
 
 applyDesignMode(getSavedDesignMode());

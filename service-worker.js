@@ -1,9 +1,9 @@
-﻿const CACHE_NAME = "pieces-chaudieres-v73";
+﻿const CACHE_NAME = "pieces-chaudieres-v74";
 const APP_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=73",
-  "./app.js?v=73",
+  "./styles.css?v=74",
+  "./app.js?v=74",
   "./saunier-duval-models.js?v=57",
   "./piecesxpress-duomax-condens-f30-90-1-parts.js",
   "./elmleblanc-tirage-naturel-models.js?v=68",
