@@ -1,56 +1,65 @@
-﻿const CACHE_NAME = "pieces-chaudieres-v63";
+﻿const CACHE_NAME = "pieces-chaudieres-v73";
 const APP_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=63",
-  "./app.js?v=63",
+  "./styles.css?v=73",
+  "./app.js?v=73",
   "./saunier-duval-models.js?v=57",
   "./piecesxpress-duomax-condens-f30-90-1-parts.js",
-  "./elmleblanc-tirage-naturel-models.js?v=63",
-  "./elmleblanc-tirage-naturel-parts-by-model.js?v=63",
-  "./elmleblanc-tirage-naturel-exploded-views.js?v=63",
-  "./elmleblanc-ventouse-models.js?v=63",
-  "./elmleblanc-ventouse-parts-by-model.js?v=63",
-  "./elmleblanc-ventouse-exploded-views.js?v=63",
-  "./elmleblanc-vmc-models.js?v=63",
-  "./elmleblanc-vmc-parts-by-model.js?v=63",
-  "./elmleblanc-vmc-exploded-views.js?v=63",
-  "./elmleblanc-bas-nox-tirage-naturel-models.js?v=63",
-  "./elmleblanc-bas-nox-tirage-naturel-parts-by-model.js?v=63",
-  "./elmleblanc-bas-nox-tirage-naturel-exploded-views.js?v=63",
-  "./elmleblanc-bas-nox-vmc-models.js?v=63",
-  "./elmleblanc-bas-nox-vmc-parts-by-model.js?v=63",
-  "./elmleblanc-bas-nox-vmc-exploded-views.js?v=63",
-  "./elmleblanc-condensation-models.js?v=63",
-  "./elmleblanc-condensation-parts-by-model.js?v=63",
-  "./elmleblanc-condensation-exploded-views.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-condensation-models.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-condensation-parts-by-model.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-condensation-exploded-views.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-bas-nox-vmc-models.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-bas-nox-vmc-parts-by-model.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-bas-nox-vmc-exploded-views.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-bas-nox-ventouse-models.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-bas-nox-ventouse-parts-by-model.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-bas-nox-ventouse-exploded-views.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-bas-nox-tirage-naturel-models.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-bas-nox-tirage-naturel-parts-by-model.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-bas-nox-tirage-naturel-exploded-views.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-basse-temperature-vmc-models.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-basse-temperature-vmc-parts-by-model.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-basse-temperature-vmc-exploded-views.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-basse-temperature-ventouse-models.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-basse-temperature-ventouse-parts-by-model.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-basse-temperature-ventouse-exploded-views.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-basse-temperature-tirage-naturel-models.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-basse-temperature-tirage-naturel-parts-by-model.js?v=63",
-  "./elmleblanc-ecs-chauffe-bain-basse-temperature-tirage-naturel-exploded-views.js?v=63",
-  "./elmleblanc-gaz-chaudiere-sol-condensation-models.js?v=63",
-  "./elmleblanc-gaz-chaudiere-sol-condensation-parts-by-model.js?v=63",
-  "./elmleblanc-gaz-chaudiere-sol-condensation-exploded-views.js?v=63",
-  "./elmleblanc-gaz-chaudiere-sol-basse-temperature-tirage-naturel-models.js?v=63",
-  "./elmleblanc-gaz-chaudiere-sol-basse-temperature-tirage-naturel-parts-by-model.js?v=63",
-  "./elmleblanc-gaz-chaudiere-sol-basse-temperature-tirage-naturel-exploded-views.js?v=63",
+  "./elmleblanc-tirage-naturel-models.js?v=68",
+  "./elmleblanc-tirage-naturel-parts-by-model.js?v=68",
+  "./elmleblanc-tirage-naturel-exploded-views.js?v=68",
+  "./elmleblanc-ventouse-models.js?v=68",
+  "./elmleblanc-ventouse-parts-by-model.js?v=68",
+  "./elmleblanc-ventouse-exploded-views.js?v=68",
+  "./elmleblanc-vmc-models.js?v=68",
+  "./elmleblanc-vmc-parts-by-model.js?v=68",
+  "./elmleblanc-vmc-exploded-views.js?v=68",
+  "./elmleblanc-bas-nox-tirage-naturel-models.js?v=68",
+  "./elmleblanc-bas-nox-tirage-naturel-parts-by-model.js?v=68",
+  "./elmleblanc-bas-nox-tirage-naturel-exploded-views.js?v=68",
+  "./elmleblanc-bas-nox-vmc-models.js?v=68",
+  "./elmleblanc-bas-nox-vmc-parts-by-model.js?v=68",
+  "./elmleblanc-bas-nox-vmc-exploded-views.js?v=68",
+  "./elmleblanc-condensation-models.js?v=68",
+  "./elmleblanc-condensation-parts-by-model.js?v=68",
+  "./elmleblanc-condensation-exploded-views.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-condensation-models.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-condensation-parts-by-model.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-condensation-exploded-views.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-bas-nox-vmc-models.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-bas-nox-vmc-parts-by-model.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-bas-nox-vmc-exploded-views.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-bas-nox-ventouse-models.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-bas-nox-ventouse-parts-by-model.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-bas-nox-ventouse-exploded-views.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-bas-nox-tirage-naturel-models.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-bas-nox-tirage-naturel-parts-by-model.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-bas-nox-tirage-naturel-exploded-views.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-basse-temperature-vmc-models.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-basse-temperature-vmc-parts-by-model.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-basse-temperature-vmc-exploded-views.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-basse-temperature-ventouse-models.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-basse-temperature-ventouse-parts-by-model.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-basse-temperature-ventouse-exploded-views.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-basse-temperature-tirage-naturel-models.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-basse-temperature-tirage-naturel-parts-by-model.js?v=68",
+  "./elmleblanc-ecs-chauffe-bain-basse-temperature-tirage-naturel-exploded-views.js?v=68",
+  "./elmleblanc-gaz-chaudiere-sol-condensation-models.js?v=68",
+  "./elmleblanc-gaz-chaudiere-sol-condensation-parts-by-model.js?v=68",
+  "./elmleblanc-gaz-chaudiere-sol-condensation-exploded-views.js?v=68",
+  "./elmleblanc-gaz-chaudiere-sol-basse-temperature-tirage-naturel-models.js?v=68",
+  "./elmleblanc-gaz-chaudiere-sol-basse-temperature-tirage-naturel-parts-by-model.js?v=68",
+  "./elmleblanc-gaz-chaudiere-sol-basse-temperature-tirage-naturel-exploded-views.js?v=68",
+  "./chappee-gaz-murales-models.js?v=68",
+  "./chappee-gaz-murales-parts-by-model.js?v=68",
+  "./chappee-gaz-murales-exploded-views.js?v=68",
+  "./chappee-gaz-sol-models.js?v=70",
+  "./chappee-gaz-sol-parts-by-model.js?v=70",
+  "./chappee-gaz-sol-exploded-views.js?v=70",
+  "./chappee-odia-hte-models.js?v=72",
+  "./chappee-odia-hte-parts-by-model.js?v=72",
+  "./chappee-odia-hte-exploded-views.js?v=72",
   "./manifest.webmanifest",
   "./assets/boiler-room-bg.png",
   "./assets/logo-egs.png",
@@ -111,6 +120,12 @@ self.addEventListener("fetch", (event) => {
     url.pathname.endsWith("/elmleblanc-gaz-chaudiere-sol-condensation-exploded-views.js") ||
     url.pathname.endsWith("/elmleblanc-gaz-chaudiere-sol-basse-temperature-tirage-naturel-parts-by-model.js") ||
     url.pathname.endsWith("/elmleblanc-gaz-chaudiere-sol-basse-temperature-tirage-naturel-exploded-views.js") ||
+    url.pathname.endsWith("/chappee-gaz-murales-parts-by-model.js") ||
+    url.pathname.endsWith("/chappee-gaz-murales-exploded-views.js") ||
+    url.pathname.endsWith("/chappee-gaz-sol-parts-by-model.js") ||
+    url.pathname.endsWith("/chappee-gaz-sol-exploded-views.js") ||
+    url.pathname.endsWith("/chappee-odia-hte-parts-by-model.js") ||
+    url.pathname.endsWith("/chappee-odia-hte-exploded-views.js") ||
     url.pathname.includes("/assets/sparecheck-documents/")
   ) {
     event.respondWith(fetch(event.request));
@@ -140,6 +155,16 @@ self.addEventListener("fetch", (event) => {
       .catch(() => caches.match(event.request))
   );
 });
+
+
+
+
+
+
+
+
+
+
 
 
 

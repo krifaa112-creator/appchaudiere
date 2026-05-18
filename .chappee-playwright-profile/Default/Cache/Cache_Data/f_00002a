@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="expires" content="0" /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache, must-revalidate" /><link rel="shortcut icon" href="GUI/Skins/Default/Templates/favicons/favicon.ico" type="image/x-icon" /><link rel="icon" href="GUI/Skins/Default/Templates/favicons/favicon.png" type="image/png" /><link rel="icon" sizes="32x32" href="GUI/Skins/Default/Templates/favicons/favicon-32.png" type="image/png" /><link rel="icon" sizes="64x64" href="GUI/Skins/Default/Templates/favicons/favicon-64.png" type="image/png" /><link rel="icon" sizes="96x96" href="GUI/Skins/Default/Templates/favicons/favicon-96.png" type="image/png" /><meta name="Description" content="Spelog : logiciel pour la création et la conception de catalogue pièces de rechange sur internet.Spelog : commande de pièces de rechange" /><link href="/GUI/Skins/Default/bootstrap/css/bootstrap.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/font-awesome/css/font-awesome.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/fileinput/css/fileinput.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/bootstrap/flat/bootstrap-flat.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/master.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/js/toastr/toastr.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/custom.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<script>var approot='/';</script>
+<script src="/GUI/Skins/Default/js/html5/modernizr.js"></script>
+<script src="/GUI/Skins/Default/jquery/jquery-1.11.3.min.js"></script>
+<script src="/GUI/Skins/Default/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="/GUI/Skins/Default/js/jquery-ui.min.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.tools.js"></script>
+<script src="/GUI/Skins/Default/js/toastr/toastr.min.js"></script>
+<script src="/GUI/Skins/Default/js/spelog-notification.js"></script>
+<script src="/GUI/Skins/Default/js/moment.min.js"></script>
+<script src="/GUI/Skins/Default/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="/GUI/Skins/Default/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js"></script>
+<script src="/GUI/Skins/Default/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/GUI/Skins/Default/fileinput/js/fileinput.min.js"></script>
+<script src="/GUI/Skins/Default/fileinput/js/fileinput_locale_fr.js"></script>
+<script src="/GUI/Skins/Default/js/select2/i18n/fr.js"></script>
+<script src="/signalr/hubs"></script><!--[if lt IE 9]>
+<script src="/GUI/Skins/Default/js/html5/respond.min.js?v=049149"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<title>
+	Spelog : catalogue de pièces de rechange
+</title><meta name="keywords" content="Spelog, pièces de rechange, pièces détachées, pièces de rechange, pièces détachées, spare parts" /></head>
+
+<body id="ctl00_spelogBody" class="login">
+
+    <form method="post" action="./Login.aspx?ReturnUrl=%2fListeFamilles.aspx%3fFAMILLE_PARENT_ID%3d41&amp;FAMILLE_PARENT_ID=41" id="aspnetForm" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATEFIELDCOUNT" id="__VIEWSTATEFIELDCOUNT" value="44" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="MfkhnyNBAJ6XA9pHbEFgg99N6nVfw9VP2BKWmjAowNKxQ1zaNQuRuX6gCK7C84NLW0+b86l0rYYLIySCAjzZozCFGJUxDutuwonX" />
+<input type="hidden" name="__VIEWSTATE1" id="__VIEWSTATE1" value="G6UEttnMg7LtYgwVvNP5+OtN/8otZT4awNWmkUUbh3In44nw6dBsTxG5fkHaibljoUtf3tVU7IWiIKTeVZ7a7Uryl2uZcknoPWBe" />
+<input type="hidden" name="__VIEWSTATE2" id="__VIEWSTATE2" value="QlxZm7J+qq8+KSZMoFfcpk+o4U/7QvAzulLPYjNreOC4JeFAfHdFoLJeCZw1t4hIqQlm5mYH4ziwp2qA84SpjIETZqzSp+TbRzF8" />
+<input type="hidden" name="__VIEWSTATE3" id="__VIEWSTATE3" value="QyuuifsWfwzK1drBJZN1X6+mKs6WqgVwVwdUc/xng3PA3ZCjtJJjF8aEJzfhMa2RdDifHyXbJabSlBnqIMaKgC6aug7fHsgUYV9L" />
+<input type="hidden" name="__VIEWSTATE4" id="__VIEWSTATE4" value="fx8qxvWyaSRkRLO5UtAIxz6IaXvZlJL954tzcr/WfBeX6gGVE6uztN5CXhniecLAzYrGkP3eGZviBgJIeBxrHT7HulzMYlmxzHFy" />
+<input type="hidden" name="__VIEWSTATE5" id="__VIEWSTATE5" value="CCdp8DVYEQwCgoa1UbKAov0V7Y3w184XMOuMitSMwjbHWeeHT3NtAOKnDM6kGnsO3vVAqeEA4/hPrIioz4nw9DAuyVqLHDFntjPm" />
+<input type="hidden" name="__VIEWSTATE6" id="__VIEWSTATE6" value="S6ClsXth60JiFRVOe+8XPDExTJ29y91hWqHUG3DFh9mlTf5Ltg03JQ3BvFAqjlb5ujE/AzIA+PPXvTp8GeHbf6a8LmXMJkfG2ljX" />
+<input type="hidden" name="__VIEWSTATE7" id="__VIEWSTATE7" value="QRqNRAGihw0EeaHEqEk9wlGE1Kl09QA7eYElzpSpflRJ5MB/3eLpx8Z2PCS5DJ7nrnKz2AD2+pvfGABE3/l8JsktPXNRcm1M4HYq" />
+<input type="hidden" name="__VIEWSTATE8" id="__VIEWSTATE8" value="iSDeZxTlF5znssGyzSClj8JAh6kxCo6hubcATVCizeuEOuRPbz2gIrTk/R8dBzbgo4veZjkpotkpX9TX3IWbQm9OPmJyl9SQUW/B" />
+<input type="hidden" name="__VIEWSTATE9" id="__VIEWSTATE9" value="OUwcbFabA072Okz+Dt8rLVKOfNK4kv/zr0lXlxxy1AM0A6qg6UJMbOQdBXcXC61XsP1kt0JqYcN3LsP7lgJqI00x7maK7VV6J4Sb" />
+<input type="hidden" name="__VIEWSTATE10" id="__VIEWSTATE10" value="JZo7CXutUaEIzjcDfLjhu8LashxmM98jhSVpDk4fLui5e4DO/YJ7es73iLIYqKERxpp+1JQXkv+qXjdTd51zDbuO/HiNmAwCtMug" />
+<input type="hidden" name="__VIEWSTATE11" id="__VIEWSTATE11" value="sJ226AroMTtqB269/SF+Uhaqxy+ye4CQbCicdINOYG728+y0u5TY9nHEbUy2jVUgQD/uBDHgOr0OrUoY9NoSwV9fgg2OVc/lKlV4" />
+<input type="hidden" name="__VIEWSTATE12" id="__VIEWSTATE12" value="i8zvslQ8TI6CAAfVce0T92d3WPYsFs6IhD2eYXj0wkiheiXmF4qNThniRGSPJo/EOjGr4TVuCRohtUZ6xzbxWvLvTqeQu4wjr5UO" />
+<input type="hidden" name="__VIEWSTATE13" id="__VIEWSTATE13" value="tpTLyExvYDDq0/Uq0n3vvcOGpg2L2jOMPFWuYIxU+I6EzAUmSwgQ6HirCPjFZt6wkn1T//nROvgYdnr7sksxDEigGyQ+ZBW5iw40" />
+<input type="hidden" name="__VIEWSTATE14" id="__VIEWSTATE14" value="mFljB1kJKWPWcRmx+STEKKFMsOc0kHIyqoZ48dF8oFXE/UZRmNG1raskDFYJgUZIdVw2wc83w95LbJUnZdT47F3hMopiSIPiEgoT" />
+<input type="hidden" name="__VIEWSTATE15" id="__VIEWSTATE15" value="3UhTk+F7tfUKloRkurqncxlNQu9JdvTRzW6+gHKavF7CKc2xwOLz/YUs4F1sKCZrz34N5T/vONtjzG+idFwaC9NuusTErc3aQFUg" />
+<input type="hidden" name="__VIEWSTATE16" id="__VIEWSTATE16" value="FQ0dlpJc6gmez4h5pxF4ES99Ue4yMQ6NfRY/aFXy9yKD173FChtXBhLpU7vpSMCW9AuS/6OvNiSzoySiNPzT2DNYYn+SFbHCmY7D" />
+<input type="hidden" name="__VIEWSTATE17" id="__VIEWSTATE17" value="H+F/4d2vCVJQGTd2gFNq23xPsxxN8jbc39rzzhiUzYO4t71bUOXTYUioKpcYy40aQQcxB07cjLNTL88ix1mPc2Oj+/V5zPNr912L" />
+<input type="hidden" name="__VIEWSTATE18" id="__VIEWSTATE18" value="AOonNPahAeX169bWatVqN4s/6i+uGRkoVayQwiXCRuVk1VvfgVE78tnlK3t14q1p/kX1niqEqjK8gFhSIV6cWLwv5P6p6V+f+Ugq" />
+<input type="hidden" name="__VIEWSTATE19" id="__VIEWSTATE19" value="r3TKJqZ9YydyqfhPc1EgUJx9MLiPZZny6WRGULKD+EcYxQMFp3aGD8OQfAXjyoQ0mEz7bd9XHrjg2ejERjfCmNa2Pd7EDCs1vWIe" />
+<input type="hidden" name="__VIEWSTATE20" id="__VIEWSTATE20" value="LGpjYBSdsAlozvcp6PSsQONFGtcopQZN2tU5OODOyRXxgGsz7le7eN+dUW2i3uRcxMa0m8BfT5dZd+R+3RW83C0XsXUQmfIgbUl1" />
+<input type="hidden" name="__VIEWSTATE21" id="__VIEWSTATE21" value="NowurlC9JVHmtUqnxus0mX6etFcL8Ry+tR8Ch8ZILHxd5a4msrhehhTnJUPL0vKvIIPGgrSPYARVOJFNrFqyHhkuEHZdVl5fb/1g" />
+<input type="hidden" name="__VIEWSTATE22" id="__VIEWSTATE22" value="6CX7Gbj/PkG8XD1sii1Nk1CRFQsN6bUE3Ag1EnOR5rsoxwlEvQTvh8uiE+ah/Wf2cHrAdXKl8zHjJE8acOP6fS6NS7zkcQ0nm3se" />
+<input type="hidden" name="__VIEWSTATE23" id="__VIEWSTATE23" value="rs6yGLWff5jSYKXFFZL+x9RHRIRNePZrYFuMU41bZW1RNwYo3RshRVSt1r+4OEg6iiMy2iAuzsJOU6NmdqwJjBCjIbfoEZZnsMK3" />
+<input type="hidden" name="__VIEWSTATE24" id="__VIEWSTATE24" value="y5GA0ig+FJ5vZCIv4OCCeX5gnk+svwzBY3ZwxJhb+SD6j6W+DOH/qdNU66/8leOUel6Zom3l0fjaO1yyvQdnSgpx1jMYlam0eW5y" />
+<input type="hidden" name="__VIEWSTATE25" id="__VIEWSTATE25" value="0rPBikagn5VxiuFeoh9xrbzTFB+eGm0QAqiu2UQ62wxVtpCmBXVMynPkYg6ptNWT+LW73c3Ia7yUJdeQspJJFhgpkS5lF5IS98C+" />
+<input type="hidden" name="__VIEWSTATE26" id="__VIEWSTATE26" value="fi6g5armuSYG5eFuE2z6N1PWdU5eKR7ytRTEBFH5bTnUWwJ6MzEFPnLmppCEBNQsWmbPxNdcZk21ckgT5iXnAZSkw+KR0+VzGaE9" />
+<input type="hidden" name="__VIEWSTATE27" id="__VIEWSTATE27" value="v2ceDU6Ee8ktNhBNJP3AH/vQULtmDY/vHo1T/2V4JsGxhX2Bw5+DVULtc4RDoByZI1UzdPliR1K0HpAawSkQP9+pJYRGcB016xUH" />
+<input type="hidden" name="__VIEWSTATE28" id="__VIEWSTATE28" value="J4E6npTK3xnhCLpU2VgzBEtY5UHiP9fXaC9RI+cTQC70rF2//n0qkL6IX+GUVbViQIYZ5SCCz5Iy7mduW1IBSMgJNqGt8xdpcmbH" />
+<input type="hidden" name="__VIEWSTATE29" id="__VIEWSTATE29" value="cdi9euHyW6i+vIKGMT2P1XC/IQYJtdfzg3If707O2JXXA5J+1eFEnOikDmtqj/JLykZGveP3OGHCq/RP8vDy9Rl5Y1ZVR81oKXp7" />
+<input type="hidden" name="__VIEWSTATE30" id="__VIEWSTATE30" value="YKgP+MNmWluHegw4Z8p9Jzu+pqdvvDCFBTOauYmaymuZGuxewbJNswm8tlzo/O5SMCIMSzfxeE20Drl4274XM+nrGy3Y282mdpqJ" />
+<input type="hidden" name="__VIEWSTATE31" id="__VIEWSTATE31" value="isP/WkipChufFDZjy/UrBGwN79KVKOySNkPsFtwRx2W9xMuQqDQ52YX7YanRziJZzlQ+ysjqAZG7yq5ybn21qHOzrzBJe2wgYowP" />
+<input type="hidden" name="__VIEWSTATE32" id="__VIEWSTATE32" value="C9/+3z6Z1dqs45FVsQFuB8hacy36JeMPxcmUUvtVEIgKsjebWC95xE0u618PQQ4uo1DKkPOvgEfZ8QZ4xTDpKs37JxCQwH+XiNag" />
+<input type="hidden" name="__VIEWSTATE33" id="__VIEWSTATE33" value="90G8iGo2nIKN0agl938HvLDogp6TjjJ8n/EC/QggD3k/dsppHxGx06u4Yrsz9wwapoERFY8mVfCHsdjEldoElKKfHYbWbSvvNREJ" />
+<input type="hidden" name="__VIEWSTATE34" id="__VIEWSTATE34" value="uj5Ew5Ng5H7IWWVBJddg2JgWj99Zghv8AB57xYLuCDE1d9RbCYWa14nza5QIveH4825o5qLSaOZzcTAeEmWncz0dkeV4F/f0hUCt" />
+<input type="hidden" name="__VIEWSTATE35" id="__VIEWSTATE35" value="oD+3oAWwhcRyQMUz59apOr2dHlzaD+GGEtmGiSOLz38Om59ua/zlnyXM/jMw5kkZXFQi4LKbHwivNZwtbQKeOGkIDZrHtkeN34Ny" />
+<input type="hidden" name="__VIEWSTATE36" id="__VIEWSTATE36" value="xy8ITQB4Dt4sgXYC5pA81OBV6j1w6t9Ki0bqejPLAPmXF1yP+LN3LexC6kHZZiXyfU5LrAR78VWGW+kuza3QLtMBdv/aEjp+Adsy" />
+<input type="hidden" name="__VIEWSTATE37" id="__VIEWSTATE37" value="V8EStBiJVsDvZ5vmcoRvQ6nihMhE3SISYWvOvzBg/tyQC7vv27eww2uvYVNhEeBo2xIn6Mfyig9cApMk8pVVDrnoWf0A274Nb4Wq" />
+<input type="hidden" name="__VIEWSTATE38" id="__VIEWSTATE38" value="3cCpkBP5hylygE1k635BszwvEfibkLMT/WwOBzJHVaQWV3NsX+f7j4lT5c19uGDaInvD+nA6qiXFfHDyLTCzW/kHZ0T7nhoHaOxa" />
+<input type="hidden" name="__VIEWSTATE39" id="__VIEWSTATE39" value="9rZ7h4YOx054ihnln1nKo8rKY5qFE0i0fi+a/D0KrAyKcC4LWiRviNjXqiW0e0itiVifwOhw5jBYDuKCN3X+qGwp6JBlKETjLycI" />
+<input type="hidden" name="__VIEWSTATE40" id="__VIEWSTATE40" value="pgyq9xgcp0+ZGzwikgGiOT75gFbVubxr2kRgHOSO57rix9F/fcjlXVHrLBKmTIbT9s1aK6ZwDEHjkby+vmdt6jLe59paOp1wLnQK" />
+<input type="hidden" name="__VIEWSTATE41" id="__VIEWSTATE41" value="Cvk9T3nQjLxSt0ThC1KFUlDrV5wZkYh9H18Lsx/0dxHT6jF2n/ruQyyC094feq3zRtmvjn2BR9gfEuET2HfrhKSXuhFjU2tY4irO" />
+<input type="hidden" name="__VIEWSTATE42" id="__VIEWSTATE42" value="LRQgVLzE2qwc4r3dGJgt0+WMgtPr1WSQfJN/EiYL3oGLQky6P8k8O3WngpZOrCfBYhL/lqTKrCL1DaL2r45oRw5n+9yCi1cMWZ3h" />
+<input type="hidden" name="__VIEWSTATE43" id="__VIEWSTATE43" value="xe6dhoZA2w==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZPDxFjnVR0mjwvTGDxmeFTqMgTnK_RSN93-FaaguVMHbUOhS_jCRY9Y5rnkouLEQWw2&amp;t=638605973300000000" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"fr-FR","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":" ","CurrencySymbol":"€","NaNSymbol":"NaN","CurrencyNegativePattern":8,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":" ","CurrencyPositivePattern":3,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":" ","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402297199999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2049,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":2,"FullDateTimePattern":"dddd d MMMM yyyy HH:mm:ss","LongDatePattern":"dddd d MMMM yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"d MMMM","PMDesignator":"","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["dim.","lun.","mar.","mer.","jeu.","ven.","sam."],"ShortestDayNames":["di","lu","ma","me","je","ve","sa"],"DayNames":["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],"AbbreviatedMonthNames":["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc.",""],"MonthNames":["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre",""],"IsReadOnly":true,"NativeCalendarName":"calendrier grégorien","AbbreviatedMonthGenitiveNames":["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc.",""],"MonthGenitiveNames":["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre",""]},"eras":[1,"ap. J.-C.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=dyDTs7gNF_kk9FufHTKjE417feXbjzNus48X3AvrPSFGhcpECQKJYCHMKRwgA2_EEU-9boJrUoM6iY4sLWp_zJbNBCy7QFryOfu63IK3i2njgBk6zW4L5ud4I8o3yfKfxUDxoMiulWtESrnarCwETunABHzAuY6FZj0Zr0OCbWg1&amp;t=ffffffffc789fa9a" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ct1HG-wRSUJU9M060LHjx4Spbx9xDbjjHOzItnRyrNxXBu9IJB83G6Hs2bO-T7DZsrtzVZXffI3ZRKz9-s1Egt5L_5kGe6I7ptmVRxak5cul7F6R5-ku179pZ2NE9qVoSZky3J5T5PyDasDK51JcjwNVD6T67Jao5-a5zgshuos1&amp;t=ffffffffc789fa9a" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+</div>
+        <!-- WRAPPER -->
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                <div class="container-fluid">
+                    <div class="navbar-brand">
+                        
+<a id="logo" href="/">
+    <img class="hidden-xs" src="/GUI/Skins/Default/images/logo_web.png" alt="">
+    <img class="visible-xs" src="/GUI/Skins/Default/images/logo_mobile.png" alt="">
+</a>
+                    </div>
+                    <nav id="navbar-top" class="navbar navbar-top">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li></li>
+                        </ul>
+                    </nav>
+                </div>
+                <nav id="navbar-main" class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div id="navbar" class="">
+                            <ul class="nav navbar-nav navbar-right">
+                                <div class="navbar-form">
+                                    <div id="ctl00_LanguageChooser1_PanelCONTROLE" class="form-inline form-group">
+	
+    <div id="LanguageChooser">
+        <!--<label for="ctl00_LanguageChooser1_ddlLanguages" id="ctl00_LanguageChooser1_lblChoose" class="control-label">Choisissez votre langue :</label>-->
+        <select name="ctl00$LanguageChooser1$ddlLanguages" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$LanguageChooser1$ddlLanguages\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_LanguageChooser1_ddlLanguages" class="form-control">
+		<option selected="selected" value="fr">Fran&#231;ais</option>
+		<option value="en">English</option>
+
+	</select>
+    </div>
+
+</div>
+
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <!-- fin Header -->
+            <!-- Container -->
+            <div id="container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Main -->
+                        <div id="main" class="col-md-12">
+                            
+    <div class="row">
+        <div class="col-md-4">
+            <div id="ZoneDeContentLeft" code="LOGIN_TEXT_LEFT" type="CONTENTZONE" kind="SIMPLE" product="" class="contentzone"></div>
+        </div>
+        <div class="col-md-4">
+            
+            <div class="row">
+                <div id="LOGIN_INFOSMEMBRES" code="LOGIN_INFOSMEMBRES" type="CONTENTZONE" kind="SIMPLE" product="" class="contentzone"></div>
+            </div>
+            
+            <div class="row">
+                <div id="ctl00_MainContent_TAB_LOGIN_TAB_LOGIN" class="login-form table noborder">
+    <h4><span id="ctl00_MainContent_TAB_LOGIN_lblTitreLogin"></span></h4>
+    <div class="form-login">
+        <div class="form-group has-feedback">
+            <label for="ctl00_MainContent_TAB_LOGIN_TextBoxLOGIN" id="ctl00_MainContent_TAB_LOGIN_lblTitreIdentifiant">E-mail :</label>
+            <input name="ctl00$MainContent$TAB_LOGIN$TextBoxLOGIN" type="text" maxlength="100" id="ctl00_MainContent_TAB_LOGIN_TextBoxLOGIN" class="form-control" />
+            <span class="user fa fa-lg fa-user form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+            <label for="ctl00_MainContent_TAB_LOGIN_TextBoxPASSWORD" id="ctl00_MainContent_TAB_LOGIN_lblTitreCode">Mot de passe :</label>
+            <input name="ctl00$MainContent$TAB_LOGIN$TextBoxPASSWORD" type="password" id="ctl00_MainContent_TAB_LOGIN_TextBoxPASSWORD" class="form-control" />
+            <span class="lock fa fa-lg fa-lock form-control-feedback"></span>
+        </div>
+        <div class="form-group">
+            <!-- Button -->
+            <div class="controls">
+                <input type="submit" name="ctl00$MainContent$TAB_LOGIN$LinkValider" value="Valider" id="ctl00_MainContent_TAB_LOGIN_LinkValider" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="checkbox">
+                </div>
+            <span id="ctl00_MainContent_TAB_LOGIN_LabelERREUR" class="text-danger"></span>
+        </div>
+    </div>
+
+    
+    
+
+</div>
+    <div>
+        <span id="ctl00_MainContent_TAB_LOGIN_lblMessage" class="text-danger" Traduction="0"></span>
+</div>
+
+<div id="ctl00_MainContent_TAB_LOGIN_Bots" style="display:none;">
+
+
+
+</div>
+            </div>
+            <div class="row">
+                <span id="ctl00_MainContent_lblInfoNav" class="infoNav"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            
+            <div id="LOGIN_INFOSSITES" code="LOGIN_INFOSSITES" type="CONTENTZONE" kind="SIMPLE" product="" class="contentzone"></div>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="ZoneDeContentBottom" code="LOGIN_TEXT_BOTTOM" type="CONTENTZONE" kind="SIMPLE" product="" class="contentzone"></div>
+        </div>
+    </div>
+
+                        </div>
+                        <!-- fin Main -->
+                    </div>
+                </div>
+            </div>
+            <!-- fin Container -->
+
+		<!-- Footer -->
+		<footer id="footer">
+			
+<!--SPECIFIQUE-->
+<div id="pullleft" class="pull-left">
+    <a id="ctl00_CtrlFooter1_hlSiteRGPD" href="http://rgpd.chappee.com" target="_blank">Politique de protection des données personnelles</a>
+    <span>-</span>
+    <a id="ctl00_CtrlFooter1_hlSiteWeb" href="http://www.chappee.com/" target="_blank">CHAPPEE</a>
+    
+    
+</div>
+<div id="pullright" class="pull-right">
+    <a id="ctl00_CtrlFooter1_hlAxess" href="http://www.axess-technology.net" target="_blank">Axess</a>
+            
+    <a id="ctl00_CtrlFooter1_hlInfos" href="http://www.spelog.com" target="_blank"></a>
+    <span id="ctl00_CtrlFooter1_lblSpelog">SPELOG 4.91.49</span>
+</div>
+<!--SPECIFIQUE-->
+
+		</footer>
+		<!-- fin Footer -->
+	</div>
+	<!-- fin WRAPPER -->
+
+	<div id="photo"></div>
+	<div id="photoarticle"></div>
+	<div id="photoschema"></div>
+	<div id="zonecustomfield"></div>
+	<div id="zonemedia"></div>
+	<div id="zonehistoart"></div>
+	<div id="zoneinfo"></div>
+	<div id="zonecommentaires"></div>
+	<div id="editcomments"></div>
+	<div id="zoneaddpanier"></div>
+	<div id="zoneaddvariantes"></div>
+	<div id="DivInfoFav" style="display: none"></div>
+
+	<!-- Script -->
+	<script type="text/javascript">
+		$("textarea[maxsize]").each(function() {
+			$(this).attr('maxlength', $(this).attr('maxsize'));
+			$(this).removeAttr('maxsize');
+		});
+
+		var cookieMessage = 'En poursuivant votre navigation ou en cliquant sur « Accepter » vous autorisez les cookies du site www.chappee.com<br>Nous utilisons  : <b><br>- Les cookies strictement nécessaires :</b> permettant d\'assurer la sécurité de nos services de communication électronique.<br><b>- Les cookies de performance :</b> permettant d’améliorer l’ergonomie et de mieux suivre la manière dont les services du site sont utilisés.<br>Pour désactiver les cookies  ';
+		var cookieDismiss = 'Accepter';
+		var cookieLink = 'cliquez-ici.';
+
+        // SPECIFIQUE DEBUT
+		window.addEventListener('load',
+			function() {
+				window.cookieconsent.initialise({
+					'palette': {
+						'popup': {
+                            'background': '#BD2225',
+							'text': '#ffffff'
+						},
+						'button': {
+							'background': '#ffffff',
+                            'text': '#BD2225'
+						}
+					},
+					'position': 'bottom',
+					'content': {
+						'message': cookieMessage,
+						'dismiss': cookieDismiss,
+						'link': cookieLink,
+                        'href': 'https://www.chappee.com/mentions-legales/mentions-legales-et-politique-sur-les-cookies'
+					}
+				});
+			});
+        // SPECIFIQUE FIN
+    </script>
+	<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManagerMain', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+	<script src="/GUI/Skins/Default/js/scripts.js"></script>
+<script src="/GUI/Skins/Default/js/spelog_jquery.js"></script>
+<script src="/GUI/Skins/Default/js/custom.js"></script>
+
+	<!-- fin Script -->
+
+	
+<script>
+    function callbackXitiContainer(res) {
+        if (res.value.pXtoption) {
+            if (res.value.pXitiProtocol == "HTTP")
+                initxitiajax(res.value.pEntSite, res.value.pXtsite, res.value.pXtn2, res.value.pXtpage, res.value.pXtdi, res.value.pX1, res.value.pX2, res.value.pX3, res.value.pX4, res.value.pX5, res.value.pX6, res.value.pX7, res.value.pX8, res.value.pX9, res.value.pX10, res.value.pParamsstring);
+            if (res.value.pXitiProtocol == "HTTPS")
+                initxitiajaxsecure(res.value.pEntSite, res.value.pXtsite, res.value.pXtn2, res.value.pXtpage, res.value.pXtdi, res.value.pX1, res.value.pX2, res.value.pX3, res.value.pX4, res.value.pX5, res.value.pX6, res.value.pX7, res.value.pX8, res.value.pX9, res.value.pX10, res.value.pParamsstring);
+        }
+    }
+
+    function randomString() {
+        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        var string_length = 64;
+        var randomstring = '';
+        for (var i = 0; i < string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum, rnum + 1);
+        }
+        return randomstring;
+    }
+
+    function initxitiajax(pEntSite, pXtsite, pXtn2, pXtpage, pXtdi, pX1, pX2, pX3, pX4, pX5, pX6, pX7, pX8, pX9, pX10, pParamsstring) {
+        xtnv = document;        //parent.document or top.document or document 
+        xtsd = "http://" + pEntSite;
+        xtsite = pXtsite;
+        xtn2 = pXtn2;        // level 2 site
+        xtpage = pXtpage;        //page name (with the use of :: to create chapters)
+        xtdi = pXtdi;        //implication degree 
+        xt_multc = pParamsstring;
+
+        if (window.xtparam != null) { window.xtparam += xt_multc; }
+        else { window.xtparam = xt_multc; };
+
+        url = 'http://' + pEntSite + '.xiti.com/hit.xiti?s=' + pXtsite + '&s2=' + pXtn2 + '&p=' + pXtpage + '&di=' + xt_multc + '&randomspe=' + randomString();
+        $('#IMAGEXITIAJAX').setAttribute("src", url);
+
+        return true;
+    }
+
+    function initxitiajaxsecure(pEntSite, pXtsite, pXtn2, pXtpage, pXtdi, pX1, pX2, pX3, pX4, pX5, pX6, pX7, pX8, pX9, pX10, pParamsstring) {
+        xtnv = document;        //parent.document or top.document or document 
+        xtsd = "https://" + pEntSite;
+        xtsite = pXtsite;
+        xtn2 = pXtn2;        // level 2 site
+        xtpage = pXtpage;        //page name (with the use of :: to create chapters)
+        xtdi = pXtdi;        //implication degree 
+        xt_multc = pParamsstring;
+
+        if (window.xtparam != null) { window.xtparam += xt_multc; }
+        else { window.xtparam = xt_multc; }
+
+        url = 'https://' + pEntSite + '.xiti.com/hit.xiti?s=' + pXtsite + '&s2=' + pXtn2 + '&p=' + pXtpage + '&di=' + xt_multc + '&randomspe=' + randomString();
+
+        $('#IMAGEXITIAJAX').setAttribute("src", url);
+
+        return true;
+    }
+</script>
+
+<img id="IMAGEXITIAJAX" name="IMAGEXITIAJAX" width="1" height="1" alt="" src="" >
+	<div id="ctl00_XITISTD"><!-- AT Internet -->
+<script type="text/javascript" src="//tag.aticdn.net/smarttag.js"></script>
+<script>
+var ATTag = new ATInternet.Tracker.Tag({
+	log: "logc187",
+	logSSL: "logs1187",
+	secure: false,
+	site: 580035,
+	domain: "xiti.com"
+});
+ATTag.page.send({
+	name: "pagename"
+});
+</script>
+<!-- End AT Internet --></div>
+</form>
+</body>
+
+</html>

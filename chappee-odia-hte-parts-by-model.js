@@ -1,0 +1,760 @@
+window.CHAPPEE_ODIA_HTE_PARTS_BY_MODEL = {
+  "368": {
+    "modelId": "368",
+    "familyId": "152",
+    "modelName": "ODIA HTE / ODIA SOLAR HTE / G8 Modular",
+    "familyName": "CHAUDIERES ODIA",
+    "sections": [
+      {
+        "id": "14046",
+        "title": "ODIA 24-32 HTE",
+        "code": "",
+        "order": "1",
+        "sourceUrl": "https://pieces.chappee.com/FicheSchema.aspx?IDSCG=14046",
+        "imageBlobId": "chappee-14046.jpg",
+        "parts": [
+          {
+            "reference": "S508572",
+            "label": "SOCLE G8 ASS.",
+            "position": "1"
+          },
+          {
+            "reference": "S144652",
+            "label": "CAISSON ETANCHE",
+            "position": "2"
+          },
+          {
+            "reference": "S200018975",
+            "label": "CAPOT + JOINT",
+            "position": "3"
+          },
+          {
+            "reference": "SD300024870",
+            "label": "JOINT DE CAPOT",
+            "position": "4"
+          },
+          {
+            "reference": "S59985",
+            "label": "BUSE CONCENTRIQUE 60/100",
+            "position": "5"
+          },
+          {
+            "reference": "S300026763",
+            "label": "ATTACHE CABLES FCW-50-01",
+            "position": "6"
+          },
+          {
+            "reference": "SX710174800",
+            "label": "SUPPORT CORPS 4 ELTS",
+            "position": "7"
+          },
+          {
+            "reference": "SX710140600",
+            "label": "SUPPORT COPRS 6 ELTS",
+            "position": "7"
+          },
+          {
+            "reference": "S7101187",
+            "label": "ECHANGEUR 4E",
+            "position": "8"
+          },
+          {
+            "reference": "SX710140700",
+            "label": "ECHANGEUR 6E",
+            "position": "8"
+          },
+          {
+            "reference": "S144656",
+            "label": "TUBE RETOUR ECHANGEUR",
+            "position": "9"
+          },
+          {
+            "reference": "S144664",
+            "label": "TUBE DEPART ECHANGEUR 4E",
+            "position": "10"
+          },
+          {
+            "reference": "S144661",
+            "label": "TUBE DEPART ECHANGEUR 6E",
+            "position": "10"
+          },
+          {
+            "reference": "SX9950760",
+            "label": "SECURITE SURCHAUFFE 105Â° (9950760)",
+            "position": "11"
+          },
+          {
+            "reference": "SX8435500",
+            "label": "SONDE ITS 2410201/0 D18",
+            "position": "12"
+          },
+          {
+            "reference": "SX8380860",
+            "label": "CLIPS ECHANGEUR PRINCIPAL",
+            "position": "13"
+          },
+          {
+            "reference": "SX710123700",
+            "label": "PATTE FIXATION CORPS",
+            "position": "14"
+          },
+          {
+            "reference": "S144668",
+            "label": "SIPHON",
+            "position": "15"
+          },
+          {
+            "reference": "S144669",
+            "label": "TUBE EVACUATION CONDENSATS CORPS",
+            "position": "16"
+          },
+          {
+            "reference": "S143599",
+            "label": "TUBE SIPHON LG 565",
+            "position": "17"
+          },
+          {
+            "reference": "SD300028666",
+            "label": "VASE D'EXPANSION 12L",
+            "position": "18"
+          },
+          {
+            "reference": "SD300028667",
+            "label": "VASE D'EXPANSION 18L",
+            "position": "18"
+          },
+          {
+            "reference": "S300024509",
+            "label": "JONCTION 1/2",
+            "position": "19"
+          },
+          {
+            "reference": "S139826",
+            "label": "CONTRE ECROU 3/4",
+            "position": "20"
+          },
+          {
+            "reference": "S116518",
+            "label": "CLIP",
+            "position": "21"
+          },
+          {
+            "reference": "S300024428",
+            "label": "FLEXIBLE VASE D'EXPANSION",
+            "position": "22"
+          },
+          {
+            "reference": "S508616",
+            "label": "SACHET VISSERIE CORPS-CAISSON",
+            "position": "23"
+          },
+          {
+            "reference": "S508617",
+            "label": "SACHET JOINTS*CORPS-CAISSON",
+            "position": "24"
+          }
+        ]
+      },
+      {
+        "id": "14047",
+        "title": "BRULEUR",
+        "code": "",
+        "order": "2",
+        "sourceUrl": "https://pieces.chappee.com/FicheSchema.aspx?IDSCG=14047",
+        "imageBlobId": "chappee-14047.jpg",
+        "parts": [
+          {
+            "reference": "SX711061001",
+            "label": "BRULEUR 24 KW ODIA",
+            "position": "1"
+          },
+          {
+            "reference": "SX711060901",
+            "label": "BRULEUR 32 KW ODIA",
+            "position": "1"
+          },
+          {
+            "reference": "SX5212900",
+            "label": "BRIDE CHAMBRE DE COMBUSTION",
+            "position": "2"
+          },
+          {
+            "reference": "SX5411000",
+            "label": "JOINT BRIDE/ECHANGEUR",
+            "position": "3"
+          },
+          {
+            "reference": "SX5411020",
+            "label": "PANNEAU ISOLANT (5411020)",
+            "position": "4"
+          },
+          {
+            "reference": "SX710448200",
+            "label": "BRULEUR WORGAS(PX951A)",
+            "position": "5"
+          },
+          {
+            "reference": "SX5212930",
+            "label": "RALLONGE BRULEUR 5E (5212930)",
+            "position": "6"
+          },
+          {
+            "reference": "SX5413530",
+            "label": "JOINT DE BRULEUR",
+            "position": "7"
+          },
+          {
+            "reference": "SX710051400",
+            "label": "AIR-GAS CONVEYOR SS.LUNA4",
+            "position": "8"
+          },
+          {
+            "reference": "SX710692300",
+            "label": "VENTILATEUR NRG118",
+            "position": "9"
+          },
+          {
+            "reference": "SX710059700",
+            "label": "VENTURI AGU3718",
+            "position": "10"
+          },
+          {
+            "reference": "SX710039100",
+            "label": "VENTURI AGU3723",
+            "position": "10"
+          },
+          {
+            "reference": "SX710042400",
+            "label": "JOINT DE VENTURI",
+            "position": "11"
+          },
+          {
+            "reference": "SX5410900",
+            "label": "JOINT VENTILATEUR (5410900)",
+            "position": "12"
+          },
+          {
+            "reference": "SX710424200",
+            "label": "ELECTRODE IONISATION B&P",
+            "position": "13"
+          },
+          {
+            "reference": "SX710220000",
+            "label": "ELECTRODE ALLUMAGE HTE",
+            "position": "14"
+          },
+          {
+            "reference": "S144698",
+            "label": "CABLE ELECTRODE IONISATION",
+            "position": "15"
+          },
+          {
+            "reference": "SX8513520",
+            "label": "CABLE ELECT.D'ALLUMAGE L=250",
+            "position": "16"
+          },
+          {
+            "reference": "SX8511150",
+            "label": "CABLE MASSE ELECTR.D'ALL.L=270(8511150)",
+            "position": "17"
+          },
+          {
+            "reference": "SX710185200",
+            "label": "JOINT ELECTRODE IONISATION",
+            "position": "18"
+          },
+          {
+            "reference": "SX710185300",
+            "label": "JOINT ELECTRODE D'ALLUMAGE",
+            "position": "19"
+          },
+          {
+            "reference": "SX710195500",
+            "label": "ENTRETOISE CANAL D'AIR",
+            "position": "20"
+          },
+          {
+            "reference": "SX710112300",
+            "label": "SUPPORT VISUEL",
+            "position": "21"
+          },
+          {
+            "reference": "SX5211800",
+            "label": "HUBLOT (5211800)",
+            "position": "22"
+          },
+          {
+            "reference": "SX5409290",
+            "label": "JOINT HUBLOT (X3) (5409290)",
+            "position": "23"
+          },
+          {
+            "reference": "SX710027900",
+            "label": "ALLUMEUR ANTOSS 24V",
+            "position": "24"
+          },
+          {
+            "reference": "SX710452600",
+            "label": "VANNE GAZ VGE56S",
+            "position": "25"
+          },
+          {
+            "reference": "SX711064000",
+            "label": "FLEXIBLE GAZ",
+            "position": "26"
+          },
+          {
+            "reference": "SX710011400",
+            "label": "CLIP FIXATION FLEXIBLE GAZ",
+            "position": "27"
+          },
+          {
+            "reference": "SX710088400",
+            "label": "SILENCIEUX BOITE A AIR",
+            "position": "29"
+          },
+          {
+            "reference": "SX710061400",
+            "label": "O-RING 18x3 EPDM",
+            "position": "30"
+          },
+          {
+            "reference": "SX54004650",
+            "label": "JOINT G 3/4 17X24X2 (x10)",
+            "position": "31"
+          }
+        ]
+      },
+      {
+        "id": "14048",
+        "title": "ENSEMBLE HYDRAULIQUE",
+        "code": "",
+        "order": "3",
+        "sourceUrl": "https://pieces.chappee.com/FicheSchema.aspx?IDSCG=14048",
+        "imageBlobId": "chappee-14048.jpg",
+        "parts": [
+          {
+            "reference": "300025173",
+            "label": "BOUCHON",
+            "position": "0"
+          },
+          {
+            "reference": "S117011",
+            "label": "MODULE HYDRAULIQUE ASS.",
+            "position": "1"
+          },
+          {
+            "reference": "S123685",
+            "label": "POMPE UPM 2",
+            "position": "2"
+          },
+          {
+            "reference": "S117587",
+            "label": "EMBOUT POMPE",
+            "position": "3"
+          },
+          {
+            "reference": "SDS100823",
+            "label": "MOTEUR VANNE 3 VOIES",
+            "position": "4"
+          },
+          {
+            "reference": "S300024447",
+            "label": "SUPPORT DE POMPE",
+            "position": "5"
+          },
+          {
+            "reference": "SDS100821",
+            "label": "SONDE DE PRESSION + JOINT + CLIP",
+            "position": "6"
+          },
+          {
+            "reference": "S116596",
+            "label": "JOINT TORIQUE 76X3,75",
+            "position": "7"
+          },
+          {
+            "reference": "SDS100832",
+            "label": "CLIP 26 (X10)",
+            "position": "8"
+          },
+          {
+            "reference": "S116518",
+            "label": "CLIP",
+            "position": "9"
+          },
+          {
+            "reference": "S114991",
+            "label": "JOINT RO17XRO25 TYPE C",
+            "position": "10"
+          },
+          {
+            "reference": "S116651",
+            "label": "JOINT TORIQUE 22X2,5",
+            "position": "11"
+          },
+          {
+            "reference": "S144684",
+            "label": "TUBE RETOUR POMPE-ECHANGEUR COMPLET",
+            "position": "20"
+          },
+          {
+            "reference": "S144679",
+            "label": "TUBE RETOUR SOUS POMPE",
+            "position": "21"
+          },
+          {
+            "reference": "S144672",
+            "label": "TUBE DISTRIBUTEUR COMPLET",
+            "position": "22"
+          },
+          {
+            "reference": "S144658",
+            "label": "TUBE ARRIVEE GAZ 1/2",
+            "position": "23"
+          },
+          {
+            "reference": "S144670",
+            "label": "TUBE BYPASS",
+            "position": "24"
+          },
+          {
+            "reference": "SX5652730",
+            "label": "DEGAZEUR G 3/8 (5652730)",
+            "position": "25"
+          },
+          {
+            "reference": "S115749",
+            "label": "SOUPAPE DE SECURITE 3 BAR",
+            "position": "26"
+          },
+          {
+            "reference": "S116552",
+            "label": "CLIP 20",
+            "position": "27"
+          },
+          {
+            "reference": "S133500",
+            "label": "ROBINET 1/4",
+            "position": "28"
+          },
+          {
+            "reference": "SX5663020",
+            "label": "CLAPET ANTI-RETOUR (5663020)",
+            "position": "29"
+          },
+          {
+            "reference": "S300025444",
+            "label": "FIXATION FLEXIBLE",
+            "position": "30"
+          },
+          {
+            "reference": "S300003563",
+            "label": "TUBE PVC 20X16",
+            "position": "31"
+          },
+          {
+            "reference": "S300025174",
+            "label": "TOLE MAINTIEN TUBES",
+            "position": "32"
+          },
+          {
+            "reference": "S508619",
+            "label": "SACHET JOINTS",
+            "position": "40"
+          },
+          {
+            "reference": "S508618",
+            "label": "SACHET VISSERIE",
+            "position": "41"
+          }
+        ]
+      },
+      {
+        "id": "14049",
+        "title": "HABILLAGE 24-32KW",
+        "code": "",
+        "order": "4",
+        "sourceUrl": "https://pieces.chappee.com/FicheSchema.aspx?IDSCG=14049",
+        "imageBlobId": "chappee-14049.jpg",
+        "parts": [
+          {
+            "reference": "S508661",
+            "label": "PANNEAU LATERAL H834 EQUIPE",
+            "position": "1"
+          },
+          {
+            "reference": "S508662",
+            "label": "PANNEAU LATERAL H834 EQUIPE DROIT",
+            "position": "1"
+          },
+          {
+            "reference": "S144666JJ",
+            "label": "PANNEAU DE DESSUS",
+            "position": "2"
+          },
+          {
+            "reference": "S144646",
+            "label": "FACADE AVANT H555",
+            "position": "3"
+          },
+          {
+            "reference": "S144710",
+            "label": "CROCHET PANNEAU AVANT",
+            "position": "4"
+          },
+          {
+            "reference": "S508620",
+            "label": "SACHET VISSERIE",
+            "position": "5"
+          }
+        ]
+      },
+      {
+        "id": "14050",
+        "title": "TABLEAU <--09-2015",
+        "code": "",
+        "order": "5",
+        "sourceUrl": "https://pieces.chappee.com/FicheSchema.aspx?IDSCG=14050",
+        "imageBlobId": "chappee-14050.jpg",
+        "parts": [
+          {
+            "reference": "144736",
+            "label": "BOUTON CHAPPEE",
+            "position": "0"
+          },
+          {
+            "reference": "S144891",
+            "label": "MODULE AVS 75.391",
+            "position": "0"
+          },
+          {
+            "reference": "S144716",
+            "label": "SUPPORT DE CARTE RIVETE",
+            "position": "1"
+          },
+          {
+            "reference": "S144701",
+            "label": "FACADE TABLEAU HMI TEXTE",
+            "position": "2"
+          },
+          {
+            "reference": "S144929",
+            "label": "CACHE HMI TEXTE - GRIS",
+            "position": "3"
+          },
+          {
+            "reference": "SX710628400",
+            "label": "COMMANDE A DISTANCE 2S",
+            "position": "4"
+          },
+          {
+            "reference": "SX710028100",
+            "label": "CARTE ELECTRONIQUE INTERFACE",
+            "position": "5"
+          },
+          {
+            "reference": "S144686",
+            "label": "INTERRUPTEUR POUSSOIR",
+            "position": "6"
+          },
+          {
+            "reference": "S293359",
+            "label": "SERRE-CABLE PARTIE SUP 2",
+            "position": "7"
+          },
+          {
+            "reference": "S144673",
+            "label": "CROCHET TABLEAU",
+            "position": "8"
+          },
+          {
+            "reference": "S144706",
+            "label": "CARTE LMS15 G8 - 24",
+            "position": "9"
+          },
+          {
+            "reference": "S144707",
+            "label": "CARTE LMS15 G8 - 32",
+            "position": "9"
+          },
+          {
+            "reference": "S300025092",
+            "label": "CACHE CARTE",
+            "position": "10"
+          },
+          {
+            "reference": "S95320950",
+            "label": "SUPPORT DE CABLE A CLIPSER",
+            "position": "11"
+          },
+          {
+            "reference": "S96550354",
+            "label": "ENTREOISE RICHCO LCBS 4-6-01",
+            "position": "12"
+          },
+          {
+            "reference": "S143079",
+            "label": "SONDE EXERIEURE QAC34CHEE PR",
+            "position": "13"
+          },
+          {
+            "reference": "S144689",
+            "label": "CABLAGE X10-X12",
+            "position": "15"
+          },
+          {
+            "reference": "S144687",
+            "label": "CABLAGE X42-X20-X21",
+            "position": "16"
+          },
+          {
+            "reference": "S144690",
+            "label": "CABLAGE X11",
+            "position": "17"
+          },
+          {
+            "reference": "S144692",
+            "label": "CABLAGE X14-X15-X22-X23-X25",
+            "position": "18"
+          },
+          {
+            "reference": "S144691",
+            "label": "CABLAGE X13",
+            "position": "19"
+          },
+          {
+            "reference": "S144693",
+            "label": "CABLAGE X40",
+            "position": "20"
+          },
+          {
+            "reference": "V508663",
+            "label": "SACHET VISSERIE TABLEAU",
+            "position": "30"
+          }
+        ]
+      },
+      {
+        "id": "14051",
+        "title": "TABLEAU ->09-2015",
+        "code": "",
+        "order": "6",
+        "sourceUrl": "https://pieces.chappee.com/FicheSchema.aspx?IDSCG=14051",
+        "imageBlobId": "chappee-14051.jpg",
+        "parts": [
+          {
+            "reference": "144736",
+            "label": "BOUTON CHAPPEE",
+            "position": "0"
+          },
+          {
+            "reference": "S144891",
+            "label": "MODULE AVS 75.391",
+            "position": "0"
+          },
+          {
+            "reference": "S144716",
+            "label": "SUPPORT DE CARTE RIVETE",
+            "position": "1"
+          },
+          {
+            "reference": "S144701",
+            "label": "FACADE TABLEAU HMI TEXTE",
+            "position": "2"
+          },
+          {
+            "reference": "S144929",
+            "label": "CACHE HMI TEXTE - GRIS",
+            "position": "3"
+          },
+          {
+            "reference": "SX710628400",
+            "label": "COMMANDE A DISTANCE 2S",
+            "position": "4"
+          },
+          {
+            "reference": "SX710028100",
+            "label": "CARTE ELECTRONIQUE INTERFACE",
+            "position": "5"
+          },
+          {
+            "reference": "S144686",
+            "label": "INTERRUPTEUR POUSSOIR",
+            "position": "6"
+          },
+          {
+            "reference": "S293359",
+            "label": "SERRE-CABLE PARTIE SUP 2",
+            "position": "7"
+          },
+          {
+            "reference": "S144673",
+            "label": "CROCHET TABLEAU",
+            "position": "8"
+          },
+          {
+            "reference": "S144706",
+            "label": "CARTE LMS15 G8 - 24",
+            "position": "9"
+          },
+          {
+            "reference": "S144707",
+            "label": "CARTE LMS15 G8 - 32",
+            "position": "9"
+          },
+          {
+            "reference": "S300025092",
+            "label": "CACHE CARTE",
+            "position": "10"
+          },
+          {
+            "reference": "S95320950",
+            "label": "SUPPORT DE CABLE A CLIPSER",
+            "position": "11"
+          },
+          {
+            "reference": "S96550354",
+            "label": "ENTREOISE RICHCO LCBS 4-6-01",
+            "position": "12"
+          },
+          {
+            "reference": "S143079",
+            "label": "SONDE EXERIEURE QAC34CHEE PR",
+            "position": "13"
+          },
+          {
+            "reference": "S144689",
+            "label": "CABLAGE X10-X12",
+            "position": "15"
+          },
+          {
+            "reference": "S144687",
+            "label": "CABLAGE X42-X20-X21",
+            "position": "16"
+          },
+          {
+            "reference": "7643702",
+            "label": "CABLAGE LMS15 X11-X13",
+            "position": "17"
+          },
+          {
+            "reference": "S144692",
+            "label": "CABLAGE X14-X15-X22-X23-X25",
+            "position": "18"
+          },
+          {
+            "reference": "S144693",
+            "label": "CABLAGE X40",
+            "position": "20"
+          },
+          {
+            "reference": "V508663",
+            "label": "SACHET VISSERIE TABLEAU",
+            "position": "30"
+          }
+        ]
+      }
+    ]
+  }
+};
