@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="expires" content="0" /><meta http-equiv="pragma" content="no-cache" /><meta http-equiv="cache-control" content="no-cache, must-revalidate" /><link rel="shortcut icon" href="GUI/Skins/Default/Templates/favicons/favicon.ico" type="image/x-icon" /><link rel="icon" href="GUI/Skins/Default/Templates/favicons/favicon.png" type="image/png" /><link rel="icon" sizes="32x32" href="GUI/Skins/Default/Templates/favicons/favicon-32.png" type="image/png" /><link rel="icon" sizes="64x64" href="GUI/Skins/Default/Templates/favicons/favicon-64.png" type="image/png" /><link rel="icon" sizes="96x96" href="GUI/Skins/Default/Templates/favicons/favicon-96.png" type="image/png" /><link href="/GUI/Skins/Default/bootstrap/css/bootstrap.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/font-awesome/css/font-awesome.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/fileinput/css/fileinput.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/bootstrap/flat/bootstrap-flat.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/master.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/colorbox.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/jquery-ui.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/bootstrap-datepicker/css/bootstrap-datepicker3.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/multibox.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/TabContainer.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/datatable_jui.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/html5/video-js.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/jquery-impromptu.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/js/toastr/toastr.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/custom.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/select2.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<link href="/GUI/Skins/Default/css/Chart.min.css?v=049149" type="text/css" rel="stylesheet"/>
+<script>var approot='/';</script>
+<script src="/GUI/Skins/Default/js/html5/modernizr.js"></script>
+<script src="/GUI/Skins/Default/jquery/jquery-1.11.3.min.js"></script>
+<script src="/GUI/Skins/Default/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="/GUI/Skins/Default/js/jquery-ui.min.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.jcarousel.min.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.easing.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.tools.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.scrollto-min.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.tools.patches.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.blockUI.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.colorbox.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.cookie.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.noty.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.dataTables.min.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.dataTables.columnFilter.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.dataTables.bootstrap.min.js"></script>
+<script src="/GUI/Skins/Default/js/jquery-impromptu.js"></script>
+<script src="/GUI/Skins/Default/js/toastr/toastr.min.js"></script>
+<script src="/GUI/Skins/Default/js/spelog-notification.js"></script>
+<script src="/GUI/Skins/Default/js/layouts/bottom.js"></script>
+<script src="/GUI/Skins/Default/js/themes/default.js"></script>
+<script src="/GUI/Skins/Default/js/html5/html5media.min.js"></script>
+<script src="/DynWebResourceHandler.aspx?type=js"></script>
+<script src="/GUI/Skins/Default/js/responsive-tabs.js"></script>
+<script src="/GUI/Skins/Default/js/moment.min.js"></script>
+<script src="/GUI/Skins/Default/bootstrap/js/bootstrap.min.js"></script>
+<script src="/GUI/Skins/Default/js/spelog_jquery.js"></script>
+<script src="/GUI/Skins/Default/js/download.js"></script>
+<script src="/GUI/Skins/Default/js/jquery.signalR-2.3.0.min.js"></script>
+<script src="/GUI/Skins/Default/js/select2/select2.min.js"></script>
+<script src="/GUI/Skins/Default/js/Chart.min.js"></script>
+<script src="/GUI/Skins/Default/js/Gauge.js"></script>
+<script src="/GUI/Skins/Default/js/iframeResizer.min.js"></script>
+<script src="/GUI/Skins/Default/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="/GUI/Skins/Default/bootstrap-datepicker/locales/bootstrap-datepicker.fr.min.js"></script>
+<script src="/GUI/Skins/Default/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/GUI/Skins/Default/fileinput/js/fileinput.min.js"></script>
+<script src="/GUI/Skins/Default/fileinput/js/fileinput_locale_fr.js"></script>
+<script src="/GUI/Skins/Default/js/select2/i18n/fr.js"></script>
+<script src="/signalr/hubs"></script><!--[if lt IE 9]>
+<script src="/GUI/Skins/Default/js/html5/respond.min.js?v=049149"></script>
+<![endif]-->
+<title>
+	INITIA + HTE (2015 -> …)
+</title><meta name="description" content="39_INITIA + HTE-INITIA + HTE (2015 -> …)" /><meta name="keywords" content="Spelog, pièces de rechange, pièces détachées, pièces de rechange, pièces détachées, spare parts" /></head>
+
+<body id="ctl00_spelogBody">
+
+    <form method="post" action="./ListeProduits.aspx?FAMILLE_ID=1489" id="aspnetForm" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATEFIELDCOUNT" id="__VIEWSTATEFIELDCOUNT" value="181" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="h9xL3qIg+rmY8WauO+qiOrevdwFVl5+WBd8944in1+jR7eLxCvWA5xFi7b4gSt9hsPPV42lmQPfvlGdHx0YHpa7vwUHCUo+8nrVv" />
+<input type="hidden" name="__VIEWSTATE1" id="__VIEWSTATE1" value="+GmQ/jahm44dIoE1ixYJYIvvpl+H3AjGAJpoIEVT/lJ5dLOL/cwMT54B8zdP3haYcDUw3WiLFQ2rWq8+nf8yq6ufPFPwT30S0Ms/" />
+<input type="hidden" name="__VIEWSTATE2" id="__VIEWSTATE2" value="Dh3vVy0Uj+rNss/4njKhIhVXG3po8UH3lqB7KXuE6hq6g/cKDnArdMZBrM/6FrgL4DUOU4G2FlecCX8P40KBZxFjhMkOdPaD7QZD" />
+<input type="hidden" name="__VIEWSTATE3" id="__VIEWSTATE3" value="2ee1i2DTPi9QYPeFnOz6LarAIdiYVWZcQyO8p8enlpsxmfk3moDH/dDmclqfKCkHk7qFfKcYvqQtrA3+x1o+nqPmWlRJnA4p17e6" />
+<input type="hidden" name="__VIEWSTATE4" id="__VIEWSTATE4" value="+8k3Bfz5G6mCZrRMXjiIgf+ei0VX9mtTpAL87iy/DBvbX7iHGnI80Q8cgSvXmULozqR88D7MQc+BV6NUgQ2FgqWXVgujc7jXKk8t" />
+<input type="hidden" name="__VIEWSTATE5" id="__VIEWSTATE5" value="QquYZptmELrnvdM1nm5HangGYB7rwCkzDjczhLFNc4HKAXlKwAxYWY1FQ7aWymP3qklslsAFdwXF52qy80yStNTDJK5dsDGe0Ia9" />
+<input type="hidden" name="__VIEWSTATE6" id="__VIEWSTATE6" value="VGzeGlUsqStbA1j0qte+UQkEcIoR7KKv3rX3gOMeMm0JcsIFWxo0WIxyDcWw0r9wh3c8no5XYTTGvm4gK4qEilXP3TXSQGAHDXho" />
+<input type="hidden" name="__VIEWSTATE7" id="__VIEWSTATE7" value="kCmlEvLHt1UqP4o645QMxZ43P+GLCZPiL8EbOgoAbNQLMdSnc4PrzQ7cNjzykmrYic+OhpeKdUmLOpH8ZyvCaVpb+zZBBOVEEiF9" />
+<input type="hidden" name="__VIEWSTATE8" id="__VIEWSTATE8" value="zw806pftEr45jdW207g5+EQoRNKgVGC+SeTm4r7MGe6PU6QaLNzocnzrba0l7D2aMyWiBmLAU5UblotSPHUeAtsvOGjSBJRlxAZl" />
+<input type="hidden" name="__VIEWSTATE9" id="__VIEWSTATE9" value="gzCc7hCcjfSmXGo/Q1sfa1kOVP3tqhwlrG1kw2yvu9Z7PlmQFmXtpDoxLSQr4oK71VbuYkIFjQ038p8rFrZm8alDekL+15278hUC" />
+<input type="hidden" name="__VIEWSTATE10" id="__VIEWSTATE10" value="MhJwX4EDcZeraHuIFJiXm2dy9CYmKxnRdmXjdE9xJHTAKVdvTx8LeUrupKWU/rXXvnqOKkwCP4jY4BkRqpDOtrhmYIRq4DRNuHly" />
+<input type="hidden" name="__VIEWSTATE11" id="__VIEWSTATE11" value="Shq6TAfVPXNTx/YXvJi36hD6K8pq9WwUMKR9tRgyZ4dszx0srwj612e/FJhU2ujPkq3P8S074uquEAzEMfj4EFVRqTkDNJQmsRjS" />
+<input type="hidden" name="__VIEWSTATE12" id="__VIEWSTATE12" value="Lt8LmaM/dh/Y0UYHtdYpJyEufm1HvrTSPG4i60hHTMWMJeG91pWeTJgs6WMq+TUz76XvAy+0LbV1ZV3eMPZvxP6z261Tx7G6GfpZ" />
+<input type="hidden" name="__VIEWSTATE13" id="__VIEWSTATE13" value="cFCUFLg+a0MQwi8zmLprzfgEUbwD+RKXZ5rq4OdSedANu7TgLhQBF4lSBaii/tQdXl/Xcg1jPFC40lrehQ96d5Uff58gA6wiPIgK" />
+<input type="hidden" name="__VIEWSTATE14" id="__VIEWSTATE14" value="KmMrSwUINyKD6mNYgxm4Mk96uM1dWoMAadyf4MR+0j8IL+70Oj7kgnXkhksfhcO/RebNF0pZLhfFV3wZFtqrEf9BKaSPKMp0YBP1" />
+<input type="hidden" name="__VIEWSTATE15" id="__VIEWSTATE15" value="HjPgI2Z5wqX+BYD5SIaJjrUbM2ed6bovOw8RZF4yrpUlWlEoClqNOdvZIW/zlwlZ5TmUpkJcxdvLilMadk/irOBNexebNDltyNiO" />
+<input type="hidden" name="__VIEWSTATE16" id="__VIEWSTATE16" value="3jKO9FmqIFs+Yx02+3Rtam8j5isNmaa5lHY98IxIbJZnyrPoiR8lRlxKb4mFm8EpO1EfbVKNgHSKPu6A1r6yNyosxcHN/MulwncU" />
+<input type="hidden" name="__VIEWSTATE17" id="__VIEWSTATE17" value="mFqQMDz5oHkSsilH6R4ClCeNELZ4asvqZ+yr80KFe6BgOgH1+W5e08JEFCGFrZs5n+lc9o8v0GoCRiTSJiWDUNtUk0Q0lN9VWDZn" />
+<input type="hidden" name="__VIEWSTATE18" id="__VIEWSTATE18" value="/JJLZbSHQRXPxq/TTlJfYBZHRxUp4XKQwN7t9AOkoI39FBBiokbK3yZOezA6gmzABBiPeeknIsTQKoxkiFUhLj7wQp7e08lfSqhc" />
+<input type="hidden" name="__VIEWSTATE19" id="__VIEWSTATE19" value="PIS2AIzkZHEE+eTeZlggAaAEXMYLzKy3dLMNkaoCJPsmeXQ+rNUbr+O3YHcy/TS652RdEmD6WH7mbd/CCQq2P6C1DtN6uTc/qWvU" />
+<input type="hidden" name="__VIEWSTATE20" id="__VIEWSTATE20" value="wIexFUAYstDsKmRrCQmVnCy/RyYDZVr9c67TafgOAbhVNO4Su+3e87910ODziDbftwmwTILy5RX6BFM30sSCneuEKsXKYdPUiG0E" />
+<input type="hidden" name="__VIEWSTATE21" id="__VIEWSTATE21" value="xpxK25/TQK9eY4uyu+uYsAVWnojsfp/Utd/JL9baNQR/mS+yy3U21GUTo++Ag4f9biJ9ul6CX1RqatNd8hiqyeWBkwP/nM9cw+B8" />
+<input type="hidden" name="__VIEWSTATE22" id="__VIEWSTATE22" value="brLwich5l4/Kq2fD9cw6bW/JqnmuOp44D2zjkGbIunTJDnK00wUBT/N59qR+Qo3jnkeFV2iryxDAbvr6xCdXf8TDvPmXF/vgaF4L" />
+<input type="hidden" name="__VIEWSTATE23" id="__VIEWSTATE23" value="JSbtyVx1pLw/MQXFio3KXvC8UBBixJoYZeGpqu/NGCM85QSG3KSvPlbbRM2xaGsRwyCtn1JeYnuZmlEJlvC+Xt5lxOOU7e/05DYQ" />
+<input type="hidden" name="__VIEWSTATE24" id="__VIEWSTATE24" value="dDxHPxrfmNB4kzAKk9XqGdkEicTqWByOFYD8Dv91hV5+QFwIK/i0MmVYGmr5LhXG6Obsq+dRJExo4Awr5J9oVeLAqBBlXIMzU93i" />
+<input type="hidden" name="__VIEWSTATE25" id="__VIEWSTATE25" value="h9dRMFbWWwVgDrVB3f2w5W4GjSywKkAwMnyjoJGMHrGUn1X1DCrCoaM3lqeoSAa3Gzqf8yW2Xj76ff9svTCNjMVmzsA8ZIGV4szV" />
+<input type="hidden" name="__VIEWSTATE26" id="__VIEWSTATE26" value="c45XZCkYLwbWuPeg9mfR9Xgg+sPPD/mZCfuGhk1HYfsof86UwnrIdStw9S2/fuRajGn4uFItjvCpNh3HfAiQBEwNlYA+TFrZjTTB" />
+<input type="hidden" name="__VIEWSTATE27" id="__VIEWSTATE27" value="CjAr6ROnHxZteJFFI3d38pAcjFYUyQcgZmCOjBv/VCKd762w0QFS8iYH6Z1LhUJJjX6lbALFhVgRSooaFB49lJieZgNcjFpYmTEH" />
+<input type="hidden" name="__VIEWSTATE28" id="__VIEWSTATE28" value="SLA8YQPEKnHHzxIYbyMea34UXCj6W+IwW9EaMGzy66JztU7YHRiTtuzGj3Lpolxub/3nt8x9CEE0Q8oWSFRdMwP0KQ2bhpS7YVvS" />
+<input type="hidden" name="__VIEWSTATE29" id="__VIEWSTATE29" value="OE83YEUGAfVLcEeZ2jNL/MsmLvaK7z0UvA3NMHHzWFTiVmXY0uwbGYMgGQWy9eOHPnXNSRvp+Lq+Si7IGgSloMTMgjMsgScUKIsx" />
+<input type="hidden" name="__VIEWSTATE30" id="__VIEWSTATE30" value="EH2rQBXd6iBPhe+0w5YjkG0fIeoF2RImwunBbEQrMvIDfSS/XHQyIBA4BMGaMAEWUa0LP+ljWmtg1o4s51ckFW6KcBLzqqvIHSmz" />
+<input type="hidden" name="__VIEWSTATE31" id="__VIEWSTATE31" value="ZkCneEPkUBrWFOvzAwokusfVaFu5hfGkPh5dpAnrTDkTxYH6x1BfSVdC8Hi804H+s/UmQA3j3EGdYar7EFfxeJQhsLx7sKWGu8HD" />
+<input type="hidden" name="__VIEWSTATE32" id="__VIEWSTATE32" value="kzO3t7qs+kl+CZ2JTAs94YIsBTY6nKbdpGFQR6PoWssDprAEbTcFrWSYCbyT/zRWtxy7mnMMJkvKTZA481yDXc9aUbRNSAnsVl7P" />
+<input type="hidden" name="__VIEWSTATE33" id="__VIEWSTATE33" value="KIGF+/QqaI+SSgNcGRsuI23nZpPh13HewWfoeShfG85YdKKtzDA//w2e0JGaL9gManzrqTxmri6opEhfl03zXA0xi/hMo2avWJrE" />
+<input type="hidden" name="__VIEWSTATE34" id="__VIEWSTATE34" value="9fmI9yfg4inty9v4spLBQCxP82YxTcbbcxNg32fZZPpjWtL6jSkNX5forIjHng/bGosgEmbO3j+835PNuDBVO8M7Rk6kgwjAjeGO" />
+<input type="hidden" name="__VIEWSTATE35" id="__VIEWSTATE35" value="W3UHsIRuO9LPfVHvniBmhjzLzR4popXrmNZofBqmEdHVXq0tEnLdBqTBzh40iummmS/0YtydqGLfbTWhhiPsjAJs/0DQ5mfVoRgn" />
+<input type="hidden" name="__VIEWSTATE36" id="__VIEWSTATE36" value="I/8Y4XppyiQWPPsGMhkpsNScXNzaDgbUEt7hZRjrGqoT+JbGHPcYEqDW7SEjHTfctzTT7eb4Ul7RuFsCyJrJ1hXl4ZU2IzntMlaZ" />
+<input type="hidden" name="__VIEWSTATE37" id="__VIEWSTATE37" value="ucfv/QlzLR/y5EzwkionIqpK7fFS1gxXQ9VHCk4x9xD3D2PaQQ3Q6R2Aol194ZOOu0yU77CKeRUrXGbKmivfgdRt1MunjgS6MpmL" />
+<input type="hidden" name="__VIEWSTATE38" id="__VIEWSTATE38" value="erCxC/zY5d648HCvk6XO7C7DXJ1fH8skm7ZMxqss2DIrmD1jtFOSb9KWr3Cw05lW2LP1pkEmp3d3XuewDpH+ZyEYL/dEcrjW8gXp" />
+<input type="hidden" name="__VIEWSTATE39" id="__VIEWSTATE39" value="8k5Shkc+x0qzpbF6MJcbCSDWDgix+m3f1ekM54LmjwNC/qpT/VxANWNg8Gqhmbp0ThX6Y8EwTmJG6hrqOavUuZ0kX0hSr6EVGQgi" />
+<input type="hidden" name="__VIEWSTATE40" id="__VIEWSTATE40" value="WndMRQw1R6D0CrmbIstneb2o+Ss+l2ZMpqlpvxRK/cIOGhGgzW36YRw6ghPk8Ktp/HN9Ufi9oTPsCJsH1dxAS7P6agij7M0niH2n" />
+<input type="hidden" name="__VIEWSTATE41" id="__VIEWSTATE41" value="YVfIYVWdX6HSCsnpF1MflRET6/DOiBMJEY/7WLUlDGCUIWXIo2jBsaHNuRN3g2AGwyzqxrOjue8PBZqd+Yg2LHQxKWcQp1mqL2iC" />
+<input type="hidden" name="__VIEWSTATE42" id="__VIEWSTATE42" value="cVJK/ioHTYO4y70oVdEhqeVw1zfhCuw/mv1BIYdH7R1sXTC4HRv7tH2Z8TAFaw5I8dhL7c6zhFG4FZpHTYE/IN8Ow5oeCPhCtNGx" />
+<input type="hidden" name="__VIEWSTATE43" id="__VIEWSTATE43" value="roOstY9ZWQFAspczjLZD+uTPy/z5LHa0lE+/dBmZinaIq68L9c4VZ3bOEx88NGXBwpzBUhk7GuhR8g14aXwM3hlnCKstwOmFw1KX" />
+<input type="hidden" name="__VIEWSTATE44" id="__VIEWSTATE44" value="hcULlIyNyvCOpELb4iKhZ08T2oUCO7xSKQYCcNOyrLIw6YDLzMjxCyjB2UXgcxy6XSLEla00yIS0MIFKcZnyThlMR5yulMXF8S1H" />
+<input type="hidden" name="__VIEWSTATE45" id="__VIEWSTATE45" value="9ELwtJq1HyIuLQYHPYIIfSxbxQYW40bY+r4+/wXvZ+nMwHBK6MXDUcX0DlgOKoi9i2w9Cau5L41vt58OiLnJxikbt7X0jmzt7DAH" />
+<input type="hidden" name="__VIEWSTATE46" id="__VIEWSTATE46" value="CZtmUuZAucWq51r+1JY/51C2wq+luX4TeJtWjRUXz2bv4JEdYwJbneG/amHhfLOn4l9w92uCHn9Lh7AuJhVZPyIt3L0idAAjZXNC" />
+<input type="hidden" name="__VIEWSTATE47" id="__VIEWSTATE47" value="J6X+9cWFbHAxo9qPFkl1GDR1G9vpA7y0AvhuSlcch/o+2XzqJSUXSt+j6WEzdNpxrKzMfqeqjtK4vbiaJTtrpWER6rdJSjM2oJgy" />
+<input type="hidden" name="__VIEWSTATE48" id="__VIEWSTATE48" value="taxF45BNG6fz3v3gL21YRy/srAphCFBQmgW4Rvn6Pb8/4+5/rgFEoQSMVCvubjuL7yUbEMqHHBhIkP5dBgP4vm9WbwNgtl71Wenm" />
+<input type="hidden" name="__VIEWSTATE49" id="__VIEWSTATE49" value="SV6NPfcNuaKDRGqo6pYxRr8c/8AxIRRCjChy8g1xce7peUdGVJsNTSUjEiKlGRU2+ayOk5c7fvpDhnBfDCTNfFuPxIHD3hz0uVu4" />
+<input type="hidden" name="__VIEWSTATE50" id="__VIEWSTATE50" value="qDvLqzv9t+ULC1UwTbnCK2C2Imwl35QDe82XY+XJw1mZMC+l0ig95uvAJiKhVGgjy/VfqJZrcj5tauIPzucfzmc976stHaARwZQh" />
+<input type="hidden" name="__VIEWSTATE51" id="__VIEWSTATE51" value="oxTpLlypCaS8LEQWSCBGruDUvIEQ77Eamv+/TCw/+EC0gGal3B8/X6xCWy11KEqN9e+3WrtQIV7h11uQwouimQL/pfksAsZD0RW0" />
+<input type="hidden" name="__VIEWSTATE52" id="__VIEWSTATE52" value="FAgijMQqLgJFQ8DS++3AZFthyWTBHX/0dpgHRlfPDsroE+7008LiuKBqoc6nJhnJdTk20PjdiTZSJDsphphkBuyNcv40BQFf45LD" />
+<input type="hidden" name="__VIEWSTATE53" id="__VIEWSTATE53" value="1GEq/Hc2FQfVf1IKcffY0vdFlgkbFVBtg2RmYJ1AJuBuIjKIm9K51EEAzzVCgnvJbIat2vXH9fONZm0iqKq6MArqMVNKbBrLxW+k" />
+<input type="hidden" name="__VIEWSTATE54" id="__VIEWSTATE54" value="AqK3wJxWS7SN7g+Vf0ADwz6+MwucLmW2I+XZ8aA4v7uZ6w+BXe+XpHDUn4OCYYNIlDvqKSday35ymRyO247KuA3yiusvWlcm2r3b" />
+<input type="hidden" name="__VIEWSTATE55" id="__VIEWSTATE55" value="oC4tbvG1ydkp6ChG9EHKDSjdOP5scTt7Gt1U8CfVwIgLx62EpG2Pa0N3hM0M7E4QeVMDRdvIo8fno0E20bVKrcpjAuEKsWfr9o7Z" />
+<input type="hidden" name="__VIEWSTATE56" id="__VIEWSTATE56" value="q11lws3il3YM5faBzjhYiH3YEsCqONF9v2cfI28HGDhswqWk5g5aXwngOxO49sw3wKsuyXDPTBQnwTuWyV2yUMewwtmM8OvWmsQ1" />
+<input type="hidden" name="__VIEWSTATE57" id="__VIEWSTATE57" value="o3Rt97P4fAZ9Zz3kDpNbhBOBI0bnNhr+MI+sqJ0oHIeY/q6I95fcnk0G/JKDbZW5VQ/7uqhwt+E1b2qhNHBrbX8oKSDaY1KtNn8n" />
+<input type="hidden" name="__VIEWSTATE58" id="__VIEWSTATE58" value="pahWy3A/6sflbiIfWA0LKgw5yC7I0FzIWE64zNIu71B00pcTZT6LfrSK5h7/qqyCtzDcx5JtHAU6WzRGpnFKn/+3btNNCiMJP8H1" />
+<input type="hidden" name="__VIEWSTATE59" id="__VIEWSTATE59" value="VEBcv8FufbGTHfbaYZGEN7FpYfGcuoseTc32+y1XE/l3FRx4dM7rWzcyIE3MEjB9McBlgvm9BRKEL9lWGgfZyLOnk+a+3fROkCdq" />
+<input type="hidden" name="__VIEWSTATE60" id="__VIEWSTATE60" value="4zTHrWRGA9Spa7Q0zKAPqtSn0rfpBjkRyNVRDY8oIeQR/L50wogclAewbvypnfO+wc/y66WPkSnW28zH8I1+NK1IiFxd8sPwp5qL" />
+<input type="hidden" name="__VIEWSTATE61" id="__VIEWSTATE61" value="1239JaNZvuG7mSKhx0Xm7b8RbjiN45uk8iVX7WCMsnJ3mvYJu0IsdXYVcGEgInkdioyrUCIED1N/oPdwNhTkDx8YbDNuB021cB87" />
+<input type="hidden" name="__VIEWSTATE62" id="__VIEWSTATE62" value="OwNa4RconG6y/vdGgd+MRFaY1GNmqyYYx3zUIHAlhII31/bs7DhiNxsPoXFn66bHtFf+2El0F8LFMJeINVhCHhy0HtgsGCGYi+/x" />
+<input type="hidden" name="__VIEWSTATE63" id="__VIEWSTATE63" value="xFtohlU7fEi5IfMQQRyXDy2NtEIfG84udAatxmsG8H6Cdnyl6Bp3SSSMMHwkeoVBf1+oRkHJqxiyHkBLBdBx7wu5iY+4Vs0V8LYN" />
+<input type="hidden" name="__VIEWSTATE64" id="__VIEWSTATE64" value="FBOm6Ah42hdhy0AwB943u3yVAUTkuxGIxBiVWJ9ORx9yxF4pts3hTQHq05MZ6vsieg9v6phHT60Jysfh8y90JVv60HGJ4X7D9wpH" />
+<input type="hidden" name="__VIEWSTATE65" id="__VIEWSTATE65" value="G9F/bK5UOXjysTN43gpeTrBy6jVy//wGY9gDTsbo5vGKFM0TSK2J6BGecZDpXDCS3ZKJMpWHmBTSu5cpg7CfuEu7wdZZjO2Lxb1C" />
+<input type="hidden" name="__VIEWSTATE66" id="__VIEWSTATE66" value="r2vzeVMYAUZ8eH8bEZxjBFylW7v5HgqIAqhtxN12uK9W2REeB0ehLEWxQlASqLw8lfZqQJhLVrn+p+dVQh08fLcaDknqHGuCdng/" />
+<input type="hidden" name="__VIEWSTATE67" id="__VIEWSTATE67" value="2UbjmBd/1X8a3ed8XyubnV5ekjNdiuGANFbruDn57vxYe/OgVPkQM69gKa4Ip9tW9TN8AT7J9QC869sOtiuTZWIz16KSSTxSMz46" />
+<input type="hidden" name="__VIEWSTATE68" id="__VIEWSTATE68" value="tFnEgb8+AO6I3sZ671vxpJaMPr0/cg4XTlY62lxFrO456ZU0AgrAXADGuV0wGX7PL2MvZCDUv5A1EDiUwvYsW8qnWf2MPeGfbipS" />
+<input type="hidden" name="__VIEWSTATE69" id="__VIEWSTATE69" value="11SMSp1h7IPEeSdFkjtilUwJAOrWpY7K3mkgTVdLF91AtfrobhcvRlZ3nAcsEsQDXRDT1Xz9Hvvqnmg19lnbQtuZ+VbmY0zJ2hjQ" />
+<input type="hidden" name="__VIEWSTATE70" id="__VIEWSTATE70" value="e2ay4OyBjc7AIyJ9Ixrd0Id9KMkypVEE00VAyssjnl2HEdJ32mZbckE/S7ddK9lV5cou6FkNUV2h7ZYLZUyEZGVvyip+NcfjTy5o" />
+<input type="hidden" name="__VIEWSTATE71" id="__VIEWSTATE71" value="jaEzb71uws3+U5WYnpokUFWW5tzyW4gWnNhSXvNN3FQKXUaH+0hf3vPdp1aqIvKDrCIVc+pS+8LtUHXGb9Xnpw4RN6R/mYr/lb3J" />
+<input type="hidden" name="__VIEWSTATE72" id="__VIEWSTATE72" value="IGabER1QQmWwJuxmVqMU/+D+klOa188Wdgfd600xZe7hVkRtfqeCnbbNpV3bjfBFFORyVOqJ0w8dVEXsZEnC4ta+CgwnmRQvnYlZ" />
+<input type="hidden" name="__VIEWSTATE73" id="__VIEWSTATE73" value="dXBuc/jSDZKI35B1ZO86zml/7iF8vTzyHho5FW79h+KCzVhbUbcpJR+OCfQjgqIsiGw53WCZOXV3/XvOraiMmCO3bO2g9yD7oZdx" />
+<input type="hidden" name="__VIEWSTATE74" id="__VIEWSTATE74" value="ND6o+BIbeglRcWbFEjb+CFULmkfY6W0yYZz6Vlzl8+2GIrK6kPe6kDG0xJHb7Flax7CiCAQtJl6/Rfu3gisEbL1ZDWslF88AH5Nz" />
+<input type="hidden" name="__VIEWSTATE75" id="__VIEWSTATE75" value="hU+MUgXtGYAwXjA+Qud8SWVs/vNY/MXkwNMU6mxXlg7wBbYfJ4SfooVr0clj+vuP4Kt49rJvv4vP4H8i9MxFitt0SoMuaMOCb/zP" />
+<input type="hidden" name="__VIEWSTATE76" id="__VIEWSTATE76" value="O6KdpyLkffpGzsswBIMSgockFGF8x2hYqpjDKK1MeMUdOxxSDTIloN9afVzP9xeYDagk/bupXxDIr9WA/I5X25ebVZ3B/0Gu+qgB" />
+<input type="hidden" name="__VIEWSTATE77" id="__VIEWSTATE77" value="m29JrGwtVEGvUttBORbipUSkjsubuw8bz3hMKC+Jrg0wUrE6KNbR2GEBVni9W6zuJfNLCl8+DkD6h6EilRMcYKCVnJY/oFvJI6dv" />
+<input type="hidden" name="__VIEWSTATE78" id="__VIEWSTATE78" value="SypsXoq1cMtegmNNZ13IRNnoC/qZ4DaXLRY4r/wqXyI/uw0zFxVmSrJuKA/NnVRRdg+/5JOEIu+moTNbMMbI5+fHs8IYTWPs1yvv" />
+<input type="hidden" name="__VIEWSTATE79" id="__VIEWSTATE79" value="bz3+UmcQ3f+g7B2v33ZU6m+P/N7gxCFmLVlJNQ2ehhdyAEMlrNOSWtp8qBaJHjVBOlj8Jh+gYXedCMSHUdsMV+zbuLB+bzk+tA4C" />
+<input type="hidden" name="__VIEWSTATE80" id="__VIEWSTATE80" value="uIDAV5ObM8Er+YsL4MCigxxNyOOwQPXe02taIy2XoAQj6hYKWhzq6sgIhVx6jyCMRH/u/1DA+k3OuzMaKcaQ5bjjmRtghZq3+uCW" />
+<input type="hidden" name="__VIEWSTATE81" id="__VIEWSTATE81" value="Q6JWlWHETTs/moqfTKhvtX/AIkByutrYfqq7mJk7yAfLs5JDE//xhp9YhJ1YOHK6Rw+7BxEVGQdKfT7Hai8tj6xq+Xkqd8953MC+" />
+<input type="hidden" name="__VIEWSTATE82" id="__VIEWSTATE82" value="FTQlKeK1uIycsFbZW9oDIwZmi4EH1Lv6XAw6jAittXt4EO8Xb/yOaJXeoxQl4FEKCz/wewIfL/4KT3GMh15kgDdZo3J5wkW0O0Rs" />
+<input type="hidden" name="__VIEWSTATE83" id="__VIEWSTATE83" value="l3w/AJ4aopdjyM8rrAXoS7DD0PE1ASmj5CImH0mTg1sPBW5KsTvlxG0PKCo9oxVpMdZi9cw3ZwYZ6fRmsGTHVzBoMx+vv+moRkYf" />
+<input type="hidden" name="__VIEWSTATE84" id="__VIEWSTATE84" value="tM6CasmeX1d+Z7tGphV8eg4EOQHK/A/xFIWmDl+zs30d8xVqmnv9IzVQ0tyhlDq05e4TdvY9Qv5WyaLxGwsCja0Bd+FseWaSW1un" />
+<input type="hidden" name="__VIEWSTATE85" id="__VIEWSTATE85" value="dsdzsdwUsRdr8DRMABIM4eY5RMEUHrKvmWzUXv3aTJeB5IIMVS9IF/CnXqXE+Rm52Qc5cj1LhSbmSb0VvJhedlXF/tOt53IX/RDv" />
+<input type="hidden" name="__VIEWSTATE86" id="__VIEWSTATE86" value="I1aGMZepfkeq04mNfYQw5BGNg+oCIatSQ2Twyb9bCfBl4bMR+vcjWK/V62anh17U8h7IIf0lQOabM6ZCViSFPAdcjRacZRzQu9UX" />
+<input type="hidden" name="__VIEWSTATE87" id="__VIEWSTATE87" value="U2wCcmArR1EMHoYv3PhW7+eD27qPPAN0HD81PSNXXk60PqPeEq7N1untCvwGSxed+paxxUPzAR3K2uaeM5HpoD/yKasi7n2mTb0O" />
+<input type="hidden" name="__VIEWSTATE88" id="__VIEWSTATE88" value="kGB2FdWBj9rL4EvQFEcgyvN9TNrh6AFMDPDe7ZlqFHl7o//8wm9qH9JGyW2fhAaV8qrAicnCaKAH+M/tye41hcn1t74z105+XEVQ" />
+<input type="hidden" name="__VIEWSTATE89" id="__VIEWSTATE89" value="g7IoKZuk7r/lYe79D8e8hz2CrzbPx4H9Cpi1HPX8d+QEHuGq22w1s3hOeaKrMezjm5PVL9hx9E0USI9gSuAfq66aDbtrFOXuAdaJ" />
+<input type="hidden" name="__VIEWSTATE90" id="__VIEWSTATE90" value="Tr38tvZ39HZrPdDyX/L3Ddefio2qOB8t9i4k3oKqGMcOZ+AE9NrkZbza92sR2zKa57YSfdjtNC5yKlQd53BUiPypOBj2zcpOFOv0" />
+<input type="hidden" name="__VIEWSTATE91" id="__VIEWSTATE91" value="B7/+0gi9wI8GQVl5R6DE5MnPmZV7unHK0xONGQZLCVG609c6zh8cQbObPfrrn4zrjjAA95pTTNC2dKdbI2y3QCjKm3HeWNepI1cG" />
+<input type="hidden" name="__VIEWSTATE92" id="__VIEWSTATE92" value="AUD6sFjN5SALgQNIqbXomgEOMxEH4TeVquVdaW6HUnjcKvZrBNYAG8CxZeuOmqyUVhQnLnP8LnH9v9oLkjWIGQIdSeMjmZJTQzlZ" />
+<input type="hidden" name="__VIEWSTATE93" id="__VIEWSTATE93" value="zt/W9Ivrtk3o2z+wBamGPLwFNiJjoljzRIFdtLRR0zi7npK3kZbDdcDabzlMwNVqUK3h/XWpwvRQOLynmIMl13fk5HVJ8N7cKXxn" />
+<input type="hidden" name="__VIEWSTATE94" id="__VIEWSTATE94" value="HRhl/dhZqIw/twEhdHMkxNATlmleFDAGpxc2B14aZtZkxIROoWRFyX+C3YZRAkM+KvQzClUwcqtqjqfRYaXvd5zQsCzvltNTsc+/" />
+<input type="hidden" name="__VIEWSTATE95" id="__VIEWSTATE95" value="CdYlJ5Pn26F9cZE+GgzuOS00OlnxZLZVG8pUAZe3A5KbgfV2vlkLFBKNTedVBqidRrKBn9+bI3YZNbb7YM2BSoFD4haeWqxKvWQV" />
+<input type="hidden" name="__VIEWSTATE96" id="__VIEWSTATE96" value="H7f66qbkYI7kzfQNAzP/hZexm33c911hPhere8d3Yv8wmhKWakliE8723E6bML63oejo9qmvSP0+yhP8++rQuUP6T/PNv53GgXf/" />
+<input type="hidden" name="__VIEWSTATE97" id="__VIEWSTATE97" value="cPKvlDjfxfh2tWjYARTbXTExzL81xQwadIzpV028Eze8PKFo3h/Xp/KZngVc7PsxXx+L+WenpCKT5TvENr3GWLlHACbbYnf3lwz+" />
+<input type="hidden" name="__VIEWSTATE98" id="__VIEWSTATE98" value="6QCXsB1Si2k8zECni9AnrYbefVI6QeDSO57KRLPcKSzsGIrzpDv/f6XBJjhbmDPuTazEr6rmdTKENmgoO4Pa7A3pWPAPlTIGul4S" />
+<input type="hidden" name="__VIEWSTATE99" id="__VIEWSTATE99" value="nzhoK/XRxWbJGjQQxtCE0peEZzLH3/VSCKWx0lIfliEhau60TdslvkD40WwfQh6W0S9GNVKgLcolHuOMtXhjOnC6HPeEstCKBVch" />
+<input type="hidden" name="__VIEWSTATE100" id="__VIEWSTATE100" value="0ivk8XcM4oiddZloU0uZrpnfj0HRunSRnqXPcL2hRY8dF0d0jJkJsMBfTify9eSkv0C4JfB9r2pnhAhNcBKDkC7u+GprGnb1DyeO" />
+<input type="hidden" name="__VIEWSTATE101" id="__VIEWSTATE101" value="caMFTxsFg2zsnYH9ZiLTPmMgzUeHdxjJqsSd1uIpWDsmLTqSMaGZgD8uONlAcuKVizSEm1kBRzMr+NVwjydXgQfkvkcpV4r8WH6g" />
+<input type="hidden" name="__VIEWSTATE102" id="__VIEWSTATE102" value="rAWhYgdZI7XqrHVhm9kgA5DWz+210/lDLEMJ3JJu2mmckvj+r1yxON15JuW8uOlp6TGE4SE8Bu4EQdx5qcc/0s3F3H5uz91p1Dp6" />
+<input type="hidden" name="__VIEWSTATE103" id="__VIEWSTATE103" value="skq/dpr7ovfT2axTkjH8BAhSY80LASxedsqQ4Bx827D+VZcGCoLxWe63tRF5UfKYXRtOReKMPoFZ8oXFuRCvNus958uNR1j6HnAC" />
+<input type="hidden" name="__VIEWSTATE104" id="__VIEWSTATE104" value="N7F57mPQFQGiS/xYcMlKqSYnYSJZ0Wjv8AeCAALbJnAdY/OeIjDOn8HLskTp+mnL0AQeWPSjwnr9ZIQdcDvaXV+z8C1lCJ90ofIj" />
+<input type="hidden" name="__VIEWSTATE105" id="__VIEWSTATE105" value="zPIzJ4CJ0TACriMfa5tTalVimtEdjWMe2hbS7RYD91hEiPYs76sfUGUCB6cZCnUJhvyNIY3evA2v8J5FvMeObWxcZjC3IffbiiL3" />
+<input type="hidden" name="__VIEWSTATE106" id="__VIEWSTATE106" value="9W5GdFFR4yan8xqQ6+nBn7Y2liRLNuQ8LCy2XMSTT1wuFrZ5mcsPzbfovAYCpRQV+TmgA5LttzC2zhVJGcFfhY47Zx8V69+Sw2Rp" />
+<input type="hidden" name="__VIEWSTATE107" id="__VIEWSTATE107" value="BZkJePOXsSaFPVENuZya6eDXvDU1w5P/ItH3g73bDrzQ60u4cKVe26nzEo4GjCwlTJE9mmJOhcOrFR9AwU2rhA9Ndr3TidyNS/MW" />
+<input type="hidden" name="__VIEWSTATE108" id="__VIEWSTATE108" value="5yioYxmy6a495hYulhCH7GPs9SZHAEo1ag2as/3nR22nZY8rjmlq3nSasIBCSYsW3ctZLqqjYpLYdeo11mtU8gNMol5Rm+wPZC4W" />
+<input type="hidden" name="__VIEWSTATE109" id="__VIEWSTATE109" value="zMTNfuQfZdvlfpks0h0gu+lGz1EOAqxPHrXo/Ilj7nJoIDOibu28OiKxVbUsAoaqkcL6GxySeMA089QiIFloxOJy6IYiIPPjIvHt" />
+<input type="hidden" name="__VIEWSTATE110" id="__VIEWSTATE110" value="CmW2GDO4qecF8yIdCsXCVisGZXV6FCZOV6BSQ1uXnuc/oBSGTPjOIBnXYKdMu2AniPaIMMbAqBDBh603QwjBinT+fcsrgut73mph" />
+<input type="hidden" name="__VIEWSTATE111" id="__VIEWSTATE111" value="RZbLHdIeiYy/EOIpcl6WTyNRrVAWUjOiEHto2JukPu7v7WieOywr7g3ocjkQVJgob9T9SvfZWKxenZsi02D380+/mJRM4KyOdioM" />
+<input type="hidden" name="__VIEWSTATE112" id="__VIEWSTATE112" value="6YyntepM1pBcUwIXoCg5DmYlolAj903rCDss3081EcM2WgJeZKJAMmWaQUE90jM+uIMPb51qrWCG846x3g4QJjgunV3m6dLHvZCI" />
+<input type="hidden" name="__VIEWSTATE113" id="__VIEWSTATE113" value="f9fMTz/+FxbNBT5xvApEByV96/x9934l6/06rMG3QR3SqbvGPDqWabDu+gmBM9hzZ5BB3qdulIUPMHnyrmukBnlxHrvyZfoyf5fM" />
+<input type="hidden" name="__VIEWSTATE114" id="__VIEWSTATE114" value="gK1VAZdu21ziZEZbkcKmcCKckrbb2n3EOrWMQHpkGuo7AvqhussZ6BioIUiqkT+c0ug0lmD0kNaMUwRe9n0NwdeNvgL7ysMAAXTZ" />
+<input type="hidden" name="__VIEWSTATE115" id="__VIEWSTATE115" value="73vR9CJsbGGWSrKhpnXvLBQCqsBTYQ9oqr8KzHUgJhpO/l7oa2bmdpVkEfhmg4MXY54ogGvbip1/4Au4PzWAX6IpwgNbMA/fffi2" />
+<input type="hidden" name="__VIEWSTATE116" id="__VIEWSTATE116" value="D9JBg7cGEIfTa1VX3YyIwtz6zutd238MJUx6B1oqQ2jIH32ogLsHHaCnL7ULvmxxX0d26dTrwxI6PjFA1bGIfLWl025df8JhzG8F" />
+<input type="hidden" name="__VIEWSTATE117" id="__VIEWSTATE117" value="UTXYZHT8uZv8F/Aa+v6LQ/cNBkn/HM7T/5J6065I2e4VpCSNqfWibYaL0tmK9WIdi+QzM/tPwKszYywOEDYQyoHBBauoczAfgVAg" />
+<input type="hidden" name="__VIEWSTATE118" id="__VIEWSTATE118" value="iyae1U9I2ek+ite7yIIe/pTfasXmZ1x4ca50akFZPDKsJrG4/CGvPphJM+DIVAUNO65cLFwO42BG8mQvUMhvcNt7kONFEzf6jCfG" />
+<input type="hidden" name="__VIEWSTATE119" id="__VIEWSTATE119" value="bt/hT1Szo7qaUfDCmUkDNiNrVndonPRXSEjWewPBQ5olijhZVX0Lh8XsLwOxyn+WkwOi74MWeZr/x8u1CnuH3SACDpCuM2WElvPi" />
+<input type="hidden" name="__VIEWSTATE120" id="__VIEWSTATE120" value="y3c8D0/KkcyUbJnr28YR+E+7Egf7N64Ug+7h1PBRGm7epBgnujiJA0VWBBVbXi0ja/Ctu3KKaJnm7nAqVTgzPGZIl7h6TxFQc4LT" />
+<input type="hidden" name="__VIEWSTATE121" id="__VIEWSTATE121" value="ajurNIekvqXv1JC7kj7+E/LVzaUg0+uN0qC6C2A+nUYETA4Hd6XKtiQl4a3fzySfG7Bj4uf6+eKB+6Y9kgSI/sZPqEKRpxadVN3f" />
+<input type="hidden" name="__VIEWSTATE122" id="__VIEWSTATE122" value="+QZoHK1ybjA1RaU70hH6XodLj/qa6YFdr/6MRahjt6Vl1IxtCZTtIpRTqzRqbfD9nz4TgdjzI1bROPEV2IBxFU7/kJIw0SlTJBDJ" />
+<input type="hidden" name="__VIEWSTATE123" id="__VIEWSTATE123" value="mi2RTDrF78DpTHMmS7jjHwVqNeySG2phAMvZQn40BuFQdTp1ABOxrdzfpOoV+R0HR0f/cZv1rEzD+xULuPrg/1BxHakjke6lEyvQ" />
+<input type="hidden" name="__VIEWSTATE124" id="__VIEWSTATE124" value="fgLloBpBccAeXZHU6OERxsa0bwkudPUC/9sdqR/9fNYJECng3NHwWaoSxK0E+nOm/1Qql2K/wmqZXjxIFJkJVnP6cyENsC2WvZfX" />
+<input type="hidden" name="__VIEWSTATE125" id="__VIEWSTATE125" value="DzVOPScNdRCluBgH1FXh2QkRU+HoKVKApVF8vNpYCd2M/0x8kLo59fW7iONSvkMQhCBhzhohQSf/boqOJxD8NdcrwiQMR3/3Tpj6" />
+<input type="hidden" name="__VIEWSTATE126" id="__VIEWSTATE126" value="UuXJ8cl38pEWLJKGZ43Q6VEIo7Cv54pq0+fD8askAphMjYHcY8xirO5yF0sXFyeC+pmupiVeffyMIUZEZoobekHPHgNq1joAYFL+" />
+<input type="hidden" name="__VIEWSTATE127" id="__VIEWSTATE127" value="ygCT4ACV4cqxZ4scLMCd1iqEszGqgHhLWO8eCWBRAj7GLHobfMeQYQMJMunm+t41/GuwM6Sj/ALtgCNXgxIuDhmz/6PGgEX28CE2" />
+<input type="hidden" name="__VIEWSTATE128" id="__VIEWSTATE128" value="QO/sfXgg+Mg9q5Ip1SiYOgUYuLj+a5jtNNrw6olTomiD311CZsQ2ybJl8Xnvy1PYCE3ybqPxnBTcLyQ4l32OgasSMBOqvQ6KLs6A" />
+<input type="hidden" name="__VIEWSTATE129" id="__VIEWSTATE129" value="m5WngXw1c7PYN8c6onucgNLlomx/GRFUpi6kQfuFHcSgCmVCXJk8NEIG1Uyz2mnCwHacZTyIivo8pUATrh2lvBcFxvxvzirciyWM" />
+<input type="hidden" name="__VIEWSTATE130" id="__VIEWSTATE130" value="1HdBt0vmwcBpcrWAbgPeRqq8q6pCEo4p7FBJpw6Y0QX9ZtvkIVCh27VZ659fCJrGTOTmhDHy3DKufCfXYbyTY1p6jLo2c+C3y95P" />
+<input type="hidden" name="__VIEWSTATE131" id="__VIEWSTATE131" value="/NE/xwpzE9E/jKUgiusQmv8mtx5dr2IXPcdT//3KVGEkwYbQdg8xhD+36stU3Bb9hxOxPB9B3ZLymq9duLXxco8jTYWjCM0SSPLB" />
+<input type="hidden" name="__VIEWSTATE132" id="__VIEWSTATE132" value="bJJT1dWQwXRwWD3ytpekXWwu4kGvAKoRAbd0J1JEXtFdOzK9vPLMAZgce8TkzXTy21SSMfeNUeLsR6M4fBnxBZhX6aYzxN0aYom4" />
+<input type="hidden" name="__VIEWSTATE133" id="__VIEWSTATE133" value="FPU40deIQnT0JysuehF3Cvl34o54Vd3yDO6/M7LF/g9XHwFcuzlRxv+dyUrV5KZvPlgYfdmJQW76LFAwu6M5+7PZrylAj148QNlL" />
+<input type="hidden" name="__VIEWSTATE134" id="__VIEWSTATE134" value="34kveFZCegu0bCSPZ/de+7Gb8q2WwVRCpLaS0x7kcC2b2GHSmhJhh7czYM5eLFNhAOo3HOQzMMSKP7f0FuVTfMPp4t80SiVH/sgy" />
+<input type="hidden" name="__VIEWSTATE135" id="__VIEWSTATE135" value="LQN0BdzXFBuGcg0MUdO0ZM5FB1rk7tHpG+tO3WE5s3h8+6I8SRu7kLKcPOowAsj5v2rk0wgmaUj1QtS4ckf28q4OyRndA1o26oIR" />
+<input type="hidden" name="__VIEWSTATE136" id="__VIEWSTATE136" value="YgWhw076CN7ZVnqBp1XpHyg+h6A9aUCBGBF2qAmKmMTxI6raCVxgFh6usGr5oSVw6tHrszxrxda21j6tSK7nGZ6btYK+CYwmWP/b" />
+<input type="hidden" name="__VIEWSTATE137" id="__VIEWSTATE137" value="2i7Kbim0F5HhsRlKxFYYUHp2hRvZwBPcFe0vAxTV7Q+tszJfuYQDersQbVOZvR7JwU2vwK6S6S1c7NiE/RsLdH2pi6Y2FGMfftnL" />
+<input type="hidden" name="__VIEWSTATE138" id="__VIEWSTATE138" value="QWSs4q/ZuEexefD9uA9zo3i6nMgd8b7q3FPo6M/hcOPj5hCxVchyoATodB2eQaIawwW0LkSRm4buxkT6a+tOxKNSrZq5voiNsRoB" />
+<input type="hidden" name="__VIEWSTATE139" id="__VIEWSTATE139" value="KFOZILV0PRdUFaLyZzWcwi6Wt5XvNT0is99fsaLQ1yXPwS+IchcCkgG73m0cDP3SFZVH4o33TsqqWhSF6/gCDnNs3SVT3yWM+O9N" />
+<input type="hidden" name="__VIEWSTATE140" id="__VIEWSTATE140" value="y7FNpB3Neex/fZeNrugVvO89l8n0Cs2f/Z2RsWk6ZSyvybrzB6s7SVWJRIaF3MKgzdUSchhRuGov/AOxOaMU0oiD86Amcfg40+Fc" />
+<input type="hidden" name="__VIEWSTATE141" id="__VIEWSTATE141" value="6Avyw+qCHBZgzQBAAZTY9lFLse5haf9OVPEIqpc170ZuMVdR2Zruzb686NjzZoSDflIOzBtFqX0y4ElEGJRg3r1dopJxxZy6u4GU" />
+<input type="hidden" name="__VIEWSTATE142" id="__VIEWSTATE142" value="tQQ1cMPyoW4zHJt+jVaWdGKGRjTpY0zi7VwiH6Z3Qpccvb4tOeoJ+kBVrdCQ3CRsdylYlRx1CGUxcfbk79cGin14/Anu0plIyiHB" />
+<input type="hidden" name="__VIEWSTATE143" id="__VIEWSTATE143" value="IZk1ezk9mSz+QlA7aVUdjw69rmDXt1vH4Bnsb5GadCPwG3ovZzTZMwHZnfqQIwtb/a2FI1FF7nANLF3r9n4n9S77QFff2ev2Z42G" />
+<input type="hidden" name="__VIEWSTATE144" id="__VIEWSTATE144" value="eTcgjn0EDCjlXJnZRNkrjKBgdjTBaCRvPQwDnO+oH/bW/iLbhcxNNkMH99hdn/CuFiuOlWPeYA2rB5yymaDopsWzQvN3dzuAD4xr" />
+<input type="hidden" name="__VIEWSTATE145" id="__VIEWSTATE145" value="h84v+Ws5CSKZwYMDUYavU8I7Gp3JrEjv+EuZqbXDeYxXXwMl7kwTCtkgxVWlCEImWYmIyZrEAQAFCNRP+bOfxpPyWqvMxus69iY0" />
+<input type="hidden" name="__VIEWSTATE146" id="__VIEWSTATE146" value="o8FC+lSg7lv04gXHeeCt6gZIYkHFh3QorZhO0M6BRCP88m3Hk1bX8Mw+s2Y/LrRW+E5XV6iaK64go/p4zt/Vv5SaHg7ER/WgT1x+" />
+<input type="hidden" name="__VIEWSTATE147" id="__VIEWSTATE147" value="HeuMIK+DDff21sBwluLQnm7x60FLdf70g6TQ9iosaXybEA1Ffc0i8xpRoDSlw1vjJXfh9tLlpuYU47+H6dQvpqOk+IgFJwxBd52y" />
+<input type="hidden" name="__VIEWSTATE148" id="__VIEWSTATE148" value="H1L93V3LEsMm+pWh7pH8RNvHWaonEjL3FZlBsZlEsC2tJ0bihFJ7LtjmL8BcwxLQcZfECxgE9Ib8fh2+iXKlWH+VkjTyUOq+vNw9" />
+<input type="hidden" name="__VIEWSTATE149" id="__VIEWSTATE149" value="4Usq8alw5zzpEbdQgweisf0xByid4x9kjdlctYqJQN0biZP14FLaBhHZIvTJp5VFxTFvvXl3OUK0rDFfKgfWpzKMVfQCXk28SMBe" />
+<input type="hidden" name="__VIEWSTATE150" id="__VIEWSTATE150" value="COuMyGEpzvHxDrHj7RPgI6DVD/RLEk5Yur49VvrNOYJIwx6LS9/4emGMWFqxUynZVr3zudVtFhOMGgXr92Dl92PkycrHCTAnzBvU" />
+<input type="hidden" name="__VIEWSTATE151" id="__VIEWSTATE151" value="T8TzI/ZyxhrCby3PX2tEUl/l/X4efM+M9l56vmpnq19m095FGZDnVM9mB0Qfe4Ez83r3NKTqPamzFPSnUa+aiaPm//80A1gS8bfe" />
+<input type="hidden" name="__VIEWSTATE152" id="__VIEWSTATE152" value="Kf0RznICakGV3zNslM5B/PPOe9VbP9nyJ6wnPcawHwC6Wdrk0N08EF6zTFzoQ9n05CVSWJmXd03JnNuyNkWEc81Y3enUy9rz/BOe" />
+<input type="hidden" name="__VIEWSTATE153" id="__VIEWSTATE153" value="TDORi7WwwYEaVAfi9lL9w5o3x57fG85LkvLa/94RGWcQJOOKMD8H3rPJ9GGYRBi7vsYiBZwMg6cp43Co0fenPuLKq69TfEDw2rS7" />
+<input type="hidden" name="__VIEWSTATE154" id="__VIEWSTATE154" value="trdZ0zOJlHPH7lsMfOhT8cASoRmLcYK141oXeau4ONHKZ9nV9qqMDsQ4qPkAHm0EK3ytEdCQkJrEshV5/K4UQZ2AvjMtpMzsCobf" />
+<input type="hidden" name="__VIEWSTATE155" id="__VIEWSTATE155" value="ex6SwmMJtKeyhah4hlV9TDVHwhLq1HAjFpyXxmds9QkdxbfY7bk4ozog5hi4/PkMIbpLc8lKssN+awjdU14nUT5/JGGWffJ5F/IK" />
+<input type="hidden" name="__VIEWSTATE156" id="__VIEWSTATE156" value="HQPmtqNxUNf9PQ3oniUDmzuwiMb//f4567H97MJ7YcwOr2uEfTE31ZDg98GGuFz3higfZ8uuMeLnxzvYDCI3r4HB3Q5cXe+QcyDF" />
+<input type="hidden" name="__VIEWSTATE157" id="__VIEWSTATE157" value="U8uxf+V84mzEzUugCdwooGtbZY02tGKcm82m7qkVyxFg2PWP57z8YVehxKIZG7EVTf2kp8QmQDnVJxRoW3C0KpSWt8hilksdHBD4" />
+<input type="hidden" name="__VIEWSTATE158" id="__VIEWSTATE158" value="tZpcjKnN+E3LcGE7jdLEJfM/I6ZhsD8w+CmWfWY59xc0Zw0qLnOKdOIEYfBJk6vhQqcggUSyd9Pagus2e4A/hFt/vJ6wwoaE79lA" />
+<input type="hidden" name="__VIEWSTATE159" id="__VIEWSTATE159" value="mW0A0ec9F7IoRHpV7BSM0FWIj89MzgqRtjYZZ4dt1CsZMvNo7A/oZVnBZ9X2ZhF6Ng1a/NeMQFWr0ypuSBZxNx/gUniomX8YwdRw" />
+<input type="hidden" name="__VIEWSTATE160" id="__VIEWSTATE160" value="DGM9b6g7QjLRCm9TYetNJ/17Au3Xn9RZVQbFUmf90fyL/b7vgCtmH6hdTxoYSZF4Xom5jEZzl8MCduWsz3HwtxMqgaAHbBUW2N9a" />
+<input type="hidden" name="__VIEWSTATE161" id="__VIEWSTATE161" value="wNIpfg84kLa93LOe6k38TV89XGfHa2TW+Or9VYmkN9qNvcKPdpNTMuXptQyqiM1mOBEXK0SlgvYx31h4ZW9Ui3PP8jMU5L8T/nY/" />
+<input type="hidden" name="__VIEWSTATE162" id="__VIEWSTATE162" value="eZyeypOGARZiTBTfULUNtqBLTI9oXB42YVxuOqHwlgnvfDzdb4YYpseewiFPx1osNkmYThDL5v5QXtN9UNoVF2Hzd1kDKVL/8BrT" />
+<input type="hidden" name="__VIEWSTATE163" id="__VIEWSTATE163" value="+rspbvoVRFL3/vHv+avLPG2hU0Vqga/PYLYxz8Y9PIiExCNC+v9SMSdEH/ZT1yRhnnS4Z0Lym9LArSylyLgaHpalJahwkwtNEQQM" />
+<input type="hidden" name="__VIEWSTATE164" id="__VIEWSTATE164" value="dfrB4l5A+Juk1zD7mtnB7tMMqMs8riyxEnGhm+QB3mcJ7hFFm48G8nE/zhce3llzZt6joE1bQ/oc12e/cTkTvDul/gTeTzUuD6+/" />
+<input type="hidden" name="__VIEWSTATE165" id="__VIEWSTATE165" value="HUK24II9OpTngJnKAcJJ9OK4He28M+L9RhjHsv2eabnrfHt1k6unlu+bCufM+TXi/9eOuphhLHBHRS3OdhCWc6xLbymwkX+TtmZT" />
+<input type="hidden" name="__VIEWSTATE166" id="__VIEWSTATE166" value="BOZH8EjF6hvix4Mq0C2GZf/8QeYY278C1hT87J6BhRVGzOsfCokCKNpteZEASOI+AilEYTp/RsML6PPJrxjhNce8X+9roP65u0Lm" />
+<input type="hidden" name="__VIEWSTATE167" id="__VIEWSTATE167" value="W/z5Xb/0dvDBexgmxmLYI2bMmUYOTbvIqTwXt/stJ/RQYgawo1C4yXGLWR7vlEDcpsDYalZ0KgixVXt/933nc1RVXm7uO8w8ZklY" />
+<input type="hidden" name="__VIEWSTATE168" id="__VIEWSTATE168" value="xdtCjOiazfULMM3jTZ/zLTEtASoFXa8luJzX8sUIedBX0Wb3k2FE50fBGX8gfM8RwWvCYWKaujiHvDERhe2eWJj0MjbTBaY36voF" />
+<input type="hidden" name="__VIEWSTATE169" id="__VIEWSTATE169" value="Mdnzm/QoZQ5KQlfxZBy5iwBVmNljV1JDHC3teBtCJ9jj0MZpas+1hAGsoKReu+IXewcnnh9EGpJe1TJmo+AF+ttF+OrPjITeC6m1" />
+<input type="hidden" name="__VIEWSTATE170" id="__VIEWSTATE170" value="qT9GTwtVv6tv04R/CA1H47h5PrFIEwsBO5lXjvVjZL3ph7D7buBahDm2EygqrAzD8uw0ININncLwbJGuXIxrPyZfStwL3Hx4fO5a" />
+<input type="hidden" name="__VIEWSTATE171" id="__VIEWSTATE171" value="U/NQU3JdXWV4bkI/q7YzlHOmtP1lIuWjRwcLocKp2jdrKA3RQs7dDpmJ1+P5E+PfVkkYXzyRdeTMk4m9HjR6Xta5uyuL6T1v9SiZ" />
+<input type="hidden" name="__VIEWSTATE172" id="__VIEWSTATE172" value="k0+fTaus7UXTZ79NVgc8opGlTZ0E1+SvayM1V1S0LpaayTuWiNq+U+MTBCEvbDRSMfdFNjJPryVp/ecaP61Ov135kLyBJELT3Kzq" />
+<input type="hidden" name="__VIEWSTATE173" id="__VIEWSTATE173" value="ToNsaMj2ky8X02SqjNVghMzOS6nF6VnyhGnrhOZXeX6ranM2MfEh8EY9wd/jOEgrGz9YbE8Nc3fYvNa3raCZjHwVqMhyxor6fJsH" />
+<input type="hidden" name="__VIEWSTATE174" id="__VIEWSTATE174" value="705xlVdnhsIyVE6ZNvooKBeaCM+0S7tCvSfKZYj2DHy3qzwfLfzNMa5kGWVV9BhW8jexFq6ADDNAJLLR1CL3XBZMtcgLIy+vbGtW" />
+<input type="hidden" name="__VIEWSTATE175" id="__VIEWSTATE175" value="M7cFZDhVIVESzzFB9c9GQoPJ1qlRb1hEATXIE/Dorv34KehmpSuqAjdZoQCL+iSVUm1cBLkC5cDVuLKEaQcwaNK3oQeb8Pu0QUrH" />
+<input type="hidden" name="__VIEWSTATE176" id="__VIEWSTATE176" value="2rNuQCKIcJ6umiqi8nJv6325xOMq27sifVRE8BJXnL9zgjJm96OetKPYDH50BIciaNwCeZjxu/sMFuz2ErIjQu8QC/fy+ICVDKtx" />
+<input type="hidden" name="__VIEWSTATE177" id="__VIEWSTATE177" value="yusWVf6pLhF+qSTmx9ngyO44QdY9RhIz19+Fx9PaMd2QSY3RYLs9qE6s5RE+EnLdUWCj7mQQ2Ws4j2yokLKChkR7xqaXe2Z/xJVl" />
+<input type="hidden" name="__VIEWSTATE178" id="__VIEWSTATE178" value="Cb+UPt6FRPKcgI0vUgSPYt/59i/85iPAoO21QLqfwyzKQxp9dByJhsa1K0l2LZ8ifazbbD11oBapv9T++oOix+WG0uqkL+VdWa0o" />
+<input type="hidden" name="__VIEWSTATE179" id="__VIEWSTATE179" value="KXqWK3jXmcj1/lEftWjyoQZhxZQOj5poXlxBLBYK9ESU2n6PtgyXQwYtCgNDYyVIkPzNGCsR8rW0YIL0Gs1/Pg0FYZsHZprtd0jM" />
+<input type="hidden" name="__VIEWSTATE180" id="__VIEWSTATE180" value="CzRrx5DJeMH+ewIiBeW1aQFSLTo=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZPDxFjnVR0mjwvTGDxmeFTqMgTnK_RSN93-FaaguVMHbUOhS_jCRY9Y5rnkouLEQWw2&amp;t=638605973300000000" type="text/javascript"></script>
+
+<script type="text/javascript" src="/ajax/common.ashx"></script><script type="text/javascript" src="/ajax/SpelogWeb.Libraries.Core.ajax.SpelogAjaxObjects,SpelogWeb.ashx"></script>
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"fr-FR","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":" ","CurrencySymbol":"€","NaNSymbol":"NaN","CurrencyNegativePattern":8,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":" ","CurrencyPositivePattern":3,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":" ","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402297199999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2049,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":2,"FullDateTimePattern":"dddd d MMMM yyyy HH:mm:ss","LongDatePattern":"dddd d MMMM yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"d MMMM","PMDesignator":"","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["dim.","lun.","mar.","mer.","jeu.","ven.","sam."],"ShortestDayNames":["di","lu","ma","me","je","ve","sa"],"DayNames":["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],"AbbreviatedMonthNames":["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc.",""],"MonthNames":["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre",""],"IsReadOnly":true,"NativeCalendarName":"calendrier grégorien","AbbreviatedMonthGenitiveNames":["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc.",""],"MonthGenitiveNames":["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre",""]},"eras":[1,"ap. J.-C.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=dyDTs7gNF_kk9FufHTKjE417feXbjzNus48X3AvrPSFGhcpECQKJYCHMKRwgA2_EEU-9boJrUoM6iY4sLWp_zJbNBCy7QFryOfu63IK3i2njgBk6zW4L5ud4I8o3yfKfxUDxoMiulWtESrnarCwETunABHzAuY6FZj0Zr0OCbWg1&amp;t=ffffffffc789fa9a" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ct1HG-wRSUJU9M060LHjx4Spbx9xDbjjHOzItnRyrNxXBu9IJB83G6Hs2bO-T7DZsrtzVZXffI3ZRKz9-s1Egt5L_5kGe6I7ptmVRxak5cul7F6R5-ku179pZ2NE9qVoSZky3J5T5PyDasDK51JcjwNVD6T67Jao5-a5zgshuos1&amp;t=ffffffffc789fa9a" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CE5A2904" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManagerMain', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+        <!-- WRAPPER -->
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                
+
+<div class="container-fluid">
+    <div class="navbar-brand">
+<a id="logo" href="/">
+    <img class="hidden-xs" src="/GUI/Skins/Default/images/logo_web.png" alt="">
+    <img class="visible-xs" src="/GUI/Skins/Default/images/logo_mobile.png" alt="">
+</a></div>
+
+    <nav id="navbar-top" class="navbar navbar-top hidden-xs">
+        <ul class="nav navbar-nav navbar-right">
+            <li id="ctl00_ctl13__InfoProfil" class="UserProfil"><a id="ctl00_ctl13_hlMonCompte" title="LAROSE PHILIPPE" traduction="0" href="/UserPreference.aspx"><i class="glyphicon glyphicon-user gi-lg"></i></a></li>
+            <li id="ctl00_ctl13__btn_logoff" class="LogOff">
+            <a id="ctl00_ctl13_lbLogoff" title="Déconnexion" class="btn_logoff" traduction="0" href="javascript:__doPostBack(&#39;ctl00$ctl13$lbLogoff&#39;,&#39;&#39;)"><i class="glyphicon glyphicon-off gi-lg"></i></a>
+            
+            </li>
+        </ul>
+    </nav>
+</div>
+<!--<li><span id="ctl00_ctl13_CtrlIdentity1_lblNom">PHILIPPE LAROSE</span>
+</li>-->
+<nav id="navbar-main" class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul id="TopButtonsCont" class="nav navbar-nav">
+                <li id="ctl00_ctl13__btn_home"><a id="ctl00_ctl13_hlHome" title="Accueil" class="btn_home" traduction="0" href="/"><i class="glyphicon glyphicon-home gi-lg"></i></a></li>
+                <li id="ctl00_ctl13__btn_catalogue"><a id="ctl00_ctl13_hlCatalogue" title="Catalogue" class="btn_catalogue" href="javascript:void(SpelogAjaxObjects.callCatalogue(callbackRedirection));">Catalogue</a></li>
+                
+                
+                
+                
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_hlOrderInfo" class="shopping-cart" href="/Modules/Panier/Panier.aspx"></a>
+<script type="text/javascript"> 
+var g_RefArticle= '';
+var g_RefSubstitut= '';
+var g_Codeobs1= '';
+var g_Codeobs2= '';
+var g_Codeobs3= '';
+var g_Codeobs4= '';
+var complements= '';
+var estUnProduit= false;
+var listefamilleProduit= '';
+
+function WinAskcallback(res) { 
+g_RefArticle= res.value.ArticleRef;
+g_CodeGamme= res.value.GammeCode;
+complements= res.value.complements;
+estUnProduit= res.value.EstUnProduit=='True';
+listefamilleProduit= res.value.ListFamilleDuProduit;
+g_RefSubstitut= res.value.ArticleSubstitut; $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_LIGNESUBTITUTION').css('display','block');
+if (g_RefSubstitut != '') {
+   $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblSUBSTITUTtitle').html('Réf. de substitution :');
+   $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblSUBSTITUT').html(g_RefSubstitut);
+} else { $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_LIGNESUBTITUTION').css('display','none'); }
+$('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblREF').html(g_RefArticle);
+$('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblDESC').html(res.value.ArticleDesc);
+$('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblPUHT').html(res.value.ArticlePUHT);
+g_QtePackaging= res.value.ArticleQtePackaging;
+if (g_QtePackaging != 0) {
+   $('#lblQtePackaging').html(res.value.ArticleQtePackagingLib);
+   $('#lblQtePackaging').css('display','inline');
+   globalQTE = g_QtePackaging;
+   globalQTELIB = res.value.ArticleQtePackagingLib;
+   memo_globalQTE = globalQTE;
+   memo_globalQTELIB = globalQTELIB;
+   memo_QtePackaging = g_QtePackaging;
+} else { 
+   $('#lblQtePackaging').css('display','none'); 
+   globalQTE = 1;
+   globalQTELIB = '';
+   memo_globalQTE = globalQTE;
+   memo_globalQTELIB = globalQTELIB;
+   memo_QtePackaging = g_QtePackaging;
+}
+$('#tbQTE').attr('value',globalQTE);
+var ddlPaniers = $("#listPANIERDESTINATAIRE");
+ddlPaniers.empty();
+g_SelectedBasket=0;
+$.each(res.value.ListePaniers, function(key, value) {
+   if (value.Key==0)
+       ddlPaniers.append($("<option selected='selected'></option>").val(value.Key).html(value.Value));
+   else 
+       ddlPaniers.append($("<option></option>").val(value.Key).html(value.Value));
+});
+addSelectChange();
+$('#PANIERDESTINATAIRE').hide();
+$('#LIGNEUSESCASES').hide();
+$('#KitsLines').hide();
+g_Codeobs1= res.value.ArticleCodeobs1;
+g_Imgobs = '<img src="'+g_Codeobs1+'" border="0"/>';
+if (g_Codeobs1 != '') {
+   $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs1').html(g_Imgobs);
+} else { $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs1').html(''); }
+g_Codeobs2= res.value.ArticleCodeobs2;
+g_Imgobs = '<img src="'+g_Codeobs2+'" border="0"/>';
+if (g_Codeobs2 != '') {
+   $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs2').html(g_Imgobs);
+} else { $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs2').html(''); }
+g_Codeobs3= res.value.ArticleCodeobs3;
+g_Imgobs = '<img src="'+g_Codeobs3+'" border="0"/>';
+if (g_Codeobs3 != '') {
+   $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs3').html(g_Imgobs);
+} else { $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs3').html(''); }
+g_Codeobs4= res.value.ArticleCodeobs4;
+g_Imgobs = '<img src="'+g_Codeobs4+'" border="0"/>';
+if (g_Codeobs4 != '') {
+   $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs4').html(g_Imgobs);
+} else { $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs4').html(''); }
+   $('html,body').scrollTop(0);
+}
+function callbacklire(res) { 
+var slib = '<b>'+res.value.NbArticle+'</b> article(s)'; 
+slib = slib + '&nbsp;-&nbsp;Total HT <b>'+res.value.TotalHt+'</b>';
+$('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_hlOrderInfo').html(slib);
+slib = slib + '&nbsp;-&nbsp;Total HT <b>'+res.value.TotalHt+'</b>';
+if (res.value.message != '') {
+   $("#DivInfoFav").center();
+   $("#DivInfoFav").html(res.value.message);
+   $("#DivInfoFav").css('display', 'block');
+   setTimeout("ClearDivInfoFav()", 2000);
+}
+ }
+function AddArticle(refArticle,src) { 
+   SpelogAjaxObjects.AskWindow(refArticle,1,WinAskcallback);
+} 
+function Add() { 
+   getCheckedRadioKit();
+   var qte = globalQTE;
+   if(qte == ''){qte = 1;}
+   if (g_QtePackaging > 1 && (qte % g_QtePackaging) != 0){
+       qte = parseInt(qte) + parseInt(g_QtePackaging) - parseInt(qte % g_QtePackaging);
+       spelogNotification.reset(); spelogNotification.message = 'La quantité a été modifiée afin d\'être conforme à la quantité de packaging'; spelogNotification.title = 'Ajout au panier';spelogNotification.info();
+       }
+
+                                window.dataLayer = window.dataLayer || [];
+
+                                if(estUnProduit)
+                                {
+                                        window.dataLayer.push({
+                                            event: 'ajout_panier',
+                                            produits: [{
+                                                type:'Produit',
+                                                produit_famille:listefamilleProduit,
+                                                produit_nom:g_RefArticle,
+                                                produit_quantite:qte
+                                            }]
+                                        });
+                                }
+                                else
+                                {
+                                   window.dataLayer.push({
+                                    event: 'ajout_panier',
+                                    produits:[{
+                                        type:'Article',
+                                        produit_nom:g_RefArticle,
+                                        produit_quantite:qte
+                                    }]
+                                });
+                                }
+                                   SpelogAjaxObjects.AddPanierEx(g_RefArticle, complements, qte, g_SelectedBasket,'',callbacklire);
+   globalQTE = 1;
+} 
+function RefreshPanier() { 
+   $('#ctl00_ctl13_ctrlPanierNavigation1_ctl00_hlOrderInfo').html('<img src="/GUI/Skins/Default/img/ajax/ajax-loader.gif" />'); 
+   SpelogAjaxObjects.LirePanier('',callbacklire); } 
+</script> 
+
+
+<span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_TEXTEDROP" class="OrderInfo"></span>
+<div id="askWindow" style="display:none">
+    <div class="header">
+		<span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblTitre">Ajouter au panier</span>
+	</div>
+    <div class="content">
+        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+            <tr>
+                <td width="100" valign="top">
+                    <strong><span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblREFtitle">Réf.</span></strong>
+                </td>
+                <td valign="top">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <strong><span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblREF"></span></strong>
+                            </td>
+                            <td align="right">
+                                <span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs1" traduction="0"></span>
+                            </td>
+                            <td align="right">
+                                <span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs2" traduction="0"></span>
+                            </td>
+                            <td align="right">
+                                <span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs3" traduction="0"></span>
+                            </td>
+                            <td align="right">
+                                <span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblCodeObs4" traduction="0"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_LIGNESUBTITUTION">
+	<td valign="top" colspan="2">
+                    <div style="font-size: 9pt; font-weight: bold;">
+                        <span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblSUBSTITUTtitle">Réf. de substitution :</span>&nbsp;<span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblSUBSTITUT"></span>
+                    </div>
+                </td>
+</tr>
+
+            <tr>
+                <td valign="top">
+                    <strong><span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblDESCtitle">Description</span></strong>
+                </td>
+                <td valign="top">
+                    <span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblDESC"></span>
+                </td>
+            </tr>
+            <tr id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_LIGNEPU">
+	<td valign="top">
+                    <strong><span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblPUHTtitle">Pu HT</span></strong>
+                </td>
+	<td valign="top">
+                    <span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblPUHT"></span>
+                </td>
+</tr>
+
+            
+            <tr class="cartqte">
+                <td valign="top">
+                    <strong><span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblQTEtitle">Qté</span></strong>
+                </td>
+                <td valign="top">
+                    <input name="ctl00$ctl13$ctrlPanierNavigation1$ctl00$tbQTE" type="text" size="3" id="tbQTE" class="inputqte" /><br />
+                    <span id="lblQtePackaging">[lblQtePackaging.Text]</span>
+                </td>
+            </tr>
+            <tr id="KitsLines">
+                 <td colspan="2">
+                    <div id="HtmlKits"></div>
+                 </td>
+            </tr>
+            <tr id="PANIERDESTINATAIRE">
+                <td valign="top">
+                    <strong><span id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_lblPANIERDESTINATAIREtitle">Panier</span></strong>
+                </td>
+                <td valign="top">
+                    <select ID="listPANIERDESTINATAIRE"></select>
+                </td>
+            </tr>
+            
+            
+            <tr id="LIGNEUSESCASES">
+                <td colspan="2">
+                    <div id="HtmlUsesCasesControl"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <a id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_hlValidate" title="Ajouter au panier" class="btn btn-primary closeModal" onMouseDown="Add()">Valider</a>
+        <a id="ctl00_ctl13_ctrlPanierNavigation1_ctl00_hlCancel" title="Annuler" class="btn btn-default closeModal" onMouseDown="globalQTE = 1;">Annuler</a>
+    </div>
+</div>
+<script type="text/javascript">
+    var memo_globalQTE = 1;
+    var memo_globalQTELIB = "";
+    var memo_QtePackaging = 1;
+
+    var globalQTE = 1;
+    var globalQTELIB = "";
+
+    var g_SelectedBasket = 0;
+
+    function addSelectChange() {
+        $(document).on('change', '#listPANIERDESTINATAIRE', function (e) {
+            g_SelectedBasket = e.target.selectedOptions[0].value;
+        });
+    }
+
+    RefreshPanier();
+</script></li>
+                <li>
+<div class="navbar-form" role="search">
+    <div class="form-group">
+        <div class="input-group search">
+            <input name="ctl00$ctl13$ctrlSearchAll1$tbSearchAll" type="text" size="10" id="tbSearchAll" class="form-control" activekey="13" activebutton="lbSearch" PlaceHolder="Recherche..." />
+            <div class="input-group-btn">
+                <a id="lbSearch" class="btn btn-default" Traduction="0"><i class="glyphicon glyphicon-search"></i></a>
+            </div>
+            <div class="input-group-btn">
+                
+            </div>
+        </div>
+    </div>
+</div></li>
+
+                <li id="ctl00_ctl13__InfoProfil2" class="UserProfil visible-xs"><a id="ctl00_ctl13_hlMonCompte2" title="LAROSE PHILIPPE" traduction="0" href="/UserPreference.aspx"><i class="glyphicon glyphicon-user gi-lg"></i></a></li>
+                <li id="ctl00_ctl13__btn_logoff2" class="LogOff visible-xs"><a id="ctl00_ctl13_lbLogoff2" title="Déconnexion" class="btn_logoff" traduction="0" href="javascript:__doPostBack(&#39;ctl00$ctl13$lbLogoff2&#39;,&#39;&#39;)"><i class="glyphicon glyphicon-off gi-lg"></i></a>
+                
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+            </header>
+            <!-- fin Header -->
+            <!-- Container -->
+            <div id="container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Left -->
+                        <aside id="left" class="col-md-3">
+                            
+                            <div code="LEFT_CONTENT" type="CONTENTZONE" kind="SIMPLE" product="" class="contentzone"></div>
+                        </aside>
+                        <!-- fin Left -->
+                        <!-- Main -->
+                        <div id="main" class="col-md-9">
+                            <div id="ctl00_CtrlNavigation_breadcrumbs" class="breadcrumbs hidden-xs">
+    <table>
+	    <tr id="ctl00_CtrlNavigation_STD">
+	<td>
+			    <span id="ctl00_CtrlNavigation_lblFAMILLE" class="Nav"><a href="/ListeFamilles.aspx?FAMILLE_PARENT_ID=-1">Catalogue</a>&nbsp;&gt; <a href="/ListeFamilles.aspx?FAMILLE_PARENT_ID=1">CHAPPEE</a>&nbsp;&gt; <a href="/ListeFamilles.aspx?FAMILLE_PARENT_ID=19">CHAUDIERES</a>&nbsp;&gt; <a href="/ListeFamilles.aspx?FAMILLE_PARENT_ID=41">CHAUDIERES GAZ MURALES</a>&nbsp;&gt; <a href="/ListeProduits.aspx?FAMILLE_ID=1489">INITIA + HTE (2015 -> …)</a> </span>
+			    
+			    
+			    
+		    </td>
+</tr>
+
+	    
+    </table>
+</div>
+                            <div class="content">
+                                <div id="INFOSNUMSERIE"></div>
+                                
+
+	<script type="text/javascript">
+
+		$().ready(function() {
+
+			var params = " {'name':'UserControls/Navigation/ctrlProductList.ascx','parametres':[{'name':'file','value':'ctrlProductList.ascx'},{'name':'idFamille','value':1489}]}";
+
+			$.ajax({
+				type: "POST",
+				url: approot + "Mvc/Remote/getRemoteControl",
+				data: params,
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				success: function(retour) {
+					$("#ListeProduits").html(retour.d);
+				}
+			});
+		});
+
+	</script>
+	<div id="ListeProduits"></div>
+	<div class="row">
+		<div class="col-md-12">
+			<div id="FAMILLE_LISTE_TEXT_BOTTOM" code="FAMILLE_LISTE_TEXT_BOTTOM" type="CONTENTZONE" kind="FAMILY" famille="FAMILLE_ID" class="contentzone"></div>
+		</div>
+	</div>
+
+                            </div>
+                        </div>
+                        <!-- fin Main -->
+                    </div>
+                </div>
+            </div>
+            <!-- fin Container -->
+
+            <!-- Footer -->
+            <footer id="footer">
+                <div class="container-fluid">
+                    
+<!--SPECIFIQUE-->
+<div id="pullleft" class="pull-left">
+    <a id="ctl00_CtrlFooter1_hlSiteRGPD" href="http://rgpd.chappee.com" target="_blank">Politique de protection des données personnelles</a>
+    <span>-</span>
+    <a id="ctl00_CtrlFooter1_hlSiteWeb" href="http://www.chappee.com/" target="_blank">CHAPPEE</a>
+    <div id="ctl00_CtrlFooter1_divContactus" style="display: inline;">
+        |
+        <a id="ctl00_CtrlFooter1_hlContactus" href="contactus.aspx" target="_blank">Contactez-nous</a></div>
+    
+</div>
+<div id="pullright" class="pull-right">
+    <a id="ctl00_CtrlFooter1_hlAxess" href="http://www.axess-technology.net" target="_blank">Axess</a>
+            
+    <a id="ctl00_CtrlFooter1_hlInfos" href="http://www.spelog.com" target="_blank"></a>
+    <span id="ctl00_CtrlFooter1_lblSpelog">SPELOG 4.91.49</span>
+</div>
+<!--SPECIFIQUE-->
+
+                </div>
+            </footer>
+            <!-- fin Footer -->
+        </div>
+        <!-- fin WRAPPER -->
+    </form>
+
+    <div id="photo"></div>
+    <div id="photoarticle"></div>
+    <div id="photoschema"></div>
+    <div id="zonecustomfield"></div>
+    <div id="zonemedia"></div>
+    <div id="zonehistoart"></div>
+    <div id="zoneinfo"></div>
+    <div id="zonecommentaires"></div>
+    <div id="editcomments"></div>
+    <div id="zoneaddpanier"></div>
+    <div id="zoneaddvariantes"></div>
+    <div id="DivInfoFav" style="display: none"></div>
+
+    <!-- Script -->
+	<script type="text/javascript">
+   
+		var gSpelogContext = '';
+    </script>
+    <script>
+       $("textarea[maxsize]").each(function () {
+         $(this).attr('maxlength', $(this).attr('maxsize'));
+         $(this).removeAttr('maxsize'); 
+       });
+   </script>
+<script>
+
+    $(document).ready(function () {
+        var bootstrapButton = $.fn.button.noConflict();
+        $.fn.bootstrapBtn = bootstrapButton;
+    });
+</script>
+    
+    <script src="/GUI/Skins/Default/js/scripts.js"></script>
+<script src="/GUI/Skins/Default/js/custom.js"></script>
+
+    <!-- fin Script -->
+
+    
+<script>
+    function callbackXitiContainer(res) {
+        if (res.value.pXtoption) {
+            if (res.value.pXitiProtocol == "HTTP")
+                initxitiajax(res.value.pEntSite, res.value.pXtsite, res.value.pXtn2, res.value.pXtpage, res.value.pXtdi, res.value.pX1, res.value.pX2, res.value.pX3, res.value.pX4, res.value.pX5, res.value.pX6, res.value.pX7, res.value.pX8, res.value.pX9, res.value.pX10, res.value.pParamsstring);
+            if (res.value.pXitiProtocol == "HTTPS")
+                initxitiajaxsecure(res.value.pEntSite, res.value.pXtsite, res.value.pXtn2, res.value.pXtpage, res.value.pXtdi, res.value.pX1, res.value.pX2, res.value.pX3, res.value.pX4, res.value.pX5, res.value.pX6, res.value.pX7, res.value.pX8, res.value.pX9, res.value.pX10, res.value.pParamsstring);
+        }
+    }
+
+    function randomString() {
+        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        var string_length = 64;
+        var randomstring = '';
+        for (var i = 0; i < string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            randomstring += chars.substring(rnum, rnum + 1);
+        }
+        return randomstring;
+    }
+
+    function initxitiajax(pEntSite, pXtsite, pXtn2, pXtpage, pXtdi, pX1, pX2, pX3, pX4, pX5, pX6, pX7, pX8, pX9, pX10, pParamsstring) {
+        xtnv = document;        //parent.document or top.document or document 
+        xtsd = "http://" + pEntSite;
+        xtsite = pXtsite;
+        xtn2 = pXtn2;        // level 2 site
+        xtpage = pXtpage;        //page name (with the use of :: to create chapters)
+        xtdi = pXtdi;        //implication degree 
+        xt_multc = pParamsstring;
+
+        if (window.xtparam != null) { window.xtparam += xt_multc; }
+        else { window.xtparam = xt_multc; };
+
+        url = 'http://' + pEntSite + '.xiti.com/hit.xiti?s=' + pXtsite + '&s2=' + pXtn2 + '&p=' + pXtpage + '&di=' + xt_multc + '&randomspe=' + randomString();
+        $('#IMAGEXITIAJAX').setAttribute("src", url);
+
+        return true;
+    }
+
+    function initxitiajaxsecure(pEntSite, pXtsite, pXtn2, pXtpage, pXtdi, pX1, pX2, pX3, pX4, pX5, pX6, pX7, pX8, pX9, pX10, pParamsstring) {
+        xtnv = document;        //parent.document or top.document or document 
+        xtsd = "https://" + pEntSite;
+        xtsite = pXtsite;
+        xtn2 = pXtn2;        // level 2 site
+        xtpage = pXtpage;        //page name (with the use of :: to create chapters)
+        xtdi = pXtdi;        //implication degree 
+        xt_multc = pParamsstring;
+
+        if (window.xtparam != null) { window.xtparam += xt_multc; }
+        else { window.xtparam = xt_multc; }
+
+        url = 'https://' + pEntSite + '.xiti.com/hit.xiti?s=' + pXtsite + '&s2=' + pXtn2 + '&p=' + pXtpage + '&di=' + xt_multc + '&randomspe=' + randomString();
+
+        $('#IMAGEXITIAJAX').setAttribute("src", url);
+
+        return true;
+    }
+</script>
+
+<img id="IMAGEXITIAJAX" name="IMAGEXITIAJAX" width="1" height="1" alt="" src="" >
+    <div id="ctl00_XITISTD"><!-- AT Internet -->
+<script type="text/javascript" src="//tag.aticdn.net/smarttag.js"></script>
+<script>
+var ATTag = new ATInternet.Tracker.Tag({
+	log: "logc187",
+	logSSL: "logs1187",
+	secure: false,
+	site: 580035,
+	domain: "xiti.com"
+});
+ATTag.page.send({
+	name: "pagename"
+});
+</script>
+<!-- End AT Internet --></div>
+<script>
+    
+
+    $(document).ready(function () {
+
+        $(document).on("click", ".downloadMediaGoogleTag", function (e) {
+            debugger;
+            var lib = $(this).attr("data-lib");
+            var lien = $(this).attr("data-lien");
+            var ext = $(this).attr("data-type");
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'doc_telecharger',
+                doc_type: ext,
+                doc_nom: lib,
+                doc_url:lien
+            });
+
+        });
+
+    });
+
+    $(document).ready(function () {
+
+        $(document).on("click", ".ajoutMediaFavoris", function (e) {
+            debugger;
+            var lib = $(this).attr("data-lib");
+            var lien = $(this).attr("data-lien");
+            var ext = $(this).attr("data-type");
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'doc_ajout_favoris',
+                doc_type: ext,
+                doc_nom: lib,
+                doc_url: lien
+            });
+
+        });
+
+    });
+
+    
+</script>
+</body>
+
+</html>

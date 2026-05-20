@@ -1,0 +1,724 @@
+// Generated from elmLeCube catalogue: elm.leblanc > ECS > Chauffe-bain > Basse temperature > Ventouse.
+// 24 models | 1887 part occurrences | 293 unique part references.
+globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_DOCUMENTS_BY_MODEL = {
+  "47458096": [
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609079.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609079.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720605406.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720605406.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720605383.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720605383.pdf"
+    }
+  ],
+  "47458198": [
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609079.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609079.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720605489.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720605489.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720605406.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720605406.pdf"
+    }
+  ],
+  "47458299": [
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609079.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609079.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720605489.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720605489.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720605406.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720605406.pdf"
+    }
+  ],
+  "47458401": [
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609079.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609079.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720605406.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720605406.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720605383.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720605383.pdf"
+    }
+  ],
+  "49706187": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-080.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-080.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-085.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-085.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-097.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-097.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-101.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-101.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-109.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-109.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-129.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-129.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-143.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-143.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609137.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609137.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720607298.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607298.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720607403.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607403.pdf"
+    }
+  ],
+  "49706262": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-080.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-080.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-085.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-085.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-097.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-097.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-101.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-101.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-109.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-109.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-129.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-129.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-143.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-143.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609137.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609137.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720607298.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607298.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720607403.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607403.pdf"
+    }
+  ],
+  "49706337": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-080.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-080.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-085.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-085.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-097.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-097.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-101.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-101.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-109.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-109.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-129.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-129.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-143.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-143.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609137.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609137.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720607298.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607298.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720607403.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607403.pdf"
+    }
+  ],
+  "49706411": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-097.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-097.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-101.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-101.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-109.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-109.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-143.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-143.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609137.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609137.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720607298.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607298.pdf"
+    }
+  ],
+  "49706488": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-097.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-097.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-101.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-101.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-109.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-109.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-143.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-143.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609137.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609137.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720607298.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607298.pdf"
+    }
+  ],
+  "49706565": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-080.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-080.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-085.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-085.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-097.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-097.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-101.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-101.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-102.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-102.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-108.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-108.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-109.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-109.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-129.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-129.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-143.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-143.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609137.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609137.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720607298.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607298.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720607403.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607403.pdf"
+    }
+  ],
+  "49706639": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-080.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-080.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609140.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609140.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720607403.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607403.pdf"
+    }
+  ],
+  "49706719": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-080.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-080.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609140.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609140.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720607403.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607403.pdf"
+    }
+  ],
+  "49706799": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-080.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-080.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609140.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609140.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720607403.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607403.pdf"
+    }
+  ],
+  "49706879": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-080.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-080.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609140.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609140.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720607403.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720607403.pdf"
+    }
+  ],
+  "64990125": [
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609112.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609112.pdf"
+    },
+    {
+      "title": "Notice d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720606118.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720606118.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720606117.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720606117.pdf"
+    }
+  ],
+  "64990238": [
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609112.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609112.pdf"
+    },
+    {
+      "title": "Notice d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720606118.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720606118.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720605489.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720605489.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720606117.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720606117.pdf"
+    }
+  ],
+  "64993061": [
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609112.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609112.pdf"
+    },
+    {
+      "title": "Notice d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720606118.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720606118.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720605489.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720605489.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720606117.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720606117.pdf"
+    }
+  ],
+  "64994667": [
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609112.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609112.pdf"
+    },
+    {
+      "title": "Notice d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720606118.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720606118.pdf"
+    },
+    {
+      "title": "Notice d'installation",
+      "mimeType": "application/pdf",
+      "uri": "6720606117.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720606117.pdf"
+    }
+  ],
+  "70463544": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-165.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-165.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-185.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-185.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609449.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609449.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720809968.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720809968.pdf"
+    }
+  ],
+  "70464970": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-165.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-165.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609449.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609449.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720809968.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720809968.pdf"
+    }
+  ],
+  "70466602": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-165.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-165.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609449.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609449.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720809968.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720809968.pdf"
+    }
+  ],
+  "70468793": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-165.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-165.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609449.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609449.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720809968.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720809968.pdf"
+    }
+  ],
+  "70469860": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-165.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-165.pdf"
+    },
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-181.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-181.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609449.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609449.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720809968.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720809968.pdf"
+    }
+  ],
+  "70469926": [
+    {
+      "title": "Fiche Info 4000",
+      "mimeType": "application/pdf",
+      "uri": "Info-4000-165.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/Info-4000-165.pdf"
+    },
+    {
+      "title": "Liste des pièces de rechange",
+      "mimeType": "application/pdf",
+      "uri": "6720609449.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720609449.pdf"
+    },
+    {
+      "title": "Notice d'installation et d'utilisation",
+      "mimeType": "application/pdf",
+      "uri": "6720809968.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/documents/6720809968.pdf"
+    }
+  ]
+};

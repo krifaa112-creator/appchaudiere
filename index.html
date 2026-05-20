@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
@@ -11,7 +11,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css?v=43" />
+    <link rel="stylesheet" href="styles.css?v=74" />
   </head>
   <body>
     <section id="authScreen" class="auth-screen">
@@ -21,6 +21,7 @@
           <div>
             <strong>EGS ENERGIES</strong>
             <span>by krifa alaeddine</span>
+            <span class="app-version">Version 74</span>
           </div>
         </div>
 
@@ -36,7 +37,7 @@
           </label>
           <label>
             Mot de passe
-            <input id="loginPassword" type="password" autocomplete="current-password" required placeholder="••••••••" />
+            <input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Votre mot de passe" />
           </label>
           <button type="submit" class="primary">Se connecter</button>
         </form>
@@ -70,6 +71,7 @@
           <div>
             <strong>EGS ENERGIES</strong>
             <span>by krifa alaeddine</span>
+            <span class="app-version">Version 74</span>
           </div>
         </div>
 
@@ -78,6 +80,7 @@
           <a class="nav-item admin-only" href="#boilerForm">Ajouter modèle</a>
           <a class="nav-item admin-only" href="#accountSettings">Paramètres comptes</a>
           <button id="openScanner" type="button" class="nav-item nav-button scanner-alert">Scanner plaque</button>
+          <button id="designModeToggle" type="button" class="nav-item nav-button design-toggle">Nouveau design</button>
         </nav>
 
         <div class="sidebar-card">
@@ -124,14 +127,6 @@
             <span>Fabricants</span>
             <strong id="metricManufacturers">0</strong>
           </article>
-          <article class="metric-card">
-            <span>Complets</span>
-            <strong id="metricComplete">0</strong>
-          </article>
-          <article class="metric-card">
-            <span>A completer</span>
-            <strong id="metricMissing">0</strong>
-          </article>
         </section>
 
         <div class="layout">
@@ -149,7 +144,7 @@
               <input
                 id="modelSearch"
                 type="search"
-                placeholder="Rechercher un modèle, fabricant, code-barres ou numéro de pièce"
+                placeholder="Modèle ou référence"
                 autocomplete="off"
               />
               <button id="submitSearch" type="button" class="primary">Rechercher</button>
@@ -204,7 +199,7 @@
                 <input id="barcode" name="barcode" placeholder="Ex: 1234567890123" inputmode="numeric" />
               </label>
               <label>
-                Lien vue eclatee
+                Lien vue éclatée
                 <input id="explodedViewUrl" name="explodedViewUrl" type="url" placeholder="https://www.dispart.fr/vues-eclatees#/machine/..." />
               </label>
               <label>
@@ -284,10 +279,79 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-    <script src="saunier-duval-models.js?v=43"></script>
-    <script src="saunier-duval-parts-by-model.js?v=43"></script>
+    <script src="saunier-duval-models.js?v=57"></script>
+    <script src="saunier-duval-parts-by-model.js?v=57"></script>
     <script src="piecesxpress-duomax-condens-f30-90-1-parts.js"></script>
-    <script src="saunier-duval-exploded-views.js?v=43"></script>
-    <script src="app.js?v=43"></script>
+    <script src="saunier-duval-exploded-views.js?v=57"></script>
+    <script src="elmleblanc-tirage-naturel-models.js?v=68"></script>
+    <script src="elmleblanc-tirage-naturel-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-tirage-naturel-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-ventouse-models.js?v=68"></script>
+    <script src="elmleblanc-ventouse-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-ventouse-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-vmc-models.js?v=68"></script>
+    <script src="elmleblanc-vmc-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-vmc-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-bas-nox-tirage-naturel-models.js?v=68"></script>
+    <script src="elmleblanc-bas-nox-tirage-naturel-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-bas-nox-tirage-naturel-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-bas-nox-vmc-models.js?v=68"></script>
+    <script src="elmleblanc-bas-nox-vmc-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-bas-nox-vmc-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-condensation-models.js?v=68"></script>
+    <script src="elmleblanc-condensation-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-condensation-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-condensation-models.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-condensation-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-condensation-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-bas-nox-vmc-models.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-bas-nox-vmc-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-bas-nox-vmc-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-bas-nox-ventouse-models.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-bas-nox-ventouse-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-bas-nox-ventouse-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-bas-nox-tirage-naturel-models.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-bas-nox-tirage-naturel-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-bas-nox-tirage-naturel-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-basse-temperature-vmc-models.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-basse-temperature-vmc-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-basse-temperature-vmc-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-basse-temperature-ventouse-models.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-basse-temperature-ventouse-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-basse-temperature-ventouse-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-basse-temperature-tirage-naturel-models.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-basse-temperature-tirage-naturel-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-ecs-chauffe-bain-basse-temperature-tirage-naturel-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-gaz-chaudiere-sol-condensation-models.js?v=68"></script>
+    <script src="elmleblanc-gaz-chaudiere-sol-condensation-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-gaz-chaudiere-sol-condensation-exploded-views.js?v=68"></script>
+    <script src="elmleblanc-gaz-chaudiere-sol-basse-temperature-tirage-naturel-models.js?v=68"></script>
+    <script src="elmleblanc-gaz-chaudiere-sol-basse-temperature-tirage-naturel-parts-by-model.js?v=68"></script>
+    <script src="elmleblanc-gaz-chaudiere-sol-basse-temperature-tirage-naturel-exploded-views.js?v=68"></script>
+    <script src="chappee-gaz-murales-models.js?v=68"></script>
+    <script src="chappee-gaz-murales-parts-by-model.js?v=68"></script>
+    <script src="chappee-gaz-murales-exploded-views.js?v=68"></script>
+    <script src="chappee-gaz-sol-models.js?v=70"></script>
+    <script src="chappee-gaz-sol-parts-by-model.js?v=70"></script>
+    <script src="chappee-gaz-sol-exploded-views.js?v=70"></script>
+    <script src="chappee-odia-hte-models.js?v=72"></script>
+    <script src="chappee-odia-hte-parts-by-model.js?v=72"></script>
+    <script src="chappee-odia-hte-exploded-views.js?v=72"></script>
+    <script src="app.js?v=74"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

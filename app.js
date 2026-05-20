@@ -1,10 +1,16 @@
-const STORAGE_KEY = "boiler-parts-library-v1";
+﻿const STORAGE_KEY = "boiler-parts-library-sparecheck-v5";
 const USERS_KEY = "boiler-core-users-v1";
 const SESSION_KEY = "boiler-core-session-v1";
-const INVENTORY_RESET_KEY = "boiler-core-inventory-reset-empty-v1";
+const INVENTORY_RESET_KEY = "boiler-core-inventory-reset-sparecheck-v5";
 const NOTES_CLEAR_KEY = "boiler-core-notes-cleared-v1";
-const SAUNIER_PARTS_IMPORT_KEY = "boiler-core-saunier-parts-import-v5";
-const DELETED_SEED_BOILERS_KEY = "boiler-core-deleted-seed-boilers-v1";
+const SAUNIER_PARTS_IMPORT_KEY = "boiler-core-saunier-parts-import-v10";
+const ELMLEBLANC_PARTS_IMPORT_KEY = "boiler-core-elmleblanc-parts-import-v1";
+const CHAPPEE_PARTS_IMPORT_KEY = "boiler-core-chappee-parts-import-v1";
+const DELETED_SEED_BOILERS_KEY = "boiler-core-deleted-seed-boilers-sparecheck-v4";
+const DESIGN_MODE_KEY = "boiler-core-design-mode-v1";
+const DESIGN_MODE_DEFAULT_RESET_KEY = "boiler-core-design-default-reset-v74";
+const ELMLEBLANC_MANUFACTURER = "ELM leblanc";
+const CHAPPEE_MANUFACTURER = "Chappée";
 const EXPLODED_VIEW_URLS = Object.fromEntries(
   Object.entries({
     "ISOMAX CONDENS T 31 CS 1 SF": "https://www.dispart.fr/vues-eclatees#/machine/28150/?marque_nom=Saunier%20Duval",
@@ -69,6 +75,10 @@ const sampleData = [
 
 const saunierDuvalSeedData = getSaunierDuvalSeedData();
 const saunierDuvalPartsByModel = getSaunierDuvalPartsByModel();
+const elmLeblancSeedData = getElmLeblancSeedData();
+const elmLeblancPartsByModel = getElmLeblancPartsByModel();
+const chappeeSeedData = getChappeeSeedData();
+const chappeePartsByModel = getChappeePartsByModel();
 
 const state = {
   boilers: loadBoilers(),
@@ -121,8 +131,6 @@ const elements = {
   metricModels: document.querySelector("#metricModels"),
   metricParts: document.querySelector("#metricParts"),
   metricManufacturers: document.querySelector("#metricManufacturers"),
-  metricComplete: document.querySelector("#metricComplete"),
-  metricMissing: document.querySelector("#metricMissing"),
   quickBackup: document.querySelector("#quickBackup"),
   exportJson: document.querySelector("#exportJson"),
   exportCsv: document.querySelector("#exportCsv"),
@@ -135,11 +143,33 @@ const elements = {
   manualBarcode: document.querySelector("#manualBarcode"),
   manualScan: document.querySelector("#manualScan"),
   ocrScan: document.querySelector("#ocrScan"),
+  designModeToggle: document.querySelector("#designModeToggle"),
   detailModal: document.querySelector("#detailModal"),
   detailTitle: document.querySelector("#detailTitle"),
   detailContent: document.querySelector("#detailContent"),
   closeDetail: document.querySelector("#closeDetail")
 };
+
+function applyDesignMode(mode) {
+  const isClassic = mode === "classic";
+  document.body.classList.toggle("design-modern", !isClassic);
+
+  if (elements.designModeToggle) {
+    elements.designModeToggle.textContent = isClassic ? "Nouveau design" : "Mode classique";
+    elements.designModeToggle.setAttribute("aria-pressed", String(!isClassic));
+  }
+}
+
+function getSavedDesignMode() {
+  if (localStorage.getItem(DESIGN_MODE_DEFAULT_RESET_KEY) !== "done") {
+    localStorage.setItem(DESIGN_MODE_KEY, "classic");
+    localStorage.setItem(DESIGN_MODE_DEFAULT_RESET_KEY, "done");
+  }
+
+  return localStorage.getItem(DESIGN_MODE_KEY) === "modern" ? "modern" : "classic";
+}
+
+applyDesignMode(getSavedDesignMode());
 
 let scannerStream = null;
 let scannerTimer = null;
@@ -435,20 +465,409 @@ function loadBoilers() {
 function getSaunierDuvalSeedData() {
   const models = Array.isArray(globalThis.SAUNIER_DUVAL_MODELS) ? globalThis.SAUNIER_DUVAL_MODELS : [];
 
-  return models.map((model) => ({
-    id: createId(),
-    manufacturer: "Saunier Duval",
-    model,
-    barcode: "",
-    specUrl: "",
-    explodedViewUrl: getDefaultExplodedViewUrl({ manufacturer: "Saunier Duval", model }),
-    notes: "",
-    parts: []
-  }));
+  return models.map((item) => {
+    const source = item && typeof item === "object" ? item : { model: String(item || "") };
+    const model = String(source.model || source.name || "");
+
+    return {
+      id: source.id ? `sparecheck-${source.id}` : createId(),
+      manufacturer: source.manufacturer || "Saunier Duval",
+      model,
+      barcode: String(source.barcode || ""),
+      specUrl: "",
+      explodedViewUrl: getDefaultExplodedViewUrl({ manufacturer: "Saunier Duval", model }),
+      notes: String(source.notes || ""),
+      parts: []
+    };
+  });
+}
+
+function getElmLeblancSeedData() {
+  const catalogues = getElmLeblancCatalogues();
+
+  return catalogues.flatMap((catalogue) =>
+    catalogue.models.map((source) => {
+      const reference = String(source.reference || "");
+      const displayName = String(source.displayName || source.productTitle || reference || "");
+      const model = reference && !displayName.includes(reference) ? `${displayName} (${reference})` : displayName;
+
+      return {
+        id: source.id ? `elmleblanc-${catalogue.key}-${source.id}` : createId(),
+        catalogueKey: catalogue.key,
+        catalogueModelId: String(source.id || ""),
+        manufacturer: ELMLEBLANC_MANUFACTURER,
+        model,
+        barcode: reference,
+        specUrl: String(source.productUrl || ""),
+        explodedViewUrl: String(source.mainDrawingUrl || ""),
+        notes: catalogue.label,
+        parts: []
+      };
+    }),
+  );
+}
+
+function getElmLeblancCatalogues() {
+  return [
+    {
+      key: "tirage-naturel",
+      label: "Basse temperature - Tirage naturel",
+      models: Array.isArray(globalThis.ELMLEBLANC_TIRAGE_NATUREL_MODELS)
+        ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_TIRAGE_NATUREL_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ventouse",
+      label: "Basse temperature - Ventouse",
+      models: Array.isArray(globalThis.ELMLEBLANC_VENTOUSE_MODELS) ? globalThis.ELMLEBLANC_VENTOUSE_MODELS : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_VENTOUSE_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_VENTOUSE_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_VENTOUSE_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_VENTOUSE_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_VENTOUSE_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_VENTOUSE_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "vmc",
+      label: "Basse temperature - VMC",
+      models: Array.isArray(globalThis.ELMLEBLANC_VMC_MODELS) ? globalThis.ELMLEBLANC_VMC_MODELS : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_VMC_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_VMC_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_VMC_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_VMC_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_VMC_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_VMC_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "bas-nox-tirage-naturel",
+      label: "Bas Nox - Tirage naturel",
+      models: Array.isArray(globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_MODELS)
+        ? globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "bas-nox-vmc",
+      label: "Bas Nox - VMC",
+      models: Array.isArray(globalThis.ELMLEBLANC_BAS_NOX_VMC_MODELS)
+        ? globalThis.ELMLEBLANC_BAS_NOX_VMC_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_BAS_NOX_VMC_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_BAS_NOX_VMC_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_BAS_NOX_VMC_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_BAS_NOX_VMC_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_BAS_NOX_VMC_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_BAS_NOX_VMC_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "condensation",
+      label: "Condensation",
+      models: Array.isArray(globalThis.ELMLEBLANC_CONDENSATION_MODELS)
+        ? globalThis.ELMLEBLANC_CONDENSATION_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_CONDENSATION_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_CONDENSATION_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_CONDENSATION_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_CONDENSATION_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_CONDENSATION_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_CONDENSATION_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-condensation",
+      label: "ECS - Chauffe-bain - Condensation",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_CONDENSATION_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-bas-nox-vmc",
+      label: "ECS - Chauffe-bain - Bas Nox - VMC",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-bas-nox-ventouse",
+      label: "ECS - Chauffe-bain - Bas Nox - Ventouse",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VENTOUSE_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-bas-nox-tirage-naturel",
+      label: "ECS - Chauffe-bain - Bas Nox - Tirage naturel",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_TIRAGE_NATUREL_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-basse-temperature-vmc",
+      label: "ECS - Chauffe-bain - Basse temperature - VMC",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VMC_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-basse-temperature-ventouse",
+      label: "ECS - Chauffe-bain - Basse temperature - Ventouse",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_VENTOUSE_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "ecs-chauffe-bain-basse-temperature-tirage-naturel",
+      label: "ECS - Chauffe-bain - Basse temperature - Tirage naturel",
+      models: Array.isArray(globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_MODELS)
+        ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "gaz-chaudiere-sol-condensation",
+      label: "Gaz - Chaudiere au sol - Condensation",
+      models: Array.isArray(globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_MODELS)
+        ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_CONDENSATION_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "gaz-chaudiere-sol-basse-temperature-tirage-naturel",
+      label: "Gaz - Chaudiere au sol - Basse temperature - Tirage naturel",
+      models: Array.isArray(globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_MODELS)
+        ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_MODELS
+        : [],
+      partsByModel:
+        globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL &&
+        typeof globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL === "object"
+          ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS &&
+        typeof globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS === "object"
+          ? globalThis.ELMLEBLANC_GAZ_CHAUDIERE_SOL_BASSE_TEMPERATURE_TIRAGE_NATUREL_EXPLODED_VIEWS
+          : {}
+    }
+  ].filter((catalogue) => catalogue.models.length);
+}
+
+function getChappeeSeedData() {
+  return getChappeeCatalogues().flatMap((catalogue) =>
+    catalogue.models.map((source) => {
+      const modelId = String(source.id || "");
+      const model = String(source.displayName || modelId || "");
+      const views = catalogue.explodedViews[modelId] || [];
+
+      return {
+        id: modelId ? `chappee-${catalogue.key}-${modelId}` : createId(),
+        catalogueKey: catalogue.key,
+        catalogueModelId: modelId,
+        manufacturer: CHAPPEE_MANUFACTURER,
+        model,
+        barcode: "",
+        specUrl: String(source.productUrl || ""),
+        explodedViewUrl: String(views[0]?.url || ""),
+        notes: `${catalogue.category} - ${catalogue.label}`,
+        parts: []
+      };
+    }),
+  );
+}
+
+function getChappeeCatalogues() {
+  return [
+    {
+      key: "gaz-murales",
+      label: "Chaudières gaz murales",
+      category: "Chaudières gaz murales",
+      models: Array.isArray(globalThis.CHAPPEE_GAZ_MURALES_MODELS) ? globalThis.CHAPPEE_GAZ_MURALES_MODELS : [],
+      partsByModel:
+        globalThis.CHAPPEE_GAZ_MURALES_PARTS_BY_MODEL && typeof globalThis.CHAPPEE_GAZ_MURALES_PARTS_BY_MODEL === "object"
+          ? globalThis.CHAPPEE_GAZ_MURALES_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.CHAPPEE_GAZ_MURALES_EXPLODED_VIEWS && typeof globalThis.CHAPPEE_GAZ_MURALES_EXPLODED_VIEWS === "object"
+          ? globalThis.CHAPPEE_GAZ_MURALES_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "gaz-sol",
+      label: "Chaudières gaz au sol",
+      category: "Chaudières gaz au sol",
+      models: Array.isArray(globalThis.CHAPPEE_GAZ_SOL_MODELS) ? globalThis.CHAPPEE_GAZ_SOL_MODELS : [],
+      partsByModel:
+        globalThis.CHAPPEE_GAZ_SOL_PARTS_BY_MODEL && typeof globalThis.CHAPPEE_GAZ_SOL_PARTS_BY_MODEL === "object"
+          ? globalThis.CHAPPEE_GAZ_SOL_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.CHAPPEE_GAZ_SOL_EXPLODED_VIEWS && typeof globalThis.CHAPPEE_GAZ_SOL_EXPLODED_VIEWS === "object"
+          ? globalThis.CHAPPEE_GAZ_SOL_EXPLODED_VIEWS
+          : {}
+    },
+    {
+      key: "odia-hte",
+      label: "ODIA HTE / ODIA SOLAR HTE",
+      category: "Chaudières gaz au sol",
+      models: Array.isArray(globalThis.CHAPPEE_ODIA_HTE_MODELS) ? globalThis.CHAPPEE_ODIA_HTE_MODELS : [],
+      partsByModel:
+        globalThis.CHAPPEE_ODIA_HTE_PARTS_BY_MODEL && typeof globalThis.CHAPPEE_ODIA_HTE_PARTS_BY_MODEL === "object"
+          ? globalThis.CHAPPEE_ODIA_HTE_PARTS_BY_MODEL
+          : {},
+      explodedViews:
+        globalThis.CHAPPEE_ODIA_HTE_EXPLODED_VIEWS && typeof globalThis.CHAPPEE_ODIA_HTE_EXPLODED_VIEWS === "object"
+          ? globalThis.CHAPPEE_ODIA_HTE_EXPLODED_VIEWS
+          : {}
+    }
+  ].filter((catalogue) => catalogue.models.length);
+}
+
+function getChappeeCatalogueForModel(modelId, catalogueKey) {
+  const key = String(catalogueKey || "");
+  const id = String(modelId || "");
+  const catalogues = getChappeeCatalogues();
+
+  return (
+    catalogues.find((catalogue) => catalogue.key === key && catalogue.explodedViews[id]) ||
+    catalogues.find((catalogue) => catalogue.explodedViews[id]) ||
+    catalogues.find((catalogue) => catalogue.key === key) ||
+    catalogues[0]
+  );
 }
 
 function normalizeModelKey(value) {
   return String(value || "").replace(/\s+/g, "").toLowerCase();
+}
+
+function isElmLeblancManufacturer(value) {
+  const manufacturer = String(value || "").trim().toLowerCase();
+  return manufacturer === "elm.leblanc" || manufacturer === "elm leblanc";
+}
+
+function isChappeeManufacturer(value) {
+  const manufacturer = String(value || "")
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+  return manufacturer === "chappee";
+}
+
+function normalizeManufacturerName(value) {
+  if (isElmLeblancManufacturer(value)) return ELMLEBLANC_MANUFACTURER;
+  if (isChappeeManufacturer(value)) return CHAPPEE_MANUFACTURER;
+  return String(value || "");
 }
 
 function getBoilerSeedKey(boiler) {
@@ -470,9 +889,87 @@ function saveDeletedSeedBoilers(deletedSeeds) {
 
 function getDefaultExplodedViewUrl(boiler) {
   const manufacturer = String(boiler?.manufacturer || "").trim().toLowerCase();
+  if (isElmLeblancManufacturer(manufacturer)) {
+    const modelId = String(boiler?.catalogueModelId || "").trim();
+    const views = getElmLeblancExplodedViewsByModelId(modelId, boiler?.catalogueKey);
+    return views[0]?.url || "";
+  }
+
+  if (isChappeeManufacturer(manufacturer)) {
+    const modelId = String(boiler?.catalogueModelId || "").trim();
+    const views = getChappeeExplodedViewsByModelId(modelId, boiler?.catalogueKey);
+    return views[0]?.externalUrl || "";
+  }
+
   if (manufacturer !== "saunier duval") return "";
 
   return EXPLODED_VIEW_URLS[normalizeModelKey(boiler?.model)] || "";
+}
+
+function getLocalExplodedViews(boiler) {
+  const manufacturer = String(boiler?.manufacturer || "").trim().toLowerCase();
+
+  if (isElmLeblancManufacturer(manufacturer)) {
+    return getElmLeblancExplodedViewsByModelId(boiler?.catalogueModelId, boiler?.catalogueKey);
+  }
+
+  if (isChappeeManufacturer(manufacturer)) {
+    return getChappeeExplodedViewsByModelId(boiler?.catalogueModelId, boiler?.catalogueKey);
+  }
+
+  if (manufacturer === "saunier duval") {
+    const source =
+      globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS && typeof globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS === "object"
+        ? globalThis.SAUNIER_DUVAL_EXPLODED_VIEWS
+        : {};
+    return source[boiler?.model] || source[String(boiler?.model || "").trim()] || [];
+  }
+
+  return [];
+}
+
+function getElmLeblancExplodedViewsByModelId(modelId, catalogueKey) {
+  const catalogue = getElmLeblancCatalogues().find((item) => item.key === String(catalogueKey || ""));
+  const source = catalogue?.explodedViews || {};
+  const views = source[String(modelId || "")] || [];
+
+  return views.map((view, index) => ({
+    name: view.title || `Vue ${index + 1}`,
+    displayType: view.level === "root" ? "Vue d'ensemble" : "Sous-ensemble",
+    documentId: view.pdf || "",
+    componentId: view.position || "",
+    component: view.title || "",
+    externalUrl: view.url || "",
+    pdf: view.pdf || ""
+  }));
+}
+
+function getChappeeExplodedViewsByModelId(modelId, catalogueKey) {
+  const catalogue = getChappeeCatalogueForModel(modelId, catalogueKey);
+  const source = catalogue?.explodedViews || {};
+  const views = source[String(modelId || "")] || [];
+
+  return views.map((view, index) => ({
+    name: view.title || `Vue ${index + 1}`,
+    displayType: view.code || `Planche ${view.order || index + 1}`,
+    documentId: String(view.id || ""),
+    componentId: String(view.order || ""),
+    component: view.title || "",
+    externalUrl: view.externalUrl || "",
+    imageBlobId: view.imageBlobId || "",
+    thumbnailBlobId: view.thumbnailBlobId || view.imageBlobId || "",
+    sourceUrl: view.sourceUrl || "",
+    pdf: ""
+  }));
+}
+
+function getDocumentAssetUrl(blobId) {
+  if (!blobId) return "";
+  const inPackagedFolder = window.location.pathname.includes("/BoilerCore-EGS-ENERGIES/");
+  const prefix = inPackagedFolder ? "../" : "";
+  const filename = String(blobId);
+  const hasExtension = /\.[a-z0-9]+$/i.test(filename);
+  return `${prefix}assets/sparecheck-documents/${filename}${hasExtension ? "" : ".webp"}`;
 }
 
 function getSaunierDuvalPartsByModel() {
@@ -492,7 +989,15 @@ function getSaunierDuvalPartsByModel() {
         number: String(part.number || ""),
         dispart: String(part.dispart || ""),
         pex: String(part.pex || ""),
-        category: "Pièces Dispart"
+        category: String(part.category || part.source || "Catalogue Saunier Duval"),
+        position: String(part.position || ""),
+        component: String(part.component || ""),
+        componentId: String(part.componentId || ""),
+        documentId: String(part.documentId || ""),
+        description: String(part.description || ""),
+        ean: String(part.ean || ""),
+        replacedBy: String(part.replacedBy || ""),
+        source: String(part.source || "")
       }))
     );
   });
@@ -513,25 +1018,88 @@ function getSaunierDuvalPartsByModel() {
   return normalized;
 }
 
+function getElmLeblancPartsByModel() {
+  const normalized = new Map();
+
+  getElmLeblancCatalogues().forEach((catalogue) => {
+    Object.entries(catalogue.partsByModel).forEach(([modelId, modelParts]) => {
+      const sections = Array.isArray(modelParts?.sections) ? modelParts.sections : [];
+      const parts = sections.flatMap((section) => {
+        const component = String(section.title || "");
+        return (section.parts || []).map((part) => ({
+          name: String(part.label || "").replace(/^\s*\d+\s*\.\s*/, ""),
+          number: String(part.reference || ""),
+          dispart: "",
+          pex: "",
+          category: component || "Catalogue ELM leblanc",
+          position: String(part.position || ""),
+          component,
+          componentId: String(section.position || ""),
+          documentId: String(section.picture || ""),
+          description: String(part.label || ""),
+          ean: "",
+          replacedBy: "",
+          source: "Catalogue ELM leblanc"
+        }));
+      });
+
+      normalized.set(`${catalogue.key}|${modelId}`, parts);
+    });
+  });
+
+  return normalized;
+}
+
+function getChappeePartsByModel() {
+  const normalized = new Map();
+
+  getChappeeCatalogues().forEach((catalogue) => {
+    Object.entries(catalogue.partsByModel).forEach(([modelId, modelParts]) => {
+      const sections = Array.isArray(modelParts?.sections) ? modelParts.sections : [];
+      const parts = sections.flatMap((section) => {
+        const component = String(section.title || "");
+        return (section.parts || []).map((part) => ({
+          name: String(part.label || ""),
+          number: String(part.reference || ""),
+          dispart: "",
+          pex: "",
+          category: component || "Catalogue Chappée",
+          position: String(part.position || ""),
+          component,
+          componentId: String(section.order || ""),
+          documentId: String(section.id || ""),
+          description: String(part.label || ""),
+          ean: "",
+          replacedBy: "",
+          source: "Catalogue Chappée"
+        }));
+      });
+
+      normalized.set(`${catalogue.key}|${modelId}`, parts);
+    });
+  });
+
+  return normalized;
+}
+
 function mergeSeedBoilers(boilers) {
   const normalized = normalizeBoilers(boilers);
   const existingKeys = new Set(normalized.map(getBoilerSeedKey));
   const deletedSeedKeys = getDeletedSeedBoilers();
-  const missingSeeds = saunierDuvalSeedData.filter((boiler) => {
+  const seedData = [...saunierDuvalSeedData, ...elmLeblancSeedData, ...chappeeSeedData];
+  const missingSeeds = seedData.filter((boiler) => {
     const key = getBoilerSeedKey(boiler);
     return !existingKeys.has(key) && !deletedSeedKeys.has(key);
   });
-  const merged = clearNotesOnce(mergeSaunierDuvalPartsOnce(normalizeBoilers([...normalized, ...missingSeeds])));
-
-  if (missingSeeds.length || merged.changed) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
-  }
+  const merged = clearNotesOnce(
+    mergeChappeePartsOnce(mergeElmLeblancPartsOnce(mergeSaunierDuvalPartsOnce(normalizeBoilers([...normalized, ...missingSeeds]))))
+  );
 
   return merged;
 }
 
 function mergeSaunierDuvalPartsOnce(boilers) {
-  if (localStorage.getItem(SAUNIER_PARTS_IMPORT_KEY) || !saunierDuvalPartsByModel.size) return boilers;
+  if (!saunierDuvalPartsByModel.size) return boilers;
 
   let changed = false;
   const updated = boilers.map((boiler) => {
@@ -540,8 +1108,9 @@ function mergeSaunierDuvalPartsOnce(boilers) {
     const seedParts = saunierDuvalPartsByModel.get(normalizeModelKey(boiler.model));
     if (!seedParts?.length) return boiler;
 
-    const existingNumbers = new Set((boiler.parts || []).map((part) => part.number.trim().toLowerCase()).filter(Boolean));
-    const missingParts = seedParts.filter((part) => !existingNumbers.has(part.number.trim().toLowerCase()));
+    const existingParts = boiler.parts || [];
+    const existingKeys = new Set(existingParts.map(getPartSyncKey));
+    const missingParts = seedParts.filter((part) => !existingKeys.has(getPartSyncKey(part)));
 
     if (!missingParts.length) return boiler;
     changed = true;
@@ -556,8 +1125,87 @@ function mergeSaunierDuvalPartsOnce(boilers) {
   });
 
   updated.changed = changed;
-  localStorage.setItem(SAUNIER_PARTS_IMPORT_KEY, "done");
+  localStorage.setItem(SAUNIER_PARTS_IMPORT_KEY, `synced-${Date.now()}`);
   return updated;
+}
+
+function mergeElmLeblancPartsOnce(boilers) {
+  if (!elmLeblancPartsByModel.size) return boilers;
+
+  let changed = false;
+  const updated = boilers.map((boiler) => {
+    if (!isElmLeblancManufacturer(boiler.manufacturer)) return boiler;
+
+    const seedParts = elmLeblancPartsByModel.get(`${boiler.catalogueKey || ""}|${boiler.catalogueModelId || ""}`);
+    if (!seedParts?.length) return boiler;
+
+    const existingParts = boiler.parts || [];
+    const existingKeys = new Set(existingParts.map(getPartSyncKey));
+    const missingParts = seedParts.filter((part) => !existingKeys.has(getPartSyncKey(part)));
+
+    if (!missingParts.length) return boiler;
+    changed = true;
+
+    return {
+      ...boiler,
+      specUrl: boiler.specUrl || "",
+      explodedViewUrl: boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler),
+      notes: boiler.notes || "",
+      parts: [...(boiler.parts || []), ...missingParts]
+    };
+  });
+
+  updated.changed = changed;
+  localStorage.setItem(ELMLEBLANC_PARTS_IMPORT_KEY, `synced-${Date.now()}`);
+  return updated;
+}
+
+function mergeChappeePartsOnce(boilers) {
+  if (!chappeePartsByModel.size) return boilers;
+
+  let changed = false;
+  const updated = boilers.map((boiler) => {
+    if (!isChappeeManufacturer(boiler.manufacturer)) return boiler;
+
+    const modelId = String(boiler.catalogueModelId || "");
+    const seedParts =
+      chappeePartsByModel.get(`${boiler.catalogueKey || ""}|${modelId}`) ||
+      chappeePartsByModel.get(`gaz-murales|${modelId}`) ||
+      [...chappeePartsByModel.entries()].find(([key]) => key.endsWith(`|${modelId}`))?.[1];
+    if (!seedParts?.length) return boiler;
+
+    const existingParts = boiler.parts || [];
+    const existingKeys = new Set(existingParts.map(getPartSyncKey));
+    const missingParts = seedParts.filter((part) => !existingKeys.has(getPartSyncKey(part)));
+
+    if (!missingParts.length) return boiler;
+    changed = true;
+
+    return {
+      ...boiler,
+      specUrl: boiler.specUrl || "",
+      explodedViewUrl: boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler),
+      notes: boiler.notes || "",
+      parts: [...(boiler.parts || []), ...missingParts]
+    };
+  });
+
+  updated.changed = changed;
+  localStorage.setItem(CHAPPEE_PARTS_IMPORT_KEY, `synced-${Date.now()}`);
+  return updated;
+}
+
+function getPartSyncKey(part) {
+  return [
+    part.number,
+    part.component || part.category,
+    part.position,
+    part.description,
+    part.ean,
+    part.replacedBy
+  ]
+    .map((value) => String(value || "").trim().toLowerCase())
+    .join("|");
 }
 
 function clearNotesOnce(boilers) {
@@ -576,8 +1224,10 @@ function normalizeBoilers(boilers) {
     .filter((boiler) => boiler && typeof boiler === "object")
     .map((boiler) => ({
       id: boiler.id || createId(),
-      manufacturer: String(boiler.manufacturer || ""),
+      manufacturer: normalizeManufacturerName(boiler.manufacturer),
       model: String(boiler.model || ""),
+      catalogueKey: String(boiler.catalogueKey || ""),
+      catalogueModelId: String(boiler.catalogueModelId || ""),
       barcode: String(boiler.barcode || ""),
       specUrl: String(boiler.specUrl || ""),
       explodedViewUrl: String(boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler)),
@@ -590,7 +1240,15 @@ function normalizeBoilers(boilers) {
               number: String(part.number || ""),
               category: String(part.category || ""),
               dispart: String(part.dispart || ""),
-              pex: String(part.pex || "")
+              pex: String(part.pex || ""),
+              position: String(part.position || ""),
+              component: String(part.component || ""),
+              componentId: String(part.componentId || ""),
+              documentId: String(part.documentId || ""),
+              description: String(part.description || ""),
+              ean: String(part.ean || ""),
+              replacedBy: String(part.replacedBy || ""),
+              source: String(part.source || "")
             }))
         : []
     }));
@@ -643,7 +1301,11 @@ function translateExampleData(boilers) {
 }
 
 function saveBoilers() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state.boilers));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state.boilers));
+  } catch (error) {
+    console.warn("Catalogue trop volumineux pour le stockage navigateur; utilisation en memoire uniquement.", error);
+  }
 }
 
 function addPartRow(part = {}) {
@@ -691,7 +1353,17 @@ function matchesQuery(boiler, query) {
     boiler.specUrl,
     boiler.explodedViewUrl,
     boiler.notes,
-    ...(boiler.parts || []).flatMap((part) => [part.name, part.number, part.category, part.dispart, part.pex])
+    ...(boiler.parts || []).flatMap((part) => [
+      part.name,
+      part.number,
+      part.category,
+      part.dispart,
+      part.pex,
+      part.position,
+      part.component,
+      part.documentId,
+      part.source
+    ])
   ]
     .join(" ")
     .toLowerCase();
@@ -700,6 +1372,9 @@ function matchesQuery(boiler, query) {
 }
 
 function getPartSource(part) {
+  if (String(part.source || "").toLowerCase().includes("elm.leblanc")) return "elmleblanc";
+  if (String(part.source || "").toLowerCase().includes("elm leblanc")) return "elmleblanc";
+  if (isChappeeManufacturer(String(part.source || "").replace(/^catalogue\s+/i, ""))) return "chappee";
   if (part.dispart) return "dispart";
   if (part.pex) return "piecesxpress";
   return "manual";
@@ -708,6 +1383,8 @@ function getPartSource(part) {
 function getSourceLabel(source) {
   if (source === "dispart") return "Dispart";
   if (source === "piecesxpress") return "PiecesXpress";
+  if (source === "elmleblanc") return "ELM leblanc";
+  if (source === "chappee") return "Chappée";
   return "Saisie manuelle";
 }
 
@@ -792,21 +1469,21 @@ function renderResults() {
   renderMetrics();
 
   if (!hasSearch) {
-    elements.resultsSummary.textContent = `${state.boilers.length} mod?les disponibles`;
+    elements.resultsSummary.textContent = `${state.boilers.length} modèles disponibles`;
     const empty = document.createElement("div");
     empty.className = "empty-state";
-    empty.textContent = "Saisissez un nom de mod?le, une r?f?rence ou un num?ro de s?rie pour afficher les appareils.";
+    empty.textContent = "Saisissez un nom de modèle, une référence ou un numéro de série pour afficher les appareils.";
     elements.results.append(empty);
     return;
   }
 
   elements.resultsSummary.textContent =
-    filtered.length === 1 ? "1 mod?le de chaudi?re trouv?" : `${filtered.length} mod?les de chaudi?re trouv?s`;
+    filtered.length === 1 ? "1 modèle de chaudière trouvé" : `${filtered.length} modèles de chaudière trouvés`;
 
   if (!filtered.length) {
     const empty = document.createElement("div");
     empty.className = "empty-state";
-    empty.textContent = "Aucun mod?le de chaudi?re trouv?. Ajoutez-le ? droite ou importez votre base.";
+    empty.textContent = "Aucun modèle de chaudière trouvé. Ajoutez-le à droite ou importez votre base.";
     elements.results.append(empty);
     return;
   }
@@ -816,7 +1493,6 @@ function renderResults() {
 function renderMetrics() {
   const modelCount = state.boilers.length;
   const partCount = state.boilers.reduce((total, boiler) => total + (boiler.parts || []).length, 0);
-  const completeCount = state.boilers.filter((boiler) => getBoilerStatus(boiler) === "complete").length;
   const manufacturerCount = new Set(
     state.boilers.map((boiler) => String(boiler.manufacturer || "").trim().toLowerCase()).filter(Boolean)
   ).size;
@@ -825,8 +1501,6 @@ function renderMetrics() {
   elements.metricModels.textContent = modelCount;
   elements.metricParts.textContent = partCount;
   elements.metricManufacturers.textContent = manufacturerCount;
-  elements.metricComplete.textContent = completeCount;
-  elements.metricMissing.textContent = modelCount - completeCount;
 }
 
 function createBadge(label, type) {
@@ -853,6 +1527,7 @@ function createBoilerCard(boiler) {
   const explodedViewButton = document.createElement("button");
   const editButton = document.createElement("button");
   const deleteButton = document.createElement("button");
+  const localExplodedViews = getLocalExplodedViews(boiler);
 
   title.textContent = boiler.model;
   manufacturer.className = "manufacturer";
@@ -860,7 +1535,7 @@ function createBoilerCard(boiler) {
   meta.className = "model-meta";
   meta.textContent = [
     boiler.barcode ? `Code-barres: ${boiler.barcode}` : "",
-    boiler.explodedViewUrl ? "Vue eclatee disponible" : ""
+    localExplodedViews.length ? `${localExplodedViews.length} vues \u00e9clat\u00e9es disponibles` : boiler.explodedViewUrl ? "Vue \u00e9clat\u00e9e disponible" : ""
   ]
     .filter(Boolean)
     .join(" · ");
@@ -879,8 +1554,8 @@ function createBoilerCard(boiler) {
   detailButton.addEventListener("click", () => openDetail(boiler.id));
   explodedViewButton.className = "exploded-view-model";
   explodedViewButton.type = "button";
-  explodedViewButton.textContent = "Vue eclatee";
-  explodedViewButton.disabled = !boiler.explodedViewUrl;
+  explodedViewButton.textContent = localExplodedViews.length > 1 ? "Vues \u00e9clat\u00e9es" : "Vue \u00e9clat\u00e9e";
+  explodedViewButton.disabled = !localExplodedViews.length && !boiler.explodedViewUrl;
   explodedViewButton.addEventListener("click", () => openExplodedView(boiler));
   editButton.className = "edit-model";
   editButton.type = "button";
@@ -910,6 +1585,7 @@ function createBoilerCard(boiler) {
       <tr>
         <th>Nom de la pièce</th>
         <th>Numéro de pièce</th>
+        <th>Repère</th>
         <th>Catégorie</th>
       </tr>
     </thead>
@@ -920,7 +1596,7 @@ function createBoilerCard(boiler) {
   if (!boiler.parts.length) {
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td colspan="3" class="empty-parts"></td>
+      <td colspan="4" class="empty-parts"></td>
     `;
     row.children[0].textContent = "Pièces à compléter";
     tbody.append(row);
@@ -931,6 +1607,7 @@ function createBoilerCard(boiler) {
     row.innerHTML = `
       <td></td>
       <td class="part-number-cell"></td>
+      <td></td>
       <td></td>
     `;
     row.children[0].textContent = part.name;
@@ -947,7 +1624,8 @@ function createBoilerCard(boiler) {
       pex.textContent = `PEX: ${part.pex}`;
       row.children[1].append(pex);
     }
-    row.children[2].textContent = part.category || "Général";
+    row.children[2].textContent = part.position || "";
+    row.children[3].textContent = part.category || "Général";
     tbody.append(row);
   });
 
@@ -979,18 +1657,28 @@ function createDetailPartRow(part) {
     <td></td>
     <td class="part-number-cell"></td>
     <td></td>
+    <td></td>
   `;
 
   const copyButton = document.createElement("button");
   copyButton.className = "copy-reference";
   copyButton.type = "button";
   copyButton.textContent = part.number;
-  copyButton.title = "Copier la reference";
+  copyButton.title = "Copier la référence";
   copyButton.addEventListener("click", () => copyPartReference(copyButton, part.number));
 
   row.children[0].textContent = part.name;
   row.children[1].append(copyButton);
-  row.children[2].textContent = getSourceLabel(getPartSource(part));
+  if (part.component || part.ean || part.replacedBy || part.description) {
+    const details = document.createElement("small");
+    details.className = "dispart-ref";
+    details.textContent = [part.component, part.ean ? `EAN ${part.ean}` : "", part.replacedBy ? `Remplacée par ${part.replacedBy}` : "", part.description]
+      .filter(Boolean)
+      .join(" · ");
+    row.children[1].append(details);
+  }
+  row.children[2].textContent = part.position || "";
+  row.children[3].textContent = part.source || getSourceLabel(getPartSource(part));
   return row;
 }
 
@@ -1011,7 +1699,7 @@ async function copyPartReference(button, reference) {
       fallbackCopyText(value);
     }
 
-    button.textContent = "Copie";
+    button.textContent = "Copié";
     button.classList.add("copied");
     window.setTimeout(() => {
       button.textContent = previousText;
@@ -1036,7 +1724,19 @@ function fallbackCopyText(value) {
 function matchesPartDetail(part, query) {
   if (!query) return true;
 
-  const sourceText = [part.name, part.number, part.category, getSourceLabel(getPartSource(part)), part.dispart, part.pex]
+  const sourceText = [
+    part.name,
+    part.number,
+    part.category,
+    part.component,
+    part.position,
+    part.description,
+    part.ean,
+    part.replacedBy,
+    getSourceLabel(getPartSource(part)),
+    part.dispart,
+    part.pex
+  ]
     .join(" ")
     .toLowerCase();
 
@@ -1055,7 +1755,7 @@ function renderDetailParts(tbody, parts, query) {
 
   const empty = document.createElement("tr");
   empty.innerHTML = `<td colspan="3" class="empty-parts"></td>`;
-  empty.children[0].textContent = parts.length ? "Aucune piece ne correspond a la recherche." : "PiÃ¨ces Ã  complÃ©ter";
+  empty.children[0].textContent = parts.length ? "Aucune pièce ne correspond à la recherche." : "Pièces à compléter";
   tbody.append(empty);
 }
 
@@ -1071,16 +1771,30 @@ function openDetail(id) {
   summary.append(createBadge(getStatusLabel(getBoilerStatus(boiler)), getBoilerStatus(boiler)));
   getBoilerSources(boiler).forEach((source) => summary.append(createBadge(getSourceLabel(source), source)));
 
+  const detailActions = document.createElement("div");
+  detailActions.className = "detail-actions";
+
   const stats = document.createElement("p");
   stats.className = "detail-stat";
   stats.textContent = `${boiler.parts.length} pièce${boiler.parts.length > 1 ? "s" : ""} référencée${boiler.parts.length > 1 ? "s" : ""}`;
+  detailActions.append(stats);
+
+  const views = getLocalExplodedViews(boiler);
+  if (views.length || boiler.explodedViewUrl) {
+    const explodedButton = document.createElement("button");
+    explodedButton.type = "button";
+    explodedButton.className = "detail-exploded-link";
+    explodedButton.textContent = views.length > 1 ? `Voir ${views.length} vues éclatées` : "Voir la vue éclatée";
+    explodedButton.addEventListener("click", () => openExplodedView(boiler));
+    detailActions.append(explodedButton);
+  }
 
   const searchLabel = document.createElement("label");
   searchLabel.className = "detail-search";
-  searchLabel.textContent = "Recherche pieces";
+  searchLabel.textContent = "Recherche pièces";
   const searchInput = document.createElement("input");
   searchInput.type = "search";
-  searchInput.placeholder = "Nom, reference, source, code...";
+  searchInput.placeholder = "Nom, référence, source, code...";
   searchInput.autocomplete = "off";
   searchLabel.append(searchInput);
 
@@ -1091,6 +1805,7 @@ function openDetail(id) {
       <tr>
         <th>Nom de la pièce</th>
         <th>Référence</th>
+        <th>Repère</th>
         <th>Source</th>
       </tr>
     </thead>
@@ -1102,7 +1817,7 @@ function openDetail(id) {
     renderDetailParts(tbody, boiler.parts, event.target.value.trim());
   });
 
-  elements.detailContent.append(summary, stats, searchLabel, table);
+  elements.detailContent.append(summary, detailActions, searchLabel, table);
   elements.detailModal.classList.remove("hidden");
   searchInput.focus();
 }
@@ -1139,13 +1854,208 @@ function editBoiler(id) {
 }
 
 function openExplodedView(boiler) {
-  const explodedViewUrl = boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler);
-  if (!explodedViewUrl) {
-    alert("Aucun lien de vue eclatee n'est enregistre pour ce modele.");
+  const views = getLocalExplodedViews(boiler);
+  if (!views.length) {
+    const explodedViewUrl = boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler);
+    if (!explodedViewUrl) {
+      alert("Aucun lien de vue \u00e9clat\u00e9e n'est enregistr\u00e9 pour ce mod\u00e8le.");
+      return;
+    }
+
+    window.open(explodedViewUrl, "_blank", "noopener");
     return;
   }
 
-  window.open(explodedViewUrl, "_blank", "noopener");
+  elements.detailTitle.textContent = `Vues \u00e9clat\u00e9es - ${boiler.model}`;
+  elements.detailContent.replaceChildren();
+
+  const viewer = document.createElement("div");
+  viewer.className = "exploded-viewer";
+
+  const list = document.createElement("div");
+  list.className = "exploded-view-list";
+
+  const stage = document.createElement("div");
+  stage.className = "exploded-view-stage";
+
+  const imageWrap = document.createElement("div");
+  imageWrap.className = "exploded-image-wrap";
+
+  const image = document.createElement("img");
+  image.className = "exploded-image";
+  image.alt = "";
+
+  const externalFrame = document.createElement("iframe");
+  externalFrame.className = "exploded-pdf-frame";
+  externalFrame.title = "Vue eclatee PDF";
+  externalFrame.loading = "lazy";
+
+  const externalLink = document.createElement("a");
+  externalLink.className = "exploded-pdf-link";
+  externalLink.target = "_blank";
+  externalLink.rel = "noopener";
+  externalLink.textContent = "Ouvrir le PDF";
+
+  const hotspotLayer = document.createElement("div");
+  hotspotLayer.className = "hotspot-layer";
+  imageWrap.append(image, externalFrame, externalLink, hotspotLayer);
+
+  const title = document.createElement("h3");
+  const meta = document.createElement("p");
+  meta.className = "exploded-view-meta";
+  const referencePanel = document.createElement("div");
+  referencePanel.className = "exploded-reference-panel";
+  stage.append(title, meta, imageWrap, referencePanel);
+
+  function renderView(view, index) {
+    [...list.querySelectorAll("button")].forEach((button, buttonIndex) => {
+      button.classList.toggle("active", buttonIndex === index);
+    });
+    title.textContent = view.name || "Vue \u00e9clat\u00e9e";
+    meta.textContent = [
+      view.displayType ? `Type: ${view.displayType}` : "",
+      view.documentId ? `Document: ${view.documentId}` : "",
+      view.externalUrl ? "PDF catalogue" : "",
+      view.hotpoints?.length ? `${view.hotpoints.length} rep\u00e8res pi\u00e8ces` : ""
+    ]
+      .filter(Boolean)
+      .join(" · ");
+    const hasLocalImage = Boolean(view.imageBlobId);
+    image.hidden = !hasLocalImage;
+    hotspotLayer.hidden = !hasLocalImage;
+    externalFrame.hidden = hasLocalImage || !view.externalUrl;
+    externalLink.hidden = !view.externalUrl;
+    if (hasLocalImage) {
+      image.src = getDocumentAssetUrl(view.imageBlobId);
+      image.alt = `${boiler.model} - ${view.name || "Vue \u00e9clat\u00e9e"}`;
+    } else {
+      image.removeAttribute("src");
+      image.alt = "";
+    }
+    if (view.externalUrl) {
+      externalFrame.src = view.externalUrl;
+      externalLink.href = view.externalUrl;
+    } else {
+      externalFrame.removeAttribute("src");
+      externalLink.removeAttribute("href");
+    }
+    hotspotLayer.replaceChildren();
+    referencePanel.replaceChildren();
+    (view.hotpoints || []).slice(0, 220).forEach((hotpoint) => {
+      const marker = document.createElement("button");
+      marker.className = "hotspot-marker";
+      marker.type = "button";
+      marker.textContent = hotpoint.content;
+      marker.title = hotpoint.content;
+      marker.style.left = `${hotpoint.x * 100}%`;
+      marker.style.top = `${hotpoint.y * 100}%`;
+      marker.style.width = `${Math.max(hotpoint.w * 100, 2.4)}%`;
+      marker.style.height = `${Math.max(hotpoint.h * 100, 2.4)}%`;
+      marker.addEventListener("click", async () => {
+        await copyHotpointReference(marker, hotpoint.content);
+      });
+      hotspotLayer.append(marker);
+    });
+
+    const references = getExplodedViewReferences(boiler, view);
+    if (references.length) {
+      const referenceTitle = document.createElement("h4");
+      referenceTitle.textContent = "R\u00e9f\u00e9rences de cette vue";
+      const referenceGrid = document.createElement("div");
+      referenceGrid.className = "exploded-reference-grid";
+      references.forEach((reference) => {
+        const refButton = document.createElement("button");
+        refButton.type = "button";
+        refButton.className = "exploded-reference-button";
+        refButton.textContent = reference.position ? `${reference.position} → ${reference.number}` : reference.number;
+        refButton.title = [reference.position ? `Repère ${reference.position}` : "", reference.number, reference.name]
+          .filter(Boolean)
+          .join(" - ");
+        refButton.addEventListener("click", async () => {
+          await copyHotpointReference(refButton, reference.number);
+        });
+        referenceGrid.append(refButton);
+      });
+      referencePanel.append(referenceTitle, referenceGrid);
+    }
+  }
+
+  views.forEach((view, index) => {
+    const item = document.createElement("button");
+    item.type = "button";
+    item.className = "exploded-view-item";
+    const thumb = view.thumbnailBlobId || view.imageBlobId ? document.createElement("img") : document.createElement("span");
+    if (thumb.tagName === "IMG") {
+      thumb.src = getDocumentAssetUrl(view.thumbnailBlobId || view.imageBlobId);
+      thumb.alt = "";
+    } else {
+      thumb.className = "exploded-pdf-thumb";
+      thumb.textContent = "PDF";
+    }
+    const label = document.createElement("span");
+    label.textContent = view.name || `Vue ${index + 1}`;
+    item.append(thumb, label);
+    item.addEventListener("click", () => renderView(view, index));
+    list.append(item);
+  });
+
+  viewer.append(list, stage);
+  elements.detailContent.append(viewer);
+  elements.detailModal.classList.remove("hidden");
+  renderView(views[0], 0);
+}
+
+function getExplodedViewReferences(boiler, view) {
+  const references = new Map();
+  (view.hotpoints || []).forEach((hotpoint) => {
+    const number = String(hotpoint.content || "").trim();
+    if (number) references.set(`|${number.toLowerCase()}`, { number, name: "", position: "" });
+  });
+  (boiler.parts || [])
+    .filter((part) => {
+      const rootElmView = view.externalUrl && view.displayType === "Vue d'ensemble";
+      const sameDocument = view.documentId && part.documentId === view.documentId;
+      const sameComponent = view.componentId && part.componentId === view.componentId;
+      const sameComponentName = view.name && part.component === view.name;
+      return rootElmView || sameDocument || sameComponent || sameComponentName;
+    })
+    .forEach((part) => {
+      const number = String(part.number || "").trim();
+      const position = String(part.position || "").trim();
+      if (!number) return;
+      references.set(`${position.toLowerCase()}|${number.toLowerCase()}`, { number, name: part.name || "", position });
+    });
+  return [...references.values()].sort(
+    (a, b) =>
+      String(a.position || "").localeCompare(String(b.position || ""), "fr", { numeric: true }) ||
+      a.number.localeCompare(b.number, "fr", { numeric: true }),
+  );
+}
+
+async function copyHotpointReference(button, reference) {
+  const value = String(reference || "").trim();
+  if (!value) return;
+
+  const previousText = button.textContent;
+  try {
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(value);
+      } catch {
+        fallbackCopyText(value);
+      }
+    } else {
+      fallbackCopyText(value);
+    }
+    button.textContent = "Copié";
+    button.classList.add("copied");
+    window.setTimeout(() => {
+      button.textContent = previousText;
+      button.classList.remove("copied");
+    }, 900);
+  } catch {
+    button.textContent = previousText;
+  }
 }
 
 function normalizeScanValue(value) {
@@ -1351,7 +2261,9 @@ function deleteBoiler(id) {
   if (!confirmed) return;
 
   const seedKey = getBoilerSeedKey(boiler);
-  const seedExists = saunierDuvalSeedData.some((seed) => getBoilerSeedKey(seed) === seedKey);
+  const seedExists = [...saunierDuvalSeedData, ...elmLeblancSeedData, ...chappeeSeedData].some(
+    (seed) => getBoilerSeedKey(seed) === seedKey
+  );
   if (seedExists) {
     const deletedSeeds = getDeletedSeedBoilers();
     deletedSeeds.add(seedKey);
@@ -1375,7 +2287,7 @@ function download(filename, content, type) {
 
 function toCsv() {
   const rows = [
-    ["Fabricant", "Modele", "Code-barres", "Lien vue eclatee", "Notes", "Nom de la piece", "Numero de piece", "Categorie", "Ref. Dispart", "Code PEX"]
+    ["Fabricant", "Modèle", "Code-barres", "Lien vue éclatée", "Notes", "Nom de la pièce", "Numéro de pièce", "Catégorie", "Ref. Dispart", "Code PEX"]
   ];
   state.boilers.forEach((boiler) => {
     if (!boiler.parts.length) {
@@ -1538,6 +2450,7 @@ elements.importJson.addEventListener("change", async (event) => {
       id: boiler.id || createId(),
       manufacturer: boiler.manufacturer || "",
       model: boiler.model || "",
+      catalogueModelId: boiler.catalogueModelId || "",
       barcode: boiler.barcode || "",
       specUrl: boiler.specUrl || "",
       explodedViewUrl: boiler.explodedViewUrl || getDefaultExplodedViewUrl(boiler),
@@ -1548,7 +2461,15 @@ elements.importJson.addEventListener("change", async (event) => {
             number: part.number || "",
             category: part.category || "",
             dispart: part.dispart || "",
-            pex: part.pex || ""
+            pex: part.pex || "",
+            position: part.position || "",
+            component: part.component || "",
+            componentId: part.componentId || "",
+            documentId: part.documentId || "",
+            description: part.description || "",
+            ean: part.ean || "",
+            replacedBy: part.replacedBy || "",
+            source: part.source || ""
           }))
         : []
     }));
@@ -1562,6 +2483,12 @@ elements.importJson.addEventListener("change", async (event) => {
 });
 
 elements.openScanner.addEventListener("click", () => startScanner());
+
+elements.designModeToggle.addEventListener("click", () => {
+  const nextMode = document.body.classList.contains("design-modern") ? "classic" : "modern";
+  localStorage.setItem(DESIGN_MODE_KEY, nextMode);
+  applyDesignMode(nextMode);
+});
 
 elements.closeScanner.addEventListener("click", () => stopScanner());
 
@@ -1677,3 +2604,11 @@ try {
 if ("serviceWorker" in navigator && window.location.protocol !== "file:") {
   navigator.serviceWorker.register("./service-worker.js");
 }
+
+
+
+
+
+
+
+

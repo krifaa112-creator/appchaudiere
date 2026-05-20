@@ -1,0 +1,9697 @@
+// Generated from elmLeCube catalogue: elm.leblanc > Gaz > Chaudiere murale > Condensation.
+// 63 models | 9485 part occurrences | 1077 unique part references.
+globalThis.ELMLEBLANC_CONDENSATION_PART_DETAILS = {
+  "19928641": {
+    "statusMessage": "",
+    "reference": "19928641",
+    "designation": "clip 3/4 (10x)",
+    "ean": "4010009241300",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559135&Reference=19928641"
+  },
+  "87167640610": {
+    "statusMessage": "",
+    "reference": "87167640610",
+    "designation": "facade",
+    "ean": "4047416141794",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456259&Reference=87167640610"
+  },
+  "87167638910": {
+    "statusMessage": "",
+    "reference": "87167638910",
+    "designation": "sortie wb6 complet",
+    "ean": "4047416139821",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456261&Reference=87167638910"
+  },
+  "87167239400": {
+    "statusMessage": "",
+    "reference": "87167239400",
+    "designation": "vis m5-12 (x10)",
+    "ean": "4010009803867",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456260&Reference=87167239400"
+  },
+  "87167727190": {
+    "statusMessage": "",
+    "reference": "87167727190",
+    "designation": "logo elm leblanc",
+    "ean": "4010009080619",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456258&Reference=87167727190"
+  },
+  "87167732200": {
+    "statusMessage": "",
+    "reference": "87167732200",
+    "designation": "capot habillage",
+    "ean": "4051516298326",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456257&Reference=87167732200"
+  },
+  "87110042320": {
+    "statusMessage": "",
+    "reference": "87110042320",
+    "designation": "joint ø80mm",
+    "ean": "4010009611981",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456262&Reference=87110042320"
+  },
+  "87167631350": {
+    "statusMessage": "",
+    "reference": "87167631350",
+    "designation": "sortie fumee equipee",
+    "ean": "4010009539582",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456264&Reference=87167631350"
+  },
+  "87110043210": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87110043210",
+    "designation": "joint ø59 (x10)",
+    "ean": "4010009699941",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456263&Reference=87110043210"
+  },
+  "87134030140": {
+    "statusMessage": "",
+    "reference": "87134030140",
+    "designation": "vis tole h 4,8x13 (x10)",
+    "ean": "4010009453048",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456265&Reference=87134030140"
+  },
+  "87167641550": {
+    "statusMessage": "",
+    "reference": "87167641550",
+    "designation": "equerre",
+    "ean": "4047416141855",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456266&Reference=87167641550"
+  },
+  "87167641810": {
+    "statusMessage": "",
+    "reference": "87167641810",
+    "designation": "vase dexpansion 10 l",
+    "ean": "4047416248462",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456268&Reference=87167641810"
+  },
+  "87167706550": {
+    "statusMessage": "",
+    "reference": "87167706550",
+    "designation": "vis tole cblxs st4,8-13f (x10)",
+    "ean": "4010009823209",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456267&Reference=87167706550"
+  },
+  "87167552760": {
+    "statusMessage": "",
+    "reference": "87167552760",
+    "designation": "ecrou",
+    "ean": "4047416208992",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456271&Reference=87167552760"
+  },
+  "87167638680": {
+    "statusMessage": "",
+    "reference": "87167638680",
+    "designation": "ecrou a oreilles m6",
+    "ean": "4047416146607",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456269&Reference=87167638680"
+  },
+  "87161061090": {
+    "statusMessage": "",
+    "reference": "87161061090",
+    "designation": "passe tube 18 mm",
+    "ean": "4010009692485",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456270&Reference=87161061090"
+  },
+  "87101030450": {
+    "statusMessage": "",
+    "reference": "87101030450",
+    "designation": "joint 18.6x13.5x1.5 (10x)",
+    "ean": "4010009418627",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456272&Reference=87101030450"
+  },
+  "87167641390": {
+    "statusMessage": "",
+    "reference": "87167641390",
+    "designation": "flexible",
+    "ean": "4047416141848",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456273&Reference=87167641390"
+  },
+  "87167712560": {
+    "statusMessage": "",
+    "reference": "87167712560",
+    "designation": "joint torique 7x2,75 (x10)",
+    "ean": "4010009626046",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456275&Reference=87167712560"
+  },
+  "87103030410": {
+    "statusMessage": "",
+    "reference": "87103030410",
+    "designation": "passe tube 5,5 mm",
+    "ean": "4047416139678",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456274&Reference=87103030410"
+  },
+  "87110043250": {
+    "statusMessage": "",
+    "reference": "87110043250",
+    "designation": "joint",
+    "ean": "4010009699958",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456279&Reference=87110043250"
+  },
+  "87167728040": {
+    "statusMessage": "",
+    "reference": "87167728040",
+    "designation": "echangeur thermique",
+    "ean": "4010009100478",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456277&Reference=87167728040"
+  },
+  "87181070870": {
+    "statusMessage": "",
+    "reference": "87181070870",
+    "designation": "jeu delectrodes",
+    "ean": "4010009700067",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456278&Reference=87181070870"
+  },
+  "87154051960": {
+    "statusMessage": "",
+    "reference": "87154051960",
+    "designation": "deplaceur",
+    "ean": "4010009035107",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456281&Reference=87154051960"
+  },
+  "87167642720": {
+    "statusMessage": "",
+    "reference": "87167642720",
+    "designation": "sachet de miroirs",
+    "ean": "4047416147307",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456283&Reference=87167642720"
+  },
+  "87181206090": {
+    "statusMessage": "",
+    "reference": "87181206090",
+    "designation": "bruleur",
+    "ean": "4010009700074",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456280&Reference=87181206090"
+  },
+  "87154052050": {
+    "statusMessage": "",
+    "reference": "87154052050",
+    "designation": "basse deflecteur",
+    "ean": "4010009272694",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456282&Reference=87154052050"
+  },
+  "87155035280": {
+    "statusMessage": "",
+    "reference": "87155035280",
+    "designation": "couvercle",
+    "ean": "4010009866916",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456286&Reference=87155035280"
+  },
+  "87072061960": {
+    "statusMessage": "",
+    "reference": "87072061960",
+    "designation": "thermostat",
+    "ean": "4010009699767",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456284&Reference=87072061960"
+  },
+  "87105062670": {
+    "statusMessage": "",
+    "reference": "87105062670",
+    "designation": "limiteur de temperature",
+    "ean": "4010009008217",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456285&Reference=87105062670"
+  },
+  "87167727960": {
+    "statusMessage": "",
+    "reference": "87167727960",
+    "designation": "sonde de temperature",
+    "ean": "4010009086925",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456288&Reference=87167727960"
+  },
+  "87133011140": {
+    "statusMessage": "",
+    "reference": "87133011140",
+    "designation": "ecrou",
+    "ean": "4010009616511",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456287&Reference=87133011140"
+  },
+  "87102050980": {
+    "statusMessage": "",
+    "reference": "87102050980",
+    "designation": "joint torique 26,34 x 5,33 (x5)",
+    "ean": "4010009083528",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456291&Reference=87102050980"
+  },
+  "87160120700": {
+    "statusMessage": "",
+    "reference": "87160120700",
+    "designation": "tuyau",
+    "ean": "4010009566953",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456292&Reference=87160120700"
+  },
+  "87156000180": {
+    "statusMessage": "",
+    "reference": "87156000180",
+    "designation": "hublot",
+    "ean": "4010009866923",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456289&Reference=87156000180"
+  },
+  "87160122730": {
+    "statusMessage": "",
+    "reference": "87160122730",
+    "designation": "siphon",
+    "ean": "4010009567370",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456290&Reference=87160122730"
+  },
+  "87167711540": {
+    "statusMessage": "",
+    "reference": "87167711540",
+    "designation": "joint torique 17x4 (10x)",
+    "ean": "4010009625933",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456295&Reference=87167711540"
+  },
+  "87161068400": {
+    "statusMessage": "",
+    "reference": "87161068400",
+    "designation": "joint",
+    "ean": "4010009984504",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456294&Reference=87161068400"
+  },
+  "87167728010": {
+    "statusMessage": "",
+    "reference": "87167728010",
+    "designation": "joint caout.59x74x3 epdm",
+    "ean": "4010009098027",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456293&Reference=87167728010"
+  },
+  "87167638580": {
+    "statusMessage": "",
+    "reference": "87167638580",
+    "designation": "tube",
+    "ean": "4047416139777",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456296&Reference=87167638580"
+  },
+  "87112000240": {
+    "statusMessage": "",
+    "reference": "87112000240",
+    "designation": "clip (x10)",
+    "ean": "4010009699965",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456297&Reference=87112000240"
+  },
+  "87167638760": {
+    "statusMessage": "",
+    "reference": "87167638760",
+    "designation": "tube",
+    "ean": "4047416141695",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456298&Reference=87167638760"
+  },
+  "87167640530": {
+    "statusMessage": "",
+    "reference": "87167640530",
+    "designation": "raccord",
+    "ean": "4047416141787",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456303&Reference=87167640530"
+  },
+  "87110043240": {
+    "statusMessage": "",
+    "reference": "87110043240",
+    "designation": "joint",
+    "ean": "4010009866862",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456301&Reference=87110043240"
+  },
+  "87167731180": {
+    "statusMessage": "",
+    "reference": "87167731180",
+    "designation": "support (x2)",
+    "ean": "4051516298241",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456299&Reference=87167731180"
+  },
+  "87167713530": {
+    "statusMessage": "Attention, ce produit est en fin de vie.",
+    "reference": "87167713530",
+    "designation": "joint torique 23x4 (10x)",
+    "ean": "4010009626121",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456304&Reference=87167713530"
+  },
+  "87186813620": {
+    "statusMessage": "",
+    "reference": "87186813620",
+    "designation": "recuperateur de condensats",
+    "ean": "4047416742199",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456302&Reference=87186813620"
+  },
+  "87172044110": {
+    "statusMessage": "Attention, ce produit est en fin de vie.",
+    "reference": "87172044110",
+    "designation": "ventilateur",
+    "ean": "4010009700777",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456308&Reference=87172044110"
+  },
+  "8737706421": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "8737706421",
+    "designation": "service kit wb6",
+    "ean": "4054925761542",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456306&Reference=8737706421"
+  },
+  "87107350860": {
+    "statusMessage": "",
+    "reference": "87107350860",
+    "designation": "tube",
+    "ean": "4010009699880",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456310&Reference=87107350860"
+  },
+  "7716780167": {
+    "statusMessage": "",
+    "reference": "7716780167",
+    "designation": "acc.n° 1574",
+    "ean": "4010009078425",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456305&Reference=7716780167"
+  },
+  "87155058250": {
+    "statusMessage": "",
+    "reference": "87155058250",
+    "designation": "membrane",
+    "ean": "4010009700012",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456313&Reference=87155058250"
+  },
+  "87161067940": {
+    "statusMessage": "",
+    "reference": "87161067940",
+    "designation": "collier de serrage",
+    "ean": "4010009975656",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456311&Reference=87161067940"
+  },
+  "87167640650": {
+    "statusMessage": "",
+    "reference": "87167640650",
+    "designation": "tube gaz",
+    "ean": "4047416141817",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456314&Reference=87167640650"
+  },
+  "87167636990": {
+    "statusMessage": "",
+    "reference": "87167636990",
+    "designation": "chambre de melange",
+    "ean": "4047416697024",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456312&Reference=87167636990"
+  },
+  "87101031610": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87101031610",
+    "designation": "joints 18,3x24,3 (10x)",
+    "ean": "4010009968375",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456318&Reference=87101031610"
+  },
+  "87133011170": {
+    "statusMessage": "",
+    "reference": "87133011170",
+    "designation": "ecrou",
+    "ean": "4010009616795",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456315&Reference=87133011170"
+  },
+  "87102050890": {
+    "statusMessage": "",
+    "reference": "87102050890",
+    "designation": "joint 12x3 (10x)",
+    "ean": "4010009616580",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456316&Reference=87102050890"
+  },
+  "87182213470": {
+    "statusMessage": "",
+    "reference": "87182213470",
+    "designation": "bloc gaz sit 848",
+    "ean": "4010009634232",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456317&Reference=87182213470"
+  },
+  "87167638620": {
+    "statusMessage": "",
+    "reference": "87167638620",
+    "designation": "tube gaz",
+    "ean": "4047416139791",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456319&Reference=87167638620"
+  },
+  "87123050920": {
+    "statusMessage": "",
+    "reference": "87123050920",
+    "designation": "plomb (x10)",
+    "ean": "4010009617808",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456322&Reference=87123050920"
+  },
+  "87167632710": {
+    "statusMessage": "",
+    "reference": "87167632710",
+    "designation": "epingle (x10)",
+    "ean": "4010009207702",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456320&Reference=87167632710"
+  },
+  "87167730920": {
+    "statusMessage": "",
+    "reference": "87167730920",
+    "designation": "transf.gaz n>b",
+    "ean": "4047416678870",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456323&Reference=87167730920"
+  },
+  "87167725760": {
+    "statusMessage": "",
+    "reference": "87167725760",
+    "designation": "tube gaz",
+    "ean": "4010009042839",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456321&Reference=87167725760"
+  },
+  "87167715960": {
+    "statusMessage": "",
+    "reference": "87167715960",
+    "designation": "volute de circulateur",
+    "ean": "4010009626343",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456326&Reference=87167715960"
+  },
+  "87167712710": {
+    "statusMessage": "",
+    "reference": "87167712710",
+    "designation": "sachet de supports",
+    "ean": "4010009626084",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456328&Reference=87167712710"
+  },
+  "87167730930": {
+    "statusMessage": "",
+    "reference": "87167730930",
+    "designation": "transf.gaz b->n",
+    "ean": "4047416678887",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456324&Reference=87167730930"
+  },
+  "87167715780": {
+    "statusMessage": "",
+    "reference": "87167715780",
+    "designation": "o-ring 78 x3,5 (x10)",
+    "ean": "4010009626312",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456327&Reference=87167715780"
+  },
+  "87161068450": {
+    "statusMessage": "",
+    "reference": "87161068450",
+    "designation": "moteur v3v equipe",
+    "ean": "4010009876175",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456331&Reference=87161068450"
+  },
+  "87167640460": {
+    "statusMessage": "",
+    "reference": "87167640460",
+    "designation": "vanne 3 voies complete",
+    "ean": "4047416141763",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456329&Reference=87167640460"
+  },
+  "87167714320": {
+    "statusMessage": "",
+    "reference": "87167714320",
+    "designation": "robinet de vidange",
+    "ean": "4010009626237",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456333&Reference=87167714320"
+  },
+  "87167639490": {
+    "statusMessage": "",
+    "reference": "87167639490",
+    "designation": "soupape de securite",
+    "ean": "4047416141718",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456330&Reference=87167639490"
+  },
+  "87167638720": {
+    "statusMessage": "",
+    "reference": "87167638720",
+    "designation": "tube",
+    "ean": "4047416139814",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456336&Reference=87167638720"
+  },
+  "87167715800": {
+    "statusMessage": "",
+    "reference": "87167715800",
+    "designation": "vis (x10)",
+    "ean": "4010009626329",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456334&Reference=87167715800"
+  },
+  "87101030430": {
+    "statusMessage": "",
+    "reference": "87101030430",
+    "designation": "joint 23.9x17.2x1.5 (10x)",
+    "ean": "4010009418597",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456335&Reference=87101030430"
+  },
+  "87182246590": {
+    "statusMessage": "",
+    "reference": "87182246590",
+    "designation": "tube ecoulement soupape",
+    "ean": "4047416141862",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456337&Reference=87182246590"
+  },
+  "87112000150": {
+    "statusMessage": "",
+    "reference": "87112000150",
+    "designation": "epingle (10x)",
+    "ean": "4010009617082",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456338&Reference=87112000150"
+  },
+  "87167722800": {
+    "statusMessage": "",
+    "reference": "87167722800",
+    "designation": "purgeur",
+    "ean": "4010009710196",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456343&Reference=87167722800"
+  },
+  "87167639620": {
+    "statusMessage": "",
+    "reference": "87167639620",
+    "designation": "manometre",
+    "ean": "4047416141725",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456339&Reference=87167639620"
+  },
+  "87167715770": {
+    "statusMessage": "",
+    "reference": "87167715770",
+    "designation": "vis m5x47,5 (x10)",
+    "ean": "4010009626589",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456341&Reference=87167715770"
+  },
+  "87167712590": {
+    "statusMessage": "",
+    "reference": "87167712590",
+    "designation": "jt met/caout. 18,5x24,3 (10x)",
+    "ean": "4010009626053",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456342&Reference=87167712590"
+  },
+  "87167711550": {
+    "statusMessage": "",
+    "reference": "87167711550",
+    "designation": "joint torique 13,87x3,53 (x10)",
+    "ean": "4010009625940",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456344&Reference=87167711550"
+  },
+  "87112000200": {
+    "statusMessage": "",
+    "reference": "87112000200",
+    "designation": "epingle (x10)",
+    "ean": "4010009633112",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456349&Reference=87112000200"
+  },
+  "87167711670": {
+    "statusMessage": "",
+    "reference": "87167711670",
+    "designation": "epingle d10 (x10)",
+    "ean": "4010009625995",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456348&Reference=87167711670"
+  },
+  "87161129740": {
+    "statusMessage": "",
+    "reference": "87161129740",
+    "designation": "support",
+    "ean": "4047416139685",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456350&Reference=87161129740"
+  },
+  "19045227400": {
+    "statusMessage": "",
+    "reference": "19045227400",
+    "designation": "fusible t1,6a (x10)",
+    "ean": "4010009385493",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456355&Reference=19045227400"
+  },
+  "87172010520": {
+    "statusMessage": "",
+    "reference": "87172010520",
+    "designation": "transformateur",
+    "ean": "4010009974062",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456353&Reference=87172010520"
+  },
+  "87167644380": {
+    "statusMessage": "",
+    "reference": "87167644380",
+    "designation": "moteur de circulateur",
+    "ean": "4047416693767",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456351&Reference=87167644380"
+  },
+  "87167734910": {
+    "statusMessage": "",
+    "reference": "87167734910",
+    "designation": "tableau electrique",
+    "ean": "4051516985004",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456354&Reference=87167734910"
+  },
+  "19045227300": {
+    "statusMessage": "",
+    "reference": "19045227300",
+    "designation": "fusible t0,5a (x10)",
+    "ean": "4010009385479",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456356&Reference=19045227300"
+  },
+  "87120001290": {
+    "statusMessage": "",
+    "reference": "87120001290",
+    "designation": "bouton de reglage",
+    "ean": "4010009974048",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456358&Reference=87120001290"
+  },
+  "19045213420": {
+    "statusMessage": "",
+    "reference": "19045213420",
+    "designation": "fusible t2,5a (x10)",
+    "ean": "4010009385448",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456357&Reference=19045213420"
+  },
+  "87161067990": {
+    "statusMessage": "",
+    "reference": "87161067990",
+    "designation": "faisceau delectrodes",
+    "ean": "4010009972990",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456361&Reference=87161067990"
+  },
+  "87167626270": {
+    "statusMessage": "",
+    "reference": "87167626270",
+    "designation": "fil de terre",
+    "ean": "4010009207931",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456359&Reference=87167626270"
+  },
+  "87144113310": {
+    "statusMessage": "",
+    "reference": "87144113310",
+    "designation": "faisceau ventilateur",
+    "ean": "4010009284079",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456360&Reference=87144113310"
+  },
+  "87167731520": {
+    "statusMessage": "",
+    "reference": "87167731520",
+    "designation": "faisceau principal",
+    "ean": "4051516298289",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456362&Reference=87167731520"
+  },
+  "87134010880": {
+    "statusMessage": "",
+    "reference": "87134010880",
+    "designation": "vis 5x12 lg pozi",
+    "ean": "4010009742524",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456366&Reference=87134010880"
+  },
+  "87144312560": {
+    "statusMessage": "",
+    "reference": "87144312560",
+    "designation": "ci de codage",
+    "ean": "4047416677675",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456363&Reference=87144312560"
+  },
+  "87144312570": {
+    "statusMessage": "",
+    "reference": "87144312570",
+    "designation": "ci de codage",
+    "ean": "4047416677682",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456364&Reference=87144312570"
+  },
+  "87167632680": {
+    "statusMessage": "",
+    "reference": "87167632680",
+    "designation": "support",
+    "ean": "4047416639956",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456365&Reference=87167632680"
+  },
+  "87167731170": {
+    "statusMessage": "",
+    "reference": "87167731170",
+    "designation": "support (x2)",
+    "ean": "4051516298234",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456367&Reference=87167731170"
+  },
+  "87186846990": {
+    "statusMessage": "",
+    "reference": "87186846990",
+    "designation": "epingle 18 mm (10x)",
+    "ean": "4051516197285",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456370&Reference=87186846990"
+  },
+  "87167632620": {
+    "statusMessage": "",
+    "reference": "87167632620",
+    "designation": "faisceau circulateur chauffage",
+    "ean": "4010009207948",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456368&Reference=87167632620"
+  },
+  "87167638600": {
+    "statusMessage": "",
+    "reference": "87167638600",
+    "designation": "tube",
+    "ean": "4047416139784",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456372&Reference=87167638600"
+  },
+  "87167731540": {
+    "statusMessage": "",
+    "reference": "87167731540",
+    "designation": "tube sortie sanitaire",
+    "ean": "4051516298302",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456373&Reference=87167731540"
+  },
+  "87102050760": {
+    "statusMessage": "",
+    "reference": "87102050760",
+    "designation": "joint torique 8 x2 (x10)",
+    "ean": "4010009856764",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456374&Reference=87102050760"
+  },
+  "87161064860": {
+    "statusMessage": "",
+    "reference": "87161064860",
+    "designation": "filtre",
+    "ean": "4010009876106",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456377&Reference=87161064860"
+  },
+  "87145000550": {
+    "statusMessage": "",
+    "reference": "87145000550",
+    "designation": "sonde de temperature",
+    "ean": "4010009950462",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456375&Reference=87145000550"
+  },
+  "87167731560": {
+    "statusMessage": "",
+    "reference": "87167731560",
+    "designation": "tube entree sanitaire",
+    "ean": "4051516298319",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456376&Reference=87167731560"
+  },
+  "87161410570": {
+    "statusMessage": "",
+    "reference": "87161410570",
+    "designation": "limiteur de debit 10 l/min",
+    "ean": "4010009723691",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456380&Reference=87161410570"
+  },
+  "87199059980": {
+    "statusMessage": "",
+    "reference": "87199059980",
+    "designation": "corps support turbine",
+    "ean": "4047416141893",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456382&Reference=87199059980"
+  },
+  "87167724000": {
+    "statusMessage": "",
+    "reference": "87167724000",
+    "designation": "turbine avec raccord",
+    "ean": "4010009716778",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456379&Reference=87167724000"
+  },
+  "87161067470": {
+    "statusMessage": "",
+    "reference": "87161067470",
+    "designation": "joint torique 22x3 epdm (x10)",
+    "ean": "4010009876359",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456381&Reference=87161067470"
+  },
+  "87167710030": {
+    "statusMessage": "",
+    "reference": "87167710030",
+    "designation": "joint 28,4x8 (x10)",
+    "ean": "4010009625872",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456385&Reference=87167710030"
+  },
+  "87167552620": {
+    "statusMessage": "",
+    "reference": "87167552620",
+    "designation": "vis m4x10 po (x10)",
+    "ean": "4010009812647",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456383&Reference=87167552620"
+  },
+  "87161064520": {
+    "statusMessage": "",
+    "reference": "87161064520",
+    "designation": "vis et joint m5x30",
+    "ean": "4010009876083",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456384&Reference=87161064520"
+  },
+  "87167713250": {
+    "statusMessage": "",
+    "reference": "87167713250",
+    "designation": "joint 19,4x8 (10x)",
+    "ean": "4010009626091",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456386&Reference=87167713250"
+  },
+  "87167638520": {
+    "statusMessage": "",
+    "reference": "87167638520",
+    "designation": "tube",
+    "ean": "4047416139753",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456387&Reference=87167638520"
+  },
+  "87160118190": {
+    "statusMessage": "",
+    "reference": "87160118190",
+    "designation": "plaque connect.echangeur .eq",
+    "ean": "4010009151456",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456389&Reference=87160118190"
+  },
+  "87167723990": {
+    "statusMessage": "",
+    "reference": "87167723990",
+    "designation": "micro-accumulateur",
+    "ean": "4010009710288",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456388&Reference=87167723990"
+  },
+  "87167638550": {
+    "statusMessage": "",
+    "reference": "87167638550",
+    "designation": "tube",
+    "ean": "4047416139760",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456390&Reference=87167638550"
+  },
+  "87161064880": {
+    "statusMessage": "",
+    "reference": "87161064880",
+    "designation": "clip limiteur de debit",
+    "ean": "4010009876113",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456394&Reference=87161064880"
+  },
+  "87174010290": {
+    "statusMessage": "",
+    "reference": "87174010290",
+    "designation": "soupape de securite",
+    "ean": "4010009876205",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456391&Reference=87174010290"
+  },
+  "87160117560": {
+    "statusMessage": "",
+    "reference": "87160117560",
+    "designation": "silencieux",
+    "ean": "4010009137948",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456396&Reference=87160117560"
+  },
+  "87167638500": {
+    "statusMessage": "",
+    "reference": "87167638500",
+    "designation": "robinet depart chauffage",
+    "ean": "4047416139746",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456403&Reference=87167638500"
+  },
+  "87161117970": {
+    "statusMessage": "",
+    "reference": "87161117970",
+    "designation": "raccord",
+    "ean": "4010009154181",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456395&Reference=87161117970"
+  },
+  "87161124910": {
+    "statusMessage": "",
+    "reference": "87161124910",
+    "designation": "raccord",
+    "ean": "4010009151487",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456397&Reference=87161124910"
+  },
+  "87167638490": {
+    "statusMessage": "",
+    "reference": "87167638490",
+    "designation": "robinet sortie sanitaire 1/2",
+    "ean": "4047416139739",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456404&Reference=87167638490"
+  },
+  "87167638480": {
+    "statusMessage": "",
+    "reference": "87167638480",
+    "designation": "robinet entree sanitaire 1/2",
+    "ean": "4047416139722",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456406&Reference=87167638480"
+  },
+  "87167638460": {
+    "statusMessage": "",
+    "reference": "87167638460",
+    "designation": "robinet gaz",
+    "ean": "4047416139708",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456405&Reference=87167638460"
+  },
+  "87167638470": {
+    "statusMessage": "",
+    "reference": "87167638470",
+    "designation": "robinet retour ch.",
+    "ean": "4047416139715",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456407&Reference=87167638470"
+  },
+  "87167257740": {
+    "statusMessage": "",
+    "reference": "87167257740",
+    "designation": "jt caout.20 x24 x1,5 ni (x10)",
+    "ean": "4010009804338",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456409&Reference=87167257740"
+  },
+  "87167621150": {
+    "statusMessage": "",
+    "reference": "87167621150",
+    "designation": "ressort (x10)",
+    "ean": "4047416834511",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456408&Reference=87167621150"
+  },
+  "87167643130": {
+    "statusMessage": "",
+    "reference": "87167643130",
+    "designation": "tube",
+    "ean": "4047416373065",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456412&Reference=87167643130"
+  },
+  "87167570100": {
+    "statusMessage": "",
+    "reference": "87167570100",
+    "designation": "jt caout.14 x18,5x1,5 ep(x10)",
+    "ean": "4010009814399",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456410&Reference=87167570100"
+  },
+  "87101031230": {
+    "statusMessage": "",
+    "reference": "87101031230",
+    "designation": "joint (x10)",
+    "ean": "4010009626480",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456413&Reference=87101031230"
+  },
+  "87167641210": {
+    "statusMessage": "",
+    "reference": "87167641210",
+    "designation": "douille coudee d20",
+    "ean": "4047416146614",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456411&Reference=87167641210"
+  },
+  "87167639640": {
+    "statusMessage": "",
+    "reference": "87167639640",
+    "designation": "douille coudee d18",
+    "ean": "4047416141732",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456418&Reference=87167639640"
+  },
+  "87167640630": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167640630",
+    "designation": "traverse",
+    "ean": "4047416141800",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456419&Reference=87167640630"
+  },
+  "87107256490": {
+    "statusMessage": "",
+    "reference": "87107256490",
+    "designation": "tube",
+    "ean": "4010009623359",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456414&Reference=87107256490"
+  },
+  "87167700040": {
+    "statusMessage": "",
+    "reference": "87167700040",
+    "designation": "disconnecteur",
+    "ean": "4010009817253",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456415&Reference=87167700040"
+  },
+  "87167639650": {
+    "statusMessage": "",
+    "reference": "87167639650",
+    "designation": "douille coudee d14",
+    "ean": "4047416141749",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=37456416&Reference=87167639650"
+  },
+  "87182247530": {
+    "statusMessage": "",
+    "reference": "87182247530",
+    "designation": "habillage",
+    "ean": "4051516046606",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713463&Reference=87182247530"
+  },
+  "87111550950": {
+    "statusMessage": "",
+    "reference": "87111550950",
+    "designation": "signe de marque elm",
+    "ean": "4010009078494",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713466&Reference=87111550950"
+  },
+  "87134030260": {
+    "statusMessage": "",
+    "reference": "87134030260",
+    "designation": "vis m5x22 (10x)",
+    "ean": "4010009645542",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713465&Reference=87134030260"
+  },
+  "87155066940": {
+    "statusMessage": "",
+    "reference": "87155066940",
+    "designation": "porte",
+    "ean": "4010009966821",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713464&Reference=87155066940"
+  },
+  "87101002090": {
+    "statusMessage": "",
+    "reference": "87101002090",
+    "designation": "restriction de debit",
+    "ean": "4010009849346",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713471&Reference=87101002090"
+  },
+  "87107352960": {
+    "statusMessage": "",
+    "reference": "87107352960",
+    "designation": "raccordement ventouse",
+    "ean": "4010009966739",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713467&Reference=87107352960"
+  },
+  "87107253530": {
+    "statusMessage": "",
+    "reference": "87107253530",
+    "designation": "silencieux",
+    "ean": "4010009035251",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713469&Reference=87107253530"
+  },
+  "87110042780": {
+    "statusMessage": "",
+    "reference": "87110042780",
+    "designation": "joint",
+    "ean": "4010009586814",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713470&Reference=87110042780"
+  },
+  "8737708010": {
+    "statusMessage": "",
+    "reference": "8737708010",
+    "designation": "echangeur de chaleur",
+    "ean": "4057749362476",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713475&Reference=8737708010"
+  },
+  "87229333300": {
+    "statusMessage": "",
+    "reference": "87229333300",
+    "designation": "joint ø 87,5mm",
+    "ean": "4010009595915",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713472&Reference=87229333300"
+  },
+  "87182242670": {
+    "statusMessage": "",
+    "reference": "87182242670",
+    "designation": "amortisseur de porte (2x)",
+    "ean": "4047416772929",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713473&Reference=87182242670"
+  },
+  "87133011960": {
+    "statusMessage": "",
+    "reference": "87133011960",
+    "designation": "ecrou",
+    "ean": "4010009968252",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713476&Reference=87133011960"
+  },
+  "87101032060": {
+    "statusMessage": "",
+    "reference": "87101032060",
+    "designation": "sachet de joints",
+    "ean": "4010009968214",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713477&Reference=87101032060"
+  },
+  "87145000870": {
+    "statusMessage": "",
+    "reference": "87145000870",
+    "designation": "sonde de temperature",
+    "ean": "4010009617105",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713481&Reference=87145000870"
+  },
+  "87180069440": {
+    "statusMessage": "",
+    "reference": "87180069440",
+    "designation": "collecteur de condensats",
+    "ean": "4010009968344",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713478&Reference=87180069440"
+  },
+  "87229638580": {
+    "statusMessage": "",
+    "reference": "87229638580",
+    "designation": "limiteur de temperature",
+    "ean": "4010009597155",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713479&Reference=87229638580"
+  },
+  "87199284870": {
+    "statusMessage": "",
+    "reference": "87199284870",
+    "designation": "jeu de pieces de fixation",
+    "ean": "4010009035213",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713480&Reference=87199284870"
+  },
+  "87110002620": {
+    "statusMessage": "",
+    "reference": "87110002620",
+    "designation": "couvercle",
+    "ean": "4010009617785",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713482&Reference=87110002620"
+  },
+  "87101001900": {
+    "statusMessage": "",
+    "reference": "87101001900",
+    "designation": "rondelle (10x)",
+    "ean": "4010009621126",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713485&Reference=87101001900"
+  },
+  "87101031530": {
+    "statusMessage": "",
+    "reference": "87101031530",
+    "designation": "joint",
+    "ean": "4010009616566",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713483&Reference=87101031530"
+  },
+  "87180038360": {
+    "statusMessage": "",
+    "reference": "87180038360",
+    "designation": "tole de protection",
+    "ean": "4010009616832",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713484&Reference=87180038360"
+  },
+  "8737708824": {
+    "statusMessage": "",
+    "reference": "8737708824",
+    "designation": "joint (10x)",
+    "ean": "4057749766106",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713487&Reference=8737708824"
+  },
+  "87180066580": {
+    "statusMessage": "",
+    "reference": "87180066580",
+    "designation": "bruleur",
+    "ean": "4010009540618",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713488&Reference=87180066580"
+  },
+  "87186649200": {
+    "statusMessage": "",
+    "reference": "87186649200",
+    "designation": "electrode",
+    "ean": "4054925713084",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713486&Reference=87186649200"
+  },
+  "87110041680": {
+    "statusMessage": "",
+    "reference": "87110041680",
+    "designation": "joint de bruleur",
+    "ean": "4010009537847",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713489&Reference=87110041680"
+  },
+  "87154160290": {
+    "statusMessage": "",
+    "reference": "87154160290",
+    "designation": "couvercle",
+    "ean": "4010009035121",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713490&Reference=87154160290"
+  },
+  "87290001830": {
+    "statusMessage": "",
+    "reference": "87290001830",
+    "designation": "joint",
+    "ean": "4010009491958",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713492&Reference=87290001830"
+  },
+  "87103052970": {
+    "statusMessage": "",
+    "reference": "87103052970",
+    "designation": "joint de fixation",
+    "ean": "4010009540564",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713494&Reference=87103052970"
+  },
+  "87101031550": {
+    "statusMessage": "",
+    "reference": "87101031550",
+    "designation": "joint",
+    "ean": "4010009968207",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713496&Reference=87101031550"
+  },
+  "8737707990": {
+    "statusMessage": "Attention, ce produit est en fin de vie.",
+    "reference": "8737707990",
+    "designation": "service kit wb5",
+    "ean": "4057749361622",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713497&Reference=8737707990"
+  },
+  "87103052960": {
+    "statusMessage": "",
+    "reference": "87103052960",
+    "designation": "joint de fixation",
+    "ean": "4010009540755",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713491&Reference=87103052960"
+  },
+  "8716119295": {
+    "statusMessage": "",
+    "reference": "8716119295",
+    "designation": "vanne a menbrane",
+    "ean": "4057749682697",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713499&Reference=8716119295"
+  },
+  "87180056030": {
+    "statusMessage": "",
+    "reference": "87180056030",
+    "designation": "tole de protection",
+    "ean": "4010009035145",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713493&Reference=87180056030"
+  },
+  "87107353870": {
+    "statusMessage": "",
+    "reference": "87107353870",
+    "designation": "tube gaz",
+    "ean": "4010009283881",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713504&Reference=87107353870"
+  },
+  "87105052100": {
+    "statusMessage": "",
+    "reference": "87105052100",
+    "designation": "limiteur dair",
+    "ean": "4010009283836",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713500&Reference=87105052100"
+  },
+  "87228801750": {
+    "statusMessage": "",
+    "reference": "87228801750",
+    "designation": "joint torique (10x)",
+    "ean": "4010009593508",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713509&Reference=87228801750"
+  },
+  "87102051030": {
+    "statusMessage": "",
+    "reference": "87102051030",
+    "designation": "joint torique (10x)",
+    "ean": "4010009968399",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713503&Reference=87102051030"
+  },
+  "87172045290": {
+    "statusMessage": "",
+    "reference": "87172045290",
+    "designation": "ventilateur",
+    "ean": "4010009985259",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713508&Reference=87172045290"
+  },
+  "87182210590": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87182210590",
+    "designation": "tube arrivee gaz",
+    "ean": "4010009633365",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713513&Reference=87182210590"
+  },
+  "87182210600": {
+    "statusMessage": "",
+    "reference": "87182210600",
+    "designation": "tube gaz",
+    "ean": "4010009633372",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713512&Reference=87182210600"
+  },
+  "87182223150": {
+    "statusMessage": "",
+    "reference": "87182223150",
+    "designation": "raccord",
+    "ean": "4010009634591",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713511&Reference=87182223150"
+  },
+  "29144114240": {
+    "statusMessage": "",
+    "reference": "29144114240",
+    "designation": "vis m4x6 (10x)",
+    "ean": "4010009624448",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713510&Reference=29144114240"
+  },
+  "87182210630": {
+    "statusMessage": "",
+    "reference": "87182210630",
+    "designation": "tube",
+    "ean": "4010009634034",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713514&Reference=87182210630"
+  },
+  "87182227440": {
+    "statusMessage": "",
+    "reference": "87182227440",
+    "designation": "vis de fermeture",
+    "ean": "4047416933542",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713515&Reference=87182227440"
+  },
+  "87105062710": {
+    "statusMessage": "",
+    "reference": "87105062710",
+    "designation": "siphon",
+    "ean": "4010009292005",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713518&Reference=87105062710"
+  },
+  "87182243440": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87182243440",
+    "designation": "manometre + joint + epingle",
+    "ean": "4047416947716",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713522&Reference=87182243440"
+  },
+  "87161408100": {
+    "statusMessage": "",
+    "reference": "87161408100",
+    "designation": "joint torique 2.62x6.02 id epdm (10x)",
+    "ean": "4010009581314",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713524&Reference=87161408100"
+  },
+  "87105062730": {
+    "statusMessage": "",
+    "reference": "87105062730",
+    "designation": "tube de revision dn80 kf",
+    "ean": "4010009292012",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713519&Reference=87105062730"
+  },
+  "87182201060": {
+    "statusMessage": "",
+    "reference": "87182201060",
+    "designation": "tuyau d evacuation",
+    "ean": "4010009651314",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713520&Reference=87182201060"
+  },
+  "87107350760": {
+    "statusMessage": "",
+    "reference": "87107350760",
+    "designation": "evacuation des condensats",
+    "ean": "4010009676270",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713521&Reference=87107350760"
+  },
+  "87199284890": {
+    "statusMessage": "",
+    "reference": "87199284890",
+    "designation": "tube depart",
+    "ean": "4010009080688",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713525&Reference=87199284890"
+  },
+  "87107354360": {
+    "statusMessage": "",
+    "reference": "87107354360",
+    "designation": "dispositif de retour",
+    "ean": "4010009035275",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713527&Reference=87107354360"
+  },
+  "87101030460": {
+    "statusMessage": "",
+    "reference": "87101030460",
+    "designation": "joint 1 (10x)",
+    "ean": "4010009418641",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713526&Reference=87101030460"
+  },
+  "87145001230": {
+    "statusMessage": "",
+    "reference": "87145001230",
+    "designation": "sonde de temperature",
+    "ean": "4010009765073",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713530&Reference=87145001230"
+  },
+  "87199284900": {
+    "statusMessage": "",
+    "reference": "87199284900",
+    "designation": "sonde de pression",
+    "ean": "4010009080695",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713531&Reference=87199284900"
+  },
+  "87385059550": {
+    "statusMessage": "",
+    "reference": "87385059550",
+    "designation": "robinet de remplissage",
+    "ean": "4010009035466",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713534&Reference=87385059550"
+  },
+  "87174010350": {
+    "statusMessage": "",
+    "reference": "87174010350",
+    "designation": "soupape de securite",
+    "ean": "4010009284208",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713532&Reference=87174010350"
+  },
+  "87107354580": {
+    "statusMessage": "",
+    "reference": "87107354580",
+    "designation": "tube retour",
+    "ean": "4010009134091",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713536&Reference=87107354580"
+  },
+  "87182202220": {
+    "statusMessage": "",
+    "reference": "87182202220",
+    "designation": "tuyau flexible",
+    "ean": "4010009100584",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713538&Reference=87182202220"
+  },
+  "87133058080": {
+    "statusMessage": "",
+    "reference": "87133058080",
+    "designation": "entretoise",
+    "ean": "4010009080558",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713535&Reference=87133058080"
+  },
+  "87168384490": {
+    "statusMessage": "",
+    "reference": "87168384490",
+    "designation": "purgeur 3/8+clef",
+    "ean": "4047416660394",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713537&Reference=87168384490"
+  },
+  "87110003020": {
+    "statusMessage": "",
+    "reference": "87110003020",
+    "designation": "cache",
+    "ean": "4010009974031",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713544&Reference=87110003020"
+  },
+  "87101031540": {
+    "statusMessage": "",
+    "reference": "87101031540",
+    "designation": "sachet de joints (10x)",
+    "ean": "4010009617013",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713540&Reference=87101031540"
+  },
+  "87160118620": {
+    "statusMessage": "",
+    "reference": "87160118620",
+    "designation": "couvercle",
+    "ean": "4010009156727",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713542&Reference=87160118620"
+  },
+  "87172076800": {
+    "statusMessage": "",
+    "reference": "87172076800",
+    "designation": "couvercle",
+    "ean": "4010009974093",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713545&Reference=87172076800"
+  },
+  "87172076780": {
+    "statusMessage": "",
+    "reference": "87172076780",
+    "designation": "partie superieure",
+    "ean": "4010009974079",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713546&Reference=87172076780"
+  },
+  "87144043480": {
+    "statusMessage": "",
+    "reference": "87144043480",
+    "designation": "plots connexion",
+    "ean": "4010009974055",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713547&Reference=87144043480"
+  },
+  "87144312110": {
+    "statusMessage": "",
+    "reference": "87144312110",
+    "designation": "ci de codage 1211 (31)",
+    "ean": "4010009035398",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713551&Reference=87144312110"
+  },
+  "8748300928": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "8748300928",
+    "designation": "circuit imprime",
+    "ean": "4062321156411",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713548&Reference=8748300928"
+  },
+  "87377045510": {
+    "statusMessage": "",
+    "reference": "87377045510",
+    "designation": "dosseret",
+    "ean": "4051516754433",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713549&Reference=87377045510"
+  },
+  "87144312050": {
+    "statusMessage": "",
+    "reference": "87144312050",
+    "designation": "ci de codage 1205 (21,23)",
+    "ean": "4010009035336",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713550&Reference=87144312050"
+  },
+  "87182246620": {
+    "statusMessage": "",
+    "reference": "87182246620",
+    "designation": "cable",
+    "ean": "4047416809724",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713557&Reference=87182246620"
+  },
+  "87161069800": {
+    "statusMessage": "",
+    "reference": "87161069800",
+    "designation": "faisceau",
+    "ean": "4010009971504",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713555&Reference=87161069800"
+  },
+  "87105061850": {
+    "statusMessage": "",
+    "reference": "87105061850",
+    "designation": "bouchon (10x)",
+    "ean": "4010009985693",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713552&Reference=87105061850"
+  },
+  "87161073290": {
+    "statusMessage": "",
+    "reference": "87161073290",
+    "designation": "faisceau circulateur",
+    "ean": "4010009971511",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713556&Reference=87161073290"
+  },
+  "87190011010": {
+    "statusMessage": "",
+    "reference": "87190011010",
+    "designation": "kit de transformation de gaz 21,23>31",
+    "ean": "4010009152316",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713563&Reference=87190011010"
+  },
+  "87182251760": {
+    "statusMessage": "",
+    "reference": "87182251760",
+    "designation": "clip et angle",
+    "ean": "4047416163383",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713562&Reference=87182251760"
+  },
+  "87190011020": {
+    "statusMessage": "",
+    "reference": "87190011020",
+    "designation": "kit de transformation de gaz 31>21,23",
+    "ean": "4010009151968",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713564&Reference=87190011020"
+  },
+  "87182210390": {
+    "statusMessage": "",
+    "reference": "87182210390",
+    "designation": "prise",
+    "ean": "4010009160885",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713561&Reference=87182210390"
+  },
+  "87167635080": {
+    "statusMessage": "",
+    "reference": "87167635080",
+    "designation": "porte",
+    "ean": "4010009232902",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806584&Reference=87167635080"
+  },
+  "87099184130": {
+    "statusMessage": "",
+    "reference": "87099184130",
+    "designation": "graisse unisilkon l641",
+    "ean": "4010009416999",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713566&Reference=87099184130"
+  },
+  "87199186580": {
+    "statusMessage": "",
+    "reference": "87199186580",
+    "designation": "pate thermocond. 20 ml.",
+    "ean": "4010009488491",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=45713567&Reference=87199186580"
+  },
+  "87167630000": {
+    "statusMessage": "",
+    "reference": "87167630000",
+    "designation": "habillage",
+    "ean": "4010009078388",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806583&Reference=87167630000"
+  },
+  "87154072600": {
+    "statusMessage": "",
+    "reference": "87154072600",
+    "designation": "vase dexpansion",
+    "ean": "4010009641049",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806585&Reference=87154072600"
+  },
+  "87167631540": {
+    "statusMessage": "",
+    "reference": "87167631540",
+    "designation": "ecrou a oreilles m6",
+    "ean": "4010009539599",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806591&Reference=87167631540"
+  },
+  "87167727010": {
+    "statusMessage": "",
+    "reference": "87167727010",
+    "designation": "joint detancheite",
+    "ean": "4010009042846",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806586&Reference=87167727010"
+  },
+  "87167726010": {
+    "statusMessage": "",
+    "reference": "87167726010",
+    "designation": "sortie wb6 complet",
+    "ean": "4010009080589",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806587&Reference=87167726010"
+  },
+  "8737711102": {
+    "statusMessage": "",
+    "reference": "8737711102",
+    "designation": "joint d59 (2x)",
+    "ean": "4062321133559",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806589&Reference=8737711102"
+  },
+  "8716773919": {
+    "statusMessage": "",
+    "reference": "8716773919",
+    "designation": "purgeur",
+    "ean": "4057749192677",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806596&Reference=8716773919"
+  },
+  "87167275200": {
+    "statusMessage": "",
+    "reference": "87167275200",
+    "designation": "entretoise (x10)",
+    "ean": "4010009818823",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806594&Reference=87167275200"
+  },
+  "87132040170": {
+    "statusMessage": "",
+    "reference": "87132040170",
+    "designation": "serrure (1x)",
+    "ean": "4010009975571",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806593&Reference=87132040170"
+  },
+  "87167074000": {
+    "statusMessage": "",
+    "reference": "87167074000",
+    "designation": "jt fibre 17x22x1",
+    "ean": "4057749091246",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806598&Reference=87167074000"
+  },
+  "87167726020": {
+    "statusMessage": "",
+    "reference": "87167726020",
+    "designation": "siphon",
+    "ean": "4010009080596",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806613&Reference=87167726020"
+  },
+  "87167727900": {
+    "statusMessage": "",
+    "reference": "87167727900",
+    "designation": "tuyau flexible 1/2,1000 mm",
+    "ean": "4010009100461",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806616&Reference=87167727900"
+  },
+  "87167725720": {
+    "statusMessage": "",
+    "reference": "87167725720",
+    "designation": "tube depart",
+    "ean": "4010009042792",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806620&Reference=87167725720"
+  },
+  "87167630640": {
+    "statusMessage": "",
+    "reference": "87167630640",
+    "designation": "tube retour chauffage",
+    "ean": "4010009202424",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806622&Reference=87167630640"
+  },
+  "87167654140": {
+    "statusMessage": "",
+    "reference": "87167654140",
+    "designation": "tube gaz kit remplacement",
+    "ean": "4054925151671",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806642&Reference=87167654140"
+  },
+  "8737712516": {
+    "statusMessage": "",
+    "reference": "8737712516",
+    "designation": "service kit wb6",
+    "ean": "4062321277277",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806625&Reference=8737712516"
+  },
+  "87167644520": {
+    "statusMessage": "",
+    "reference": "87167644520",
+    "designation": "tube arrivee gaz",
+    "ean": "4047416693781",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806637&Reference=87167644520"
+  },
+  "87167641990": {
+    "statusMessage": "",
+    "reference": "87167641990",
+    "designation": "support (x5)",
+    "ean": "4047416329925",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806655&Reference=87167641990"
+  },
+  "87167714270": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167714270",
+    "designation": "moteur de circulateur",
+    "ean": "4010009626206",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806647&Reference=87167714270"
+  },
+  "87167633180": {
+    "statusMessage": "",
+    "reference": "87167633180",
+    "designation": "kit de transformation de 23-->31",
+    "ean": "4010009224846",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806643&Reference=87167633180"
+  },
+  "87167631990": {
+    "statusMessage": "",
+    "reference": "87167631990",
+    "designation": "vanne a 3 voies",
+    "ean": "4047416677491",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806650&Reference=87167631990"
+  },
+  "87167635040": {
+    "statusMessage": "",
+    "reference": "87167635040",
+    "designation": "tuyau",
+    "ean": "4010009232612",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806661&Reference=87167635040"
+  },
+  "87167631810": {
+    "statusMessage": "",
+    "reference": "87167631810",
+    "designation": "tube flexible de raccordement sanitaire",
+    "ean": "4010009545545",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806662&Reference=87167631810"
+  },
+  "87167630680": {
+    "statusMessage": "",
+    "reference": "87167630680",
+    "designation": "tube retour chauffage",
+    "ean": "4010009202431",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806658&Reference=87167630680"
+  },
+  "87101030150": {
+    "statusMessage": "",
+    "reference": "87101030150",
+    "designation": "joint 3/8 (10x)",
+    "ean": "4010009418535",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806659&Reference=87101030150"
+  },
+  "87167630960": {
+    "statusMessage": "",
+    "reference": "87167630960",
+    "designation": "support",
+    "ean": "4010009221944",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806665&Reference=87167630960"
+  },
+  "87167727050": {
+    "statusMessage": "",
+    "reference": "87167727050",
+    "designation": "bouchon raccord sonde",
+    "ean": "4010009042884",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806669&Reference=87167727050"
+  },
+  "87144316080": {
+    "statusMessage": "",
+    "reference": "87144316080",
+    "designation": "ci de codage 1608",
+    "ean": "4010009436300",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806683&Reference=87144316080"
+  },
+  "87167632080": {
+    "statusMessage": "",
+    "reference": "87167632080",
+    "designation": "faisceau principal",
+    "ean": "4010009539643",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806682&Reference=87167632080"
+  },
+  "87172078350": {
+    "statusMessage": "",
+    "reference": "87172078350",
+    "designation": "tableau electrique",
+    "ean": "4010009550747",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806673&Reference=87172078350"
+  },
+  "87182203980": {
+    "statusMessage": "",
+    "reference": "87182203980",
+    "designation": "facade",
+    "ean": "4010009134138",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806678&Reference=87182203980"
+  },
+  "87167630850": {
+    "statusMessage": "",
+    "reference": "87167630850",
+    "designation": "faisceau circulateur ecs",
+    "ean": "4010009547136",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806684&Reference=87167630850"
+  },
+  "87167631790": {
+    "statusMessage": "",
+    "reference": "87167631790",
+    "designation": "faisceau",
+    "ean": "4010009545538",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806685&Reference=87167631790"
+  },
+  "87167631690": {
+    "statusMessage": "",
+    "reference": "87167631690",
+    "designation": "circulateur sanitaire",
+    "ean": "4010009201809",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806689&Reference=87167631690"
+  },
+  "87167630920": {
+    "statusMessage": "",
+    "reference": "87167630920",
+    "designation": "tube echangeur a plaque",
+    "ean": "4010009202516",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806690&Reference=87167630920"
+  },
+  "87134030290": {
+    "statusMessage": "",
+    "reference": "87134030290",
+    "designation": "vis (10x)",
+    "ean": "4010009550211",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806687&Reference=87134030290"
+  },
+  "87113046950": {
+    "statusMessage": "",
+    "reference": "87113046950",
+    "designation": "clip (10x)",
+    "ean": "4010009625858",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806695&Reference=87113046950"
+  },
+  "87145001170": {
+    "statusMessage": "",
+    "reference": "87145001170",
+    "designation": "sonde de temperature",
+    "ean": "4010009705987",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806691&Reference=87145001170"
+  },
+  "87167632010": {
+    "statusMessage": "",
+    "reference": "87167632010",
+    "designation": "embout",
+    "ean": "4010009547280",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806693&Reference=87167632010"
+  },
+  "87167630830": {
+    "statusMessage": "",
+    "reference": "87167630830",
+    "designation": "tube depart",
+    "ean": "4010009202462",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806696&Reference=87167630830"
+  },
+  "87167711620": {
+    "statusMessage": "",
+    "reference": "87167711620",
+    "designation": "o-ring 17,12x2,62 (10x)",
+    "ean": "4010009625971",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806705&Reference=87167711620"
+  },
+  "87167631910": {
+    "statusMessage": "",
+    "reference": "87167631910",
+    "designation": "embout sanit.echang.a plaques",
+    "ean": "4010009539612",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806697&Reference=87167631910"
+  },
+  "87167631590": {
+    "statusMessage": "",
+    "reference": "87167631590",
+    "designation": "limiteur de debit",
+    "ean": "4010009221685",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806703&Reference=87167631590"
+  },
+  "87167630810": {
+    "statusMessage": "",
+    "reference": "87167630810",
+    "designation": "tube liais.v3v/echangeur",
+    "ean": "4010009202448",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806704&Reference=87167630810"
+  },
+  "87167634790": {
+    "statusMessage": "",
+    "reference": "87167634790",
+    "designation": "limiteur de debit",
+    "ean": "4010009221951",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806707&Reference=87167634790"
+  },
+  "87167630880": {
+    "statusMessage": "",
+    "reference": "87167630880",
+    "designation": "tube arrivee eau froide",
+    "ean": "4010009202479",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806710&Reference=87167630880"
+  },
+  "87167711560": {
+    "statusMessage": "",
+    "reference": "87167711560",
+    "designation": "o-ring 15,54x2,62 (10x)",
+    "ean": "4010009625957",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806706&Reference=87167711560"
+  },
+  "87167631820": {
+    "statusMessage": "",
+    "reference": "87167631820",
+    "designation": "tube flexible",
+    "ean": "4010009545552",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806711&Reference=87167631820"
+  },
+  "87167009100": {
+    "statusMessage": "",
+    "reference": "87167009100",
+    "designation": "ecrou 1/2 (10x)",
+    "ean": "4010009800521",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806712&Reference=87167009100"
+  },
+  "87167631900": {
+    "statusMessage": "",
+    "reference": "87167631900",
+    "designation": "isolation",
+    "ean": "4010009539605",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806715&Reference=87167631900"
+  },
+  "87167454900": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167454900",
+    "designation": "vase dexpansion 2 l sanitaire",
+    "ean": "4010009812173",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806713&Reference=87167454900"
+  },
+  "8716747333": {
+    "statusMessage": "",
+    "reference": "8716747333",
+    "designation": "vase dexpansion sanitaire 2l",
+    "ean": "4062321201319",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806714&Reference=8716747333"
+  },
+  "87167631470": {
+    "statusMessage": "",
+    "reference": "87167631470",
+    "designation": "support",
+    "ean": "4010009629870",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806718&Reference=87167631470"
+  },
+  "87167650830": {
+    "statusMessage": "",
+    "reference": "87167650830",
+    "designation": "diaphragme (x5)",
+    "ean": "4051516679576",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806717&Reference=87167650830"
+  },
+  "87185050200": {
+    "statusMessage": "",
+    "reference": "87185050200",
+    "designation": "clapet anti-retour",
+    "ean": "4010009629443",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806720&Reference=87185050200"
+  },
+  "87167713850": {
+    "statusMessage": "",
+    "reference": "87167713850",
+    "designation": "raccord a/filtre",
+    "ean": "4010009631460",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806723&Reference=87167713850"
+  },
+  "87182250460": {
+    "statusMessage": "",
+    "reference": "87182250460",
+    "designation": "joint 16x24x2",
+    "ean": "4047416977553",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806724&Reference=87182250460"
+  },
+  "87167602330": {
+    "statusMessage": "",
+    "reference": "87167602330",
+    "designation": "clip (x10)",
+    "ean": "4010009815549",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806727&Reference=87167602330"
+  },
+  "87167630890": {
+    "statusMessage": "",
+    "reference": "87167630890",
+    "designation": "tube liaison",
+    "ean": "4010009202486",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806732&Reference=87167630890"
+  },
+  "87167631490": {
+    "statusMessage": "",
+    "reference": "87167631490",
+    "designation": "tube liaison ballons",
+    "ean": "4010009202561",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806736&Reference=87167631490"
+  },
+  "7716780392": {
+    "statusMessage": "",
+    "reference": "7716780392",
+    "designation": "vase sanitaire 2 litre iw-evd2",
+    "ean": "4057749777201",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806729&Reference=7716780392"
+  },
+  "8716747334": {
+    "statusMessage": "",
+    "reference": "8716747334",
+    "designation": "flexible dhw-g3/4-coude",
+    "ean": "4062321235178",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806730&Reference=8716747334"
+  },
+  "87174052850": {
+    "statusMessage": "",
+    "reference": "87174052850",
+    "designation": "degazeur",
+    "ean": "4010009012252",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806738&Reference=87174052850"
+  },
+  "87112000160": {
+    "statusMessage": "",
+    "reference": "87112000160",
+    "designation": "epingle (10x)",
+    "ean": "4010009617099",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806742&Reference=87112000160"
+  },
+  "87167632370": {
+    "statusMessage": "",
+    "reference": "87167632370",
+    "designation": "isolation (x10)",
+    "ean": "4010009221692",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806743&Reference=87167632370"
+  },
+  "87167632280": {
+    "statusMessage": "",
+    "reference": "87167632280",
+    "designation": "tube recirculation",
+    "ean": "4010009202622",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806740&Reference=87167632280"
+  },
+  "87167632260": {
+    "statusMessage": "",
+    "reference": "87167632260",
+    "designation": "tube recirculation",
+    "ean": "4010009202615",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806741&Reference=87167632260"
+  },
+  "87167630900": {
+    "statusMessage": "",
+    "reference": "87167630900",
+    "designation": "tube sortie sanitaire",
+    "ean": "4010009202493",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806739&Reference=87167630900"
+  },
+  "87167630390": {
+    "statusMessage": "",
+    "reference": "87167630390",
+    "designation": "ballon",
+    "ean": "4010009550716",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806747&Reference=87167630390"
+  },
+  "87167631850": {
+    "statusMessage": "",
+    "reference": "87167631850",
+    "designation": "robinet de vidange",
+    "ean": "4010009550723",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806744&Reference=87167631850"
+  },
+  "87167635460": {
+    "statusMessage": "",
+    "reference": "87167635460",
+    "designation": "ecrou ctn",
+    "ean": "4047416640006",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806745&Reference=87167635460"
+  },
+  "87167631570": {
+    "statusMessage": "",
+    "reference": "87167631570",
+    "designation": "traverse",
+    "ean": "4010009218715",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806748&Reference=87167631570"
+  },
+  "87167635440": {
+    "statusMessage": "",
+    "reference": "87167635440",
+    "designation": "sonde de temperature",
+    "ean": "4047416639994",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806746&Reference=87167635440"
+  },
+  "87167640660": {
+    "statusMessage": "",
+    "reference": "87167640660",
+    "designation": "tube sortie sanitaire",
+    "ean": "4047416948782",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806752&Reference=87167640660"
+  },
+  "87167632110": {
+    "statusMessage": "",
+    "reference": "87167632110",
+    "designation": "soupape sanitaire 7bar",
+    "ean": "4010009545583",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806749&Reference=87167632110"
+  },
+  "87167630820": {
+    "statusMessage": "",
+    "reference": "87167630820",
+    "designation": "tube liaison ballons",
+    "ean": "4010009202455",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806750&Reference=87167630820"
+  },
+  "87167633580": {
+    "statusMessage": "",
+    "reference": "87167633580",
+    "designation": "serrure",
+    "ean": "4047416767697",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806751&Reference=87167633580"
+  },
+  "8713305610": {
+    "statusMessage": "",
+    "reference": "8713305610",
+    "designation": "raccord",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806754&Reference=8713305610"
+  },
+  "87161567590": {
+    "statusMessage": "",
+    "reference": "87161567590",
+    "designation": "robinet 3/4 chauffage",
+    "ean": "4010009620266",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806757&Reference=87161567590"
+  },
+  "87167712850": {
+    "statusMessage": "",
+    "reference": "87167712850",
+    "designation": "robinet gaz",
+    "ean": "4010009623410",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806755&Reference=87167712850"
+  },
+  "87167726430": {
+    "statusMessage": "",
+    "reference": "87167726430",
+    "designation": "vis m5-10 (x10)",
+    "ean": "4010009083887",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806759&Reference=87167726430"
+  },
+  "87167712860": {
+    "statusMessage": "",
+    "reference": "87167712860",
+    "designation": "robinet 1/2 sanitaire",
+    "ean": "4010009623427",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806756&Reference=87167712860"
+  },
+  "87167603080": {
+    "statusMessage": "",
+    "reference": "87167603080",
+    "designation": "manette rob.gaz",
+    "ean": "4010009815662",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806762&Reference=87167603080"
+  },
+  "87107256480": {
+    "statusMessage": "",
+    "reference": "87107256480",
+    "designation": "tube",
+    "ean": "4010009623342",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806761&Reference=87107256480"
+  },
+  "87167716330": {
+    "statusMessage": "",
+    "reference": "87167716330",
+    "designation": "robinet retour chauffage",
+    "ean": "4010009710042",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806758&Reference=87167716330"
+  },
+  "87167633190": {
+    "statusMessage": "",
+    "reference": "87167633190",
+    "designation": "kit de transformation de 31-->23",
+    "ean": "4010009224853",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806832&Reference=87167633190"
+  },
+  "87167295960": {
+    "statusMessage": "",
+    "reference": "87167295960",
+    "designation": "vis c m3x 6(x10)",
+    "ean": "4010009807483",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806763&Reference=87167295960"
+  },
+  "87167708800": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167708800",
+    "designation": "jeu de tubes",
+    "ean": "4010009856054",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806768&Reference=87167708800"
+  },
+  "87167638900": {
+    "statusMessage": "",
+    "reference": "87167638900",
+    "designation": "robinet",
+    "ean": "4047416948775",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806769&Reference=87167638900"
+  },
+  "8716766049": {
+    "statusMessage": "",
+    "reference": "8716766049",
+    "designation": "faisceau principal",
+    "ean": "4057749606129",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51817834&Reference=8716766049"
+  },
+  "87167731330": {
+    "statusMessage": "",
+    "reference": "87167731330",
+    "designation": "support (x2)",
+    "ean": "4051516298258",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819730&Reference=87167731330"
+  },
+  "87144316090": {
+    "statusMessage": "",
+    "reference": "87144316090",
+    "designation": "ci de codage 1609",
+    "ean": "4010009436317",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51806872&Reference=87144316090"
+  },
+  "8737602353": {
+    "statusMessage": "",
+    "reference": "8737602353",
+    "designation": "turbine",
+    "ean": "4057749854957",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51817862&Reference=8737602353"
+  },
+  "87167731370": {
+    "statusMessage": "",
+    "reference": "87167731370",
+    "designation": "facade/porte",
+    "ean": "4051516298272",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819668&Reference=87167731370"
+  },
+  "87133056100": {
+    "statusMessage": "",
+    "reference": "87133056100",
+    "designation": "raccord",
+    "ean": "4010009620235",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819800&Reference=87133056100"
+  },
+  "87186445550": {
+    "statusMessage": "",
+    "reference": "87186445550",
+    "designation": "vis din7500 m5x12 (10x)",
+    "ean": "4054925831238",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819807&Reference=87186445550"
+  },
+  "87167711640": {
+    "statusMessage": "",
+    "reference": "87167711640",
+    "designation": "joint torique 6x2,5 (x10)",
+    "ean": "4010009625988",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819789&Reference=87167711640"
+  },
+  "87161567600": {
+    "statusMessage": "",
+    "reference": "87161567600",
+    "designation": "robinet",
+    "ean": "4010009620273",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819805&Reference=87161567600"
+  },
+  "87167702430": {
+    "statusMessage": "",
+    "reference": "87167702430",
+    "designation": "jeu de tubes dosga5",
+    "ean": "4010009817772",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819806&Reference=87167702430"
+  },
+  "87167703400": {
+    "statusMessage": "",
+    "reference": "87167703400",
+    "designation": "traverse daccrochage",
+    "ean": "4010009824350",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819811&Reference=87167703400"
+  },
+  "87167647310": {
+    "statusMessage": "",
+    "reference": "87167647310",
+    "designation": "robinet gaz",
+    "ean": "4051516299613",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819814&Reference=87167647310"
+  },
+  "87167647320": {
+    "statusMessage": "",
+    "reference": "87167647320",
+    "designation": "robinet 3/4 ret. chauf.",
+    "ean": "4051516299620",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819810&Reference=87167647320"
+  },
+  "87167647350": {
+    "statusMessage": "",
+    "reference": "87167647350",
+    "designation": "raccord sort. sanit",
+    "ean": "4051516299651",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819813&Reference=87167647350"
+  },
+  "87167640750": {
+    "statusMessage": "",
+    "reference": "87167640750",
+    "designation": "tube depart chauffage",
+    "ean": "4051516298227",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820035&Reference=87167640750"
+  },
+  "87167718300": {
+    "statusMessage": "",
+    "reference": "87167718300",
+    "designation": "bouchon male 1/2",
+    "ean": "4010009665465",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820045&Reference=87167718300"
+  },
+  "87167647330": {
+    "statusMessage": "",
+    "reference": "87167647330",
+    "designation": "robinet 3/4 chauf.",
+    "ean": "4051516299637",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819816&Reference=87167647330"
+  },
+  "87167647340": {
+    "statusMessage": "",
+    "reference": "87167647340",
+    "designation": "robinet ent. sanit.",
+    "ean": "4051516299644",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51819820&Reference=87167647340"
+  },
+  "87167728360": {
+    "statusMessage": "",
+    "reference": "87167728360",
+    "designation": "kit transf.gaz gvsc n->b",
+    "ean": "4047416258065",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820064&Reference=87167728360"
+  },
+  "87167731360": {
+    "statusMessage": "",
+    "reference": "87167731360",
+    "designation": "tube liais.ballon/v3v",
+    "ean": "4051516298265",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820094&Reference=87167731360"
+  },
+  "87167731530": {
+    "statusMessage": "",
+    "reference": "87167731530",
+    "designation": "faisceau principal",
+    "ean": "4051516298296",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820107&Reference=87167731530"
+  },
+  "87144312520": {
+    "statusMessage": "",
+    "reference": "87144312520",
+    "designation": "ci de codage",
+    "ean": "4010009042730",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820108&Reference=87144312520"
+  },
+  "87167728370": {
+    "statusMessage": "",
+    "reference": "87167728370",
+    "designation": "kit transf.gaz gvsc b->n",
+    "ean": "4047416258089",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820202&Reference=87167728370"
+  },
+  "87181206160": {
+    "statusMessage": "",
+    "reference": "87181206160",
+    "designation": "bruleur",
+    "ean": "4010009700081",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820293&Reference=87181206160"
+  },
+  "87144312530": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87144312530",
+    "designation": "ci de codage",
+    "ean": "4010009042754",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820246&Reference=87144312530"
+  },
+  "87110002960": {
+    "statusMessage": "",
+    "reference": "87110002960",
+    "designation": "chambre de melange",
+    "ean": "4010009699934",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820329&Reference=87110002960"
+  },
+  "87107350850": {
+    "statusMessage": "",
+    "reference": "87107350850",
+    "designation": "tuyauterie",
+    "ean": "4010009699873",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820327&Reference=87107350850"
+  },
+  "87144312550": {
+    "statusMessage": "",
+    "reference": "87144312550",
+    "designation": "ci de codage",
+    "ean": "4047416836140",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820386&Reference=87144312550"
+  },
+  "87167730300": {
+    "statusMessage": "",
+    "reference": "87167730300",
+    "designation": "kit transf.gaz gvsc14n->b",
+    "ean": "4047416918464",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820340&Reference=87167730300"
+  },
+  "87167730310": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167730310",
+    "designation": "kit transf.gaz gvsc14b->n",
+    "ean": "4047416918471",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820341&Reference=87167730310"
+  },
+  "87144312540": {
+    "statusMessage": "",
+    "reference": "87144312540",
+    "designation": "ci de codage",
+    "ean": "4047416836133",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=51820385&Reference=87144312540"
+  },
+  "8716773765": {
+    "statusMessage": "",
+    "reference": "8716773765",
+    "designation": "chambre de melange",
+    "ean": "4054925980042",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428018&Reference=8716773765"
+  },
+  "7716780346": {
+    "statusMessage": "",
+    "reference": "7716780346",
+    "designation": "kit transf.gaz nat--> gpl",
+    "ean": "4054925509304",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428030&Reference=7716780346"
+  },
+  "87144312590": {
+    "statusMessage": "",
+    "reference": "87144312590",
+    "designation": "ci de codage 1259",
+    "ean": "4054925499971",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428074&Reference=87144312590"
+  },
+  "7716780347": {
+    "statusMessage": "",
+    "reference": "7716780347",
+    "designation": "kit transf.gaz gpl->nat",
+    "ean": "4054925509311",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428031&Reference=7716780347"
+  },
+  "8716774008": {
+    "statusMessage": "",
+    "reference": "8716774008",
+    "designation": "faisceau principal",
+    "ean": "4057749606983",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428072&Reference=8716774008"
+  },
+  "87167726050": {
+    "statusMessage": "",
+    "reference": "87167726050",
+    "designation": "tube",
+    "ean": "4047416827155",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428119&Reference=87167726050"
+  },
+  "87144312580": {
+    "statusMessage": "",
+    "reference": "87144312580",
+    "designation": "ci de codage 1258",
+    "ean": "4054925499964",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428073&Reference=87144312580"
+  },
+  "8716766641": {
+    "statusMessage": "",
+    "reference": "8716766641",
+    "designation": "joints 20,00x24,00x2,00 (x10)",
+    "ean": "4062321486853",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428124&Reference=8716766641"
+  },
+  "8716747370": {
+    "statusMessage": "",
+    "reference": "8716747370",
+    "designation": "Robinet Gaz",
+    "ean": "4062321515614",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428121&Reference=8716747370"
+  },
+  "8716766640": {
+    "statusMessage": "",
+    "reference": "8716766640",
+    "designation": "joints 18,4x23,8x2,0 (x10)",
+    "ean": "4062321482572",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428127&Reference=8716766640"
+  },
+  "87167735890": {
+    "statusMessage": "",
+    "reference": "87167735890",
+    "designation": "cache",
+    "ean": "4054925500011",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428135&Reference=87167735890"
+  },
+  "7716780348": {
+    "statusMessage": "",
+    "reference": "7716780348",
+    "designation": "kit transf.gaz nat--> gpl",
+    "ean": "4054925509328",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428204&Reference=7716780348"
+  },
+  "7716780349": {
+    "statusMessage": "",
+    "reference": "7716780349",
+    "designation": "kit transf.gaz gpl->nat",
+    "ean": "4054925509335",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428205&Reference=7716780349"
+  },
+  "87144312870": {
+    "statusMessage": "",
+    "reference": "87144312870",
+    "designation": "ci de codage 1287",
+    "ean": "4054925499988",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428249&Reference=87144312870"
+  },
+  "87144312500": {
+    "statusMessage": "",
+    "reference": "87144312500",
+    "designation": "ci de codage",
+    "ean": "4010009042709",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428890&Reference=87144312500"
+  },
+  "87144312880": {
+    "statusMessage": "",
+    "reference": "87144312880",
+    "designation": "ci de codage 1288",
+    "ean": "4054925499995",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428250&Reference=87144312880"
+  },
+  "87167728340": {
+    "statusMessage": "",
+    "reference": "87167728340",
+    "designation": "kit transf.gaz gvac n->b",
+    "ean": "4047416258027",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428847&Reference=87167728340"
+  },
+  "87167728350": {
+    "statusMessage": "",
+    "reference": "87167728350",
+    "designation": "kit transf.gaz gvac b->n",
+    "ean": "4047416258041",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428848&Reference=87167728350"
+  },
+  "87144312510": {
+    "statusMessage": "",
+    "reference": "87144312510",
+    "designation": "ci de codage",
+    "ean": "4010009042723",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54428891&Reference=87144312510"
+  },
+  "8716747373": {
+    "statusMessage": "",
+    "reference": "8716747373",
+    "designation": "Vanne Sanitaire 3/4 1/2",
+    "ean": "4062321517878",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430278&Reference=8716747373"
+  },
+  "87167469060": {
+    "statusMessage": "",
+    "reference": "87167469060",
+    "designation": "trappe de visite",
+    "ean": "4051516073114",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430286&Reference=87167469060"
+  },
+  "87167469070": {
+    "statusMessage": "",
+    "reference": "87167469070",
+    "designation": "bouchon f 3/4 bal121/151",
+    "ean": "4051516073121",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430287&Reference=87167469070"
+  },
+  "87167469140": {
+    "statusMessage": "",
+    "reference": "87167469140",
+    "designation": "habillage",
+    "ean": "4051516073190",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430288&Reference=87167469140"
+  },
+  "87167469100": {
+    "statusMessage": "",
+    "reference": "87167469100",
+    "designation": "anode",
+    "ean": "4051516073152",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430290&Reference=87167469100"
+  },
+  "87167469020": {
+    "statusMessage": "",
+    "reference": "87167469020",
+    "designation": "soupape de securite",
+    "ean": "4051516073077",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430289&Reference=87167469020"
+  },
+  "87167469080": {
+    "statusMessage": "",
+    "reference": "87167469080",
+    "designation": "joint",
+    "ean": "4051516073138",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430291&Reference=87167469080"
+  },
+  "87167469310": {
+    "statusMessage": "",
+    "reference": "87167469310",
+    "designation": "support",
+    "ean": "4054925289091",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430292&Reference=87167469310"
+  },
+  "87167469110": {
+    "statusMessage": "",
+    "reference": "87167469110",
+    "designation": "vis",
+    "ean": "4051516073169",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430293&Reference=87167469110"
+  },
+  "87167469010": {
+    "statusMessage": "",
+    "reference": "87167469010",
+    "designation": "joint",
+    "ean": "4051516073060",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430294&Reference=87167469010"
+  },
+  "87167469030": {
+    "statusMessage": "",
+    "reference": "87167469030",
+    "designation": "epingle",
+    "ean": "4051516073084",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430296&Reference=87167469030"
+  },
+  "87167469000": {
+    "statusMessage": "",
+    "reference": "87167469000",
+    "designation": "vis",
+    "ean": "4051516073053",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430295&Reference=87167469000"
+  },
+  "87167469130": {
+    "statusMessage": "",
+    "reference": "87167469130",
+    "designation": "tube",
+    "ean": "4051516073183",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430298&Reference=87167469130"
+  },
+  "87167469040": {
+    "statusMessage": "",
+    "reference": "87167469040",
+    "designation": "pied",
+    "ean": "4051516073091",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430297&Reference=87167469040"
+  },
+  "8716747310": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "8716747310",
+    "designation": "isolation",
+    "ean": "4057749764249",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430301&Reference=8716747310"
+  },
+  "87167469120": {
+    "statusMessage": "",
+    "reference": "87167469120",
+    "designation": "support de sonde ctn",
+    "ean": "4051516073176",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430299&Reference=87167469120"
+  },
+  "87167469050": {
+    "statusMessage": "",
+    "reference": "87167469050",
+    "designation": "goupille",
+    "ean": "4051516073107",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430300&Reference=87167469050"
+  },
+  "87167637380": {
+    "statusMessage": "",
+    "reference": "87167637380",
+    "designation": "axe (x4)",
+    "ean": "4047416869674",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430742&Reference=87167637380"
+  },
+  "8716862160": {
+    "statusMessage": "Attention, ce produit est en fin de vie.",
+    "reference": "8716862160",
+    "designation": "Ballon Mousse 48L BIL50M",
+    "ean": "4062321441470",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430741&Reference=8716862160"
+  },
+  "87167622050": {
+    "statusMessage": "",
+    "reference": "87167622050",
+    "designation": "o-ring (x10)",
+    "ean": "4010009246466",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430745&Reference=87167622050"
+  },
+  "87167618670": {
+    "statusMessage": "",
+    "reference": "87167618670",
+    "designation": "sonde ntc ballon",
+    "ean": "4010009825449",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430743&Reference=87167618670"
+  },
+  "87167620290": {
+    "statusMessage": "",
+    "reference": "87167620290",
+    "designation": "bride de raccordement",
+    "ean": "4010009826064",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430744&Reference=87167620290"
+  },
+  "87167620260": {
+    "statusMessage": "",
+    "reference": "87167620260",
+    "designation": "anode",
+    "ean": "4010009826033",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430746&Reference=87167620260"
+  },
+  "87167620280": {
+    "statusMessage": "",
+    "reference": "87167620280",
+    "designation": "jt trappe de visite",
+    "ean": "4010009826057",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430747&Reference=87167620280"
+  },
+  "87167620250": {
+    "statusMessage": "",
+    "reference": "87167620250",
+    "designation": "canne de puisage egb rpp",
+    "ean": "4010009826026",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430748&Reference=87167620250"
+  },
+  "87167637330": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167637330",
+    "designation": "jaquette",
+    "ean": "4047416834542",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430749&Reference=87167637330"
+  },
+  "87167633480": {
+    "statusMessage": "",
+    "reference": "87167633480",
+    "designation": "tube de raccordement",
+    "ean": "4047416845449",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430751&Reference=87167633480"
+  },
+  "87167638010": {
+    "statusMessage": "",
+    "reference": "87167638010",
+    "designation": "jeu de tubes",
+    "ean": "4047416834559",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430753&Reference=87167638010"
+  },
+  "87167624280": {
+    "statusMessage": "",
+    "reference": "87167624280",
+    "designation": "joint kling.14 x24 x2 (10x)",
+    "ean": "4010009083672",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430754&Reference=87167624280"
+  },
+  "87167633340": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167633340",
+    "designation": "raccord",
+    "ean": "4047416834535",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430756&Reference=87167633340"
+  },
+  "87167624270": {
+    "statusMessage": "",
+    "reference": "87167624270",
+    "designation": "joint 13,5x18,6x2 (10x)",
+    "ean": "4010009083665",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430755&Reference=87167624270"
+  },
+  "87167286260": {
+    "statusMessage": "",
+    "reference": "87167286260",
+    "designation": "douille coud.ent/sort.san",
+    "ean": "4010009806400",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430762&Reference=87167286260"
+  },
+  "87167637740": {
+    "statusMessage": "",
+    "reference": "87167637740",
+    "designation": "isolation thermique",
+    "ean": "4047416847108",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430766&Reference=87167637740"
+  },
+  "87167637460": {
+    "statusMessage": "",
+    "reference": "87167637460",
+    "designation": "cable",
+    "ean": "4047416847092",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430767&Reference=87167637460"
+  },
+  "87167721710": {
+    "statusMessage": "",
+    "reference": "87167721710",
+    "designation": "tubes racc.rechauf.bil51",
+    "ean": "4010009863946",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54430764&Reference=87167721710"
+  },
+  "8716774290": {
+    "statusMessage": "",
+    "reference": "8716774290",
+    "designation": "ensemble ventouse 80x50",
+    "ean": "4057749972033",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431881&Reference=8716774290"
+  },
+  "8716774205": {
+    "statusMessage": "",
+    "reference": "8716774205",
+    "designation": "joint dia.50",
+    "ean": "4057749842190",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431885&Reference=8716774205"
+  },
+  "8716774210": {
+    "statusMessage": "",
+    "reference": "8716774210",
+    "designation": "tuyau de fumees",
+    "ean": "4057749843074",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431882&Reference=8716774210"
+  },
+  "8716774209": {
+    "statusMessage": "",
+    "reference": "8716774209",
+    "designation": "tuyau de fumees",
+    "ean": "4057749843067",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431883&Reference=8716774209"
+  },
+  "8716774206": {
+    "statusMessage": "",
+    "reference": "8716774206",
+    "designation": "joint dia.80",
+    "ean": "4057749842206",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431884&Reference=8716774206"
+  },
+  "87167632660": {
+    "statusMessage": "",
+    "reference": "87167632660",
+    "designation": "bouchon a/joint",
+    "ean": "4010009691761",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431900&Reference=87167632660"
+  },
+  "8716774219": {
+    "statusMessage": "",
+    "reference": "8716774219",
+    "designation": "bride",
+    "ean": "4057749766403",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431902&Reference=8716774219"
+  },
+  "8716774309": {
+    "statusMessage": "",
+    "reference": "8716774309",
+    "designation": "sachet de miroirs",
+    "ean": "4062321003562",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431910&Reference=8716774309"
+  },
+  "8716774312": {
+    "statusMessage": "",
+    "reference": "8716774312",
+    "designation": "tube arr.air melang.gaz",
+    "ean": "4062321023027",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431937&Reference=8716774312"
+  },
+  "8716774204": {
+    "statusMessage": "",
+    "reference": "8716774204",
+    "designation": "bouchon",
+    "ean": "4057749762030",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431886&Reference=8716774204"
+  },
+  "7716780395": {
+    "statusMessage": "",
+    "reference": "7716780395",
+    "designation": "fc-c50-1000 (allonge 1m dia. 50/80mm)",
+    "ean": "4057749134608",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431901&Reference=7716780395"
+  },
+  "8716774218": {
+    "statusMessage": "",
+    "reference": "8716774218",
+    "designation": "support prise dair",
+    "ean": "4057749765697",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54431898&Reference=8716774218"
+  },
+  "8716774207": {
+    "statusMessage": "",
+    "reference": "8716774207",
+    "designation": "jeu de tubes",
+    "ean": "4057749842213",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54432043&Reference=8716774207"
+  },
+  "87167727340": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167727340",
+    "designation": "cache",
+    "ean": "4010009080626",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744063&Reference=87167727340"
+  },
+  "87167725020": {
+    "statusMessage": "",
+    "reference": "87167725020",
+    "designation": "vis tole cblxs st4,8-22 (x10)",
+    "ean": "4010009878810",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744064&Reference=87167725020"
+  },
+  "87167220480": {
+    "statusMessage": "",
+    "reference": "87167220480",
+    "designation": "jt kling.15 x19 x1,5 (x10)",
+    "ean": "4010009820598",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54432045&Reference=87167220480"
+  },
+  "87101031160": {
+    "statusMessage": "",
+    "reference": "87101031160",
+    "designation": "joint 1/2 (10x)",
+    "ean": "4010009419037",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=54432048&Reference=87101031160"
+  },
+  "87167726930": {
+    "statusMessage": "",
+    "reference": "87167726930",
+    "designation": "habillage",
+    "ean": "4010009100065",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744061&Reference=87167726930"
+  },
+  "87167726790": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167726790",
+    "designation": "sortie fumee equipee",
+    "ean": "4010009080602",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744069&Reference=87167726790"
+  },
+  "87113011300": {
+    "statusMessage": "",
+    "reference": "87113011300",
+    "designation": "collier d.125",
+    "ean": "4010009100423",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744072&Reference=87113011300"
+  },
+  "87105061990": {
+    "statusMessage": "",
+    "reference": "87105061990",
+    "designation": "bouchon (2x)",
+    "ean": "4010009586807",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744070&Reference=87105061990"
+  },
+  "87167711440": {
+    "statusMessage": "",
+    "reference": "87167711440",
+    "designation": "plaque de jonction",
+    "ean": "4010009625926",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744071&Reference=87167711440"
+  },
+  "87167458880": {
+    "statusMessage": "",
+    "reference": "87167458880",
+    "designation": "vase dexpansion",
+    "ean": "4010009812371",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744073&Reference=87167458880"
+  },
+  "87110002190": {
+    "statusMessage": "",
+    "reference": "87110002190",
+    "designation": "couvercle air ambiant",
+    "ean": "4010009545897",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744078&Reference=87110002190"
+  },
+  "87167725710": {
+    "statusMessage": "",
+    "reference": "87167725710",
+    "designation": "tube retour",
+    "ean": "4010009042761",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744109&Reference=87167725710"
+  },
+  "87167714820": {
+    "statusMessage": "",
+    "reference": "87167714820",
+    "designation": "cache lateral",
+    "ean": "4010009659006",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744079&Reference=87167714820"
+  },
+  "87167722170": {
+    "statusMessage": "",
+    "reference": "87167722170",
+    "designation": "flexible de vase",
+    "ean": "4010009716709",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744081&Reference=87167722170"
+  },
+  "87167727650": {
+    "statusMessage": "",
+    "reference": "87167727650",
+    "designation": "tube depart chauffage",
+    "ean": "4010009080640",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744106&Reference=87167727650"
+  },
+  "87107350870": {
+    "statusMessage": "",
+    "reference": "87107350870",
+    "designation": "raccord",
+    "ean": "4010009699897",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744122&Reference=87107350870"
+  },
+  "87167008690": {
+    "statusMessage": "",
+    "reference": "87167008690",
+    "designation": "ecrou 3/4 (10x)",
+    "ean": "4010009800477",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744119&Reference=87167008690"
+  },
+  "87110002920": {
+    "statusMessage": "",
+    "reference": "87110002920",
+    "designation": "chambre de melange",
+    "ean": "4010009699927",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744120&Reference=87110002920"
+  },
+  "87167727780": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167727780",
+    "designation": "diaphragme gaz d.7,2",
+    "ean": "4010009080671",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744123&Reference=87167727780"
+  },
+  "87167725870": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167725870",
+    "designation": "tube gaz",
+    "ean": "4010009080572",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744124&Reference=87167725870"
+  },
+  "87167728060": {
+    "statusMessage": "",
+    "reference": "87167728060",
+    "designation": "bloc gaz",
+    "ean": "4010009135371",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744127&Reference=87167728060"
+  },
+  "8716747368": {
+    "statusMessage": "",
+    "reference": "8716747368",
+    "designation": "kit upmo 15-60 + connecteur",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744136&Reference=8716747368"
+  },
+  "87167725750": {
+    "statusMessage": "",
+    "reference": "87167725750",
+    "designation": "tube arrivee gaz",
+    "ean": "4010009042822",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744129&Reference=87167725750"
+  },
+  "87102050070": {
+    "statusMessage": "",
+    "reference": "87102050070",
+    "designation": "o-ring (10x)",
+    "ean": "4010009419600",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744131&Reference=87102050070"
+  },
+  "87167727700": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167727700",
+    "designation": "kit transf.gaz 23 31",
+    "ean": "4010009078463",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744132&Reference=87167727700"
+  },
+  "87155066990": {
+    "statusMessage": "",
+    "reference": "87155066990",
+    "designation": "facade",
+    "ean": "4010009980964",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744168&Reference=87155066990"
+  },
+  "87167727480": {
+    "statusMessage": "Attention, ce produit est en fin de vie.",
+    "reference": "87167727480",
+    "designation": "faisceau principal",
+    "ean": "4010009043034",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744173&Reference=87167727480"
+  },
+  "87167727240": {
+    "statusMessage": "",
+    "reference": "87167727240",
+    "designation": "tube retour chauffage",
+    "ean": "4010009042976",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744146&Reference=87167727240"
+  },
+  "87167727260": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167727260",
+    "designation": "tube liaison bal/v3v",
+    "ean": "4010009042990",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744156&Reference=87167727260"
+  },
+  "87167727350": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167727350",
+    "designation": "patte",
+    "ean": "4047416645957",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744175&Reference=87167727350"
+  },
+  "87167638960": {
+    "statusMessage": "",
+    "reference": "87167638960",
+    "designation": "capot habillage",
+    "ean": "4047416139838",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61749110&Reference=87167638960"
+  },
+  "87167728200": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167728200",
+    "designation": "sortie fumee equipee",
+    "ean": "4047416673912",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744497&Reference=87167728200"
+  },
+  "87167728380": {
+    "statusMessage": "",
+    "reference": "87167728380",
+    "designation": "faisceau principal",
+    "ean": "4047416673936",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744595&Reference=87167728380"
+  },
+  "87167730370": {
+    "statusMessage": "",
+    "reference": "87167730370",
+    "designation": "echangeur thermique",
+    "ean": "4047416889634",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61744748&Reference=87167730370"
+  },
+  "87167640710": {
+    "statusMessage": "",
+    "reference": "87167640710",
+    "designation": "faisceau principal",
+    "ean": "4047416141824",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61749215&Reference=87167640710"
+  },
+  "87167640400": {
+    "statusMessage": "",
+    "reference": "87167640400",
+    "designation": "joint detancheite",
+    "ean": "4047416141756",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61749114&Reference=87167640400"
+  },
+  "87167638770": {
+    "statusMessage": "",
+    "reference": "87167638770",
+    "designation": "equerre",
+    "ean": "4047416141701",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61749153&Reference=87167638770"
+  },
+  "87167638640": {
+    "statusMessage": "",
+    "reference": "87167638640",
+    "designation": "tube",
+    "ean": "4047416141688",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61749227&Reference=87167638640"
+  },
+  "87167638700": {
+    "statusMessage": "",
+    "reference": "87167638700",
+    "designation": "tube",
+    "ean": "4047416139807",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=61749223&Reference=87167638700"
+  },
+  "87167712950": {
+    "statusMessage": "",
+    "reference": "87167712950",
+    "designation": "limiteur de debit",
+    "ean": "4010009615668",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603727&Reference=87167712950"
+  },
+  "87167727690": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167727690",
+    "designation": "kit transf.gaz 23 31",
+    "ean": "4010009078456",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603682&Reference=87167727690"
+  },
+  "87167727030": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87167727030",
+    "designation": "faisceau principal",
+    "ean": "4010009042877",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603720&Reference=87167727030"
+  },
+  "87174010160": {
+    "statusMessage": "",
+    "reference": "87174010160",
+    "designation": "soupape de surppression (l) 15bar",
+    "ean": "4010009468950",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603729&Reference=87174010160"
+  },
+  "87167710420": {
+    "statusMessage": "",
+    "reference": "87167710420",
+    "designation": "raccord",
+    "ean": "4010009615385",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603735&Reference=87167710420"
+  },
+  "87134030130": {
+    "statusMessage": "",
+    "reference": "87134030130",
+    "designation": "vis 4x15 (10x)",
+    "ean": "4010009453031",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603731&Reference=87134030130"
+  },
+  "87167727100": {
+    "statusMessage": "",
+    "reference": "87167727100",
+    "designation": "tube arrivee eau froide",
+    "ean": "4010009042921",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603744&Reference=87167727100"
+  },
+  "87167711270": {
+    "statusMessage": "",
+    "reference": "87167711270",
+    "designation": "filtre",
+    "ean": "4010009615453",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603736&Reference=87167711270"
+  },
+  "87167712410": {
+    "statusMessage": "",
+    "reference": "87167712410",
+    "designation": "vis (10x)",
+    "ean": "4010009626039",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603738&Reference=87167712410"
+  },
+  "87167716300": {
+    "statusMessage": "",
+    "reference": "87167716300",
+    "designation": "carter bloc hydraulique",
+    "ean": "4010009626367",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603740&Reference=87167716300"
+  },
+  "87167727120": {
+    "statusMessage": "",
+    "reference": "87167727120",
+    "designation": "tube depart chauffage",
+    "ean": "4010009042938",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603747&Reference=87167727120"
+  },
+  "87167727390": {
+    "statusMessage": "",
+    "reference": "87167727390",
+    "designation": "tube sortie sanitaire",
+    "ean": "4010009080633",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603748&Reference=87167727390"
+  },
+  "87167721380": {
+    "statusMessage": "",
+    "reference": "87167721380",
+    "designation": "tube liais.v3v/echang.plaques",
+    "ean": "4010009710134",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603746&Reference=87167721380"
+  },
+  "87102050800": {
+    "statusMessage": "",
+    "reference": "87102050800",
+    "designation": "joint torique 7,75x2,1 (10x)",
+    "ean": "4010009549581",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603751&Reference=87102050800"
+  },
+  "87167714250": {
+    "statusMessage": "",
+    "reference": "87167714250",
+    "designation": "ecrou (10x)",
+    "ean": "4010009626183",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603752&Reference=87167714250"
+  },
+  "29106124320": {
+    "statusMessage": "",
+    "reference": "29106124320",
+    "designation": "vis de fixation 4,8x13 (10x)",
+    "ean": "4010009385905",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63603753&Reference=29106124320"
+  },
+  "87228801630": {
+    "statusMessage": "",
+    "reference": "87228801630",
+    "designation": "joint 12.37x2.62 epdm (10x)",
+    "ean": "4010009593447",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63634515&Reference=87228801630"
+  },
+  "87167728260": {
+    "statusMessage": "",
+    "reference": "87167728260",
+    "designation": "faisceau principal",
+    "ean": "4047416673929",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=63629497&Reference=87167728260"
+  },
+  "87101032090": {
+    "statusMessage": "",
+    "reference": "87101032090",
+    "designation": "joint",
+    "ean": "4010009966722",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019693&Reference=87101032090"
+  },
+  "87154073280": {
+    "statusMessage": "",
+    "reference": "87154073280",
+    "designation": "vase dexpansion gb072 14-24(k)/ gb172",
+    "ean": "4010009284116",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019690&Reference=87154073280"
+  },
+  "29123011540": {
+    "statusMessage": "",
+    "reference": "29123011540",
+    "designation": "vis m5x12 (10x)",
+    "ean": "4010009386391",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019691&Reference=29123011540"
+  },
+  "87107353180": {
+    "statusMessage": "",
+    "reference": "87107353180",
+    "designation": "tube",
+    "ean": "4010009968467",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019748&Reference=87107353180"
+  },
+  "8737712658": {
+    "statusMessage": "",
+    "reference": "8737712658",
+    "designation": "tube gaz",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019739&Reference=8737712658"
+  },
+  "87161074370": {
+    "statusMessage": "",
+    "reference": "87161074370",
+    "designation": "joint torique 12.5x3 wras / ktw (10x)",
+    "ean": "4010009968528",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019751&Reference=87161074370"
+  },
+  "87107353060": {
+    "statusMessage": "",
+    "reference": "87107353060",
+    "designation": "tube depart",
+    "ean": "4010009968443",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019753&Reference=87107353060"
+  },
+  "87161064270": {
+    "statusMessage": "",
+    "reference": "87161064270",
+    "designation": "tube sortie sanitaire",
+    "ean": "4010009876250",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019761&Reference=87161064270"
+  },
+  "87107353240": {
+    "statusMessage": "",
+    "reference": "87107353240",
+    "designation": "tube retour",
+    "ean": "4010009968474",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019755&Reference=87107353240"
+  },
+  "87107353050": {
+    "statusMessage": "",
+    "reference": "87107353050",
+    "designation": "tube arrivee eau froide",
+    "ean": "4010009968436",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019758&Reference=87107353050"
+  },
+  "8748300956": {
+    "statusMessage": "",
+    "reference": "8748300956",
+    "designation": "circuit imprime",
+    "ean": "4060000000000",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019777&Reference=8748300956"
+  },
+  "87144321600": {
+    "statusMessage": "",
+    "reference": "87144321600",
+    "designation": "ci de codage 2160 (21,23)",
+    "ean": "4054925285161",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019779&Reference=87144321600"
+  },
+  "87161064280": {
+    "statusMessage": "",
+    "reference": "87161064280",
+    "designation": "tube",
+    "ean": "4010009876267",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019763&Reference=87161064280"
+  },
+  "87144321610": {
+    "statusMessage": "",
+    "reference": "87144321610",
+    "designation": "ci de codage 2161 (31)",
+    "ean": "4054925285185",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019780&Reference=87144321610"
+  },
+  "8737708511": {
+    "statusMessage": "",
+    "reference": "8737708511",
+    "designation": "faisceau",
+    "ean": "4057749658654",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019787&Reference=8737708511"
+  },
+  "87182251220": {
+    "statusMessage": "",
+    "reference": "87182251220",
+    "designation": "faisceau",
+    "ean": "4047416918075",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019786&Reference=87182251220"
+  },
+  "7738112004": {
+    "statusMessage": "",
+    "reference": "7738112004",
+    "designation": "gas conversion kit gvac 25-1mn 31>21,23",
+    "ean": "4054925286649",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019792&Reference=7738112004"
+  },
+  "87161082120": {
+    "statusMessage": "",
+    "reference": "87161082120",
+    "designation": "corps de chauffe",
+    "ean": "4010009974628",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019795&Reference=87161082120"
+  },
+  "87161064350": {
+    "statusMessage": "",
+    "reference": "87161064350",
+    "designation": "joint detancheite sek wu 15mm",
+    "ean": "4010009876038",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019796&Reference=87161064350"
+  },
+  "7738112005": {
+    "statusMessage": "",
+    "reference": "7738112005",
+    "designation": "gas conversion kit gvac 25-1mn 21,23>31",
+    "ean": "4054925286656",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019793&Reference=7738112005"
+  },
+  "87161064250": {
+    "statusMessage": "",
+    "reference": "87161064250",
+    "designation": "tampon en caoutchouc",
+    "ean": "4010009876236",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019799&Reference=87161064250"
+  },
+  "87161063560": {
+    "statusMessage": "",
+    "reference": "87161063560",
+    "designation": "dispositif de depart",
+    "ean": "4010009876007",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019797&Reference=87161063560"
+  },
+  "87167716870": {
+    "statusMessage": "",
+    "reference": "87167716870",
+    "designation": "vis m5x32",
+    "ean": "4010009876427",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019798&Reference=87167716870"
+  },
+  "87145000810": {
+    "statusMessage": "",
+    "reference": "87145000810",
+    "designation": "sonde de temperature",
+    "ean": "4010009875987",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019801&Reference=87145000810"
+  },
+  "87161065490": {
+    "statusMessage": "",
+    "reference": "87161065490",
+    "designation": "clip 13mm (1x)",
+    "ean": "4010009876120",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019807&Reference=87161065490"
+  },
+  "87161065660": {
+    "statusMessage": "",
+    "reference": "87161065660",
+    "designation": "bouchon",
+    "ean": "4010009977070",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019808&Reference=87161065660"
+  },
+  "87161074360": {
+    "statusMessage": "",
+    "reference": "87161074360",
+    "designation": "joint torique 16x3 epdm (10x)",
+    "ean": "4010009160496",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019817&Reference=87161074360"
+  },
+  "87105062860": {
+    "statusMessage": "",
+    "reference": "87105062860",
+    "designation": "raccord",
+    "ean": "4010009134084",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019809&Reference=87105062860"
+  },
+  "87161064420": {
+    "statusMessage": "",
+    "reference": "87161064420",
+    "designation": "dispositif de retour",
+    "ean": "4010009876069",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019811&Reference=87161064420"
+  },
+  "87161065670": {
+    "statusMessage": "",
+    "reference": "87161065670",
+    "designation": "bouchon",
+    "ean": "4010009035404",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019816&Reference=87161065670"
+  },
+  "87161064320": {
+    "statusMessage": "",
+    "reference": "87161064320",
+    "designation": "clip",
+    "ean": "4010009876021",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019819&Reference=87161064320"
+  },
+  "87161068150": {
+    "statusMessage": "",
+    "reference": "87161068150",
+    "designation": "joint de fixation",
+    "ean": "4010009876168",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019820&Reference=87161068150"
+  },
+  "8716122562": {
+    "statusMessage": "",
+    "reference": "8716122562",
+    "designation": "sonde de débit",
+    "ean": "4062320000000",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019824&Reference=8716122562"
+  },
+  "87161068480": {
+    "statusMessage": "",
+    "reference": "87161068480",
+    "designation": "vis m5 stainless",
+    "ean": "4010009876199",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019822&Reference=87161068480"
+  },
+  "87161068470": {
+    "statusMessage": "",
+    "reference": "87161068470",
+    "designation": "servomoteur",
+    "ean": "4010009876182",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019823&Reference=87161068470"
+  },
+  "87161064850": {
+    "statusMessage": "",
+    "reference": "87161064850",
+    "designation": "injecteur",
+    "ean": "4010009876090",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019830&Reference=87161064850"
+  },
+  "8716122563": {
+    "statusMessage": "",
+    "reference": "8716122563",
+    "designation": "Sonde de débit",
+    "ean": "4062321821968",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019825&Reference=8716122563"
+  },
+  "87161064330": {
+    "statusMessage": "",
+    "reference": "87161064330",
+    "designation": "raccord",
+    "ean": "4010009876281",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019828&Reference=87161064330"
+  },
+  "87161064380": {
+    "statusMessage": "",
+    "reference": "87161064380",
+    "designation": "clip",
+    "ean": "4010009876045",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019832&Reference=87161064380"
+  },
+  "87182217280": {
+    "statusMessage": "",
+    "reference": "87182217280",
+    "designation": "circulateur upm 15-70chg",
+    "ean": "4010009677116",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019831&Reference=87182217280"
+  },
+  "87172045560": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87172045560",
+    "designation": "moteur de circulateur",
+    "ean": "4010009104759",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019839&Reference=87172045560"
+  },
+  "87161064450": {
+    "statusMessage": "",
+    "reference": "87161064450",
+    "designation": "degazeur",
+    "ean": "4010009876076",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019833&Reference=87161064450"
+  },
+  "87155021140": {
+    "statusMessage": "",
+    "reference": "87155021140",
+    "designation": "raccord en t",
+    "ean": "4010009970736",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019838&Reference=87155021140"
+  },
+  "87161070440": {
+    "statusMessage": "",
+    "reference": "87161070440",
+    "designation": "limiteur de debit",
+    "ean": "4010009876410",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019841&Reference=87161070440"
+  },
+  "87161127860": {
+    "statusMessage": "",
+    "reference": "87161127860",
+    "designation": "couvercle",
+    "ean": "4010009111016",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67019842&Reference=87161127860"
+  },
+  "87160122830": {
+    "statusMessage": "",
+    "reference": "87160122830",
+    "designation": "joint",
+    "ean": "4010009567431",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395094&Reference=87160122830"
+  },
+  "87376005000": {
+    "statusMessage": "",
+    "reference": "87376005000",
+    "designation": "habillage",
+    "ean": "4051516209469",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395093&Reference=87376005000"
+  },
+  "87182228280": {
+    "statusMessage": "",
+    "reference": "87182228280",
+    "designation": "signe de marque elm",
+    "ean": "4047416119236",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395095&Reference=87182228280"
+  },
+  "87186411680": {
+    "statusMessage": "",
+    "reference": "87186411680",
+    "designation": "cadre de porte",
+    "ean": "4047416155630",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395096&Reference=87186411680"
+  },
+  "87182243020": {
+    "statusMessage": "",
+    "reference": "87182243020",
+    "designation": "serrure (1x)",
+    "ean": "4047416772936",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395098&Reference=87182243020"
+  },
+  "29106194090": {
+    "statusMessage": "",
+    "reference": "29106194090",
+    "designation": "vis (10x)",
+    "ean": "4010009385974",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395100&Reference=29106194090"
+  },
+  "87186411690": {
+    "statusMessage": "",
+    "reference": "87186411690",
+    "designation": "cache",
+    "ean": "4047416155647",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395099&Reference=87186411690"
+  },
+  "87161425020": {
+    "statusMessage": "",
+    "reference": "87161425020",
+    "designation": "vase d´expansion",
+    "ean": "4010009727897",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395101&Reference=87161425020"
+  },
+  "87160109290": {
+    "statusMessage": "",
+    "reference": "87160109290",
+    "designation": "support",
+    "ean": "4010009091745",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395102&Reference=87160109290"
+  },
+  "87199051460": {
+    "statusMessage": "",
+    "reference": "87199051460",
+    "designation": "vis m4x6 (10x)",
+    "ean": "4051516024611",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395103&Reference=87199051460"
+  },
+  "87167559320": {
+    "statusMessage": "",
+    "reference": "87167559320",
+    "designation": "couvercle",
+    "ean": "4010009625865",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395104&Reference=87167559320"
+  },
+  "87106090150": {
+    "statusMessage": "",
+    "reference": "87106090150",
+    "designation": "ecrou 4,8mm (10x)",
+    "ean": "4010009421801",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395109&Reference=87106090150"
+  },
+  "87160122660": {
+    "statusMessage": "",
+    "reference": "87160122660",
+    "designation": "tube",
+    "ean": "4010009567189",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395111&Reference=87160122660"
+  },
+  "29106124240": {
+    "statusMessage": "",
+    "reference": "29106124240",
+    "designation": "vis 4,2x9,5 (10x)",
+    "ean": "4010009385882",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395105&Reference=29106124240"
+  },
+  "87161069390": {
+    "statusMessage": "",
+    "reference": "87161069390",
+    "designation": "tuyau de fumees haut",
+    "ean": "4010009867128",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395107&Reference=87161069390"
+  },
+  "87134011090": {
+    "statusMessage": "",
+    "reference": "87134011090",
+    "designation": "vis (10x) m5x15",
+    "ean": "4010009153504",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395114&Reference=87134011090"
+  },
+  "87186408420": {
+    "statusMessage": "",
+    "reference": "87186408420",
+    "designation": "cadre de montage",
+    "ean": "4047416153766",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395116&Reference=87186408420"
+  },
+  "87160122640": {
+    "statusMessage": "",
+    "reference": "87160122640",
+    "designation": "couvercle",
+    "ean": "4010009567172",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395112&Reference=87160122640"
+  },
+  "87160110400": {
+    "statusMessage": "",
+    "reference": "87160110400",
+    "designation": "support",
+    "ean": "4010009153566",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395113&Reference=87160110400"
+  },
+  "87167714660": {
+    "statusMessage": "",
+    "reference": "87167714660",
+    "designation": "joint",
+    "ean": "4047416854434",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395120&Reference=87167714660"
+  },
+  "87186409690": {
+    "statusMessage": "",
+    "reference": "87186409690",
+    "designation": "support",
+    "ean": "4047416153773",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395117&Reference=87186409690"
+  },
+  "87160122620": {
+    "statusMessage": "",
+    "reference": "87160122620",
+    "designation": "equerre",
+    "ean": "4010009567165",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395118&Reference=87160122620"
+  },
+  "87160121220": {
+    "statusMessage": "",
+    "reference": "87160121220",
+    "designation": "equerre",
+    "ean": "4010009673347",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395119&Reference=87160121220"
+  },
+  "87160115600": {
+    "statusMessage": "",
+    "reference": "87160115600",
+    "designation": "couvercle",
+    "ean": "4010009113942",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395121&Reference=87160115600"
+  },
+  "29181601560": {
+    "statusMessage": "",
+    "reference": "29181601560",
+    "designation": "vis",
+    "ean": "4010009866831",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395127&Reference=29181601560"
+  },
+  "87154160390": {
+    "statusMessage": "",
+    "reference": "87154160390",
+    "designation": "echangeur de chaleur",
+    "ean": "4010009629863",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395123&Reference=87154160390"
+  },
+  "87154160020": {
+    "statusMessage": "",
+    "reference": "87154160020",
+    "designation": "recuperateur de condensats",
+    "ean": "4010009573579",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395125&Reference=87154160020"
+  },
+  "87113048590": {
+    "statusMessage": "",
+    "reference": "87113048590",
+    "designation": "support",
+    "ean": "4010009566939",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395132&Reference=87113048590"
+  },
+  "87101031910": {
+    "statusMessage": "",
+    "reference": "87101031910",
+    "designation": "joint d`etanchetite",
+    "ean": "4010009866848",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395128&Reference=87101031910"
+  },
+  "87156000240": {
+    "statusMessage": "",
+    "reference": "87156000240",
+    "designation": "sachet de miroirs",
+    "ean": "4010009700029",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395133&Reference=87156000240"
+  },
+  "87172044100": {
+    "statusMessage": "",
+    "reference": "87172044100",
+    "designation": "ventilateur",
+    "ean": "4010009567639",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395145&Reference=87172044100"
+  },
+  "87133011800": {
+    "statusMessage": "",
+    "reference": "87133011800",
+    "designation": "ecrou m8",
+    "ean": "4010009866886",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395141&Reference=87133011800"
+  },
+  "87154051800": {
+    "statusMessage": "",
+    "reference": "87154051800",
+    "designation": "support",
+    "ean": "4010009566946",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395146&Reference=87154051800"
+  },
+  "87167637000": {
+    "statusMessage": "",
+    "reference": "87167637000",
+    "designation": "chambre de melange",
+    "ean": "4047416996134",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395147&Reference=87167637000"
+  },
+  "29167105290": {
+    "statusMessage": "",
+    "reference": "29167105290",
+    "designation": "joint plat (10x)",
+    "ean": "4010009632047",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395153&Reference=29167105290"
+  },
+  "87160122710": {
+    "statusMessage": "",
+    "reference": "87160122710",
+    "designation": "tube gaz",
+    "ean": "4010009567356",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395152&Reference=87160122710"
+  },
+  "87376005020": {
+    "statusMessage": "",
+    "reference": "87376005020",
+    "designation": "tube gaz",
+    "ean": "4051516264840",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395157&Reference=87376005020"
+  },
+  "87160124850": {
+    "statusMessage": "",
+    "reference": "87160124850",
+    "designation": "bloc gaz",
+    "ean": "4010009567622",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395154&Reference=87160124850"
+  },
+  "87161068000": {
+    "statusMessage": "",
+    "reference": "87161068000",
+    "designation": "joint plat",
+    "ean": "4010009984450",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395155&Reference=87161068000"
+  },
+  "87161066330": {
+    "statusMessage": "",
+    "reference": "87161066330",
+    "designation": "contact a pression",
+    "ean": "4010009974772",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395159&Reference=87161066330"
+  },
+  "87160113770": {
+    "statusMessage": "",
+    "reference": "87160113770",
+    "designation": "support",
+    "ean": "4010009112075",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395160&Reference=87160113770"
+  },
+  "87160101130": {
+    "statusMessage": "",
+    "reference": "87160101130",
+    "designation": "flexible",
+    "ean": "4010009684701",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395161&Reference=87160101130"
+  },
+  "8737604214": {
+    "statusMessage": "",
+    "reference": "8737604214",
+    "designation": "pompe upmo 15-60 cacao 14 3h",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395163&Reference=8737604214"
+  },
+  "87160107930": {
+    "statusMessage": "",
+    "reference": "87160107930",
+    "designation": "raccord",
+    "ean": "4010009108115",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395164&Reference=87160107930"
+  },
+  "87167715970": {
+    "statusMessage": "",
+    "reference": "87167715970",
+    "designation": "joint torique 16x3 (x10)",
+    "ean": "4010009108207",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395167&Reference=87167715970"
+  },
+  "87186434270": {
+    "statusMessage": "",
+    "reference": "87186434270",
+    "designation": "soupape de securite",
+    "ean": "4051516683436",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395165&Reference=87186434270"
+  },
+  "87147070240": {
+    "statusMessage": "",
+    "reference": "87147070240",
+    "designation": "epingle (10x)",
+    "ean": "4010009633068",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395168&Reference=87147070240"
+  },
+  "87167719870": {
+    "statusMessage": "",
+    "reference": "87167719870",
+    "designation": "echangeur de chaleur",
+    "ean": "4010009108214",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395176&Reference=87167719870"
+  },
+  "87185050390": {
+    "statusMessage": "",
+    "reference": "87185050390",
+    "designation": "purgeur",
+    "ean": "4010009621119",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395171&Reference=87185050390"
+  },
+  "87102050900": {
+    "statusMessage": "",
+    "reference": "87102050900",
+    "designation": "joint torique 9,19x2,62 (x10)",
+    "ean": "4010009632054",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395169&Reference=87102050900"
+  },
+  "87101031640": {
+    "statusMessage": "",
+    "reference": "87101031640",
+    "designation": "joint 30x22,2x1,5 (10x)",
+    "ean": "4010009099345",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395170&Reference=87101031640"
+  },
+  "87186422110": {
+    "statusMessage": "",
+    "reference": "87186422110",
+    "designation": "3-voies vanne",
+    "ean": "4051516056803",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395178&Reference=87186422110"
+  },
+  "87186429570": {
+    "statusMessage": "",
+    "reference": "87186429570",
+    "designation": "servomoteur",
+    "ean": "4051516067939",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395179&Reference=87186429570"
+  },
+  "87186421930": {
+    "statusMessage": "",
+    "reference": "87186421930",
+    "designation": "tuyauterie ch out saia w/o adaptor",
+    "ean": "4051516056773",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395183&Reference=87186421930"
+  },
+  "87186405650": {
+    "statusMessage": "",
+    "reference": "87186405650",
+    "designation": "sert-câble (10x)",
+    "ean": "4050000000000",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395180&Reference=87186405650"
+  },
+  "87186420590": {
+    "statusMessage": "",
+    "reference": "87186420590",
+    "designation": "tube plaque echange chaleur entree saia",
+    "ean": "4051516056735",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395181&Reference=87186420590"
+  },
+  "87160108090": {
+    "statusMessage": "",
+    "reference": "87160108090",
+    "designation": "sonde de temperature",
+    "ean": "4010009108146",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395186&Reference=87160108090"
+  },
+  "87186433560": {
+    "statusMessage": "",
+    "reference": "87186433560",
+    "designation": "tuyauterie saia",
+    "ean": "4051516209438",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395185&Reference=87186433560"
+  },
+  "87199053350": {
+    "statusMessage": "",
+    "reference": "87199053350",
+    "designation": "sert-cable (10x)",
+    "ean": "4010009864875",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395189&Reference=87199053350"
+  },
+  "87186432810": {
+    "statusMessage": "",
+    "reference": "87186432810",
+    "designation": "tube",
+    "ean": "4051516578787",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395191&Reference=87186432810"
+  },
+  "87182264100": {
+    "statusMessage": "",
+    "reference": "87182264100",
+    "designation": "robinet",
+    "ean": "4051516171629",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395188&Reference=87182264100"
+  },
+  "87160118200": {
+    "statusMessage": "",
+    "reference": "87160118200",
+    "designation": "corps de turbine",
+    "ean": "4010009151463",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395193&Reference=87160118200"
+  },
+  "87186445540": {
+    "statusMessage": "",
+    "reference": "87186445540",
+    "designation": "vis din7500 m4x12 (10x)",
+    "ean": "4054925330809",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395195&Reference=87186445540"
+  },
+  "87160108080": {
+    "statusMessage": "",
+    "reference": "87160108080",
+    "designation": "tuyauterie",
+    "ean": "4010009108139",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395203&Reference=87160108080"
+  },
+  "87376007810": {
+    "statusMessage": "Attention, ce produit est en fin de vie.",
+    "reference": "87376007810",
+    "designation": "turbine",
+    "ean": "4051516713676",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395202&Reference=87376007810"
+  },
+  "87161410610": {
+    "statusMessage": "",
+    "reference": "87161410610",
+    "designation": "limiteur de debit 12 l/min",
+    "ean": "4010009950769",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395200&Reference=87161410610"
+  },
+  "87160110670": {
+    "statusMessage": "",
+    "reference": "87160110670",
+    "designation": "manometre",
+    "ean": "4010009111917",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395206&Reference=87160110670"
+  },
+  "87160107850": {
+    "statusMessage": "",
+    "reference": "87160107850",
+    "designation": "coude",
+    "ean": "4010009108092",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395208&Reference=87160107850"
+  },
+  "87186448950": {
+    "statusMessage": "",
+    "reference": "87186448950",
+    "designation": "tube flexible de raccordement sanitaire",
+    "ean": "4054925281057",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395211&Reference=87186448950"
+  },
+  "87186408540": {
+    "statusMessage": "",
+    "reference": "87186408540",
+    "designation": "tube retour distribution",
+    "ean": "4047416845029",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395209&Reference=87186408540"
+  },
+  "87160107950": {
+    "statusMessage": "",
+    "reference": "87160107950",
+    "designation": "tube",
+    "ean": "4010009108122",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395210&Reference=87160107950"
+  },
+  "87144018960": {
+    "statusMessage": "",
+    "reference": "87144018960",
+    "designation": "faisceau circulateur",
+    "ean": "4010009950271",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395212&Reference=87144018960"
+  },
+  "87160122720": {
+    "statusMessage": "",
+    "reference": "87160122720",
+    "designation": "tuyauterie",
+    "ean": "4010009567363",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395214&Reference=87160122720"
+  },
+  "87160122760": {
+    "statusMessage": "",
+    "reference": "87160122760",
+    "designation": "tube",
+    "ean": "4010009567387",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395217&Reference=87160122760"
+  },
+  "87186420600": {
+    "statusMessage": "",
+    "reference": "87186420600",
+    "designation": "tube ech. chaleur sortie saia w/o adapt.",
+    "ean": "4051516056742",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395216&Reference=87186420600"
+  },
+  "87376005010": {
+    "statusMessage": "",
+    "reference": "87376005010",
+    "designation": "tube vidange",
+    "ean": "4051516261092",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395219&Reference=87376005010"
+  },
+  "87172076790": {
+    "statusMessage": "",
+    "reference": "87172076790",
+    "designation": "dosseret",
+    "ean": "4010009974086",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395223&Reference=87172076790"
+  },
+  "87186438460": {
+    "statusMessage": "",
+    "reference": "87186438460",
+    "designation": "joint 6x10x1 (10x)",
+    "ean": "4051516578794",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395220&Reference=87186438460"
+  },
+  "8748300941": {
+    "statusMessage": "",
+    "reference": "8748300941",
+    "designation": "Circuit imprimé",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395224&Reference=8748300941"
+  },
+  "87186400270": {
+    "statusMessage": "",
+    "reference": "87186400270",
+    "designation": "couvercle",
+    "ean": "4010009197249",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395236&Reference=87186400270"
+  },
+  "87186493960": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87186493960",
+    "designation": "faisceau delectrodes",
+    "ean": "4054925984118",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395238&Reference=87186493960"
+  },
+  "87144311730": {
+    "statusMessage": "",
+    "reference": "87144311730",
+    "designation": "cle de codage 1173",
+    "ean": "4051516188856",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395227&Reference=87144311730"
+  },
+  "87144311720": {
+    "statusMessage": "",
+    "reference": "87144311720",
+    "designation": "cle de codage 1172",
+    "ean": "4051516188832",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395226&Reference=87144311720"
+  },
+  "87160110510": {
+    "statusMessage": "",
+    "reference": "87160110510",
+    "designation": "cable",
+    "ean": "4010009110071",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395239&Reference=87160110510"
+  },
+  "87376004930": {
+    "statusMessage": "",
+    "reference": "87376004930",
+    "designation": "kit de transformation de gaz 23>31",
+    "ean": "4051516208493",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395242&Reference=87376004930"
+  },
+  "87186435940": {
+    "statusMessage": "",
+    "reference": "87186435940",
+    "designation": "faisceau de cables",
+    "ean": "4051516285913",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395240&Reference=87186435940"
+  },
+  "87199055760": {
+    "statusMessage": "",
+    "reference": "87199055760",
+    "designation": "cable",
+    "ean": "4010009110125",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395241&Reference=87199055760"
+  },
+  "8737602770": {
+    "statusMessage": "",
+    "reference": "8737602770",
+    "designation": "jeu delectrodes",
+    "ean": "4062321072599",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395954&Reference=8737602770"
+  },
+  "87376006160": {
+    "statusMessage": "",
+    "reference": "87376006160",
+    "designation": "tuyau de fumees",
+    "ean": "4054925246650",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395927&Reference=87376006160"
+  },
+  "8737605555": {
+    "statusMessage": "",
+    "reference": "8737605555",
+    "designation": "jeu de maintenance (allumage)",
+    "ean": "4062320000000",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395959&Reference=8737605555"
+  },
+  "87186448360": {
+    "statusMessage": "",
+    "reference": "87186448360",
+    "designation": "circulateur upm2 15-70 cacao",
+    "ean": "4051516746148",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395981&Reference=87186448360"
+  },
+  "87186417890": {
+    "statusMessage": "",
+    "reference": "87186417890",
+    "designation": "support aps",
+    "ean": "4051516816766",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67395978&Reference=87186417890"
+  },
+  "8737602851": {
+    "statusMessage": "",
+    "reference": "8737602851",
+    "designation": "turbine",
+    "ean": "4062321120191",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67396021&Reference=8737602851"
+  },
+  "8737602847": {
+    "statusMessage": "",
+    "reference": "8737602847",
+    "designation": "faisceau d'electrodes",
+    "ean": "4060000000000",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67396057&Reference=8737602847"
+  },
+  "87160136070": {
+    "statusMessage": "",
+    "reference": "87160136070",
+    "designation": "tube flexible de raccordement sanitaire",
+    "ean": "4047416210773",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67396030&Reference=87160136070"
+  },
+  "87186472280": {
+    "statusMessage": "",
+    "reference": "87186472280",
+    "designation": "faisceau de cables",
+    "ean": "4054925626643",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67396059&Reference=87186472280"
+  },
+  "87186520790": {
+    "statusMessage": "",
+    "reference": "87186520790",
+    "designation": "faisceau des cables",
+    "ean": "4057749654953",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67396060&Reference=87186520790"
+  },
+  "873790495A0": {
+    "statusMessage": "",
+    "reference": "873790495A0",
+    "designation": "cache",
+    "ean": "4051516205102",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600277&Reference=873790495A0"
+  },
+  "8737605553": {
+    "statusMessage": "",
+    "reference": "8737605553",
+    "designation": "câble d#allumage",
+    "ean": "4062320000000",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=67396062&Reference=8737605553"
+  },
+  "87167649250": {
+    "statusMessage": "",
+    "reference": "87167649250",
+    "designation": "axe de porte",
+    "ean": "4051516204938",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600278&Reference=87167649250"
+  },
+  "87167649060": {
+    "statusMessage": "",
+    "reference": "87167649060",
+    "designation": "habillage",
+    "ean": "4051516204891",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600276&Reference=87167649060"
+  },
+  "87161074390": {
+    "statusMessage": "",
+    "reference": "87161074390",
+    "designation": "o-ring 13,87 x 3,53 l (10x)",
+    "ean": "4047416332567",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600288&Reference=87161074390"
+  },
+  "87167641690": {
+    "statusMessage": "",
+    "reference": "87167641690",
+    "designation": "tube sortie evacuation",
+    "ean": "4047416760056",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600281&Reference=87167641690"
+  },
+  "87167637960": {
+    "statusMessage": "",
+    "reference": "87167637960",
+    "designation": "couvercle sans joint",
+    "ean": "4047416760018",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600286&Reference=87167637960"
+  },
+  "87167641860": {
+    "statusMessage": "",
+    "reference": "87167641860",
+    "designation": "joint couvercle caisson",
+    "ean": "4047416760100",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600287&Reference=87167641860"
+  },
+  "87167643660": {
+    "statusMessage": "",
+    "reference": "87167643660",
+    "designation": "flexible de vase expansion ch",
+    "ean": "4047416760322",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600290&Reference=87167643660"
+  },
+  "87186423250": {
+    "statusMessage": "",
+    "reference": "87186423250",
+    "designation": "couvercle acces service",
+    "ean": "4047416679884",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600294&Reference=87186423250"
+  },
+  "8716122434": {
+    "statusMessage": "",
+    "reference": "8716122434",
+    "designation": "vase d´expansion",
+    "ean": "4062320000000",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600292&Reference=8716122434"
+  },
+  "87167622650": {
+    "statusMessage": "",
+    "reference": "87167622650",
+    "designation": "barre accrochage",
+    "ean": "4010009078159",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600293&Reference=87167622650"
+  },
+  "87182256400": {
+    "statusMessage": "",
+    "reference": "87182256400",
+    "designation": "deplaceur",
+    "ean": "4047416984834",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600302&Reference=87182256400"
+  },
+  "87167640680": {
+    "statusMessage": "",
+    "reference": "87167640680",
+    "designation": "echangeur thermique",
+    "ean": "4047416762524",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600297&Reference=87167640680"
+  },
+  "87167642140": {
+    "statusMessage": "",
+    "reference": "87167642140",
+    "designation": "support wb6",
+    "ean": "4047416760148",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600303&Reference=87167642140"
+  },
+  "87167641050": {
+    "statusMessage": "",
+    "reference": "87167641050",
+    "designation": "semelle wb6",
+    "ean": "4047416760049",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600308&Reference=87167641050"
+  },
+  "87167641870": {
+    "statusMessage": "",
+    "reference": "87167641870",
+    "designation": "joint semelle / sortie",
+    "ean": "4047416760117",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600309&Reference=87167641870"
+  },
+  "87167643630": {
+    "statusMessage": "",
+    "reference": "87167643630",
+    "designation": "sortie fumee wb6 equipe",
+    "ean": "4047416760315",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600310&Reference=87167643630"
+  },
+  "87167642380": {
+    "statusMessage": "",
+    "reference": "87167642380",
+    "designation": "tube depart chauffage",
+    "ean": "4047416760230",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600316&Reference=87167642380"
+  },
+  "87167642260": {
+    "statusMessage": "",
+    "reference": "87167642260",
+    "designation": "tube retour chauffage",
+    "ean": "4047416760162",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600318&Reference=87167642260"
+  },
+  "87167641840": {
+    "statusMessage": "",
+    "reference": "87167641840",
+    "designation": "vis cb m5 x 20 inox",
+    "ean": "4047416760087",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600313&Reference=87167641840"
+  },
+  "87167642410": {
+    "statusMessage": "",
+    "reference": "87167642410",
+    "designation": "tube liaison ballon rechauffage",
+    "ean": "4047416760254",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600317&Reference=87167642410"
+  },
+  "87160115090": {
+    "statusMessage": "",
+    "reference": "87160115090",
+    "designation": "tube",
+    "ean": "4010009113775",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600323&Reference=87160115090"
+  },
+  "87182242070": {
+    "statusMessage": "",
+    "reference": "87182242070",
+    "designation": "ventilateur",
+    "ean": "4047416878324",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600329&Reference=87182242070"
+  },
+  "87167644090": {
+    "statusMessage": "",
+    "reference": "87167644090",
+    "designation": "degazeur",
+    "ean": "4047416760476",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600319&Reference=87167644090"
+  },
+  "87186427800": {
+    "statusMessage": "",
+    "reference": "87186427800",
+    "designation": "purgeur",
+    "ean": "4051516034405",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600320&Reference=87186427800"
+  },
+  "87186602080": {
+    "statusMessage": "",
+    "reference": "87186602080",
+    "designation": "joint ventilateur",
+    "ean": "4047416782126",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600330&Reference=87186602080"
+  },
+  "87182228450": {
+    "statusMessage": "",
+    "reference": "87182228450",
+    "designation": "membrane",
+    "ean": "4047416781822",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600336&Reference=87182228450"
+  },
+  "87186602000": {
+    "statusMessage": "",
+    "reference": "87186602000",
+    "designation": "vis 60x14 (2x)",
+    "ean": "4047416782065",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600332&Reference=87186602000"
+  },
+  "87186601760": {
+    "statusMessage": "",
+    "reference": "87186601760",
+    "designation": "plaque de raccordement",
+    "ean": "4047416782041",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600331&Reference=87186601760"
+  },
+  "87182228440": {
+    "statusMessage": "",
+    "reference": "87182228440",
+    "designation": "carter",
+    "ean": "4047416781808",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600335&Reference=87182228440"
+  },
+  "87186601170": {
+    "statusMessage": "",
+    "reference": "87186601170",
+    "designation": "limitateur air gb 072-24 k",
+    "ean": "4047416782027",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600337&Reference=87186601170"
+  },
+  "87182250840": {
+    "statusMessage": "",
+    "reference": "87182250840",
+    "designation": "equerre",
+    "ean": "4047416880051",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600343&Reference=87182250840"
+  },
+  "87186602030": {
+    "statusMessage": "",
+    "reference": "87186602030",
+    "designation": "tube gaz",
+    "ean": "4047416782089",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600340&Reference=87186602030"
+  },
+  "87167640700": {
+    "statusMessage": "",
+    "reference": "87167640700",
+    "designation": "tube entree fot4",
+    "ean": "4047416760025",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600338&Reference=87167640700"
+  },
+  "87186602270": {
+    "statusMessage": "",
+    "reference": "87186602270",
+    "designation": "coussinet limiteur",
+    "ean": "4047416782157",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600339&Reference=87186602270"
+  },
+  "87167646790": {
+    "statusMessage": "",
+    "reference": "87167646790",
+    "designation": "tube silicone.rouge",
+    "ean": "4051516033279",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600348&Reference=87167646790"
+  },
+  "87182243450": {
+    "statusMessage": "",
+    "reference": "87182243450",
+    "designation": "bloc gaz",
+    "ean": "4047416331843",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600344&Reference=87182243450"
+  },
+  "87161067480": {
+    "statusMessage": "",
+    "reference": "87161067480",
+    "designation": "joint torique 12,5 x3 wras / ktw (1x)",
+    "ean": "4010009876366",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600353&Reference=87161067480"
+  },
+  "87167650340": {
+    "statusMessage": "",
+    "reference": "87167650340",
+    "designation": "tube entree gaz",
+    "ean": "4051516328351",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600347&Reference=87167650340"
+  },
+  "87161139150": {
+    "statusMessage": "",
+    "reference": "87161139150",
+    "designation": "tube retour chauffage",
+    "ean": "4047416759999",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600355&Reference=87161139150"
+  },
+  "87161139050": {
+    "statusMessage": "",
+    "reference": "87161139050",
+    "designation": "raccord",
+    "ean": "4047416332642",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600358&Reference=87161139050"
+  },
+  "87186819200": {
+    "statusMessage": "",
+    "reference": "87186819200",
+    "designation": "clip (10x)",
+    "ean": "4047416333687",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600365&Reference=87186819200"
+  },
+  "871861054A0": {
+    "statusMessage": "",
+    "reference": "871861054A0",
+    "designation": "pompe 3pk/43",
+    "ean": "4047416333168",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600362&Reference=871861054A0"
+  },
+  "8737712788": {
+    "statusMessage": "",
+    "reference": "8737712788",
+    "designation": "servomoteur",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600364&Reference=8737712788"
+  },
+  "87161139110": {
+    "statusMessage": "",
+    "reference": "87161139110",
+    "designation": "raccord soupape de securite",
+    "ean": "4047416332680",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600368&Reference=87161139110"
+  },
+  "87182224780": {
+    "statusMessage": "",
+    "reference": "87182224780",
+    "designation": "bouchon (5x)",
+    "ean": "4047416333106",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600366&Reference=87182224780"
+  },
+  "87186853800": {
+    "statusMessage": "",
+    "reference": "87186853800",
+    "designation": "dispositif de retour",
+    "ean": "4047416592893",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600367&Reference=87186853800"
+  },
+  "8737602757": {
+    "statusMessage": "",
+    "reference": "8737602757",
+    "designation": "tableau electrique skin mid ratio row ra",
+    "ean": "4062321063665",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600372&Reference=8737602757"
+  },
+  "87186439890": {
+    "statusMessage": "",
+    "reference": "87186439890",
+    "designation": "soupape de securite + joint",
+    "ean": "4054925242218",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600369&Reference=87186439890"
+  },
+  "8716766179": {
+    "statusMessage": "",
+    "reference": "8716766179",
+    "designation": "hcm 1240",
+    "ean": "4057749932198",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600376&Reference=8716766179"
+  },
+  "87445030400": {
+    "statusMessage": "",
+    "reference": "87445030400",
+    "designation": "fusible 5x20 f 5a (50x)",
+    "ean": "4047416666365",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600373&Reference=87445030400"
+  },
+  "29142113020": {
+    "statusMessage": "",
+    "reference": "29142113020",
+    "designation": "vis",
+    "ean": "4051516200411",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600374&Reference=29142113020"
+  },
+  "8716765894": {
+    "statusMessage": "",
+    "reference": "8716765894",
+    "designation": "cable allumeur",
+    "ean": "4057749379986",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600378&Reference=8716765894"
+  },
+  "87167731630": {
+    "statusMessage": "",
+    "reference": "87167731630",
+    "designation": "support lateral",
+    "ean": "4051516204945",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600377&Reference=87167731630"
+  },
+  "7716780431": {
+    "statusMessage": "",
+    "reference": "7716780431",
+    "designation": "kit transf.gaz nat--> but",
+    "ean": "4057749930668",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600381&Reference=7716780431"
+  },
+  "87167647420": {
+    "statusMessage": "",
+    "reference": "87167647420",
+    "designation": "faisceau de cables",
+    "ean": "4051516292577",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600380&Reference=87167647420"
+  },
+  "87167650370": {
+    "statusMessage": "",
+    "reference": "87167650370",
+    "designation": "faisceau de cables",
+    "ean": "4051516328375",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600379&Reference=87167650370"
+  },
+  "87167621520": {
+    "statusMessage": "",
+    "reference": "87167621520",
+    "designation": "ballon 48 l. emaille",
+    "ean": "4010009975946",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600383&Reference=87167621520"
+  },
+  "87167642340": {
+    "statusMessage": "",
+    "reference": "87167642340",
+    "designation": "tube sortie sanitaire",
+    "ean": "4047416760209",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600384&Reference=87167642340"
+  },
+  "87167642300": {
+    "statusMessage": "",
+    "reference": "87167642300",
+    "designation": "tube entree sanitaire",
+    "ean": "4047416760179",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600385&Reference=87167642300"
+  },
+  "87161410520": {
+    "statusMessage": "",
+    "reference": "87161410520",
+    "designation": "limiteur de debit 8l blanc a/adapteur",
+    "ean": "4010009723653",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600389&Reference=87161410520"
+  },
+  "8716766126": {
+    "statusMessage": "",
+    "reference": "8716766126",
+    "designation": "filtre (10x)",
+    "ean": "4057749762566",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600387&Reference=8716766126"
+  },
+  "87161078870": {
+    "statusMessage": "",
+    "reference": "87161078870",
+    "designation": "insert de limiteur de debit 14lt",
+    "ean": "4010009977087",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600388&Reference=87161078870"
+  },
+  "87434010360": {
+    "statusMessage": "",
+    "reference": "87434010360",
+    "designation": "vis m5x12 (10x)",
+    "ean": "4010009516750",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600399&Reference=87434010360"
+  },
+  "87167643780": {
+    "statusMessage": "",
+    "reference": "87167643780",
+    "designation": "isolant ctn",
+    "ean": "4047416760353",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600393&Reference=87167643780"
+  },
+  "87167643580": {
+    "statusMessage": "",
+    "reference": "87167643580",
+    "designation": "support vase expansion ch",
+    "ean": "4047416760285",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600400&Reference=87167643580"
+  },
+  "87167642320": {
+    "statusMessage": "",
+    "reference": "87167642320",
+    "designation": "tube liaison ballon sanitaire",
+    "ean": "4047416760193",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600401&Reference=87167642320"
+  },
+  "87167644400": {
+    "statusMessage": "",
+    "reference": "87167644400",
+    "designation": "tube vase sanitaire",
+    "ean": "4051516292355",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600402&Reference=87167644400"
+  },
+  "87167643860": {
+    "statusMessage": "",
+    "reference": "87167643860",
+    "designation": "raccord soupape sanitaire ktw",
+    "ean": "4047416760438",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600403&Reference=87167643860"
+  },
+  "87167631730": {
+    "statusMessage": "",
+    "reference": "87167631730",
+    "designation": "soupape de securite",
+    "ean": "4010009545484",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600404&Reference=87167631730"
+  },
+  "87167650940": {
+    "statusMessage": "",
+    "reference": "87167650940",
+    "designation": "anode",
+    "ean": "4051516627836",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600414&Reference=87167650940"
+  },
+  "87161049550": {
+    "statusMessage": "",
+    "reference": "87161049550",
+    "designation": "joint torique 3,53 x 20,22id",
+    "ean": "4010009831211",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600405&Reference=87161049550"
+  },
+  "87161139180": {
+    "statusMessage": "",
+    "reference": "87161139180",
+    "designation": "clip (10x)",
+    "ean": "4047416332727",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600410&Reference=87161139180"
+  },
+  "87167642360": {
+    "statusMessage": "",
+    "reference": "87167642360",
+    "designation": "tube retour rechauffage ballon",
+    "ean": "4047416760223",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600412&Reference=87167642360"
+  },
+  "87167621550": {
+    "statusMessage": "",
+    "reference": "87167621550",
+    "designation": "trappe visite bal.emaille",
+    "ean": "4010009975960",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600416&Reference=87167621550"
+  },
+  "87167621540": {
+    "statusMessage": "",
+    "reference": "87167621540",
+    "designation": "jt trappe visite bal.email.",
+    "ean": "4010009975953",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600418&Reference=87167621540"
+  },
+  "87167654200": {
+    "statusMessage": "",
+    "reference": "87167654200",
+    "designation": "canne de puisage email",
+    "ean": "4054925227116",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600417&Reference=87167654200"
+  },
+  "87167710970": {
+    "statusMessage": "",
+    "reference": "87167710970",
+    "designation": "bouchon (5x)",
+    "ean": "4051516823153",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600421&Reference=87167710970"
+  },
+  "7716780430": {
+    "statusMessage": "",
+    "reference": "7716780430",
+    "designation": "kit transf.gaz but--> nat",
+    "ean": "4057749930651",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600732&Reference=7716780430"
+  },
+  "8716747372": {
+    "statusMessage": "",
+    "reference": "8716747372",
+    "designation": "Robinet Gaz",
+    "ean": "4062321515638",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600425&Reference=8716747372"
+  },
+  "87167622620": {
+    "statusMessage": "",
+    "reference": "87167622620",
+    "designation": "tubes disconnecteur",
+    "ean": "4010009078449",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600429&Reference=87167622620"
+  },
+  "8716766181": {
+    "statusMessage": "",
+    "reference": "8716766181",
+    "designation": "hcm 1241",
+    "ean": "4057749932204",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=68600727&Reference=8716766181"
+  },
+  "87144321630": {
+    "statusMessage": "",
+    "reference": "87144321630",
+    "designation": "ci de codage 2163 (31)",
+    "ean": "4054925285222",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=69181445&Reference=87144321630"
+  },
+  "87105052120": {
+    "statusMessage": "",
+    "reference": "87105052120",
+    "designation": "limiteur dair",
+    "ean": "4010009283843",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=69181398&Reference=87105052120"
+  },
+  "87144321620": {
+    "statusMessage": "",
+    "reference": "87144321620",
+    "designation": "ci de codage 2162 (21,23)",
+    "ean": "4054925285208",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=69181444&Reference=87144321620"
+  },
+  "7738112002": {
+    "statusMessage": "",
+    "reference": "7738112002",
+    "designation": "gas conversion kit gvsc 35-1mn 31>21,23",
+    "ean": "4054925286625",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=69181457&Reference=7738112002"
+  },
+  "87113048370": {
+    "statusMessage": "",
+    "reference": "87113048370",
+    "designation": "plaque de jonction",
+    "ean": "4010009283492",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=69181478&Reference=87113048370"
+  },
+  "7738112003": {
+    "statusMessage": "",
+    "reference": "7738112003",
+    "designation": "kit de transformation de gaz",
+    "ean": "4054925286632",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=69181458&Reference=7738112003"
+  },
+  "87107353980": {
+    "statusMessage": "",
+    "reference": "87107353980",
+    "designation": "tube depart",
+    "ean": "4010009283461",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=69181475&Reference=87107353980"
+  },
+  "87107353970": {
+    "statusMessage": "",
+    "reference": "87107353970",
+    "designation": "tube retour",
+    "ean": "4010009283454",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=69181476&Reference=87107353970"
+  },
+  "8716766500": {
+    "statusMessage": "",
+    "reference": "8716766500",
+    "designation": "panneau de facade elm leblanc",
+    "ean": "4062321434304",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604038&Reference=8716766500"
+  },
+  "87161064390": {
+    "statusMessage": "",
+    "reference": "87161064390",
+    "designation": "raccord",
+    "ean": "4010009876052",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=69181486&Reference=87161064390"
+  },
+  "8716766512": {
+    "statusMessage": "",
+    "reference": "8716766512",
+    "designation": "panneau lateral (rd gauche blanc+mousse)",
+    "ean": "4062321448530",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604041&Reference=8716766512"
+  },
+  "8737709138": {
+    "statusMessage": "",
+    "reference": "8737709138",
+    "designation": "lunette facade ronde",
+    "ean": "4057749855947",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604039&Reference=8737709138"
+  },
+  "8716766506": {
+    "statusMessage": "",
+    "reference": "8716766506",
+    "designation": "panneau lateral (rd droit blanc+mousse)",
+    "ean": "4062321434366",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604040&Reference=8716766506"
+  },
+  "8716766504": {
+    "statusMessage": "",
+    "reference": "8716766504",
+    "designation": "sortie fumee inferieure",
+    "ean": "4062321434342",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604046&Reference=8716766504"
+  },
+  "87186824540": {
+    "statusMessage": "",
+    "reference": "87186824540",
+    "designation": "support sortie fumee",
+    "ean": "4051516200657",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604049&Reference=87186824540"
+  },
+  "8716767123": {
+    "statusMessage": "",
+    "reference": "8716767123",
+    "designation": "vase dexpansion 12l",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604042&Reference=8716767123"
+  },
+  "8716766505": {
+    "statusMessage": "",
+    "reference": "8716766505",
+    "designation": "sortie fumee superieure",
+    "ean": "4062321434359",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604047&Reference=8716766505"
+  },
+  "87186500360": {
+    "statusMessage": "",
+    "reference": "87186500360",
+    "designation": "protection anti-pluie",
+    "ean": "4057749672032",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604048&Reference=87186500360"
+  },
+  "8716766508": {
+    "statusMessage": "",
+    "reference": "8716766508",
+    "designation": "couvercle de caisson",
+    "ean": "4062321434397",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604054&Reference=8716766508"
+  },
+  "8716766624": {
+    "statusMessage": "",
+    "reference": "8716766624",
+    "designation": "tube silicone",
+    "ean": "4062321448608",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604052&Reference=8716766624"
+  },
+  "87161093630": {
+    "statusMessage": "",
+    "reference": "87161093630",
+    "designation": "vis no.10x20 hex tete de bride (3x)",
+    "ean": "4051516200503",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604050&Reference=87161093630"
+  },
+  "8716766507": {
+    "statusMessage": "",
+    "reference": "8716766507",
+    "designation": "dispositif de verrouillage panneau",
+    "ean": "4062321434380",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604053&Reference=8716766507"
+  },
+  "8716766524": {
+    "statusMessage": "",
+    "reference": "8716766524",
+    "designation": "verrou tableau electrique",
+    "ean": "4062321434595",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604056&Reference=8716766524"
+  },
+  "29106421620": {
+    "statusMessage": "",
+    "reference": "29106421620",
+    "designation": "vis",
+    "ean": "4010009386148",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604058&Reference=29106421620"
+  },
+  "8737709145": {
+    "statusMessage": "",
+    "reference": "8737709145",
+    "designation": "support attache",
+    "ean": "4057749856012",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604055&Reference=8737709145"
+  },
+  "8737709147": {
+    "statusMessage": "",
+    "reference": "8737709147",
+    "designation": "support appareil de controle",
+    "ean": "4057749856036",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604057&Reference=8737709147"
+  },
+  "8737709149": {
+    "statusMessage": "",
+    "reference": "8737709149",
+    "designation": "clip locking",
+    "ean": "4057749856050",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604061&Reference=8737709149"
+  },
+  "8737709196": {
+    "statusMessage": "",
+    "reference": "8737709196",
+    "designation": "couvercle",
+    "ean": "4057749856418",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604059&Reference=8737709196"
+  },
+  "8737709148": {
+    "statusMessage": "",
+    "reference": "8737709148",
+    "designation": "couvercle ip plux",
+    "ean": "4057749856043",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604060&Reference=8737709148"
+  },
+  "87122010070": {
+    "statusMessage": "",
+    "reference": "87122010070",
+    "designation": "serre-cable",
+    "ean": "4010009975373",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604062&Reference=87122010070"
+  },
+  "8716766628": {
+    "statusMessage": "",
+    "reference": "8716766628",
+    "designation": "plaque daccrochage",
+    "ean": "4062321476335",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604064&Reference=8716766628"
+  },
+  "8716766544": {
+    "statusMessage": "",
+    "reference": "8716766544",
+    "designation": "echangeur thermique 30kw",
+    "ean": "4062321434991",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604067&Reference=8716766544"
+  },
+  "87377044950": {
+    "statusMessage": "",
+    "reference": "87377044950",
+    "designation": "passe-cables 2-poles",
+    "ean": "4051516753757",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604063&Reference=87377044950"
+  },
+  "87154051970": {
+    "statusMessage": "",
+    "reference": "87154051970",
+    "designation": "deflecteur superieur",
+    "ean": "4057749662828",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604071&Reference=87154051970"
+  },
+  "87379035360": {
+    "statusMessage": "",
+    "reference": "87379035360",
+    "designation": "jeu delectrodes",
+    "ean": "4057749663023",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604068&Reference=87379035360"
+  },
+  "87186507890": {
+    "statusMessage": "",
+    "reference": "87186507890",
+    "designation": "joint de bruleur",
+    "ean": "4057749662842",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604069&Reference=87186507890"
+  },
+  "87186509840": {
+    "statusMessage": "",
+    "reference": "87186509840",
+    "designation": "bruleur 30kw",
+    "ean": "4057749672131",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604070&Reference=87186509840"
+  },
+  "8737602342": {
+    "statusMessage": "",
+    "reference": "8737602342",
+    "designation": "deflecteur inferieur",
+    "ean": "4057749838544",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604072&Reference=8737602342"
+  },
+  "8716766513": {
+    "statusMessage": "",
+    "reference": "8716766513",
+    "designation": "collecteur condensat equipe",
+    "ean": "4062321434496",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604074&Reference=8716766513"
+  },
+  "87379026380": {
+    "statusMessage": "",
+    "reference": "87379026380",
+    "designation": "bouchon",
+    "ean": "4057749663016",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604075&Reference=87379026380"
+  },
+  "87186510710": {
+    "statusMessage": "",
+    "reference": "87186510710",
+    "designation": "joint",
+    "ean": "4057749662866",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604073&Reference=87186510710"
+  },
+  "8716766510": {
+    "statusMessage": "",
+    "reference": "8716766510",
+    "designation": "support echangeur thermique",
+    "ean": "4062321434472",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604083&Reference=8716766510"
+  },
+  "8716766514": {
+    "statusMessage": "",
+    "reference": "8716766514",
+    "designation": "collecteur condensat",
+    "ean": "4062321434502",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604076&Reference=8716766514"
+  },
+  "8716766541": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "8716766541",
+    "designation": "tube sortie superieur c6",
+    "ean": "4062321440459",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604084&Reference=8716766541"
+  },
+  "8737602143": {
+    "statusMessage": "",
+    "reference": "8737602143",
+    "designation": "vis m6x18 (10x)",
+    "ean": "4057749704733",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604082&Reference=8737602143"
+  },
+  "8716766617": {
+    "statusMessage": "",
+    "reference": "8716766617",
+    "designation": "ensemble degazeur-coude corps de chauffe",
+    "ean": "4062321448547",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604087&Reference=8716766617"
+  },
+  "87186888010": {
+    "statusMessage": "",
+    "reference": "87186888010",
+    "designation": "sonde de temperature 18mm",
+    "ean": "4051516239084",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604088&Reference=87186888010"
+  },
+  "8737602314": {
+    "statusMessage": "",
+    "reference": "8737602314",
+    "designation": "siphon",
+    "ean": "4057749832757",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604091&Reference=8737602314"
+  },
+  "8716766618": {
+    "statusMessage": "",
+    "reference": "8716766618",
+    "designation": "tube entree c6 coil",
+    "ean": "4062321448554",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604089&Reference=8716766618"
+  },
+  "8716766516": {
+    "statusMessage": "",
+    "reference": "8716766516",
+    "designation": "connecteur siphon assemble",
+    "ean": "4062321434519",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604090&Reference=8716766516"
+  },
+  "8737602313": {
+    "statusMessage": "",
+    "reference": "8737602313",
+    "designation": "joint",
+    "ean": "4057749832740",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604093&Reference=8737602313"
+  },
+  "87379033990": {
+    "statusMessage": "",
+    "reference": "87379033990",
+    "designation": "limiteur de temperature",
+    "ean": "4057749662033",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604096&Reference=87379033990"
+  },
+  "8737712737": {
+    "statusMessage": "",
+    "reference": "8737712737",
+    "designation": "tuyau",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604092&Reference=8737712737"
+  },
+  "8737602343": {
+    "statusMessage": "",
+    "reference": "8737602343",
+    "designation": "sonde de temperature ntc",
+    "ean": "4057749838551",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604094&Reference=8737602343"
+  },
+  "8716766517": {
+    "statusMessage": "",
+    "reference": "8716766517",
+    "designation": "ecrou m8",
+    "ean": "4062321434526",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604095&Reference=8716766517"
+  },
+  "87379029990": {
+    "statusMessage": "",
+    "reference": "87379029990",
+    "designation": "cable dallumage",
+    "ean": "4057749672391",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604097&Reference=87379029990"
+  },
+  "7736700599": {
+    "statusMessage": "",
+    "reference": "7736700599",
+    "designation": "transformateur dallumage",
+    "ean": "4054925505528",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604098&Reference=7736700599"
+  },
+  "8716766620": {
+    "statusMessage": "",
+    "reference": "8716766620",
+    "designation": "tube sortie inferieur c6",
+    "ean": "4062321448523",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604101&Reference=8716766620"
+  },
+  "8716766653": {
+    "statusMessage": "",
+    "reference": "8716766653",
+    "designation": "Purgeur + cup",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604105&Reference=8716766653"
+  },
+  "8716766654": {
+    "statusMessage": "",
+    "reference": "8716766654",
+    "designation": "Kit entretien",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604106&Reference=8716766654"
+  },
+  "8737604361": {
+    "statusMessage": "",
+    "reference": "8737604361",
+    "designation": "Bloc gaz",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604110&Reference=8737604361"
+  },
+  "87186517840": {
+    "statusMessage": "",
+    "reference": "87186517840",
+    "designation": "ventilateur",
+    "ean": "4057749663528",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604108&Reference=87186517840"
+  },
+  "87186518020": {
+    "statusMessage": "",
+    "reference": "87186518020",
+    "designation": "bloc gaz",
+    "ean": "4057749663542",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604109&Reference=87186518020"
+  },
+  "87186506050": {
+    "statusMessage": "",
+    "reference": "87186506050",
+    "designation": "venturi 30kw g20/g31",
+    "ean": "4057749672049",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604111&Reference=87186506050"
+  },
+  "8716766518": {
+    "statusMessage": "",
+    "reference": "8716766518",
+    "designation": "coude sortie ventilateur",
+    "ean": "4062321434533",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604115&Reference=8716766518"
+  },
+  "87186509470": {
+    "statusMessage": "",
+    "reference": "87186509470",
+    "designation": "venturi 30kw g25/gz35a",
+    "ean": "4057749672100",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604112&Reference=87186509470"
+  },
+  "8716117051": {
+    "statusMessage": "",
+    "reference": "8716117051",
+    "designation": "volet de protection",
+    "ean": "4054925284201",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604113&Reference=8716117051"
+  },
+  "8716117050": {
+    "statusMessage": "",
+    "reference": "8716117050",
+    "designation": "clapet volet de protection",
+    "ean": "4054925284195",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604114&Reference=8716117050"
+  },
+  "774600188A0": {
+    "statusMessage": "",
+    "reference": "774600188A0",
+    "designation": "joint",
+    "ean": "4051516196875",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604117&Reference=774600188A0"
+  },
+  "87186517850": {
+    "statusMessage": "",
+    "reference": "87186517850",
+    "designation": "vis m5x15 (3x)",
+    "ean": "4057749663535",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604118&Reference=87186517850"
+  },
+  "87186626260": {
+    "statusMessage": "",
+    "reference": "87186626260",
+    "designation": "joint torique nbr 29x2 (10x)",
+    "ean": "4057749663559",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604122&Reference=87186626260"
+  },
+  "87379028640": {
+    "statusMessage": "Attention, ce produit est en fin de vie.",
+    "reference": "87379028640",
+    "designation": "bouchon de protection",
+    "ean": "4057749663580",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604120&Reference=87379028640"
+  },
+  "8737719057": {
+    "statusMessage": "",
+    "reference": "8737719057",
+    "designation": "conduit d’aspiration d’air",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604121&Reference=8737719057"
+  },
+  "87186510180": {
+    "statusMessage": "",
+    "reference": "87186510180",
+    "designation": "injecteur gaz 30kw g20",
+    "ean": "4057749672186",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604125&Reference=87186510180"
+  },
+  "87186504730": {
+    "statusMessage": "",
+    "reference": "87186504730",
+    "designation": "tube gaz coude",
+    "ean": "4057749663481",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604123&Reference=87186504730"
+  },
+  "87186510170": {
+    "statusMessage": "",
+    "reference": "87186510170",
+    "designation": "injecteur gaz 30kw g31",
+    "ean": "4057749672179",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604124&Reference=87186510170"
+  },
+  "87186684490": {
+    "statusMessage": "",
+    "reference": "87186684490",
+    "designation": "joint gaz valve 41x3 (10x)",
+    "ean": "4054925859645",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604127&Reference=87186684490"
+  },
+  "87161066830": {
+    "statusMessage": "",
+    "reference": "87161066830",
+    "designation": "ecrou",
+    "ean": "4010009984405",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604126&Reference=87161066830"
+  },
+  "87186445530": {
+    "statusMessage": "",
+    "reference": "87186445530",
+    "designation": "vis m8x45",
+    "ean": "6942501798977",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604130&Reference=87186445530"
+  },
+  "87186521960": {
+    "statusMessage": "",
+    "reference": "87186521960",
+    "designation": "cosse de masse 6.3",
+    "ean": "4057749662019",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604131&Reference=87186521960"
+  },
+  "8716766519": {
+    "statusMessage": "",
+    "reference": "8716766519",
+    "designation": "tube gaz",
+    "ean": "4062321434540",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604128&Reference=8716766519"
+  },
+  "87186496680": {
+    "statusMessage": "",
+    "reference": "87186496680",
+    "designation": "couvercle melange gaz-air",
+    "ean": "4057749662835",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604129&Reference=87186496680"
+  },
+  "8737602350": {
+    "statusMessage": "",
+    "reference": "8737602350",
+    "designation": "vanne 3 voies hu2-10 3wv",
+    "ean": "4057749854926",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604145&Reference=8737602350"
+  },
+  "8737602352": {
+    "statusMessage": "",
+    "reference": "8737602352",
+    "designation": "adaptateur ch retour plastique",
+    "ean": "4057749854940",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604140&Reference=8737602352"
+  },
+  "87186404140": {
+    "statusMessage": "",
+    "reference": "87186404140",
+    "designation": "o-ring 18.7x2.7 (10x)",
+    "ean": "4047416333205",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604142&Reference=87186404140"
+  },
+  "8737711825": {
+    "statusMessage": "",
+    "reference": "8737711825",
+    "designation": "tube",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604144&Reference=8737711825"
+  },
+  "8737602355": {
+    "statusMessage": "",
+    "reference": "8737602355",
+    "designation": "clip (10x)",
+    "ean": "4057749854971",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604146&Reference=8737602355"
+  },
+  "8737602349": {
+    "statusMessage": "",
+    "reference": "8737602349",
+    "designation": "joint 23.47x2.62 (10x)",
+    "ean": "4057749854919",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604147&Reference=8737602349"
+  },
+  "8737602348": {
+    "statusMessage": "",
+    "reference": "8737602348",
+    "designation": "adaptateur hu2-10 phe-3wv + joint + epin",
+    "ean": "4057749854902",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604151&Reference=8737602348"
+  },
+  "87186854900": {
+    "statusMessage": "",
+    "reference": "87186854900",
+    "designation": "joint torique 20.22 x 3.53 (10x)",
+    "ean": "4047416333762",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604154&Reference=87186854900"
+  },
+  "8737602356": {
+    "statusMessage": "",
+    "reference": "8737602356",
+    "designation": "clip (10x)",
+    "ean": "4057749854988",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604152&Reference=8737602356"
+  },
+  "87186489730": {
+    "statusMessage": "",
+    "reference": "87186489730",
+    "designation": "adaptateur vase dexpansion + sonde",
+    "ean": "4057749358028",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604159&Reference=87186489730"
+  },
+  "8737605865": {
+    "statusMessage": "",
+    "reference": "8737605865",
+    "designation": "pompe upm4l 68w erp1",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604155&Reference=8737605865"
+  },
+  "8737602345": {
+    "statusMessage": "",
+    "reference": "8737602345",
+    "designation": "volute pompe (manifold plate)",
+    "ean": "4057749854872",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604156&Reference=8737602345"
+  },
+  "8737602346": {
+    "statusMessage": "",
+    "reference": "8737602346",
+    "designation": "joint 34x3 (10x)",
+    "ean": "4057749854889",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604157&Reference=8737602346"
+  },
+  "87186429790": {
+    "statusMessage": "",
+    "reference": "87186429790",
+    "designation": "coude",
+    "ean": "4051516264123",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604166&Reference=87186429790"
+  },
+  "87186632290": {
+    "statusMessage": "",
+    "reference": "87186632290",
+    "designation": "clip de verrouillage",
+    "ean": "4051516834388",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604160&Reference=87186632290"
+  },
+  "87186510420": {
+    "statusMessage": "",
+    "reference": "87186510420",
+    "designation": "sonde de pression",
+    "ean": "4057749358042",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604161&Reference=87186510420"
+  },
+  "8737602347": {
+    "statusMessage": "",
+    "reference": "8737602347",
+    "designation": "raccord soupape de securite",
+    "ean": "4057749854896",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604163&Reference=8737602347"
+  },
+  "8737714734": {
+    "statusMessage": "",
+    "reference": "8737714734",
+    "designation": "tableau electrique acu mhp-23",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604171&Reference=8737714734"
+  },
+  "8716766521": {
+    "statusMessage": "",
+    "reference": "8716766521",
+    "designation": "faisceau de cable haute tension",
+    "ean": "4062321434564",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604173&Reference=8716766521"
+  },
+  "8716766515": {
+    "statusMessage": "",
+    "reference": "8716766515",
+    "designation": "faisceau de cables basse tension coil",
+    "ean": "4062321441500",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604172&Reference=8716766515"
+  },
+  "8737711080": {
+    "statusMessage": "",
+    "reference": "8737711080",
+    "designation": "kit connecteur",
+    "ean": "4062321122638",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604174&Reference=8737711080"
+  },
+  "8716766650": {
+    "statusMessage": "",
+    "reference": "8716766650",
+    "designation": "Cable d alimentation electrique reseau",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604175&Reference=8716766650"
+  },
+  "8737711282": {
+    "statusMessage": "",
+    "reference": "8737711282",
+    "designation": "module mhm avec on off",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604178&Reference=8737711282"
+  },
+  "8737709432": {
+    "statusMessage": "",
+    "reference": "8737709432",
+    "designation": "cable autofill",
+    "ean": "4057749951526",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604176&Reference=8737709432"
+  },
+  "8716766939": {
+    "statusMessage": "",
+    "reference": "8716766939",
+    "designation": "cle de codage acp 20193 h",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604179&Reference=8716766939"
+  },
+  "8737602655": {
+    "statusMessage": "",
+    "reference": "8737602655",
+    "designation": "cache eco (coil)",
+    "ean": "4062321034382",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604177&Reference=8737602655"
+  },
+  "8716766963": {
+    "statusMessage": "",
+    "reference": "8716766963",
+    "designation": "cle de codage acp 20194 lpg",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604180&Reference=8716766963"
+  },
+  "7738113983": {
+    "statusMessage": "",
+    "reference": "7738113983",
+    "designation": "- K 40 RF",
+    "ean": "4062321983154",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604182&Reference=7738113983"
+  },
+  "8737718886": {
+    "statusMessage": "Attention, ce produit est en fin de vie.",
+    "reference": "8737718886",
+    "designation": "module connect-key k 30 rf",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604181&Reference=8737718886"
+  },
+  "7716780502": {
+    "statusMessage": "",
+    "reference": "7716780502",
+    "designation": "kit conversion gaz bosch/elm fr h-> l",
+    "ean": "4062321399788",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604183&Reference=7716780502"
+  },
+  "7716780506": {
+    "statusMessage": "",
+    "reference": "7716780506",
+    "designation": "kit conversion gaz leblanc fr coil h ->",
+    "ean": "4062321401078",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604184&Reference=7716780506"
+  },
+  "8716766532": {
+    "statusMessage": "",
+    "reference": "8716766532",
+    "designation": "isolant sonde ctn",
+    "ean": "4062321434847",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604190&Reference=8716766532"
+  },
+  "7716780507": {
+    "statusMessage": "",
+    "reference": "7716780507",
+    "designation": "kit conv. gaz leblanc fr coil lpg -> h",
+    "ean": "4062321401085",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604185&Reference=7716780507"
+  },
+  "8716766630": {
+    "statusMessage": "",
+    "reference": "8716766630",
+    "designation": "ballon 48 l.inox",
+    "ean": "4062321476304",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604187&Reference=8716766630"
+  },
+  "8716766622": {
+    "statusMessage": "",
+    "reference": "8716766622",
+    "designation": "tube entree eau froide sanitaire coil",
+    "ean": "4062321448585",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604193&Reference=8716766622"
+  },
+  "8716766929": {
+    "statusMessage": "",
+    "reference": "8716766929",
+    "designation": "flexible sanitaire g3/4",
+    "ean": "4060000000000",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604203&Reference=8716766929"
+  },
+  "8716766928": {
+    "statusMessage": "",
+    "reference": "8716766928",
+    "designation": "vase d'expansion sanitaire",
+    "ean": "4060000000000",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604202&Reference=8716766928"
+  },
+  "8716766629": {
+    "statusMessage": "",
+    "reference": "8716766629",
+    "designation": "tube entree ballon coil",
+    "ean": "4062321475741",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604205&Reference=8716766629"
+  },
+  "8716766619": {
+    "statusMessage": "",
+    "reference": "8716766619",
+    "designation": "tube sortie echangeur a plaques coil",
+    "ean": "4062321448561",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604206&Reference=8716766619"
+  },
+  "8716766626": {
+    "statusMessage": "",
+    "reference": "8716766626",
+    "designation": "patte inferieure support vase 12l",
+    "ean": "4062321476311",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604210&Reference=8716766626"
+  },
+  "8716766623": {
+    "statusMessage": "",
+    "reference": "8716766623",
+    "designation": "tube sortie sanitaire (coil)",
+    "ean": "4062321448592",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604207&Reference=8716766623"
+  },
+  "8716766627": {
+    "statusMessage": "",
+    "reference": "8716766627",
+    "designation": "patte support vase 2l",
+    "ean": "4062321476328",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604211&Reference=8716766627"
+  },
+  "8716766621": {
+    "statusMessage": "",
+    "reference": "8716766621",
+    "designation": "tube entree serpentin",
+    "ean": "4062321448578",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604214&Reference=8716766621"
+  },
+  "8716747341": {
+    "statusMessage": "",
+    "reference": "8716747341",
+    "designation": "robinet gaz",
+    "ean": "4062321357030",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604221&Reference=8716747341"
+  },
+  "7716780456": {
+    "statusMessage": "",
+    "reference": "7716780456",
+    "designation": "iw-setci-1",
+    "ean": "4062321358143",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604238&Reference=7716780456"
+  },
+  "87186421090": {
+    "statusMessage": "",
+    "reference": "87186421090",
+    "designation": "vis taptite m5x8",
+    "ean": "4047416373287",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604228&Reference=87186421090"
+  },
+  "7716780444": {
+    "statusMessage": "",
+    "reference": "7716780444",
+    "designation": "hw-setbc-1",
+    "ean": "4062321331566",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604236&Reference=7716780444"
+  },
+  "7716780455": {
+    "statusMessage": "",
+    "reference": "7716780455",
+    "designation": "iw-evd2",
+    "ean": "4062321358136",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604239&Reference=7716780455"
+  },
+  "8716766543": {
+    "statusMessage": "",
+    "reference": "8716766543",
+    "designation": "tube entree c6",
+    "ean": "4062321434977",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604526&Reference=8716766543"
+  },
+  "87186849540": {
+    "statusMessage": "",
+    "reference": "87186849540",
+    "designation": "vis m5x35 (10x)",
+    "ean": "4047416333748",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604574&Reference=87186849540"
+  },
+  "87186844710": {
+    "statusMessage": "",
+    "reference": "87186844710",
+    "designation": "collecteur",
+    "ean": "4047416333724",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604571&Reference=87186844710"
+  },
+  "8737602364": {
+    "statusMessage": "",
+    "reference": "8737602364",
+    "designation": "echangeur a plaques c-phe 22",
+    "ean": "4057749855060",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604578&Reference=8737602364"
+  },
+  "8737711824": {
+    "statusMessage": "",
+    "reference": "8737711824",
+    "designation": "tube",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604579&Reference=8737711824"
+  },
+  "8737602344": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "8737602344",
+    "designation": "circulateur erp",
+    "ean": "4057749854865",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604598&Reference=8737602344"
+  },
+  "8737714735": {
+    "statusMessage": "",
+    "reference": "8737714735",
+    "designation": "tableau electrique acu mhp-20",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604614&Reference=8737714735"
+  },
+  "8737714030": {
+    "statusMessage": "",
+    "reference": "8737714030",
+    "designation": "unite de commande hmi 700",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604621&Reference=8737714030"
+  },
+  "8716766523": {
+    "statusMessage": "",
+    "reference": "8716766523",
+    "designation": "faisceau pompe sanitaire sls",
+    "ean": "4062321434588",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604619&Reference=8716766523"
+  },
+  "8716766962": {
+    "statusMessage": "",
+    "reference": "8716766962",
+    "designation": "cle de codage acp 20300 lpg",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604623&Reference=8716766962"
+  },
+  "8716766520": {
+    "statusMessage": "",
+    "reference": "8716766520",
+    "designation": "faisceau de cables basse tension sls",
+    "ean": "4062321434557",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604615&Reference=8716766520"
+  },
+  "8716766938": {
+    "statusMessage": "",
+    "reference": "8716766938",
+    "designation": "cle de codage acp 20299 h",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604624&Reference=8716766938"
+  },
+  "7716780503": {
+    "statusMessage": "",
+    "reference": "7716780503",
+    "designation": "kit conversion gaz leblanc fr sls h-> l",
+    "ean": "4062321399795",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604628&Reference=7716780503"
+  },
+  "8716766528": {
+    "statusMessage": "",
+    "reference": "8716766528",
+    "designation": "tube entree eau froide sanitaire",
+    "ean": "4062321434632",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604637&Reference=8716766528"
+  },
+  "7716780504": {
+    "statusMessage": "",
+    "reference": "7716780504",
+    "designation": "kit conv. gaz leblanc fr sls lpg -> h",
+    "ean": "4062321401054",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604629&Reference=7716780504"
+  },
+  "8716766526": {
+    "statusMessage": "",
+    "reference": "8716766526",
+    "designation": "ballon 42l. inox",
+    "ean": "4062321434618",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604631&Reference=8716766526"
+  },
+  "8716766537": {
+    "statusMessage": "",
+    "reference": "8716766537",
+    "designation": "tube entree eau froide sanitaire ballon",
+    "ean": "4062321434922",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604654&Reference=8716766537"
+  },
+  "8716766995": {
+    "statusMessage": "",
+    "reference": "8716766995",
+    "designation": "raccord turbine - nourrice",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604642&Reference=8716766995"
+  },
+  "8716766538": {
+    "statusMessage": "",
+    "reference": "8716766538",
+    "designation": "tube entree echangeur a plaques",
+    "ean": "4062321434939",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604655&Reference=8716766538"
+  },
+  "87167645390": {
+    "statusMessage": "",
+    "reference": "87167645390",
+    "designation": "clapet anti-retour d15",
+    "ean": "4047416760872",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604645&Reference=87167645390"
+  },
+  "8716121868": {
+    "statusMessage": "",
+    "reference": "8716121868",
+    "designation": "joint",
+    "ean": "4062321433789",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970036&Reference=8716121868"
+  },
+  "8716766539": {
+    "statusMessage": "",
+    "reference": "8716766539",
+    "designation": "limiteur de debit",
+    "ean": "4062321434946",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604656&Reference=8716766539"
+  },
+  "8716766540": {
+    "statusMessage": "",
+    "reference": "8716766540",
+    "designation": "tube sortie echangeur a plaques",
+    "ean": "4062321434953",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604660&Reference=8716766540"
+  },
+  "8716766527": {
+    "statusMessage": "",
+    "reference": "8716766527",
+    "designation": "tube sortie eau chaude sanitaire",
+    "ean": "4062321434625",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70604664&Reference=8716766527"
+  },
+  "8737602307": {
+    "statusMessage": "",
+    "reference": "8737602307",
+    "designation": "couvercle acces service",
+    "ean": "4057749832689",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970037&Reference=8737602307"
+  },
+  "8716121156": {
+    "statusMessage": "",
+    "reference": "8716121156",
+    "designation": "panneau avant",
+    "ean": "4062321330965",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970039&Reference=8716121156"
+  },
+  "87161153060": {
+    "statusMessage": "",
+    "reference": "87161153060",
+    "designation": "vis (10x) 8x1/2",
+    "ean": "4051516134358",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970038&Reference=87161153060"
+  },
+  "8716121411": {
+    "statusMessage": "",
+    "reference": "8716121411",
+    "designation": "bezel",
+    "ean": "4062321371531",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970040&Reference=8716121411"
+  },
+  "8716121307": {
+    "statusMessage": "",
+    "reference": "8716121307",
+    "designation": "console",
+    "ean": "4062321340551",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970042&Reference=8716121307"
+  },
+  "8737603843": {
+    "statusMessage": "",
+    "reference": "8737603843",
+    "designation": "vis m5x15 (10x)",
+    "ean": "4062321363536",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970041&Reference=8737603843"
+  },
+  "8716121305": {
+    "statusMessage": "",
+    "reference": "8716121305",
+    "designation": "plaque de fixation",
+    "ean": "4062321340544",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970043&Reference=8716121305"
+  },
+  "29144114040": {
+    "statusMessage": "",
+    "reference": "29144114040",
+    "designation": "vis m4x12 (10x)",
+    "ean": "4010009580508",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970044&Reference=29144114040"
+  },
+  "8716121312": {
+    "statusMessage": "",
+    "reference": "8716121312",
+    "designation": "cable",
+    "ean": "4062321340605",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970046&Reference=8716121312"
+  },
+  "8716121310": {
+    "statusMessage": "",
+    "reference": "8716121310",
+    "designation": "support de cables",
+    "ean": "4062321340582",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970045&Reference=8716121310"
+  },
+  "87379027500": {
+    "statusMessage": "",
+    "reference": "87379027500",
+    "designation": "joint ø70mm",
+    "ean": "4057749663573",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970047&Reference=87379027500"
+  },
+  "87186509860": {
+    "statusMessage": "",
+    "reference": "87186509860",
+    "designation": "tuyau de fumees haut",
+    "ean": "4057749663504",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970050&Reference=87186509860"
+  },
+  "87186509870": {
+    "statusMessage": "",
+    "reference": "87186509870",
+    "designation": "tuyau de fumees",
+    "ean": "4057749663511",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970048&Reference=87186509870"
+  },
+  "8716121497": {
+    "statusMessage": "",
+    "reference": "8716121497",
+    "designation": "panneau lateral",
+    "ean": "4062321371982",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970057&Reference=8716121497"
+  },
+  "87379029700": {
+    "statusMessage": "",
+    "reference": "87379029700",
+    "designation": "joint ø80mm",
+    "ean": "4057749672384",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970051&Reference=87379029700"
+  },
+  "8716121250": {
+    "statusMessage": "",
+    "reference": "8716121250",
+    "designation": "capuchon",
+    "ean": "4062321340506",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970056&Reference=8716121250"
+  },
+  "8716121498": {
+    "statusMessage": "",
+    "reference": "8716121498",
+    "designation": "panneau lateral",
+    "ean": "4062321371999",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970058&Reference=8716121498"
+  },
+  "8716117028": {
+    "statusMessage": "",
+    "reference": "8716117028",
+    "designation": "visser 8x1 / 2 zc pzfl type b s / tap ch",
+    "ean": "4054925283976",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970059&Reference=8716117028"
+  },
+  "8737602309": {
+    "statusMessage": "",
+    "reference": "8737602309",
+    "designation": "vase d´expansion support",
+    "ean": "4057749832702",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970062&Reference=8737602309"
+  },
+  "8716121496": {
+    "statusMessage": "",
+    "reference": "8716121496",
+    "designation": "tole de fond",
+    "ean": "4062321371975",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970060&Reference=8716121496"
+  },
+  "87186506550": {
+    "statusMessage": "",
+    "reference": "87186506550",
+    "designation": "vase d´expansion",
+    "ean": "4057749579065",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970061&Reference=87186506550"
+  },
+  "29150110060": {
+    "statusMessage": "",
+    "reference": "29150110060",
+    "designation": "ecrou",
+    "ean": "4010009953739",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970063&Reference=29150110060"
+  },
+  "8716117078": {
+    "statusMessage": "",
+    "reference": "8716117078",
+    "designation": "screw m4 x 8 hex hd pozi taptite",
+    "ean": "4054925285321",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970069&Reference=8716117078"
+  },
+  "8737602308": {
+    "statusMessage": "",
+    "reference": "8737602308",
+    "designation": "vase d´expansion support",
+    "ean": "4057749832696",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970065&Reference=8737602308"
+  },
+  "8716121393": {
+    "statusMessage": "",
+    "reference": "8716121393",
+    "designation": "tube",
+    "ean": "4062321371425",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970067&Reference=8716121393"
+  },
+  "8716117038": {
+    "statusMessage": "",
+    "reference": "8716117038",
+    "designation": "sceller le bac a condensats",
+    "ean": "4054925284072",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970070&Reference=8716117038"
+  },
+  "8716121406": {
+    "statusMessage": "",
+    "reference": "8716121406",
+    "designation": "charniere",
+    "ean": "4062321371517",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970068&Reference=8716121406"
+  },
+  "8716121897": {
+    "statusMessage": "",
+    "reference": "8716121897",
+    "designation": "capuchon",
+    "ean": "4062321441494",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970074&Reference=8716121897"
+  },
+  "8716121856": {
+    "statusMessage": "",
+    "reference": "8716121856",
+    "designation": "scelle",
+    "ean": "4062321413361",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970072&Reference=8716121856"
+  },
+  "8716121939": {
+    "statusMessage": "",
+    "reference": "8716121939",
+    "designation": "echangeur thermique",
+    "ean": "4062321449964",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970076&Reference=8716121939"
+  },
+  "8737709150": {
+    "statusMessage": "",
+    "reference": "8737709150",
+    "designation": "sachet de joints",
+    "ean": "4057749856067",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970073&Reference=8737709150"
+  },
+  "8737602552": {
+    "statusMessage": "",
+    "reference": "8737602552",
+    "designation": "vis m5x8 taptite pozi pl (10x)",
+    "ean": "4057749978554",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970096&Reference=8737602552"
+  },
+  "87186823320": {
+    "statusMessage": "",
+    "reference": "87186823320",
+    "designation": "ecrou m8 avec bride",
+    "ean": "4047416847153",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970080&Reference=87186823320"
+  },
+  "87131040510": {
+    "statusMessage": "",
+    "reference": "87131040510",
+    "designation": "goujon filete m8x45",
+    "ean": "4010009866879",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970081&Reference=87131040510"
+  },
+  "87186509850": {
+    "statusMessage": "",
+    "reference": "87186509850",
+    "designation": "support",
+    "ean": "4057749662859",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970095&Reference=87186509850"
+  },
+  "87434010910": {
+    "statusMessage": "",
+    "reference": "87434010910",
+    "designation": "kit de retenue",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970097&Reference=87434010910"
+  },
+  "87186863360": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87186863360",
+    "designation": "vis",
+    "ean": "4051516200848",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970102&Reference=87186863360"
+  },
+  "87161156730": {
+    "statusMessage": "",
+    "reference": "87161156730",
+    "designation": "joint (x1)",
+    "ean": "4047416921563",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970111&Reference=87161156730"
+  },
+  "87186515860": {
+    "statusMessage": "",
+    "reference": "87186515860",
+    "designation": "capacite de reserve",
+    "ean": "4057749672230",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970101&Reference=87186515860"
+  },
+  "87186402310": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "87186402310",
+    "designation": "echangeur de chaleur",
+    "ean": "4047416333182",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970106&Reference=87186402310"
+  },
+  "87161139190": {
+    "statusMessage": "",
+    "reference": "87161139190",
+    "designation": "tube depart chauffage",
+    "ean": "4051516196936",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970123&Reference=87161139190"
+  },
+  "87161165490": {
+    "statusMessage": "",
+    "reference": "87161165490",
+    "designation": "joint torique 13,87x3,53 (x10)",
+    "ean": "4051516733452",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970116&Reference=87161165490"
+  },
+  "8716121164": {
+    "statusMessage": "",
+    "reference": "8716121164",
+    "designation": "clip",
+    "ean": "4062321340377",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970131&Reference=8716121164"
+  },
+  "8716118019": {
+    "statusMessage": "",
+    "reference": "8716118019",
+    "designation": "joint torique 12,5 x 3 l x10",
+    "ean": "4057749085818",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970119&Reference=8716118019"
+  },
+  "871861779A0": {
+    "statusMessage": "",
+    "reference": "871861779A0",
+    "designation": "joint torique 6,60x2,4 epdm-70 wras /ktw",
+    "ean": "4051516197186",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970145&Reference=871861779A0"
+  },
+  "8716121325": {
+    "statusMessage": "",
+    "reference": "8716121325",
+    "designation": "tube",
+    "ean": "4062321340698",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970134&Reference=8716121325"
+  },
+  "87161139170": {
+    "statusMessage": "",
+    "reference": "87161139170",
+    "designation": "clip (10x)",
+    "ean": "4047416332703",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970141&Reference=87161139170"
+  },
+  "8737712177": {
+    "statusMessage": "",
+    "reference": "8737712177",
+    "designation": "raccord en t",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970146&Reference=8737712177"
+  },
+  "8737603925": {
+    "statusMessage": "",
+    "reference": "8737603925",
+    "designation": "limiteur de debi 11 l/min",
+    "ean": "4062321398446",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970148&Reference=8737603925"
+  },
+  "8737602357": {
+    "statusMessage": "",
+    "reference": "8737602357",
+    "designation": "servomoteur",
+    "ean": "4057749854995",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970147&Reference=8737602357"
+  },
+  "87186444960": {
+    "statusMessage": "",
+    "reference": "87186444960",
+    "designation": "raccord limiteur de debit",
+    "ean": "4051516723750",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970149&Reference=87186444960"
+  },
+  "87161139060": {
+    "statusMessage": "",
+    "reference": "87161139060",
+    "designation": "filtre",
+    "ean": "4051516196929",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970152&Reference=87161139060"
+  },
+  "8716121392": {
+    "statusMessage": "",
+    "reference": "8716121392",
+    "designation": "scelle",
+    "ean": "4062321371418",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970160&Reference=8716121392"
+  },
+  "8716121391": {
+    "statusMessage": "",
+    "reference": "8716121391",
+    "designation": "revetement",
+    "ean": "4062321371401",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970161&Reference=8716121391"
+  },
+  "8737602354": {
+    "statusMessage": "",
+    "reference": "8737602354",
+    "designation": "tube",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970153&Reference=8737602354"
+  },
+  "87186838730": {
+    "statusMessage": "",
+    "reference": "87186838730",
+    "designation": "tube retour chauffage",
+    "ean": "4051516197278",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970155&Reference=87186838730"
+  },
+  "8737602312": {
+    "statusMessage": "",
+    "reference": "8737602312",
+    "designation": "tuyau",
+    "ean": "4057749832733",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970159&Reference=8737602312"
+  },
+  "87160122690": {
+    "statusMessage": "",
+    "reference": "87160122690",
+    "designation": "raccord aveugle",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970163&Reference=87160122690"
+  },
+  "8716121859": {
+    "statusMessage": "",
+    "reference": "8716121859",
+    "designation": "tube",
+    "ean": "4062321413392",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970165&Reference=8716121859"
+  },
+  "8716121858": {
+    "statusMessage": "",
+    "reference": "8716121858",
+    "designation": "joint torique",
+    "ean": "4062321413385",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970168&Reference=8716121858"
+  },
+  "8716121857": {
+    "statusMessage": "",
+    "reference": "8716121857",
+    "designation": "adaptateur",
+    "ean": "4062321413378",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970166&Reference=8716121857"
+  },
+  "8716121860": {
+    "statusMessage": "",
+    "reference": "8716121860",
+    "designation": "tube",
+    "ean": "4062321413408",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970171&Reference=8716121860"
+  },
+  "8716121861": {
+    "statusMessage": "",
+    "reference": "8716121861",
+    "designation": "tube",
+    "ean": "4062321413415",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970169&Reference=8716121861"
+  },
+  "87161156800": {
+    "statusMessage": "",
+    "reference": "87161156800",
+    "designation": "joint 18.6 x 13.5 x 1.5 (1x)",
+    "ean": "4047416921631",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970170&Reference=87161156800"
+  },
+  "87186495540": {
+    "statusMessage": "",
+    "reference": "87186495540",
+    "designation": "assemblee flux coude echangeur de chaleu",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970172&Reference=87186495540"
+  },
+  "8716122078": {
+    "statusMessage": "",
+    "reference": "8716122078",
+    "designation": "purgeur automatique",
+    "ean": "4062321533212",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970173&Reference=8716122078"
+  },
+  "T00220054A0": {
+    "statusMessage": "",
+    "reference": "T00220054A0",
+    "designation": "epingle",
+    "ean": "4051516201104",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970175&Reference=T00220054A0"
+  },
+  "8716121869": {
+    "statusMessage": "",
+    "reference": "8716121869",
+    "designation": "purgeur",
+    "ean": "4062321433994",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970174&Reference=8716121869"
+  },
+  "8716121476": {
+    "statusMessage": "",
+    "reference": "8716121476",
+    "designation": "rondelle",
+    "ean": "4062321378196",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970177&Reference=8716121476"
+  },
+  "8716121862": {
+    "statusMessage": "",
+    "reference": "8716121862",
+    "designation": "tube",
+    "ean": "4062321413422",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970178&Reference=8716121862"
+  },
+  "8716121863": {
+    "statusMessage": "",
+    "reference": "8716121863",
+    "designation": "o ring",
+    "ean": "4062321413439",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970181&Reference=8716121863"
+  },
+  "87186496460": {
+    "statusMessage": "",
+    "reference": "87186496460",
+    "designation": "conduit de ventilation",
+    "ean": "4057749663474",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970187&Reference=87186496460"
+  },
+  "8718600808": {
+    "statusMessage": "",
+    "reference": "8718600808",
+    "designation": "corps du bruleur",
+    "ean": "4051516708948",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970188&Reference=8718600808"
+  },
+  "8716121184": {
+    "statusMessage": "",
+    "reference": "8716121184",
+    "designation": "capuchon",
+    "ean": "4062321340414",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970201&Reference=8716121184"
+  },
+  "7746900441": {
+    "statusMessage": "",
+    "reference": "7746900441",
+    "designation": "joint carter venturi",
+    "ean": "4047416898506",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970189&Reference=7746900441"
+  },
+  "8737603467": {
+    "statusMessage": "",
+    "reference": "8737603467",
+    "designation": "injecteur gaz 30kw g20 / g25",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970197&Reference=8737603467"
+  },
+  "871860034A0": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "871860034A0",
+    "designation": "joint",
+    "ean": "4051516200572",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970204&Reference=871860034A0"
+  },
+  "8716121467": {
+    "statusMessage": "",
+    "reference": "8716121467",
+    "designation": "tube",
+    "ean": "4062321371951",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970202&Reference=8716121467"
+  },
+  "8716121404": {
+    "statusMessage": "",
+    "reference": "8716121404",
+    "designation": "cable electrique",
+    "ean": "4062321371500",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970208&Reference=8716121404"
+  },
+  "8716121309": {
+    "statusMessage": "",
+    "reference": "8716121309",
+    "designation": "cable electrique",
+    "ean": "4062321340575",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970207&Reference=8716121309"
+  },
+  "8716121866": {
+    "statusMessage": "",
+    "reference": "8716121866",
+    "designation": "faisceau de cables",
+    "ean": "4062321413460",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970211&Reference=8716121866"
+  },
+  "8716121215": {
+    "statusMessage": "",
+    "reference": "8716121215",
+    "designation": "cable",
+    "ean": "4062321340445",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970209&Reference=8716121215"
+  },
+  "8716121419": {
+    "statusMessage": "",
+    "reference": "8716121419",
+    "designation": "rail",
+    "ean": "4062321371555",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970210&Reference=8716121419"
+  },
+  "8716121400": {
+    "statusMessage": "",
+    "reference": "8716121400",
+    "designation": "revetement",
+    "ean": "4062321371463",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970213&Reference=8716121400"
+  },
+  "8716121317": {
+    "statusMessage": "",
+    "reference": "8716121317",
+    "designation": "cache",
+    "ean": "4062321340643",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970212&Reference=8716121317"
+  },
+  "8716122561": {
+    "statusMessage": "",
+    "reference": "8716122561",
+    "designation": "module de commande",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970214&Reference=8716122561"
+  },
+  "8716121320": {
+    "statusMessage": "",
+    "reference": "8716121320",
+    "designation": "support",
+    "ean": "4062321340674",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970215&Reference=8716121320"
+  },
+  "8716117246": {
+    "statusMessage": "",
+    "reference": "8716117246",
+    "designation": "screw kb35 x 22/10",
+    "ean": "4054925551440",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970218&Reference=8716117246"
+  },
+  "8716121318": {
+    "statusMessage": "",
+    "reference": "8716121318",
+    "designation": "revetement",
+    "ean": "4062321340650",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970216&Reference=8716121318"
+  },
+  "8716121398": {
+    "statusMessage": "",
+    "reference": "8716121398",
+    "designation": "revetement",
+    "ean": "4062321371449",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970221&Reference=8716121398"
+  },
+  "8716121402": {
+    "statusMessage": "",
+    "reference": "8716121402",
+    "designation": "rail de fixation",
+    "ean": "4062321371487",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970219&Reference=8716121402"
+  },
+  "8716121228": {
+    "statusMessage": "",
+    "reference": "8716121228",
+    "designation": "serre-cables,serre-cable",
+    "ean": "4062321340483",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970220&Reference=8716121228"
+  },
+  "8716121433": {
+    "statusMessage": "",
+    "reference": "8716121433",
+    "designation": "raccordement electrique",
+    "ean": "4062321371944",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970225&Reference=8716121433"
+  },
+  "8716121403": {
+    "statusMessage": "",
+    "reference": "8716121403",
+    "designation": "gaine",
+    "ean": "4062321371494",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970222&Reference=8716121403"
+  },
+  "8716121399": {
+    "statusMessage": "",
+    "reference": "8716121399",
+    "designation": "ecrou",
+    "ean": "4062321371456",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970223&Reference=8716121399"
+  },
+  "8716119985": {
+    "statusMessage": "",
+    "reference": "8716119985",
+    "designation": "raccord",
+    "ean": "4062321253028",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970226&Reference=8716119985"
+  },
+  "8716119984": {
+    "statusMessage": "",
+    "reference": "8716119984",
+    "designation": "raccord",
+    "ean": "4062321253011",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970224&Reference=8716119984"
+  },
+  "8716119983": {
+    "statusMessage": "",
+    "reference": "8716119983",
+    "designation": "raccord",
+    "ean": "4062321253004",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970229&Reference=8716119983"
+  },
+  "8716119987": {
+    "statusMessage": "",
+    "reference": "8716119987",
+    "designation": "raccord",
+    "ean": "4062321253042",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970228&Reference=8716119987"
+  },
+  "8716119988": {
+    "statusMessage": "",
+    "reference": "8716119988",
+    "designation": "raccord",
+    "ean": "4062321253059",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970227&Reference=8716119988"
+  },
+  "8716120690": {
+    "statusMessage": "",
+    "reference": "8716120690",
+    "designation": "borne de raccordement",
+    "ean": "4062321307226",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970230&Reference=8716120690"
+  },
+  "8716121408": {
+    "statusMessage": "",
+    "reference": "8716121408",
+    "designation": "connecteur",
+    "ean": "4062321371524",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970231&Reference=8716121408"
+  },
+  "8716121425": {
+    "statusMessage": "",
+    "reference": "8716121425",
+    "designation": "cle de codage",
+    "ean": "4062321371562",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970232&Reference=8716121425"
+  },
+  "8716121203": {
+    "statusMessage": "",
+    "reference": "8716121203",
+    "designation": "capuchon",
+    "ean": "4062321340421",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970236&Reference=8716121203"
+  },
+  "8716116900": {
+    "statusMessage": "",
+    "reference": "8716116900",
+    "designation": "fuse 5x20mm fast acting (pk5)",
+    "ean": "4054925280128",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970238&Reference=8716116900"
+  },
+  "8716121316": {
+    "statusMessage": "",
+    "reference": "8716121316",
+    "designation": "cable",
+    "ean": "4062321340636",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970233&Reference=8716121316"
+  },
+  "8716121394": {
+    "statusMessage": "",
+    "reference": "8716121394",
+    "designation": "interrupteur",
+    "ean": "4062321371432",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970234&Reference=8716121394"
+  },
+  "8716121218": {
+    "statusMessage": "",
+    "reference": "8716121218",
+    "designation": "revetement",
+    "ean": "4062321340469",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970235&Reference=8716121218"
+  },
+  "8716121950": {
+    "statusMessage": "",
+    "reference": "8716121950",
+    "designation": "support",
+    "ean": "4062321458171",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970239&Reference=8716121950"
+  },
+  "8737602652": {
+    "statusMessage": "",
+    "reference": "8737602652",
+    "designation": "cable key",
+    "ean": "4062321037376",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970240&Reference=8737602652"
+  },
+  "8738712998": {
+    "statusMessage": "",
+    "reference": "8738712998",
+    "designation": "robinet dcw in",
+    "ean": "4057749108067",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970248&Reference=8738712998"
+  },
+  "7733601290": {
+    "statusMessage": "",
+    "reference": "7733601290",
+    "designation": "Kit transformation Gaz Naturel => Gaz Propane 22-30 kW - Megalis iCondens",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970241&Reference=7733601290"
+  },
+  "7733601294": {
+    "statusMessage": "",
+    "reference": "7733601294",
+    "designation": "Kit transformation Gaz Propane => Gaz Naturel 22-30 kW - Megalis iCondens",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970242&Reference=7733601294"
+  },
+  "8716747339": {
+    "statusMessage": "",
+    "reference": "8716747339",
+    "designation": "structure dosseret",
+    "ean": "4062321357016",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970244&Reference=8716747339"
+  },
+  "8738712999": {
+    "statusMessage": "",
+    "reference": "8738712999",
+    "designation": "robinet ch",
+    "ean": "4057749108074",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970249&Reference=8738712999"
+  },
+  "8716747340": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "8716747340",
+    "designation": "vis m5x10 (x10)",
+    "ean": "4062321357023",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970250&Reference=8716747340"
+  },
+  "8716747361": {
+    "statusMessage": "",
+    "reference": "8716747361",
+    "designation": "jeu de tubes",
+    "ean": "4062321357047",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970254&Reference=8716747361"
+  },
+  "87186840440": {
+    "statusMessage": "",
+    "reference": "87186840440",
+    "designation": "o-ring (10x)",
+    "ean": "4051516674861",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970260&Reference=87186840440"
+  },
+  "8716747338": {
+    "statusMessage": "",
+    "reference": "8716747338",
+    "designation": "plaque daccrochage murale",
+    "ean": "4062321357009",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970258&Reference=8716747338"
+  },
+  "87186892750": {
+    "statusMessage": "",
+    "reference": "87186892750",
+    "designation": "disconnecteur remplissage gachette",
+    "ean": "4051516674878",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970259&Reference=87186892750"
+  },
+  "8737709184": {
+    "statusMessage": "",
+    "reference": "8737709184",
+    "designation": "disconnecteur remplissage intelligent",
+    "ean": "4057749857606",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970264&Reference=8737709184"
+  },
+  "8716121867": {
+    "statusMessage": "",
+    "reference": "8716121867",
+    "designation": "rondelle",
+    "ean": "4062321427160",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970262&Reference=8716121867"
+  },
+  "29101411160": {
+    "statusMessage": "",
+    "reference": "29101411160",
+    "designation": "socket head cap screw - c/w washer",
+    "ean": "4010009642633",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970261&Reference=29101411160"
+  },
+  "8716747362": {
+    "statusMessage": "",
+    "reference": "8716747362",
+    "designation": "jeu de tubes",
+    "ean": "4062321357054",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970276&Reference=8716747362"
+  },
+  "8716747363": {
+    "statusMessage": "",
+    "reference": "8716747363",
+    "designation": "jeu de tubes",
+    "ean": "4062321357061",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970297&Reference=8716747363"
+  },
+  "7716780457": {
+    "statusMessage": "",
+    "reference": "7716780457",
+    "designation": "hw-fsa-1",
+    "ean": "4062321459918",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970347&Reference=7716780457"
+  },
+  "87186429550": {
+    "statusMessage": "",
+    "reference": "87186429550",
+    "designation": "echangeur thermique c-phe 20 plates",
+    "ean": "4051516779030",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970440&Reference=87186429550"
+  },
+  "87186509480": {
+    "statusMessage": "",
+    "reference": "87186509480",
+    "designation": "venturi 15 kw g25/gz35a",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970529&Reference=87186509480"
+  },
+  "87376002840": {
+    "statusMessage": "",
+    "reference": "87376002840",
+    "designation": "limiteur de debit 9 l/ min",
+    "ean": "4051516066550",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970482&Reference=87376002840"
+  },
+  "87186808540": {
+    "statusMessage": "",
+    "reference": "87186808540",
+    "designation": "evacuation de la condensation",
+    "ean": "4047416872094",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970516&Reference=87186808540"
+  },
+  "7733601291": {
+    "statusMessage": "",
+    "reference": "7733601291",
+    "designation": "Kit transformation Gaz Naturel => Gaz Propane 18-25 kW - Megalis iCondens",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970576&Reference=7733601291"
+  },
+  "8716121807": {
+    "statusMessage": "",
+    "reference": "8716121807",
+    "designation": "restriction de debit 15kw g20/g25",
+    "ean": "4062321372002",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970532&Reference=8716121807"
+  },
+  "8716121426": {
+    "statusMessage": "",
+    "reference": "8716121426",
+    "designation": "cle de codage",
+    "ean": "4062321371913",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970567&Reference=8716121426"
+  },
+  "7733601295": {
+    "statusMessage": "",
+    "reference": "7733601295",
+    "designation": "Kit transformation Gaz Propane => Gaz Naturel 18-25 kW - Megalis iCondens",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970577&Reference=7733601295"
+  },
+  "87186509830": {
+    "statusMessage": "",
+    "reference": "87186509830",
+    "designation": "bruleur 15kw",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970753&Reference=87186509830"
+  },
+  "87186808240": {
+    "statusMessage": "",
+    "reference": "87186808240",
+    "designation": "collecteur systeme",
+    "ean": "4047416352084",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970778&Reference=87186808240"
+  },
+  "8737602377": {
+    "statusMessage": "",
+    "reference": "8737602377",
+    "designation": "tube dhw",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970786&Reference=8737602377"
+  },
+  "8716121865": {
+    "statusMessage": "",
+    "reference": "8716121865",
+    "designation": "faisceau de cables",
+    "ean": "4062321413453",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970861&Reference=8716121865"
+  },
+  "8737602378": {
+    "statusMessage": "",
+    "reference": "8737602378",
+    "designation": "tube",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970787&Reference=8737602378"
+  },
+  "7733601296": {
+    "statusMessage": "",
+    "reference": "7733601296",
+    "designation": "Kit transformation Gaz Propane => Gaz Naturel 18 kW - Egalis iCondens",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970896&Reference=7733601296"
+  },
+  "8716121431": {
+    "statusMessage": "",
+    "reference": "8716121431",
+    "designation": "cle de codage",
+    "ean": "4062321371920",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970886&Reference=8716121431"
+  },
+  "7733601292": {
+    "statusMessage": "",
+    "reference": "7733601292",
+    "designation": "Kit transformation Gaz Naturel => Gaz Propane 18 kW - Egalis iCondens",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970895&Reference=7733601292"
+  },
+  "8716747364": {
+    "statusMessage": "",
+    "reference": "8716747364",
+    "designation": "jeu de tubes",
+    "ean": "4062321357078",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970926&Reference=8716747364"
+  },
+  "8716747365": {
+    "statusMessage": "",
+    "reference": "8716747365",
+    "designation": "raccord equerre 1/2 3/4",
+    "ean": "4062321357085",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70970900&Reference=8716747365"
+  },
+  "8716121432": {
+    "statusMessage": "",
+    "reference": "8716121432",
+    "designation": "cle de codage",
+    "ean": "4062321371937",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70971113&Reference=8716121432"
+  },
+  "7733601297": {
+    "statusMessage": "",
+    "reference": "7733601297",
+    "designation": "Kit transformation Gaz Propane => Gaz Naturel 22 kW - Egalis iCondens",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70971123&Reference=7733601297"
+  },
+  "8737602645": {
+    "statusMessage": "",
+    "reference": "8737602645",
+    "designation": "revetement blanc",
+    "ean": "4062321034320",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559046&Reference=8737602645"
+  },
+  "7733601293": {
+    "statusMessage": "",
+    "reference": "7733601293",
+    "designation": "Kit transformation Gaz Naturel => Gaz Propane 22 kW - Egalis iCondens",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=70971122&Reference=7733601293"
+  },
+  "87186495890": {
+    "statusMessage": "",
+    "reference": "87186495890",
+    "designation": "tube",
+    "ean": "4057749579041",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559050&Reference=87186495890"
+  },
+  "8737602647": {
+    "statusMessage": "",
+    "reference": "8737602647",
+    "designation": "paroi laterale rhs",
+    "ean": "4062321034344",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559047&Reference=8737602647"
+  },
+  "8737602306": {
+    "statusMessage": "",
+    "reference": "8737602306",
+    "designation": "support",
+    "ean": "4057749832672",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559049&Reference=8737602306"
+  },
+  "8737602648": {
+    "statusMessage": "",
+    "reference": "8737602648",
+    "designation": "paroi laterale lhs",
+    "ean": "4062321034351",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559048&Reference=8737602648"
+  },
+  "87186410290": {
+    "statusMessage": "",
+    "reference": "87186410290",
+    "designation": "clip (5x)",
+    "ean": "4047416211244",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559055&Reference=87186410290"
+  },
+  "8737602316": {
+    "statusMessage": "",
+    "reference": "8737602316",
+    "designation": "support",
+    "ean": "4057749921932",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559059&Reference=8737602316"
+  },
+  "8737602318": {
+    "statusMessage": "",
+    "reference": "8737602318",
+    "designation": "lunette",
+    "ean": "4057749832788",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559057&Reference=8737602318"
+  },
+  "8737602310": {
+    "statusMessage": "",
+    "reference": "8737602310",
+    "designation": "revetement",
+    "ean": "4057749832719",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559058&Reference=8737602310"
+  },
+  "8737602613": {
+    "statusMessage": "",
+    "reference": "8737602613",
+    "designation": "joint",
+    "ean": "4062321012014",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559069&Reference=8737602613"
+  },
+  "8737602651": {
+    "statusMessage": "",
+    "reference": "8737602651",
+    "designation": "carenage key",
+    "ean": "4062321037345",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559070&Reference=8737602651"
+  },
+  "87186515850": {
+    "statusMessage": "",
+    "reference": "87186515850",
+    "designation": "serrure capacite de reserve",
+    "ean": "4057749672223",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559080&Reference=87186515850"
+  },
+  "87379022460": {
+    "statusMessage": "",
+    "reference": "87379022460",
+    "designation": "echangeur thermique 30kw",
+    "ean": "4057749672377",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559072&Reference=87379022460"
+  },
+  "87186455100": {
+    "statusMessage": "",
+    "reference": "87186455100",
+    "designation": "clip (10x)",
+    "ean": "4054925157055",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559091&Reference=87186455100"
+  },
+  "8716121838": {
+    "statusMessage": "",
+    "reference": "8716121838",
+    "designation": "panneau",
+    "ean": "4062321398729",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559083&Reference=8716121838"
+  },
+  "87186491580": {
+    "statusMessage": "",
+    "reference": "87186491580",
+    "designation": "tube",
+    "ean": "4057749578266",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559089&Reference=87186491580"
+  },
+  "87001037150": {
+    "statusMessage": "",
+    "reference": "87001037150",
+    "designation": "joint 24x2 (10x)",
+    "ean": "4051516134761",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559093&Reference=87001037150"
+  },
+  "87186491670": {
+    "statusMessage": "",
+    "reference": "87186491670",
+    "designation": "tube",
+    "ean": "4057749578273",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559092&Reference=87186491670"
+  },
+  "87379025020": {
+    "statusMessage": "",
+    "reference": "87379025020",
+    "designation": "serrure capacite de reserve",
+    "ean": "4057749662026",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559104&Reference=87379025020"
+  },
+  "87160120330": {
+    "statusMessage": "",
+    "reference": "87160120330",
+    "designation": "vis m5x14 (10x)",
+    "ean": "4047416327884",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559102&Reference=87160120330"
+  },
+  "8755000786": {
+    "statusMessage": "",
+    "reference": "8755000786",
+    "designation": "Écrou (Bloc gaz)",
+    "ean": "4069143156346",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559129&Reference=8755000786"
+  },
+  "8716121956": {
+    "statusMessage": "",
+    "reference": "8716121956",
+    "designation": "chicane",
+    "ean": "4060000000000",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559109&Reference=8716121956"
+  },
+  "7738113398": {
+    "statusMessage": "",
+    "reference": "7738113398",
+    "designation": "Kit d’entretien flexible avec support pour corps de chauffe rond (Nouveau) avec fourchette, support, flexible, 1 grosse brosse et 1 petite brosse",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559110&Reference=7738113398"
+  },
+  "8737711853": {
+    "statusMessage": "",
+    "reference": "8737711853",
+    "designation": "Service-Kit C6-13",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559111&Reference=8737711853"
+  },
+  "87186495880": {
+    "statusMessage": "",
+    "reference": "87186495880",
+    "designation": "tube gaz",
+    "ean": "4057749579034",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559131&Reference=87186495880"
+  },
+  "87186522070": {
+    "statusMessage": "",
+    "reference": "87186522070",
+    "designation": "injecteur gaz 30kw g25",
+    "ean": "4057749672247",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559138&Reference=87186522070"
+  },
+  "87186445640": {
+    "statusMessage": "",
+    "reference": "87186445640",
+    "designation": "servomoteur",
+    "ean": "4051516815912",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559140&Reference=87186445640"
+  },
+  "87186445660": {
+    "statusMessage": "",
+    "reference": "87186445660",
+    "designation": "soupape de securite 3bar",
+    "ean": "4051516815929",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559144&Reference=87186445660"
+  },
+  "87186445850": {
+    "statusMessage": "",
+    "reference": "87186445850",
+    "designation": "contact a pression",
+    "ean": "4051516815998",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559145&Reference=87186445850"
+  },
+  "87186445620": {
+    "statusMessage": "",
+    "reference": "87186445620",
+    "designation": "3-voies vanne",
+    "ean": "4051516815905",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559141&Reference=87186445620"
+  },
+  "87186449940": {
+    "statusMessage": "",
+    "reference": "87186449940",
+    "designation": "collecteur",
+    "ean": "4051516816056",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559142&Reference=87186449940"
+  },
+  "87186455490": {
+    "statusMessage": "",
+    "reference": "87186455490",
+    "designation": "collecteur dcw",
+    "ean": "4054925156454",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559143&Reference=87186455490"
+  },
+  "87186445570": {
+    "statusMessage": "",
+    "reference": "87186445570",
+    "designation": "collecteur",
+    "ean": "4051516815875",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559146&Reference=87186445570"
+  },
+  "87186445590": {
+    "statusMessage": "",
+    "reference": "87186445590",
+    "designation": "collecteur dhw",
+    "ean": "4051516815899",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559147&Reference=87186445590"
+  },
+  "87186456850": {
+    "statusMessage": "",
+    "reference": "87186456850",
+    "designation": "filtre 14 l/min",
+    "ean": "4054925156515",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559152&Reference=87186456850"
+  },
+  "87186429490": {
+    "statusMessage": "",
+    "reference": "87186429490",
+    "designation": "echangeur de chaleur c-phe 26 plates",
+    "ean": "4054925587340",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559148&Reference=87186429490"
+  },
+  "8737604635": {
+    "statusMessage": "",
+    "reference": "8737604635",
+    "designation": "pompe para tsl 7m",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559151&Reference=8737604635"
+  },
+  "87186504540": {
+    "statusMessage": "Attention, ce produit est en fin de vie.",
+    "reference": "87186504540",
+    "designation": "sonde de temperature ntc",
+    "ean": "4057749286062",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559154&Reference=87186504540"
+  },
+  "87186450520": {
+    "statusMessage": "",
+    "reference": "87186450520",
+    "designation": "soupape de securite 15bar",
+    "ean": "4051516816063",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559153&Reference=87186450520"
+  },
+  "87186445920": {
+    "statusMessage": "",
+    "reference": "87186445920",
+    "designation": "robinet de remplissage",
+    "ean": "4051516816001",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559155&Reference=87186445920"
+  },
+  "87186445890": {
+    "statusMessage": "",
+    "reference": "87186445890",
+    "designation": "clip (10x)",
+    "ean": "4054925155341",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559160&Reference=87186445890"
+  },
+  "87186445630": {
+    "statusMessage": "",
+    "reference": "87186445630",
+    "designation": "clip (10x)",
+    "ean": "4054925155280",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559161&Reference=87186445630"
+  },
+  "87186445830": {
+    "statusMessage": "",
+    "reference": "87186445830",
+    "designation": "robinet de vidange",
+    "ean": "4051516815981",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559156&Reference=87186445830"
+  },
+  "87186445780": {
+    "statusMessage": "",
+    "reference": "87186445780",
+    "designation": "capteur a effet hall",
+    "ean": "4051516815950",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559157&Reference=87186445780"
+  },
+  "87186445800": {
+    "statusMessage": "",
+    "reference": "87186445800",
+    "designation": "clip (10x)",
+    "ean": "4054925155303",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559162&Reference=87186445800"
+  },
+  "87186445900": {
+    "statusMessage": "",
+    "reference": "87186445900",
+    "designation": "vis t20 ø4x10 8.8 (10x)",
+    "ean": "4054925155358",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559166&Reference=87186445900"
+  },
+  "87186445860": {
+    "statusMessage": "",
+    "reference": "87186445860",
+    "designation": "clip (10x)",
+    "ean": "4054925155327",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559163&Reference=87186445860"
+  },
+  "87186445670": {
+    "statusMessage": "",
+    "reference": "87186445670",
+    "designation": "bouchon",
+    "ean": "4054925156430",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559169&Reference=87186445670"
+  },
+  "87186445790": {
+    "statusMessage": "",
+    "reference": "87186445790",
+    "designation": "clip (10x)",
+    "ean": "4054925155297",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559164&Reference=87186445790"
+  },
+  "87186445840": {
+    "statusMessage": "",
+    "reference": "87186445840",
+    "designation": "clip (10x)",
+    "ean": "4054925155310",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559165&Reference=87186445840"
+  },
+  "8737602606": {
+    "statusMessage": "",
+    "reference": "8737602606",
+    "designation": "obturateur",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559172&Reference=8737602606"
+  },
+  "87186445870": {
+    "statusMessage": "",
+    "reference": "87186445870",
+    "designation": "sert-cable (10x)",
+    "ean": "4054925155334",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559170&Reference=87186445870"
+  },
+  "8737603089": {
+    "statusMessage": "",
+    "reference": "8737603089",
+    "designation": "o-ring 21,89mmx2,62mm (10x)",
+    "ean": "4062321262389",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559173&Reference=8737603089"
+  },
+  "8737604785": {
+    "statusMessage": "",
+    "reference": "8737604785",
+    "designation": "ntc câble adaptateur",
+    "ean": "4062321698522",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559175&Reference=8737604785"
+  },
+  "8737605559": {
+    "statusMessage": "",
+    "reference": "8737605559",
+    "designation": "Raccordement retour w/o Moteur",
+    "ean": "4062321813994",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559176&Reference=8737605559"
+  },
+  "8737605560": {
+    "statusMessage": "",
+    "reference": "8737605560",
+    "designation": "Raccordement w/o Sonde de température",
+    "ean": "4062321814007",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559177&Reference=8737605560"
+  },
+  "8737604347": {
+    "statusMessage": "",
+    "reference": "8737604347",
+    "designation": "faisceau de câbles 24 v",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559179&Reference=8737604347"
+  },
+  "8737602848": {
+    "statusMessage": "",
+    "reference": "8737602848",
+    "designation": "Faisceau de câbles HV",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559180&Reference=8737602848"
+  },
+  "8737602654": {
+    "statusMessage": "",
+    "reference": "8737602654",
+    "designation": "cable sans fiche",
+    "ean": "4062321037369",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559182&Reference=8737602654"
+  },
+  "87186507080": {
+    "statusMessage": "",
+    "reference": "87186507080",
+    "designation": "faisceau",
+    "ean": "4057749579096",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559181&Reference=87186507080"
+  },
+  "8737605180": {
+    "statusMessage": "",
+    "reference": "8737605180",
+    "designation": "tableau electrique acu-l",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559184&Reference=8737605180"
+  },
+  "87186496860": {
+    "statusMessage": "",
+    "reference": "87186496860",
+    "designation": "tableau de commande",
+    "ean": "4057749579058",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559183&Reference=87186496860"
+  },
+  "8737605059": {
+    "statusMessage": "",
+    "reference": "8737605059",
+    "designation": "hcm acp 25102 (ng)",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559185&Reference=8737605059"
+  },
+  "8737605060": {
+    "statusMessage": "",
+    "reference": "8737605060",
+    "designation": "hcm acp 25103 (lpg)",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559186&Reference=8737605060"
+  },
+  "87186518240": {
+    "statusMessage": "",
+    "reference": "87186518240",
+    "designation": "3wv cable",
+    "ean": "4057749654632",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559188&Reference=87186518240"
+  },
+  "7736902574": {
+    "statusMessage": "",
+    "reference": "7736902574",
+    "designation": "kit conversion gaz lpgcn gva ic22-30 v2",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559194&Reference=7736902574"
+  },
+  "7736902572": {
+    "statusMessage": "",
+    "reference": "7736902572",
+    "designation": "kit conversion gaz ngcn gva ic22-30 v2",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559193&Reference=7736902572"
+  },
+  "8737605061": {
+    "statusMessage": "",
+    "reference": "8737605061",
+    "designation": "hcm acp 25104 (ng)",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559336&Reference=8737605061"
+  },
+  "8737605062": {
+    "statusMessage": "",
+    "reference": "8737605062",
+    "designation": "hcm acp 25105 (lpg)",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559337&Reference=8737605062"
+  },
+  "7736902575": {
+    "statusMessage": "",
+    "reference": "7736902575",
+    "designation": "kit conversion gaz ngcn gva ic15-25 v2",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559344&Reference=7736902575"
+  },
+  "87186449950": {
+    "statusMessage": "",
+    "reference": "87186449950",
+    "designation": "clip (10x)",
+    "ean": "4054925155365",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559457&Reference=87186449950"
+  },
+  "7736902577": {
+    "statusMessage": "",
+    "reference": "7736902577",
+    "designation": "kit conversion gaz lpgcn gva ic15-25 v2",
+    "ean": "",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559345&Reference=7736902577"
+  },
+  "87186449070": {
+    "statusMessage": "",
+    "reference": "87186449070",
+    "designation": "collecteur",
+    "ean": "4051516816025",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559445&Reference=87186449070"
+  },
+  "87186449080": {
+    "statusMessage": "",
+    "reference": "87186449080",
+    "designation": "collecteur",
+    "ean": "4051516816032",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559446&Reference=87186449080"
+  },
+  "87186449090": {
+    "statusMessage": "",
+    "reference": "87186449090",
+    "designation": "graveur",
+    "ean": "4051516816049",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559463&Reference=87186449090"
+  },
+  "8737603714": {
+    "statusMessage": "",
+    "reference": "8737603714",
+    "designation": "cle de codage acp 25107 (lpg)",
+    "ean": "4062321325367",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559477&Reference=8737603714"
+  },
+  "8737603713": {
+    "statusMessage": "",
+    "reference": "8737603713",
+    "designation": "cle de codage acp 25106 (ng)",
+    "ean": "4062321325350",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559476&Reference=8737603713"
+  },
+  "7736901828": {
+    "statusMessage": "",
+    "reference": "7736901828",
+    "designation": "kit conv.gaz ng cn gvs ic 15",
+    "ean": "4062321039592",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559484&Reference=7736901828"
+  },
+  "7736901829": {
+    "statusMessage": "",
+    "reference": "7736901829",
+    "designation": "kit conv.gaz lpg cn gvs ic 15",
+    "ean": "4062321039608",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559485&Reference=7736901829"
+  },
+  "7736901792": {
+    "statusMessage": "Attention, ce produit est arrêté.",
+    "reference": "7736901792",
+    "designation": "kit conv.gaz ng cn gvs ic 22",
+    "ean": "4062321039233",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559624&Reference=7736901792"
+  },
+  "8737603688": {
+    "statusMessage": "",
+    "reference": "8737603688",
+    "designation": "cle de codage acp 25035 (ng)",
+    "ean": "4062321325107",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559616&Reference=8737603688"
+  },
+  "8737603689": {
+    "statusMessage": "",
+    "reference": "8737603689",
+    "designation": "cle de codage acp 25036 (lpg)",
+    "ean": "4062321325114",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559617&Reference=8737603689"
+  },
+  "7736901793": {
+    "statusMessage": "",
+    "reference": "7736901793",
+    "designation": "kit conv.gaz lpg cn gvs ic 22",
+    "ean": "4062321039240",
+    "hasUseCase": true,
+    "hasSuccessorBlock": true,
+    "detailsUrl": "https://www.catalogueinteractif.elmlecube.fr/Search/Details?Id=71559625&Reference=7736901793"
+  }
+};

@@ -1,0 +1,413 @@
+<style>
+    #visualizationPDF {
+        overflow: scroll;
+        overflow-y: scroll;
+    }
+
+    .displayImportant {
+        display: none !important;
+    }
+</style>
+
+<script src="/Scripts/pdf/pdf.js"></script>
+
+<div id="popupShowSendDocument" class="modal fade" role="dialog" style="top: auto !important;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="section-title center">Envoyer une documentation</div>
+
+                <div class="col-md-12" id="recaptchaDetailed" style="display:none;margin-bottom:10px;font-weight:bold;">
+                    Afin de valider le formulaire nous avons besoin de votre consentement, pour cela merci de bien vouloir accepter les cookies en cliquant sur "Paramètres de cookies" en bas de cette page puis recharger la page.
+                </div>
+
+                <div id="loaderSendDocumentation" class="loader py-4" style="display: none;margin: auto;"></div>
+
+                <div id="successSendDocumentation" style="display:none;color:green;margin-bottom:10px;">La documentation a été envoyée.</div>
+                <div id="errorSendDocumentation" style="display:none;color:#E65849;margin-bottom:10px;"></div>
+
+                <div id="bodySendDocumentation">
+                    <span>Veuillez saisir l'adresse email sur laquelle vous souhaitez envoyer la documentation "<span id="typeDocument"></span>".</span><br /><br />
+
+                    <div class="form-group form-row">
+                        <label class="control-label col-4">Adresse email</label>
+                        <div class="input-select d-flex justify-content-end">
+                            <input type="text" id="emailSendDocumentation" style="border:1px solid black;" />
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="recaptcha"></div>
+
+                    
+
+                    <div style="text-align: center; clear:both; padding-top:15px;">
+                        <a class="button" data-dismiss="modal">Annuler</a>
+                        <button id="btnSubmitSendDocumentation" type="submit" class="button primary">Envoyer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div id="largeSizeDocuments" class="d-flex flex-row px-5 py-4 m-0" style="display:none;">
+        <div id="documentDiv" class="d-none d-lg-flex flex-column mr-auto">
+            <div class="title pt-3 pb-5">Documentations disponibles</div>
+
+                <div class="document light py-2 px-3 mt-2 mb-3" num=1 mimeType=application/pdf pdfUri=Info-4000-126.pdf>Fiche Info 4000</div>
+                <div class="document light py-2 px-3 mt-2 mb-3" num=2 mimeType=application/pdf pdfUri=Info-4000-142.pdf>Fiche Info 4000</div>
+                <div class="document light py-2 px-3 mt-2 mb-3" num=3 mimeType=application/pdf pdfUri=Info-4000-179.pdf>Fiche Info 4000</div>
+                <div class="document light py-2 px-3 mt-2 mb-3" num=4 mimeType=application/pdf pdfUri=Info-4000-190.pdf>Fiche Info 4000</div>
+                <div class="document light py-2 px-3 mt-2 mb-3" num=5 mimeType=application/pdf pdfUri=6720609190.pdf>Liste des pi&#232;ces de rechange</div>
+                <div class="document light py-2 px-3 mt-2 mb-3" num=6 mimeType=application/pdf pdfUri=6720607940.pdf>Notice d&#39;installation et d&#39;utilisation</div>
+        </div>
+        <div class="d-flex flex-column col-12 col-lg-6 col-xl-7 pt-4 m-0">
+            <div class="d-none d-lg-flex flex-row justify-content-end">
+                <div class="pdfIcons pl-4" style="display:none"><a target="_blank" class="download" href="#" download><img src="/Content/Images/download-black.svg" /></a></div>
+                <div class="pdfIcons pl-4" style="display:none" onclick="SendDocumentation();"><img src="/Content/Images/paperplane-black.svg" /></div>
+            </div>
+            <div class="visualizationTitle">Visualisation</div>
+
+            <div id="loaderDocument" class="loader" style="margin:auto;display:none;"></div>
+
+            <div id="visualizationPDF">
+            </div>
+
+            <div id="visualizationImage">
+            </div>
+
+            <video id="visualizationVideo" controls preload="auto">
+            </video>
+        </div>
+    </div>
+    <div id="ghostResponsiveDocuments" class="d-block d-lg-none" style="display:none;"></div>
+    <div id="responsiveDocuments" class="d-flex d-lg-none flex-column" style="display:none;overflow: scroll;">
+        <div class="header d-flex flex-row py-2 px-3">
+            <div class="title vcenter-child">Documentations disponibles</div>
+            <div id="openResponsiveDocumentDiv" class="vcenter-child mr-auto ml-3"><img src="/Content/Images/down-black.svg" /></div>
+            <div id="closeResponsiveDocumentDiv" class="vcenter-child ml-auto" style="display:none;"><img src="/Content/Images/close-black.svg" /></div>
+            <div id="downloadResponsiveDocumentDiv" class="pdfIcons pl-4" style="display:none"><a target="_blank" class="download" href="#" download><img src="/Content/Images/download-black.svg" /></a></div>
+            <div id="sendResponsiveDocumentDiv" onclick="SendDocumentation();" class="pdfIcons pl-4" style="display:none"><img src="/Content/Images/paperplane-black.svg" /></div>
+        </div>
+        <div id="responsiveDocumentDiv" class="px-5" style="display:none;">
+
+                <div class="document light p-4 my-2" num=1 mimeType=application/pdf pdfUri=Info-4000-126.pdf>Fiche Info 4000</div>
+                <div class="document light p-4 my-2" num=2 mimeType=application/pdf pdfUri=Info-4000-142.pdf>Fiche Info 4000</div>
+                <div class="document light p-4 my-2" num=3 mimeType=application/pdf pdfUri=Info-4000-179.pdf>Fiche Info 4000</div>
+                <div class="document light p-4 my-2" num=4 mimeType=application/pdf pdfUri=Info-4000-190.pdf>Fiche Info 4000</div>
+                <div class="document light p-4 my-2" num=5 mimeType=application/pdf pdfUri=6720609190.pdf>Liste des pi&#232;ces de rechange</div>
+                <div class="document light p-4 my-2" num=6 mimeType=application/pdf pdfUri=6720607940.pdf>Notice d&#39;installation et d&#39;utilisation</div>
+        </div>
+    </div>
+    <script>
+
+        var pagesCount = 0;
+
+        // Responsive visualizationPDF
+        $(function () {
+            $("#visualizationPDF").hide();
+            $("#visualizationVideo").hide();
+            $("#visualizationImage").hide();
+            if ($(window).width() < 992) {
+                $("#visualizationPDF").parent().parent().removeClass("px-5");
+            }
+            else {
+                $("#visualizationPDF").parent().parent().addClass("px-5");
+            }
+        });
+
+        // Remove "px-5" class when screen width is less than 992
+        $(function () {
+            $(window).resize(function () {
+                if ($(window).width() < 992) {
+                    $("#visualizationPDF").parent().parent().removeClass("px-5");
+                }
+                else {
+                    $("#visualizationPDF").parent().parent().addClass("px-5");
+                }
+            });
+        });
+
+        // The div ghostResponsiveDocuments is under the responsiveDocuments div (placed at the bottom of the page with absolute positionning) so we want the two to have the same height
+        $(function () {
+            $(window).resize(function () {
+                console.log("responsiveDocuments height : " + $("#responsiveDocuments").css("height"));
+                $("#ghostResponsiveDocuments").css("height", $("#responsiveDocuments").css("height"));
+            });
+        });
+
+        $(function () {
+            $("#btnSubmitSendDocumentation").click(function () {
+                $("#loaderSendDocumentation").css("display", "block");
+                $("#bodySendDocumentation").css("display", "none");
+
+                var email = $("#emailSendDocumentation").val();
+                var link = "https://www.elmleblanc-services.fr/Catalogue/documents/" + $("#documentation .document.active").first().attr("pdfuri");
+
+                var data = new FormData();
+                data.append("email", email);
+                data.append("link", link);
+                data.append("typeDocument", $("#typeDocument").text());
+
+                if ($("#recaptcha").html() != "") {
+                    data.append("g-recaptcha-response", grecaptcha.getResponse());
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Product/SendDocumentation",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        $("#loaderSendDocumentation").css("display", "none");
+                        $("#bodySendDocumentation").css("display", "block");
+
+                        if (response.Success) {
+                            $("#recaptcha").html('');
+                            $("#successSendDocumentation").css("display", "block");
+                            $("#errorSendDocumentation").css("display", "none");
+                        }
+                        else {
+                            $("#successSendDocumentation").css("display", "none");
+                            $("#errorSendDocumentation").html(response.Reason);
+                            $("#errorSendDocumentation").css("display", "block");
+                        }
+                    },
+                    error: function (response) {
+                        $("#successSendDocumentation").css("display", "none");
+                        $("#errorSendDocumentation").html(response.Reason);
+                        $("#errorSendDocumentation").css("display", "block");
+                    }
+                });
+            })
+        })
+
+
+        //Classe active sur les documents PDF
+        $(function () {
+            $("#documentation .document").click(function () {
+
+                // Show pdf icons (download, send by mail)
+                $(".pdfIcons").fadeIn();
+
+                if (!$(this).hasClass("active")) {
+                    $("#documentation .document").removeClass("active");
+                    $(this).addClass("active");
+                    console.log("pdfuri : " + $(this).attr("pdfuri"));
+                    $("#documentation .document[num=" + $(this).attr("num") + "]").addClass("active");
+                    $("#responsiveDocuments .header .title").html($(this).html());
+
+                    //Set the href of the links in order to download the PDF
+                    $("#documentation .download").attr("href", "https://www.elmleblanc-services.fr/Catalogue/documents/" + $("#documentation .document.active").first().attr("pdfuri"));
+
+                    if ($(this).parents("#responsiveDocuments").length > 0) {
+                        if ($("#responsiveDocuments .header").hasClass("active")) {
+                            $("#responsiveDocuments .header").removeClass("active");
+                            $("#closeResponsiveDocumentDiv").hide();
+                            $("#openResponsiveDocumentDiv").show();
+                            $("#downloadResponsiveDocumentDiv").show();
+                            $("#sendResponsiveDocumentDiv").show();
+                            $("#responsiveDocuments").animate({
+                                height: $("#responsiveDocuments").attr("myheight") + "px"
+                            }, function () {
+                                $("#responsiveDocumentDiv").hide();
+                            });
+                        }
+                    }
+
+                    $("#visualizationPDF").hide();
+                    $("#visualizationVideo").hide();
+                    $("#visualizationImage").hide();
+
+                    //Afficher le bon PDF en utilisant l'uri stocké dans la balise
+                    var documentUri = "https://www.elmleblanc-services.fr/Catalogue/documents/" + $(this).attr("pdfUri");
+                    var mimeType = $(this).attr("mimeType");
+
+                    if (mimeType == "application/pdf") {
+                        GetDocumentPDF(documentUri);
+                    }
+
+                    if (mimeType.startsWith("image")) {
+                        $("#visualizationImage").show();
+                        $("#visualizationImage").css("background-image", "url('" + documentUri + "')");
+                    }
+
+                    if (mimeType.startsWith("video")) {
+                        $("#visualizationVideo").show();
+                        $("#visualizationVideo").attr("src", documentUri);
+                    }
+                }
+            });
+        });
+
+        function SendDocumentation() {
+
+            var privacySettingValue1 = window.localStorage.getItem("privacySettingValue");
+
+            if (typeof privacySettingValue1 != undefined && privacySettingValue1 == 2) {
+                if ($("#recaptcha").html() == "") {
+                    $("#recaptcha").append("<span class='controls editor-field'>")
+                    $("#recaptcha").append("<script type='text/javascript' src='https://www.google.com/recaptcha/api.js'><\/script>")
+                    $("#recaptcha").append("<div class='g-recaptcha' data-sitekey='6LfoOZwUAAAAAIhqyQoxy6Cx8MEtx6YbKw8XsOFh'></div>")
+
+                    $("#recaptchaDetailed").css('display', 'none');
+                }
+            } else {
+                $("#recaptcha").html('');
+                $("#recaptchaDetailed").css('display', 'block');
+            }
+
+            $("#popupShowSendDocument").modal('show');
+            $("#typeDocument").text($("#documentation .document.active").first().text());
+        }
+
+        function convertDataURIToBinary(dataURI) {
+            var base64Index = dataURI.indexOf(BASE64_MARKER) + BASE64_MARKER.length;
+            var base64 = dataURI.substring(base64Index);
+            var raw = window.atob(base64);
+            var rawLength = raw.length;
+            var array = new Uint8Array(new ArrayBuffer(rawLength));
+
+            for (var i = 0; i < rawLength; i++) {
+                array[i] = raw.charCodeAt(i);
+            }
+            return array;
+        }
+
+        // repsonsiveDocuments div : when we clicked on either the title or the openResponsiveDocumentDiv icon we open the responsiveDocuments div
+        $(function () {
+            $("#responsiveDocuments #openResponsiveDocumentDiv, #responsiveDocuments .title").click(function () {
+
+                if (!$("#responsiveDocuments .header").hasClass("active")) {
+                    $("#responsiveDocuments").attr("myheight", $("#responsiveDocuments").height());
+                    $("#responsiveDocuments .header").addClass("active");
+                    $("#openResponsiveDocumentDiv").hide();
+                    $("#downloadResponsiveDocumentDiv").hide();
+                    $("#sendResponsiveDocumentDiv").hide();
+                    $("#closeResponsiveDocumentDiv").show();
+                    $("#responsiveDocuments").animate({
+                        height: $("body").height()
+                    }, function () {
+                        $("#responsiveDocumentDiv").fadeIn();
+
+                    });
+                }
+            });
+        });
+
+        // click on the cross to close the responsiveDocuments div
+        $(function () {
+            $("#responsiveDocuments #closeResponsiveDocumentDiv").click(function () {
+
+                if ($("#responsiveDocuments .header").hasClass("active")) {
+                    $("#responsiveDocuments .header").removeClass("active");
+                    $("#closeResponsiveDocumentDiv").hide();
+                    $("#openResponsiveDocumentDiv").show();
+                    $("#downloadResponsiveDocumentDiv").show();
+                    $("#sendResponsiveDocumentDiv").show();
+                    $("#responsiveDocuments").animate({
+                        height: $("#responsiveDocuments").attr("myheight") + "px"
+                    }, function () {
+                        $("#responsiveDocumentDiv").hide();
+                    });
+                }
+            });
+        });
+
+        function Num(num) {
+            var num = num;
+
+            return function () {
+                return num;
+            }
+        };
+
+        function renderPDF(url, canvasContainer, options) {
+            var options = options || {
+                scale: 1.5
+            },
+                func,
+                pdfDoc,
+                def = $.Deferred(),
+                promise = $.Deferred().resolve().promise(),
+                width,
+                height,
+                makeRunner = function (func, args) {
+                    return function () {
+                        return func.call(null, args);
+                    };
+                };
+
+            function renderPage(num) {
+                var def = $.Deferred(),
+                    currPageNum = new Num(num);
+                pdfDoc.getPage(currPageNum()).then(function (page) {
+                    var viewport = page.getViewport(options.scale);
+                    var canvas = document.createElement('canvas');
+                    var ctx = canvas.getContext('2d');
+                    var renderContext = {
+                        canvasContext: ctx,
+                        viewport: viewport
+                    };
+
+                    if (currPageNum() === 1) {
+                        height = viewport.height;
+                        width = viewport.width;
+                    }
+
+                    canvas.height = height;
+                    canvas.width = width;
+
+                    $("canvas").css("width", "100%");
+
+                    canvasContainer.appendChild(canvas);
+
+                    page.render(renderContext).then(function () {
+                        def.resolve();
+
+                        if (currPageNum() == pagesCount) {
+                            $("#loaderDocument").css("display", "none");
+                            $("#visualizationPDF").show();
+                            $("#responsiveDocuments").removeClass("displayImportant");
+                        }
+                    });
+                })
+
+                return def.promise();
+            }
+
+            function renderPages(data) {
+                pdfDoc = data;
+
+                pagesCount = pdfDoc.numPages;
+                for (var i = 1; i <= pagesCount; i++) {
+                    func = renderPage;
+                    promise = promise.then(makeRunner(func, i));
+                }
+            }
+
+            PDFJS.disableWorker = true;
+            PDFJS.getDocument(url).then(renderPages);
+        };
+
+        function GetDocumentPDF(url) {
+            $("#visualizationPDF").html('');
+
+            if ($(window).width() < 768) {
+                $("#responsiveDocuments").addClass("displayImportant");
+                $("#loaderDocument").css("display", "block");
+
+                var pdfjsLib = window['pdfjs-dist/build/pdf'];
+                pdfjsLib.GlobalWorkerOptions.workerSrc = '/Scripts/pdf/pdf.worker.js';
+
+                var body = document.getElementById("visualizationPDF");
+                renderPDF(url, body);
+            }
+            else {
+                $("#visualizationPDF").show();
+                PDFObject.embed(url, "#visualizationPDF");
+            }
+        }
+    </script>

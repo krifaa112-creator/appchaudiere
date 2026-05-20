@@ -1,0 +1,106 @@
+// Generated from elmLeCube catalogue: elm.leblanc > ECS > Chauffe-bain > Bas Nox > VMC.
+// 2 models | 161 part occurrences | 91 unique part references.
+globalThis.ELMLEBLANC_ECS_CHAUFFE_BAIN_BAS_NOX_VMC_EXPLODED_VIEWS = {
+  "62215723": [
+    {
+      "level": "root",
+      "position": "",
+      "title": "Vue d'ensemble",
+      "pdf": "6720907839.AA.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907839.AA.pdf"
+    },
+    {
+      "level": "section",
+      "position": "1",
+      "title": "1 . habillage",
+      "pdf": "6720907762.AA.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907762.AA.pdf"
+    },
+    {
+      "level": "section",
+      "position": "2",
+      "title": "2 . corps interieur/hydrogenerateur",
+      "pdf": "6720907750.AA.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907750.AA.pdf"
+    },
+    {
+      "level": "section",
+      "position": "3",
+      "title": "3 . bruleur",
+      "pdf": "6720907743.AC.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907743.AC.pdf"
+    },
+    {
+      "level": "section",
+      "position": "4",
+      "title": "4 . bloc gaz",
+      "pdf": "6720907840.AA.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907840.AA.pdf"
+    },
+    {
+      "level": "section",
+      "position": "5",
+      "title": "5 . robinet d´eau (plastique)",
+      "pdf": "6720907745.AB.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907745.AB.pdf"
+    },
+    {
+      "level": "section",
+      "position": "6",
+      "title": "6 . unite dallumage",
+      "pdf": "6720907858.AA.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907858.AA.pdf"
+    }
+  ],
+  "62216350": [
+    {
+      "level": "root",
+      "position": "",
+      "title": "Vue d'ensemble",
+      "pdf": "6720907839.AA.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907839.AA.pdf"
+    },
+    {
+      "level": "section",
+      "position": "1",
+      "title": "1 . habillage",
+      "pdf": "6720907762.AA.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907762.AA.pdf"
+    },
+    {
+      "level": "section",
+      "position": "2",
+      "title": "2 . corps interieur/hydrogenerateur",
+      "pdf": "6720907750.AA.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907750.AA.pdf"
+    },
+    {
+      "level": "section",
+      "position": "3",
+      "title": "3 . bruleur",
+      "pdf": "6720907743.AC.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907743.AC.pdf"
+    },
+    {
+      "level": "section",
+      "position": "4",
+      "title": "4 . bloc gaz",
+      "pdf": "6720907840.AA.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907840.AA.pdf"
+    },
+    {
+      "level": "section",
+      "position": "5",
+      "title": "5 . robinet d´eau (plastique)",
+      "pdf": "6720907745.AB.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907745.AB.pdf"
+    },
+    {
+      "level": "section",
+      "position": "6",
+      "title": "6 . unite dallumage",
+      "pdf": "6720907858.AA.pdf",
+      "url": "https://www.elmleblanc-services.fr/Catalogue/drawings/6720907858.AA.pdf"
+    }
+  ]
+};
